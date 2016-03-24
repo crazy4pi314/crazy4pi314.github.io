@@ -26,6 +26,20 @@
 				box-shadow: none;
 				background: none;
 			}
+
+			.two-col-container {
+				width: 100%;
+			}
+
+			.left-col {
+				float: left;
+				width: 50%;
+			}
+
+			.right-col {
+				float: right;
+				width: 50%;
+			}
 		</style>
 
 		<!-- Printing and PDF exports -->
@@ -71,29 +85,83 @@
 						## Quantum Key Distribution (QKD) ##
 				
 						- Objective: share a secret key between Alice and Bob
+						- Reviews: [doi:10/bjxpf6](http://doi.org/bjxpf6) and [doi:10/dshjwp](http://doi.org/dshjwp)
+					</script>	
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						## QKD performance ##
+				
 						- Security of transmission is tested with the quantum bit error rate:
 						`\[\sf{\text{QBER} = \frac{n_{\text{wrong}}}{n_{\text{wrong}}+n_{\text{right}}}}\]`	
 						- Required key generation threshold `$\sf{QBER \lesssim  10\%}$`
-						- Reviews: [rev1]() [rev 2]()
+
 					</script>	
 				</section>
 
 				<section  data-markdown>
 					<script type="text/template">
-						### Example QKD Protocol: BB84 ###
+						### Example QKD protocol: BB84 ###
 						![http://swissquantum.idquantique.com/](http://swissquantum.idquantique.com/IMG/jpg/bb84.jpg "BB84 diagram")
 						
 						[doi:10/3d6](http://doi.org/3d6)
 					</script>
 				</section>
 
-				<section  data-markdown>
-					<script type="text/template">
-						### Commercial QKD Devices ###
-						<img src="http://ww1.prweb.com/prfiles/2010/05/18/2917774/hybridquantum.jpg" alt="id Quantique Clavis 2" style="width: 350px;"/>
-						<!-- ![id Quantique Clavis 2](http://ww1.prweb.com/prfiles/2010/05/18/2917774/hybridquantum.jpg =100x20 "id Quantique Clavis 2") -->
-					</script>
+<!-- 
+				<section>
+					<h3>Commercial QKD devices</h3>
+					<div style="float: left; width: 50%;">
+						<img src="\figures\idqphotocrop.jpg" alt="id Quantique Clavis 2" style="width: 100%;" />
+					</div>
+					<p style="float: right; width: 50%; text-align: center;	">
+						<ul>
+							<li>id Quantique</li>
+							<li>Quintencence</li>
+							<li>MagiQ</li>
+							<li>SequreNet</li>
+						</ul>
+					</p>
+				</section> -->
+
+				<section >	
+					<h3>Commercial QKD devices</h3>
+					<div class="two-col-container">
+						<div class="left-col">
+							<ul>
+								<li><a href="http://www.idquantique.com/">id Quantique</a></li>
+								<li><a href="http://www.quintessencelabs.com/">QuintessenceLabs</a></li>
+							</ul>
+						</div>	
+						<div class="right-col">
+							<ul>
+								<li><a href="http://www.magiqtech.com/Home.html">MagiQ</a></li>
+								<li><a href="http://www.sequrenet.com/">SeQureNet</a></li>
+							</ul>
+						</div>
+						<!-- <p>
+							Toshiba, Hewlett Packard, IBM, Mitsubishi, NEC, NTT, AIT	
+						</p> -->
+					</div>
+				
+					<img src="\figures\idqfront.jpg" alt="id Quantique Clavis 2" style="width: 100%;" />
+				
 				</section>
+
+<!--				<section  data-markdown data-background="http://ww1.prweb.com/prfiles/2010/05/18/2917774/hybridquantum.jpg" alt="id Quantique Clavis 2" data-background-size="500px">
+					<script type="text/template">
+						### Commercial QKD devices ###
+						<p>
+							<ul>
+								<li>id Quantique</li>
+								<li>Quintencence</li>
+								<li>MagiQ</li>
+								<li>SequreNet</li>
+							</ul>
+						</p>
+					</script>
+				</section>-->
 
 				<section  data-markdown>
 					<script type="text/template">
@@ -109,15 +177,80 @@
 
 				<section  data-markdown>
 					<script type="text/template">
-						## Why Space QKD ##
-						- Distance/Loss [need]()
-						- Key rate [need]()
-						- Realistic device security models [need]()
+						## Why space QKD ##
+						[doi:10/bdnw](http://doi.org/bdnw)
+						<a href="http://doi.org/bdnw">
+							<img src="figures/loss.svg" style="width: 90%" alt="Space optical losses doi:10/bdnw">
+						</a>
+						
+						
+					</script>
+				</section>
+
+				<section  data-markdown>
+					<script type="text/template">
+						## QKD receiver satellite ##
+						- pros: configurable source, simple space hardware, other space QI experiments
+						- cons: lower key rate
+					</script>
+				</section>
+
+				<section  data-markdown>
+					<script type="text/template">
+						## Reciever hardware##
+						<!-- <img src="figures/loss.svg" alt="Space optical losses"> -->
+						- pics of setup
+						- lab testing results
+					</script>
+				</section>
+
+				<section  data-markdown>
+					<script type="text/template">
+						## Airborne testing of receiver hardware##
+						<!-- <img src="figures/loss.svg" alt="Space optical losses"> -->
+						- pics of setup
+						- results in super short form
 					</script>
 				</section>
 				
 				<section data-background="http://cdn.gifbay.com/2013/02/how_keys_work-34063.gif">
 						<h2>Hacking QKD Hardware</h2>
+				</section>
+
+				<section  data-markdown data-background="figures/hotel.png" data-background-size=110%>
+					<script type="text/template">
+						## Functionality `$\neq$` Security ##
+						<!-- <a href="http://www.forbes.com/sites/andygreenberg/2012/07/23/hacker-will-expose-potential-security-flaw-in-more-than-four-million-hotel-room-keycard-locks/#379f52d167b2">
+							<img src="figures/hotel.png" style="width: 70%" alt="hacking hotel door locks">
+						</a> -->
+						- examples of hardware vulnerabilities
+					</script>
+				</section>
+
+				<section  data-markdown>
+					<script type="text/template">
+						## Standard hardware component ##
+						<!-- <img src="figures/loss.svg" alt="Space optical losses"> -->
+						- figure of iqd setup
+					</script>
+				</section>
+
+				<section  data-markdown>
+					<script type="text/template">
+						## Laser damage attack ##
+
+						- fiber fuse video
+						
+					</script>
+				</section>
+
+				<section  data-markdown>
+					<script type="text/template">
+						## Attack results ##
+
+						- table of results
+						- no patch that works
+					</script>
 				</section>
 
 				<section>
@@ -131,7 +264,7 @@
 					</ul>
 				</section>
 
-				<section data-markdown style="text-align: left;">
+				<section data-markdown > <!-- style="text-align: left;"> -->
 					<script type="text/template">
 						# Thank you #
 					</script>
