@@ -166,50 +166,92 @@
 				<section  data-markdown>
 					<script type="text/template">
 						## Challenges for practical QKD ##
-						- Distance/Loss [need]()
-						  - Space link QKD
-						- Key rate [need]()
-						  - Faster Sources[qkdr paper]()
-						- Realistic device security models [need]()
-						  - Standards and certification 
+						- Distance/Loss 
+						   - *307 km in fibre* [doi:10/bdpg](http://doi.org/bdpg)
+						- Key rate 
+						   - *GHz BB84 decoy state* [doi:10/dqdr8n](http://doi.org/dqdr8n)
+						- Realistic device security models 
+						   - *Security proofs with side-channels* [doi:10/dshjwp](http://doi.org/dshjwp)
 					</script>
 				</section>
 
 				<section  data-markdown>
 					<script type="text/template">
-						## Why space QKD ##
+						## Solutions (?) for practical QKD ##
+						- Distance/Loss 
+						  - **Free-space/Space QKD** [doi:10/bdnw](http://doi.org/bdnw)
+						- Key rate 
+						  - *Faster sources* 
+						- Realistic device security models
+						  - **Hardware certification and standards** [ETSI group](http://www.etsi.org/technologies-clusters/technologies/quantum-key-distribution)
+					</script>
+				</section>
+
+				<section  data-markdown>
+					<script type="text/template">
+						### Space QKD losses ###
 						[doi:10/bdnw](http://doi.org/bdnw)
+
 						<a href="http://doi.org/bdnw">
-							<img src="figures/loss.png" style="width: 90%" alt="Space optical losses doi:10/bdnw">
+							<img src="figures/loss.png" style="width: 70%" alt="Space optical losses doi:10/bdnw">
 						</a>
-						
-						
 					</script>
 				</section>
 
 				<section  data-markdown>
 					<script type="text/template">
 						## QKD receiver satellite ##
-						- pros: configurable source, simple space hardware, other space QI experiments
-						- cons: lower key rate
+						<img src="figures/reciever_schematic.png" alt="Reciever payload schematic">
+						- pros: configurable source, simple space hardware, other space QI experiments-[doi:10/bdqf](http://doi.org/bdqf)
+						- cons: lower key rate, detector damage
 					</script>
 				</section>
 
 				<section  data-markdown>
 					<script type="text/template">
-						## Reciever hardware##
-						<!-- <img src="figures/loss.svg" alt="Space optical losses"> -->
-						- pics of setup
-						- lab testing results
+						### QKD receiver lab hardware ###
+						<img src="figures/qkdr-hardware.png" alt="lab hardware demo" style="width: 60%">
+					</script>
+				</section>
+
+				<section  data-markdown >
+					<script type="text/template">
+						### Lab testing of receiver hardware ###
+						<!-- <img src="figures/recunit.jpg" alt="Reciever hardware"> -->
+						| **Results**                     |                               |
+						| -------------                   |---------------                |
+						| Total loss <br> (channel + receiver) | 43.7dB <br>(38.7 dB + 5 dB)       |
+						| Duration                        | 100 s                         |
+						| Average QBER                    | 3.14%                         |
+						| Finite size secure key length   | 16.3 kbits = <br>65 AES 256 keys  |
 					</script>
 				</section>
 
 				<section  data-markdown>
 					<script type="text/template">
-						## Airborne testing of receiver hardware##
-						<!-- <img src="figures/loss.svg" alt="Space optical losses"> -->
-						- pics of setup
-						- results in super short form
+						### Airborne receiver hardware ###
+						
+						- Rugged electronics and mounting for more extreme conditions (-40° C and vibration)
+						- Fine pointing unit to help reduce loss in receiver optics
+
+						<img src="figures/recunit.jpg" alt="Space optical losses" style="width: 60%" >
+
+					</script>
+				</section>
+
+				<section  data-markdown>
+					<script type="text/template">
+						### Airborne receiver hardware ###
+						
+						<div class="two-col-container">
+							<div class="left-col">
+								<img src="figures/plane-electronics.jpg" alt="Reciever control electronics" >
+							</div>
+							<div class="right-col">
+								<img src="figures/plane-telescope.jpg" alt="Reciever telescope" >
+							</div>
+						</div>
+
 					</script>
 				</section>
 				
@@ -223,45 +265,75 @@
 						<!-- <a href="http://www.forbes.com/sites/andygreenberg/2012/07/23/hacker-will-expose-potential-security-flaw-in-more-than-four-million-hotel-room-keycard-locks/#379f52d167b2">
 							<img src="figures/hotel.png" style="width: 70%" alt="hacking hotel door locks">
 						</a> -->
-						- examples of hardware vulnerabilities
+						- Classical: Bad USB, Hotel debug port, Stack-On gun safes
+						- Quantum: Timing [doi:10/c97d7r](http://doi.org/c97d7r), **Detector control** [doi:10/d6cgxf](http://doi.org/d6cgxf), Multi-wavelength [doi:10/fnqkhz](http://doi.org/fnqkhz)
+						- Both: Trojan horse, Man in the middle, site vulnerability
 					</script>
 				</section>
+
+				<section data-markdown data-background-video="figures/fiber-fuse-crop.mp4" >
+					<script type="text/template">
+						<h2 class="fragment" data-fragment-index="1">Fiber fusing</h2>
+						<img class="fragment" data-fragment-index="1"src="figures/fiberfuse.jpg" alt="Laser damage fiber close-up" style="height: 10% width: 100%">
+
+					</script>
+				</section>
+
+				<section  data-markdown data-background="#666666">
+					<script type="text/template">
+						## Laser damage attack ##
+						<img src="figures/ldsetup.png" alt="Setup diagram for laser damage attack">
+						
+					</script>
+				</section>
+
 
 				<section  data-markdown>
 					<script type="text/template">
-						## Standard hardware component ##
-						<!-- <img src="figures/loss.svg" alt="Space optical losses"> -->
-						- figure of iqd setup
+						## Device damage ##
+						<div class="two-col-container">
+							<div class="left-col">
+								<img src="figures/unburnt.jpg" alt="Undamaged detector sample" >
+							</div>
+							<div class="right-col">
+								<img src="figures/burnt.jpg" alt="damaged detector sample" >
+							</div>
+						</div>
+						<!-- - no patch that works -->
 					</script>
 				</section>
 
+
 				<section  data-markdown>
+					<script type="text/template">
+						## Attack results ##
+
+						<img src="figures/attackplot.png" alt="Laser damage attack results plot" style="width: 80%">
+						<!-- - no patch that works -->
+					</script>
+				</section>
+
+
+
+<!-- 				<section  data-markdown>
 					<script type="text/template">
 						## Laser damage attack ##
 
 						- fiber fuse video
 						
 					</script>
-				</section>
+				</section> -->
+
 
 				<section  data-markdown>
 					<script type="text/template">
-						## Attack results ##
+					## What next? ##
 
-						- table of results
-						- no patch that works
+					- Launch a satellite to demonstrate QKD to low earth orbit!
+					- Standards and hardware certification for QKD
+					- Classical cryptography community engagement
+					- ~~Take over the world~~
 					</script>
-				</section>
-
-				<section>
-					<h2>Conclusions</h2>
-
-					<ul>
-						<li>Launch a satellite to demonstrate QKD to low earth orbit!</li>
-						<li>Standards and hardware certification for QKD</li>
-						<li>Classical cryptography community engagement</li>
-						<li style="text-decoration: line-through;">Take over the world</li>
-					</ul>
 				</section>
 
 				<section data-markdown > <!-- style="text-align: left;"> -->
@@ -287,6 +359,8 @@
 				history: true,
 				center: true,
 				slideNumber: true,
+				 // Turns fragments on and off globally
+    			fragments: true,
 
 				transition: 'slide', // none/fade/slide/convex/concave/zoom
 
