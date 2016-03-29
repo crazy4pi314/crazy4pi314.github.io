@@ -1,54 +1,69 @@
 ---
-layout: page 
+layout: page
 title: About
-
 ---
+I am Sarah Kaiser, a PhD Candidate in the [Institute for Quantum Computing](https://uwaterloo.ca/institute-for-quantum-computing/) at the [University of Waterloo](https://uwaterloo.ca/) in Waterloo, Ontario.
 
-### Dark version of jekyll-clean theme
+## Research interests ##
 
-This theme was created on top of Jekyll Clean theme by Scotte, you can view the originnal version in action [on his blog](https://scotte.github.io).
+* Quantum information and computation	    
 
-* Get it from [github](https://github.com/streetturtle/jekyll-clean-dark).
-* See the [live demo](http://pavelmakhov.com/jekyll-clean-dark).
-* See it [in action on my own blog](http://pavelmakhov.com).
+* Quantum key distribution 
 
-This theme uses some parts of Twitter Bootstrap, which allows it to look nice on a mobile devices using a collapsable nav bar and hiding the
-sidebar.
+* Long distance quantum communication
 
-Optionally you can use:
+* Single photon detection
 
- - [Disqus](http://disqus.com) as a comments system;
- - [Google Analyticse](http://www.google.com/analytics/);
- - [Yandex Metrika](http://metrica.yandex.com);
- - Blog tags.
 
-All these features could be set up in `_config.yml`. Also you can have social icons which could lead to your social acounts. Out-of-the box it has: LinkedIn, GitHub, StackOverflow, LastFm, Instagram. You can easily add more by putting svg images in a /css/social folder.
+## Publications ##
 
-Installation
-==
+* Vadim Makarov, Jean-Philippe Bourgoin, Poompong Chaiwongkhot, Mathieu Gagne, Thomas Jennewein, **Sarah Kaiser**, Raman Kashyap, Matthieu Legre, Carter Minshull, Shihan Sajeed. _Laser damage creates backdoors in quantum communications._ [arXiv:1510.03148 (2015)](http://arxiv.org/abs/1510.03148)
 
-If you dont't have your own blog you can clone this repository and put your articles in a `_posts` folder.
-If you already have your own blog then I think you can clone this repository and copy-paste content keeping your `_posts` folder.
+* J\-P Bourgoin, B L Higgins, N Gigov, C Holloway,  C J Pugh, **S Kaiser**,  M Cranmer and T Jennewein. _Free-space quantum key distribution to a moving receiver._ [Optics Express Vol. 23, Issue 26, pp. 33437-33447 (2015)](https://www.osapublishing.org/oe/abstract.cfm?uri=oe-23-26-33437)	
 
-After you will have to set up your `_config.yml`
+* Shihan Sajeed, Igor Radchenko, **Sarah Kaiser**, Jean-Philippe Bourgoin, Anna Pappa, Laurent Monat, Matthieu Legré, and Vadim Makarov. _Attacks exploiting deviation of mean photon number in quantum key distribution and coin tossing_ [Phys. Rev. A 91, 032326 (2015)](http://journals.aps.org/pra/abstract/10.1103/PhysRevA.91.032326)
 
-License
-=======
+* Feihu Xu, Shihan Sajeed, **Sarah Kaiser**, Zhiyuan Tang, Li Qian, Vadim Makarov, and Hoi-Kwong Lo. _Experimental quantum key distribution with source flaws and tight finite-key analysis._ [Phys. Rev. A 92, 032305 (2015)](http://journals.aps.org/pra/abstract/10.1103/PhysRevA.92.032305)
 
-The content of this theme is distributed and licensed under a
-[Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/legalcode)
 
-    This license lets others distribute, remix, tweak, and build upon your work,
-    even commercially, as long as they credit you for the original creation. This
-    is the most accommodating of licenses offered. Recommended for maximum
-    dissemination and use of licensed materials.
+## Conferences ##
 
-In other words: you can do anything you want with this theme on any site, just please
-provide a link to the original theme on github.
+* **Sarah Kaiser**, Chris Pugh, Jean-Philippe Bourgoin, Brendon Higgins, Thomas Jennewein. ``Towards satellite-based quantum communication: field testing the QEYSSAT payload''. Talk at [SQuInT 2016](http://physics.unm.edu/SQuInT/2016/abstracts.php?speaker=Kaiser).
 
-This theme includes the following files which are the properties of their
-respective owners:
+* **Sarah Kaiser**. ``What QKD can learn from Classical Cryptography''. Talk at Last Frontiers in Quantum Information Science 2015
 
-* js/bootstrap.min.js - [bootstrap](http://getbootstrap.com)
-* css/bootstrap.min.css - [bootstrap](http://getbootstrap.com)
-* js/jquery.min.js - [jquery](https://jquery.com)
+* **Sarah Kaiser**, Chris Pugh, Jean-Philippe Bourgoin, Brendon Higgins, Nigar Sultana, Elena Anisimova, Eric Choi, Thomas Jennewein. ``Towards Airborne Quantum Key Distribution''. Poster at [Canadian Summer School on Quantum Information 2014](http://www.uoguelph.ca/quigs/cssqi14/)
+
+## Honors ##
+
+* UW Equity and Inclusivity Award for founding FemPhys Organization 2016
+* IQC David Johnston Award for Scientific Outreach 2015
+* Mike and Ophelia Lazaridis Fellowship  2012-present
+* Best Poster Presentation, Sigma Zeta National Convention 2009			
+* COMAP Competition, Meritorious Award Winner  2008, 2009, 2010, 2011
+
+## Leadership ##
+
+* IQC Equity and Inclusion committee member 2015-present		
+* FemPhys Co-founder and officer 2014-2015
+* Optical Society of America University of Waterloo chapter officer 2014-present
+* IQC Graduate student association officer  2014-2015
+* IQC Entrepreneurship club Co-organizer  2014-2015
+* QCRYPT conference student organizer 2013
+* Sigma Pi Sigma Chapter President 2010-2011
+* Sigma Zeta Chapter Officer 2009-2011	
+
+## Outreach ##
+
+* Co-creator of [LIGHT Illuminated](http://www.themuseum.ca/exhibition/opening-light-illuminated#overlay-context=) at the [THEMUSEUM](http://www.themuseum.ca/) in Kitchener, ON
+* Ontario Centre for Excellence Discovery Trade show demo of satellite QKD equipment 2015 	
+* Canadian Association for Girls in Science workshop lecture ``Quantum Cryptography'' 2014, 2015
+* Waterloo Unlimited workshop for high schoolers ``Using Quantum Mechanics to Explore New Frontiers in Cryptography'' 2014 
+* Shad Valley workshop lecture ``Exploring the fantastic world of quantum mechanics: Quantum Cryptography'' 2014
+* Quantum Cryptography School for Young Students lecture ``Implementations of Quantum Cryptography'' 2013-2015
+* Undergraduate School on Experimental Quantum Information Processing lecturer 2013, 2014 
+
+## Contact ##
+
+<a href="mailto:sckaiser@sckaiser.com" target="_top">sckaiser@sckaiser.com</a>
+
