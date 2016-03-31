@@ -62,11 +62,21 @@
 
 			<div class="slides">
 				<section>
-					<h1 style="font-size: 175%">Practical Quantum Cryptography Devices:</h1>
-					<h3 style="font-size: 100%">how to make them and how to break them</h3>
+					<h1 style="font-size: 175%; margin-bottom: 0;">Practical Quantum Cryptography Devices:</h1>
+					<h3 style="font-size: 110%">how to make them and how to break them</h3>
+					<hr />
+
 					<p>
-						<small>Created by <a href="http://www.sckaiser.com">Sarah Kaiser</a> / <a href="http://twitter.com/crazy4pi314">@crazy4pi314</a></small>
+						<small>
+							<strong><a href="http://www.sckaiser.com">Sarah Kaiser</a></strong> &bull;
+							Institute for Quantum Computing<br>
+						<a href="http://www.sckaiser.com/research/talks/macquarie_seminar_2016/">www.sckaiser.com/research/talks/macquarie_seminar_2016</a>
+						</small>
 					</p>
+
+					<aside class="notes">
+        				How is breaking practical 
+    				</aside>
 				</section>
 
 				<section>
@@ -86,44 +96,72 @@
 				
 						- Objective: share a secret key between Alice and Bob
 						- Reviews: [doi:10/bjxpf6](http://doi.org/bjxpf6) and [doi:10/dshjwp](http://doi.org/dshjwp)
-					</script>	
-				</section>
 
-				<section data-markdown>
-					<script type="text/template">
-						## QKD performance ##
-				
-						- Security of transmission is tested with the quantum bit error rate:
-						`\[\sf{\text{QBER} = \frac{n_{\text{wrong}}}{n_{\text{wrong}}+n_{\text{right}}}}\]`	
-						- Required key generation threshold `$\sf{QBER \lesssim  10\%}$`
+						<img src="figures/qkd-concept.png" alt="diagram for qkd concept" style="width: 80%;" />
 
+						Note:
+						Key EXPANSION protocol, relate to DH 
 					</script>	
 				</section>
 
 				<section  data-markdown>
 					<script type="text/template">
 						### Example QKD protocol: BB84 ###
-						![http://swissquantum.idquantique.com/](http://swissquantum.idquantique.com/IMG/jpg/bb84.jpg "BB84 diagram")
+						#### Quantum phase ####
+						<div class="two-col-container">
+							<div class="left-col" style="width: 70%">
+								![http://swissquantum.idquantique.com/](http://swissquantum.idquantique.com/IMG/jpg/bb84.jpg "BB84 diagram")
 						
-						[doi:10/3d6](http://doi.org/3d6)
+								[doi:10/3d6](http://doi.org/3d6)
+							</div>
+							<div class="right-col" style="width: 30%">
+								<ol>
+									<li>Alice randomly chooses basis and bit</li>
+									<li>Alice prepares state</li>
+									<li>Bob randomly chooses basis and measures</li>
+									<li>Repeat</li>
+								</ol>
+
+							</div>
+						</div>
 					</script>
 				</section>
 
-<!-- 
-				<section>
-					<h3>Commercial QKD devices</h3>
-					<div style="float: left; width: 50%;">
-						<img src="\figures\idqphotocrop.jpg" alt="id Quantique Clavis 2" style="width: 100%;" />
-					</div>
-					<p style="float: right; width: 50%; text-align: center;	">
-						<ul>
-							<li>id Quantique</li>
-							<li>Quintencence</li>
-							<li>MagiQ</li>
-							<li>SequreNet</li>
-						</ul>
-					</p>
-				</section> -->
+				<section  data-markdown>
+					<script type="text/template">
+						### Example QKD protocol: BB84 ###
+						#### Classical phase ####
+						<div class="two-col-container">
+							<div class="left-col" style="width: 70%">
+								![http://swissquantum.idquantique.com/](http://swissquantum.idquantique.com/IMG/jpg/bb84.jpg "BB84 diagram")
+						
+								[doi:10/3d6](http://doi.org/3d6)
+							</div>
+							<div class="right-col" style="width: 30%">
+								<ol>
+									<li>Share basis choices</li>
+									<li>Error correction</li>
+									<li>Privacy amplification</li>
+									<li>Final key produced</li>
+								</ol>
+
+							</div>
+						</div>
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						### QKD performance ###
+				
+						- Security of transmission is tested with the quantum bit error rate:
+						`\[\sf{\text{QBER} = \frac{n_{\text{wrong}}}{n_{\text{wrong}}+n_{\text{right}}}}\]`	
+						- Required key generation threshold `$\sf{QBER \lesssim  10\%}$`
+						
+						Note:
+						Explain how bad QBER breaks security/threshold works
+					</script>	
+				</section>
 
 				<section >	
 					<h3>Commercial QKD devices</h3>
@@ -167,9 +205,8 @@
 					<script type="text/template">
 						## Challenges for practical QKD ##
 						- Distance/Loss 
-						   - *307 km in fibre* [doi:10/bdpg](http://doi.org/bdpg)
-						- Key rate 
-						   - *GHz BB84 decoy state* [doi:10/dqdr8n](http://doi.org/dqdr8n)
+						   - *307 km in fibre* [doi:10/bdpg](http://doi.org/bdpg) 
+						   
 						- Realistic device security models 
 						   - *Security proofs with side-channels* [doi:10/dshjwp](http://doi.org/dshjwp)
 					</script>
@@ -177,13 +214,14 @@
 
 				<section  data-markdown>
 					<script type="text/template">
-						## Solutions (?) for practical QKD ##
+						### Solutions (?) for practical QKD ###
 						- Distance/Loss 
 						  - **Free-space/Space QKD** [doi:10/bdnw](http://doi.org/bdnw)
-						- Key rate 
-						  - *Faster sources* 
+						  - *GHz BB84 decoy state* [doi:10/dqdr8n](http://doi.org/dqdr8n)
 						- Realistic device security models
 						  - **Hardware certification and standards** [ETSI group](http://www.etsi.org/technologies-clusters/technologies/quantum-key-distribution)
+						Note:
+						How can standards inter-operate with security?
 					</script>
 				</section>
 
@@ -193,32 +231,48 @@
 						[doi:10/bdnw](http://doi.org/bdnw)
 
 						<a href="http://doi.org/bdnw">
-							<img src="figures/loss.png" style="width: 70%" alt="Space optical losses doi:10/bdnw">
+							<img src="figures/loss.png" style="width: 90%" alt="Space optical losses doi:10/bdnw">
 						</a>
 					</script>
 				</section>
 
 				<section  data-markdown>
 					<script type="text/template">
-						## QKD receiver satellite ##
-						<img src="figures/reciever_schematic.png" alt="Reciever payload schematic">
-						- pros: configurable source, simple space hardware, other space QI experiments-[doi:10/bdqf](http://doi.org/bdqf)
-						- cons: lower key rate, detector damage
+						## Uplink QKD system ##
+
+						- Pros: 
+						  - Configurable source
+						  - Simpler space hardware
+						  - Other space QI experiments [doi:10/bdqf](http://doi.org/bdqf)
+						- Cons: 
+						  - lower key rate
+						  - detector radiation damage [doi:10/dg8xhd](http://doi.org/dg8xhd)
+
+						Note:
+						Dark count rates->QBER
 					</script>
 				</section>
 
 				<section  data-markdown>
 					<script type="text/template">
-						### QKD receiver lab hardware ###
-						<img src="figures/qkdr-hardware.png" alt="lab hardware demo" style="width: 60%">
+						### QKD receiver satellite ###
+						<img src="figures/reciever_schematic.png" alt="Reciever payload schematic">
+						
+					</script>
+				</section>
+
+				<section  data-markdown>
+					<script type="text/template">
+						### QKD receiver lab testing ###
+						<img src="figures/qkdr-hardware.png" alt="lab hardware demo" style="width: 70%">
 					</script>
 				</section>
 
 				<section  data-markdown >
 					<script type="text/template">
-						### Lab testing of receiver hardware ###
+						### Lab testing results ###
 						<!-- <img src="figures/recunit.jpg" alt="Reciever hardware"> -->
-						| **Results**                     |                               |
+						|                                 |                               |
 						| -------------                   |---------------                |
 						| Total loss <br> (channel + receiver) | 43.7dB <br>(38.7 dB + 5 dB)       |
 						| Duration                        | 100 s                         |
@@ -261,17 +315,32 @@
 
 				<section  data-markdown data-background="figures/hotel.png" data-background-size=110%>
 					<script type="text/template">
-						## Functionality `$\neq$` Security ##
-						<!-- <a href="http://www.forbes.com/sites/andygreenberg/2012/07/23/hacker-will-expose-potential-security-flaw-in-more-than-four-million-hotel-room-keycard-locks/#379f52d167b2">
-							<img src="figures/hotel.png" style="width: 70%" alt="hacking hotel door locks">
-						</a> -->
-						- Classical: Bad USB, Hotel debug port, Stack-On gun safes
-						- Quantum: Timing [doi:10/c97d7r](http://doi.org/c97d7r), **Detector control** [doi:10/d6cgxf](http://doi.org/d6cgxf), Multi-wavelength [doi:10/fnqkhz](http://doi.org/fnqkhz)
-						- Both: Trojan horse, Man in the middle, site vulnerability
+						### Functionality `$\neq$` Security ###
+
+						- Classical:
+						  - Bad USB [srlabs.de](https://srlabs.de/badusb/)
+						  - Hotel debug port [forbes.com](http://www.forbes.com/sites/andygreenberg/2012/11/26/security-flaw-in-common-keycard-locks-exploited-in-string-of-hotel-room-break-ins/#3bb9bad75e64)
+						  - Stack-On gun safes [forbes.com](http://www.forbes.com/sites/marcwebertobias/2012/07/27/unsafe-gun-safes-can-be-opened-by-a-three-year-old/#5c8ab957303b)
+						
 					</script>
 				</section>
 
-				<section data-markdown data-background-video="figures/fiber-fuse-crop.mp4" >
+				<section  data-markdown data-background="figures/original-bb84-darker.png" data-background-size=110%>
+					<script type="text/template">
+						### QKD hardware security ###
+
+						- Quantum:
+						  - Timing [doi:10/c97d7r](http://doi.org/c97d7r)
+						  - Detector control [doi:10/d6cgxf](http://doi.org/d6cgxf)
+						  - Multi-wavelength [doi:10/fnqkhz](http://doi.org/fnqkhz)
+						- Both
+						  - Trojan horse
+						  - Man in the middle
+						  - Site vulnerability
+					</script>
+				</section>
+
+				<section data-markdown data-background-video="figures/fiber-fuse-crop-nosound.mp4" >
 					<script type="text/template">
 						<h2 class="fragment" data-fragment-index="1">Fiber fusing</h2>
 						<img class="fragment" data-fragment-index="1"src="figures/fiberfuse.jpg" alt="Laser damage fiber close-up" style="height: 10% width: 100%">
@@ -281,7 +350,7 @@
 
 				<section  data-markdown data-background="#666666">
 					<script type="text/template">
-						## Laser damage attack ##
+						### Laser damage attack ###
 						<img src="figures/ldsetup.png" alt="Setup diagram for laser damage attack">
 						
 					</script>
@@ -290,7 +359,7 @@
 
 				<section  data-markdown>
 					<script type="text/template">
-						## Device damage ##
+						### Device damage ###
 						<div class="two-col-container">
 							<div class="left-col">
 								<img src="figures/unburnt.jpg" alt="Undamaged detector sample" >
@@ -306,24 +375,12 @@
 
 				<section  data-markdown>
 					<script type="text/template">
-						## Attack results ##
+						### Attack results ###
 
 						<img src="figures/attackplot.png" alt="Laser damage attack results plot" style="width: 80%">
 						<!-- - no patch that works -->
 					</script>
 				</section>
-
-
-
-<!-- 				<section  data-markdown>
-					<script type="text/template">
-						## Laser damage attack ##
-
-						- fiber fuse video
-						
-					</script>
-				</section> -->
-
 
 				<section  data-markdown>
 					<script type="text/template">
@@ -331,12 +388,12 @@
 
 					- Launch a satellite to demonstrate QKD to low earth orbit!
 					- Standards and hardware certification for QKD
-					- Classical cryptography community engagement
+					- InfoSec and OpSec community engagement
 					- ~~Take over the world~~
 					</script>
 				</section>
 
-				<section data-markdown > <!-- style="text-align: left;"> -->
+				<section data-markdown >
 					<script type="text/template">
 						# Thank you #
 					</script>
