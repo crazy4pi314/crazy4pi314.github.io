@@ -24,10 +24,16 @@ I am Sarah Kaiser, a PhD Candidate in the [Institute for Quantum Computing](http
 
 * Shihan Sajeed, Igor Radchenko, **Sarah Kaiser**, Jean-Philippe Bourgoin, Anna Pappa, Laurent Monat, Matthieu Legré, and Vadim Makarov. _Attacks exploiting deviation of mean photon number in quantum key distribution and coin tossing_ [Phys. Rev. A 91, 032326 (2015)](http://journals.aps.org/pra/abstract/10.1103/PhysRevA.91.032326)
 
+* Contributor to Quantum Safe Cryptography and Security: An introduction, benefits, enablers and challenges [ETSI White Paper No. 8](http://www.etsi.org/images/files/ETSIWhitePapers/QuantumSafeWhitepaper.pdf)
+
 * Feihu Xu, Shihan Sajeed, **Sarah Kaiser**, Zhiyuan Tang, Li Qian, Vadim Makarov, and Hoi-Kwong Lo. _Experimental quantum key distribution with source flaws and tight finite-key analysis._ [Phys. Rev. A 92, 032305 (2015)](http://journals.aps.org/pra/abstract/10.1103/PhysRevA.92.032305)
 
 
 ## Conferences ##
+
+* **Sarah Kaiser**. "Extending the reach of QKD" Talk at Last Frontiers in Quantum Information Science 2016
+
+* **Sarah Kaiser**, Chris Pugh, Jean-Philippe Bourgoin, Brendon Higgins, Thomas Jennewein. "Towards satellite-based quantum communication: field testing the QEYSSAT payload." Talk at [ASTRO 2016](http://www.casi.ca/assets/list%20of%20titles%20from%20astro%202016.pdf).
 
 * **Sarah Kaiser**, Chris Pugh, Jean-Philippe Bourgoin, Brendon Higgins, Thomas Jennewein. "Towards satellite-based quantum communication: field testing the QEYSSAT payload." Talk at [SQuInT 2016](http://physics.unm.edu/SQuInT/2016/abstracts.php?speaker=Kaiser).
 
