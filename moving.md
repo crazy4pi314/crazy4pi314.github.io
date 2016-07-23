@@ -7,14 +7,26 @@ title: Moving Sale
 <a href="mailto:sckaiser@sckaiser.com" target="_top">sckaiser@sckaiser.com</a>
 226-339-8217
 
-## All Items for sale and must go!##
+## All items must go by Aug. 3rd! Can arrange flexible pickup (or possibly delivery to QNC if small) ##
 
 |Item                                    |Price (OBO)|Photo |
 |------------------------------------------------------------------------------|-----|-----------------------------------|
-| [Window AC unit](https://www.danby.com/products/window-air-conditioners/dac10011e/) Used 3 years ago at CLV, moved and didn't fit at new place. Slight radiator damage from moving, but still works well. | 50  | ![AC_1](/public/media/photos/AC_front.jpg) ![AC_2](/public/media/photos/AC_back.jpg)  |
 | Oscillating fan | 10  | ![fan](/public/media/photos/fan.jpg) |
-| [WiFi Printer](http://www.epson.ca/cgi-bin/ceStore/jsp/Product.do?sku=C11CB23205) Barely used | 30 | ![printer](/public/media/photos/printer_1.jpg) ![printer](/public/media/photos/printer_2.jpg) |
+| [Window AC unit](https://www.danby.com/products/window-air-conditioners/dac10011e/) Used 3 years ago at CLV, moved and didn't fit at new place. Slight radiator damage from moving, but still works well. | 50  | ![AC_1](/public/media/photos/AC_front.jpg) ![AC_2](/public/media/photos/AC_back.jpg)  |
+| [WiFi Printer](http://www.epson.ca/cgi-bin/ceStore/jsp/Product.do?sku=C11CB23205) Barely used | 30 |  ![printer](/public/media/photos/printer_2.jpg) |
+|[Asus 23" LED Backlight LCD Monitor w/Speakers](http://www.newegg.com/Product/Product.aspx?Item=N82E16824236117)|50||
+|[Viewsonic 27" IPS LED Monitor](https://www.amazon.ca/ViewSonic-VX2770SMH-LED-Monitor-Frameless-Design/dp/B008RM23ZI/ref=sr_1_1?ie=UTF8&qid=1469253198&sr=8-1&keywords=ViewSonic+VX2770SMH-LED+27%22+IPS+LED+Monitor+Frameless+Design+Full+HD+1080p+30M%3A1+DCR%2C+HDMI%2FDVI%2FVGA)|90||
+|[Logitech LS21 2.1 Stereo Speaker System](https://www.amazon.ca/Logitech-LS21-Stereo-Speaker-System/dp/B0015C30J0)|10||
 |Carmen red wig slightly longer than shoulder length, used once | 20 | ![wig](/public/media/photos/wig_1.jpg) ![wig](/public/media/photos/wig_2.jpg) ![wig](/public/media/photos/wig_3.jpg) |
-
-
-
+| Arkel bike commuter bag, holds up to 15" laptop | 60  | ![arkel](/public/media/photos/arkel.jpg) |
+| Delta bike pannier set | 50 | ![delta](/public/media/photos/bike_bag_set.jpg) |
+| Elastic bike cargo net | 5 | ![](/public/media/photos/net.jpg) |
+| Blender with drink spout | 10 | ![blender](/public/media/photos/blender_1.jpg) |
+| Hanging closet shelves | 5 | ![shelves](/public/media/photos/closet.jpg) |
+| Collapsible clothes drying rack | 10 | ![](/public/media/photos/dryer_1.jpg) ![](/public/media/photos/dryer_2.jpg) |
+| Heated blanket, detachable cord for washing | 15 | ![](/public/media/photos/heated_blanket_1.jpg) ![](/public/media/photos/heated_blanket_2.jpg) |
+| Chicago cutlery knife set with block and built in sharpener | 25 | ![](/public/media/photos/knife_1.jpg)  ![](/public/media/photos/knife_2.jpg) |
+| Magic bullet set with party cups | 15 | ![](/public/media/photos/magic_1.jpg) |
+| Kitchenaid pink hand mixer| 10 | ![](/public/media/photos/mixer_1.jpg) |
+| Rice cooker | 5 | ![](/public/media/photos/rice_cooker.jpg) |
+| Plastic drawers | 5 each | ![](/public/media/photos/plastic_1.jpg) ![](/public/media/photos/plastic_2.jpg)|
