@@ -24,6 +24,7 @@ title: Moving Sale
 | Elastic bike cargo net | 5 | ![](/public/media/photos/net.jpg) |
 | Blender with drink spout | 10 | ![blender](/public/media/photos/blender_1.jpg) |
 | Hanging closet shelves | 5 | ![shelves](/public/media/photos/closet.jpg) |
+| Lighted makeup mirror |10|![](/public/media/photos/vanity.jpg)|
 | Collapsible clothes drying rack | 10 | ![](/public/media/photos/dryer_1.jpg) ![](/public/media/photos/dryer_2.jpg) |
 | Heated blanket, detachable cord for washing | 15 | ![](/public/media/photos/heated_blanket_1.jpg) ![](/public/media/photos/heated_blanket_2.jpg) |
 | Chicago cutlery knife set with block and built in sharpener | 25 | ![](/public/media/photos/knife_1.jpg)  ![](/public/media/photos/knife_2.jpg) |
