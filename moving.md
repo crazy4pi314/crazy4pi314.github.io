@@ -7,7 +7,7 @@ title: Moving Sale
 <a href="mailto:sckaiser@sckaiser.com" target="_top">sckaiser@sckaiser.com</a>
 226-339-8217
 
-## All items must go by Aug. 3rd! Can arrange flexible pickup (or possibly delivery to QNC if small) ##
+## All items must go by (and depending on what it is not until) Aug. 3rd! Can arrange flexible pickup or  delivery to QNC if small ##
 
 |Item                                    |Price (OBO)|Photo |
 |------------------------------------------------------------------------------|-----|-----------------------------------|
@@ -23,6 +23,6 @@ title: Moving Sale
 | Hanging closet shelves | 5 | ![shelves](/public/media/photos/closet.jpg) |
 | Collapsible clothes drying rack | 10 | ![](/public/media/photos/dryer_1.jpg) ![](/public/media/photos/dryer_2.jpg) |
 | Heated blanket, detachable cord for washing | 15 | ![](/public/media/photos/heated_blanket_1.jpg) ![](/public/media/photos/heated_blanket_2.jpg) |
-| Kitchenaid pink hand mixer| 10 | ![](/public/media/photos/mixer_1.jpg) |
+| Kitchenaid pink hand mixer| 20 | ![](/public/media/photos/mixer_1.jpg) |
 | Rice cooker | 5 | ![](/public/media/photos/rice_cooker.jpg) |
 | Plastic drawers | 5 each | ![](/public/media/photos/plastic_1.jpg) ![](/public/media/photos/plastic_2.jpg)|
