@@ -21,7 +21,6 @@ title: Moving Sale
 |Carmen red wig slightly longer than shoulder length, used once | 20 | ![wig](/public/media/photos/wig_1.jpg) ![wig](/public/media/photos/wig_2.jpg) ![wig](/public/media/photos/wig_3.jpg) |
 | Blender with drink spout | 10 | ![blender](/public/media/photos/blender_1.jpg) |
 | Hanging closet shelves | 5 | ![shelves](/public/media/photos/closet.jpg) |
-| Lighted makeup mirror |10|![](/public/media/photos/vanity.jpg)|
 | Collapsible clothes drying rack | 10 | ![](/public/media/photos/dryer_1.jpg) ![](/public/media/photos/dryer_2.jpg) |
 | Heated blanket, detachable cord for washing | 15 | ![](/public/media/photos/heated_blanket_1.jpg) ![](/public/media/photos/heated_blanket_2.jpg) |
 | Kitchenaid pink hand mixer| 10 | ![](/public/media/photos/mixer_1.jpg) |
