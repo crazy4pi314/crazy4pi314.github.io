@@ -27,8 +27,6 @@ title: Moving Sale
 | Lighted makeup mirror |10|![](/public/media/photos/vanity.jpg)|
 | Collapsible clothes drying rack | 10 | ![](/public/media/photos/dryer_1.jpg) ![](/public/media/photos/dryer_2.jpg) |
 | Heated blanket, detachable cord for washing | 15 | ![](/public/media/photos/heated_blanket_1.jpg) ![](/public/media/photos/heated_blanket_2.jpg) |
-| Chicago cutlery knife set with block and built in sharpener | 25 | ![](/public/media/photos/knife_1.jpg)  ![](/public/media/photos/knife_2.jpg) |
-| Magic bullet set with party cups | 15 | ![](/public/media/photos/magic_1.jpg) |
 | Kitchenaid pink hand mixer| 10 | ![](/public/media/photos/mixer_1.jpg) |
 | Rice cooker | 5 | ![](/public/media/photos/rice_cooker.jpg) |
 | Plastic drawers | 5 each | ![](/public/media/photos/plastic_1.jpg) ![](/public/media/photos/plastic_2.jpg)|
