@@ -13,7 +13,6 @@ title: Moving Sale
 |------------------------------------------------------------------------------|-----|-----------------------------------|
 | Oscillating fan | 10  | ![fan](/public/media/photos/fan.jpg) |
 | [Window AC unit](https://www.danby.com/products/window-air-conditioners/dac10011e/) Used 3 years ago at CLV, moved and didn't fit at new place. Slight radiator damage from moving, but still works well. | 50  | ![AC_1](/public/media/photos/AC_front.jpg) ![AC_2](/public/media/photos/AC_back.jpg)  |
-| [WiFi Printer](http://www.epson.ca/cgi-bin/ceStore/jsp/Product.do?sku=C11CB23205) Barely used | 30 |  ![printer](/public/media/photos/printer_2.jpg) |
 |[Asus 23" LED Backlight LCD Monitor w/Speakers](http://www.newegg.com/Product/Product.aspx?Item=N82E16824236117)|50||
 |2 x [3 Way Adjustable Tilting Desk Monitor Mount Bracket(Max 33Lbs, 13~30inch)](http://www.monoprice.com/product?p_id=5402)|10/each ||
 |[Logitech LS21 2.1 Stereo Speaker System](https://www.amazon.ca/Logitech-LS21-Stereo-Speaker-System/dp/B0015C30J0)|10||
