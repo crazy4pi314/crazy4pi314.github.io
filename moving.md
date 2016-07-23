@@ -19,9 +19,6 @@ title: Moving Sale
 |2 x [3 Way Adjustable Tilting Desk Monitor Mount Bracket(Max 33Lbs, 13~30inch)](http://www.monoprice.com/product?p_id=5402)|10/each ||
 |[Logitech LS21 2.1 Stereo Speaker System](https://www.amazon.ca/Logitech-LS21-Stereo-Speaker-System/dp/B0015C30J0)|10||
 |Carmen red wig slightly longer than shoulder length, used once | 20 | ![wig](/public/media/photos/wig_1.jpg) ![wig](/public/media/photos/wig_2.jpg) ![wig](/public/media/photos/wig_3.jpg) |
-| Arkel bike commuter bag, holds up to 15" laptop | 60  | ![arkel](/public/media/photos/arkel.jpg) |
-| Delta bike pannier set | 50 | ![delta](/public/media/photos/bike_bag_set.jpg) |
-| Elastic bike cargo net | 5 | ![](/public/media/photos/net.jpg) |
 | Blender with drink spout | 10 | ![blender](/public/media/photos/blender_1.jpg) |
 | Hanging closet shelves | 5 | ![shelves](/public/media/photos/closet.jpg) |
 | Lighted makeup mirror |10|![](/public/media/photos/vanity.jpg)|
