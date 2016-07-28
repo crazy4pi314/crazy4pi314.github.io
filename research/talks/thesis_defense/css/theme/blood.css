@@ -10,7 +10,19 @@
  *
  */
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:300,700,300italic,700italic);
-@import 'https://fonts.googleapis.com/css?family=Arimo|Droid+Sans|Hind|Noto+Sans|Oxygen|Raleway';
+@import 'https://fonts.googleapis.com/css?family=Lato';
+@import url("//hello.myfonts.net/count/28aa3d");
+
+
+@font-face {
+    font-family: 'GillSansMTStd-Medium';
+    src: url({{ 'font-gill-sans.eot' | asset_url }});
+    src: url({{ 'font-gill-sans.eot?#iefix' | asset_url }}) format('embedded-opentype'),
+         url({{ 'font-gill-sans.woff' | asset_url }}) format('woff'),
+         url({{ 'font-gill-sans.ttf' | asset_url }}) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /*********************************************
  * GLOBAL STYLES
@@ -47,7 +59,7 @@ body {
 .reveal h6 {
   margin: 0 0 20px 0;
   color: #eee;
-  font-family: Gill Sans MT, "sans-serif";
+  font-family: Lato, "sans-serif";
   font-weight: normal;
   line-height: 1.2;
   letter-spacing: normal;

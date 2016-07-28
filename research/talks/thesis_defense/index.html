@@ -71,7 +71,17 @@
 					Regular text
 				</section>
 <!--==================================================================================-->
+				<section data-markdown>
+					Follow along at http://www.sckaiser.com/research/talks/thesis_defense/.
 
+					---
+
+					Control slides with ←, → and spacebar.
+					
+					Zoom in and out with shift-click.
+
+					<strong>F</strong> for full-screen.
+				</section>
 <!--==================================================================================-->
 				<section>
 					<h1 style="font-size: 175%; margin-bottom: 0;"> Quantum key distribution devices:</h1>
@@ -94,160 +104,77 @@
 <!--==================================================================================-->
 				<section>
 					<large>Information security is an integral part of modern society.</large>
-					<p class="fragment">It already horribly compromised.</p>
+					<p class="fragment">It <i> already</i> horribly compromised.</p>
 				</section>
 <!--==================================================================================-->
 				<section >
-					<h3>Where does quantum technology fit in?</h3> 
-					<p class="fragment"> Shor's algorithm </p>
-					<p class="fragment"> Post-quantum cryptography </p> 
-					<p class="fragment" style="color: #fb3550;"> <strong> Quantum key distribution</strong> </p>
-					
+					<h2>Where does quantum technology fit in?</h2> 
+					<span class="fragment"> Shor's algorithm,</span><span class="fragment"> Post-quantum cryptography,</span><p class="fragment" style="color: #fb3550;"> Quantum key distribution. </p>
 				</section>
 <!--==================================================================================-->
 				<section data-markdown>
 					<script type="text/template">
 						## Quantum Key Distribution (QKD) ##
 				
-						- Objective: share a secret key between Alice and Bob
+						Objective: share a secret key between Alice and Bob
 
-						<img src="figures/qkd-concept.png" alt="diagram for qkd concept" style="width: 80%;" />
+						<img src="figures/qkd-concept.png" alt="diagram for qkd concept" style="width: 70%;" />
 
 						Note:
 						Key EXPANSION protocol, relate to DH 
 					</script>	
 				</section>
-<!--==================================================================================-->
-				<section  data-markdown>
-					<script type="text/template">
-						### Example QKD protocol: BB84 ###
-						#### Quantum phase ####
-						<div class="two-col-container">
-							<div class="left-col" style="width: 60%">
-								![http://swissquantum.idquantique.com/](http://swissquantum.idquantique.com/IMG/jpg/bb84.jpg "BB84 diagram")
-						
-								[doi:10/3d6](http://doi.org/3d6)
-							</div>
-							<div class="right-col" style="width: 40%">
-								<ol>
-									<li>Alice randomly chooses basis and bit</li>
-									<li>Alice prepares state</li>
-									<li>Bob randomly chooses basis and measures</li>
-									<li>Repeat</li>
-								</ol>
 
-							</div>
-						</div>
-					</script>
-				</section>
-<!--==================================================================================-->
-				<section  data-markdown>
-					<script type="text/template">
-						### Example QKD protocol: BB84 ###
-						#### Classical phase ####
-						<div class="two-col-container">
-							<div class="left-col" style="width: 60%">
-								![http://swissquantum.idquantique.com/](http://swissquantum.idquantique.com/IMG/jpg/bb84.jpg "BB84 diagram")
-						
-								[doi:10/3d6](http://doi.org/3d6)
-							</div>
-							<div class="right-col" style="width: 40%">
-								<ol>
-									<li>Share basis choices</li>
-									<li>Error correction</li>
-									<li>Privacy amplification</li>
-									<li>Final key produced</li>
-								</ol>
-
-							</div>
-						</div>
-					</script>
-				</section>
 <!--==================================================================================-->
 				<section data-markdown>
 					<script type="text/template">
-						### QKD performance ###
+						## QKD performance ##
 				
-						- Security of transmission is tested with the quantum bit error rate:
-						`\[\sf{\text{QBER} = \frac{n_{\text{wrong}}}{n_{\text{wrong}}+n_{\text{right}}}}\]`	
-						- Required key generation threshold `$\sf{QBER \lesssim  10\%}$`
+						- Security of transmission is tested with the quantum bit error rate: `\[\text{QBER} = \frac{n_{\text{wrong}}}{n_{\text{wrong}}+n_{\text{right}}}\]`	
+						- Required key generation threshold `$\text{QBER}\lesssim  10\%$`
 						
 						Note:
 						Explain how bad QBER breaks security/threshold works
 					</script>	
 				</section>
+
 <!--==================================================================================-->
-				<section >	
-					<h3>Commercial QKD devices</h3>
-					<div class="two-col-container">
-						<div class="left-col">
-							<ul>
-								<li><a href="http://www.idquantique.com/">id Quantique</a></li>
-								<li><a href="http://www.quintessencelabs.com/">QuintessenceLabs</a></li>
-							</ul>
-						</div>	
-						<div class="right-col">
-							<ul>
-								<li><a href="http://www.magiqtech.com/Home.html">MagiQ</a></li>
-								<li><a href="http://www.sequrenet.com/">SeQureNet</a></li>
-							</ul>
-						</div>
-						<!-- <p>
-							Toshiba, Hewlett Packard, IBM, Mitsubishi, NEC, NTT, AIT	
-						</p> -->
-					</div>
-				
-					<img src="figures/idqfront.jpg" alt="id Quantique Clavis 2" style="width: 100%;" />
-				
+				<section>
+						<h2> Why don't we all have quantum keys? </h2>
+						<ol>
+						<li><p class="fragment"> Distance/Loss<!-- 307 km in fiber [doi:10/bdpg](http://doi.org/bdpg) --> </p></li>
+						<li><p class="fragment"> Infrastructure developments <!-- 307 km in fiber [doi:10/bdpg](http://doi.org/bdpg) --> </p></li>						   
+						<li><p class="fragment"> Realistic device security models 
+						   <!-- - Security proofs with side-channels [doi:10/dshjwp](http://doi.org/dshjwp) --></p></li>
+						 <ol>
 				</section>
-<!--==================================================================================-->
-<!--				<section  data-markdown data-background="http://ww1.prweb.com/prfiles/2010/05/18/2917774/hybridquantum.jpg" alt="id Quantique Clavis 2" data-background-size="500px">
-					<script type="text/template">
-						### Commercial QKD devices ###
-						<p>
-							<ul>
-								<li>id Quantique</li>
-								<li>Quintencence</li>
-								<li>MagiQ</li>
-								<li>SequreNet</li>
-							</ul>
-						</p>
-					</script>
-				</section>-->
+
 <!--==================================================================================-->
 				<section  data-markdown>
 					<script type="text/template">
-						## Challenges for practical QKD ##
-						- Distance/Loss 
-						   - *307 km in fibre* [doi:10/bdpg](http://doi.org/bdpg) 
-						   
-						- Realistic device security models 
-						   - *Security proofs with side-channels* [doi:10/dshjwp](http://doi.org/dshjwp)
-					</script>
-				</section>
-<!--==================================================================================-->
-				<section  data-markdown>
-					<script type="text/template">
-						### Solutions (?) for practical QKD ###
-						- Distance/Loss 
-						  - **Free-space/Space QKD** [doi:10/bdnw](http://doi.org/bdnw)
-						  - *GHz BB84 decoy state* [doi:10/dqdr8n](http://doi.org/dqdr8n)
-						- Realistic device security models
-						  - **Hardware certification and standards** [ETSI group](http://www.etsi.org/technologies-clusters/technologies/quantum-key-distribution)
-						Note:
-						How can standards inter-operate with security?
-					</script>
-				</section>
-<!--==================================================================================-->
-				<section  data-markdown>
-					<script type="text/template">
-						### Space QKD losses ###
+						### Long distance QKD losses ###
 						[doi:10/bdnw](http://doi.org/bdnw)
 
 						<a href="http://doi.org/bdnw">
 							<img src="figures/loss.png" style="width: 90%" alt="Space optical losses doi:10/bdnw">
 						</a>
 					</script>
+				</section>
+
+<!--==================================================================================-->
+				<section>
+						<h2> How to make them and how to break them </h2>
+						<ol>
+						<li><p class="fragment"> Distance &rarr; <span style="color: #fb3550;">Space QKD links</span></p></li>
+						<li><p class="fragment"> Infrastructure  &rarr; <span style="color: #fb3550;">Robust quantum optical components</span> </p></li>						   
+						<li><p class="fragment"> Security models &rarr; <span style="color: #fb3550;">Laser damage attack</span>
+						   <!-- - Security proofs with side-channels [doi:10/dshjwp](http://doi.org/dshjwp) --></p></li>
+						 <ol>
+				</section>
+<!--==================================================================================-->
+				<section>
+					<h1>Distance:</h1>
+					<h3>exchange key anywhere on earth</h3>
 				</section>
 <!--==================================================================================-->
 				<section  data-markdown>
@@ -273,6 +200,11 @@
 						<img src="figures/reciever_schematic.png" alt="Reciever payload schematic">
 						
 					</script>
+				</section>
+<!--==================================================================================-->
+				<section>
+					<h1 style="font-size: 280%">Infrastructure:</h1>
+					<h3>robust devices up to the task</h3>
 				</section>
 <!--==================================================================================-->
 				<section  data-markdown>
@@ -322,10 +254,12 @@
 
 					</script>
 				</section>
-<!--==================================================================================-->				
+<!--==================================================================================-->
 				<section data-background="http://cdn.gifbay.com/2013/02/how_keys_work-34063.gif">
-						<h2>Hacking QKD Hardware</h2>
+					<h1>Security:</h1>
+					<h3>ensuring device model integrity to attacks</h3>
 				</section>
+
 <!--==================================================================================-->
 				<section  data-markdown data-background="figures/hotel.png" data-background-size=110%>
 					<script type="text/template">
@@ -451,3 +385,95 @@
 
 	</body>
 </html>
+<!--==================================================================================-->
+<!-- 				<section  data-markdown>
+					<script type="text/template">
+						### Example QKD protocol: BB84 ###
+						#### Quantum phase ####
+						<div class="two-col-container">
+							<div class="left-col" style="width: 60%">
+								![http://swissquantum.idquantique.com/](http://swissquantum.idquantique.com/IMG/jpg/bb84.jpg "BB84 diagram")
+						
+								[doi:10/3d6](http://doi.org/3d6)
+							</div>
+							<div class="right-col" style="width: 40%">
+								<ol>
+									<li>Alice randomly chooses basis and bit</li>
+									<li>Alice prepares state</li>
+									<li>Bob randomly chooses basis and measures</li>
+									<li>Repeat</li>
+								</ol>
+
+							</div>
+						</div>
+					</script>
+				</section>
+==================================================================================
+				<section  data-markdown>
+					<script type="text/template">
+						### Example QKD protocol: BB84 ###
+						#### Classical phase ####
+						<div class="two-col-container">
+							<div class="left-col" style="width: 60%">
+								![http://swissquantum.idquantique.com/](http://swissquantum.idquantique.com/IMG/jpg/bb84.jpg "BB84 diagram")
+						
+								[doi:10/3d6](http://doi.org/3d6)
+							</div>
+							<div class="right-col" style="width: 40%">
+								<ol>
+									<li>Share basis choices</li>
+									<li>Error correction</li>
+									<li>Privacy amplification</li>
+									<li>Final key produced</li>
+								</ol>
+
+							</div>
+						</div>
+					</script>
+				</section> -->
+<!--==================================================================================-->
+<!--				<section  data-markdown data-background="http://ww1.prweb.com/prfiles/2010/05/18/2917774/hybridquantum.jpg" alt="id Quantique Clavis 2" data-background-size="500px">
+					<script type="text/template">
+						### Commercial QKD devices ###
+						<p>
+							<ul>
+								<li>id Quantique</li>
+								<li>Quintencence</li>
+								<li>MagiQ</li>
+								<li>SequreNet</li>
+							</ul>
+						</p>
+					</script>
+				</section>-->
+<!--==================================================================================-->
+<!-- 				<section  data-markdown>
+					<script type="text/template">
+						## Challenges for practical QKD ##
+						- Distance/Loss 
+						   - *307 km in fibre* [doi:10/bdpg](http://doi.org/bdpg) 
+						   
+						- Realistic device security models 
+						   - *Security proofs with side-channels* [doi:10/dshjwp](http://doi.org/dshjwp) 
+					</script>
+				</section> -->
+<!--==================================================================================-->
+<!-- 				<section >	
+					<h3>Commercial QKD devices</h3>
+					<div class="two-col-container">
+						<div class="left-col">
+							<ul>
+								<li><a href="http://www.idquantique.com/">id Quantique</a></li>
+								<li><a href="http://www.quintessencelabs.com/">QuintessenceLabs</a></li>
+							</ul>
+						</div>	
+						<div class="right-col">
+							<ul>
+								<li><a href="http://www.magiqtech.com/Home.html">MagiQ</a></li>
+								<li><a href="http://www.sequrenet.com/">SeQureNet</a></li>
+							</ul>
+						</div>
+					</div>
+				
+					<img src="figures/idqfront.jpg" alt="id Quantique Clavis 2" style="width: 100%;" />
+				
+				</section> -->
