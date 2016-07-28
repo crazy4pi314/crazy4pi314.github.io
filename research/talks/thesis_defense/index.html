@@ -4,9 +4,9 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Practical Quantum Cryptography Devices: how to make them and how to break them</title>
+		<title>Quantum key distribution devices: How to make them and how to break them</title>
 
-		<meta name="description" content="Macquarie, April 2016">
+		<meta name="description" content="10 Aug 2016">
 		<meta name="author" content="Sarah Kaiser">
 
 		<meta name="apple-mobile-web-app-capable" content="yes">
@@ -61,41 +61,55 @@
 		<div class="reveal">
 
 			<div class="slides">
+
+<!--==================================================================================-->
 				<section>
-					<h1 style="font-size: 175%; margin-bottom: 0;">Practical Quantum Cryptography Devices:</h1>
-					<h3 style="font-size: 110%">how to make them and how to break them</h3>
+					<h2>Heading</h2>
+					<ol>
+						<li>What is Quantum key distribution (QKD)?</li>
+					</ol>
+					Regular text
+				</section>
+<!--==================================================================================-->
+
+<!--==================================================================================-->
+				<section>
+					<h1 style="font-size: 175%; margin-bottom: 0;"> Quantum key distribution devices:</h1>
+					<h3 style="font-size: 100%">How to make them and how to break them</h3>
 					<hr />
 
 					<p>
-						<small>
-							<strong><a href="http://www.sckaiser.com">Sarah Kaiser</a></strong> &bull;
-							Institute for Quantum Computing<br>
-						<a href="http://www.sckaiser.com/research/talks/macquarie_seminar_2016/">www.sckaiser.com/research/talks/macquarie_seminar_2016</a>
-						</small>
+						<!-- <small> -->
+						<strong> PhD Thesis Defense</strong><br>
+						<a href="http://www.sckaiser.com">Sarah Kaiser</a> <br>
+						<a href="https://uwaterloo.ca/institute-for-quantum-computing/">Institute for Quantum Computing</a><br>
+<!-- 						<a href="http://www.sckaiser.com/research/talks/thesis_defense/">www.sckaiser.com/research/talks/thesis_defense</a> -->
+						<!-- </small> -->
 					</p>
 
 					<aside class="notes">
         				How is breaking practical 
     				</aside>
 				</section>
-
+<!--==================================================================================-->
 				<section>
-					<h2>Long story short:</h2>
-					<ol>
-						<li>What is Quantum key distribution (QKD)?</li>
-						<li>Current challenges for QKD</li>
-						<li>QKD in space</li>
-						<li>Hacking QKD hardware</li>
-						<li>What is next for QKD?</li>
-					</ol>
+					<large>Information security is an integral part of modern society.</large>
+					<p class="fragment">It already horribly compromised.</p>
 				</section>
-
+<!--==================================================================================-->
+				<section >
+					<h3>Where does quantum technology fit in?</h3> 
+					<p class="fragment"> Shor's algorithm </p>
+					<p class="fragment"> Post-quantum cryptography </p> 
+					<p class="fragment" style="color: #fb3550;"> <strong> Quantum key distribution</strong> </p>
+					
+				</section>
+<!--==================================================================================-->
 				<section data-markdown>
 					<script type="text/template">
 						## Quantum Key Distribution (QKD) ##
 				
 						- Objective: share a secret key between Alice and Bob
-						- Reviews: [doi:10/bjxpf6](http://doi.org/bjxpf6) and [doi:10/dshjwp](http://doi.org/dshjwp)
 
 						<img src="figures/qkd-concept.png" alt="diagram for qkd concept" style="width: 80%;" />
 
@@ -103,18 +117,18 @@
 						Key EXPANSION protocol, relate to DH 
 					</script>	
 				</section>
-
+<!--==================================================================================-->
 				<section  data-markdown>
 					<script type="text/template">
 						### Example QKD protocol: BB84 ###
 						#### Quantum phase ####
 						<div class="two-col-container">
-							<div class="left-col" style="width: 70%">
+							<div class="left-col" style="width: 60%">
 								![http://swissquantum.idquantique.com/](http://swissquantum.idquantique.com/IMG/jpg/bb84.jpg "BB84 diagram")
 						
 								[doi:10/3d6](http://doi.org/3d6)
 							</div>
-							<div class="right-col" style="width: 30%">
+							<div class="right-col" style="width: 40%">
 								<ol>
 									<li>Alice randomly chooses basis and bit</li>
 									<li>Alice prepares state</li>
@@ -126,18 +140,18 @@
 						</div>
 					</script>
 				</section>
-
+<!--==================================================================================-->
 				<section  data-markdown>
 					<script type="text/template">
 						### Example QKD protocol: BB84 ###
 						#### Classical phase ####
 						<div class="two-col-container">
-							<div class="left-col" style="width: 70%">
+							<div class="left-col" style="width: 60%">
 								![http://swissquantum.idquantique.com/](http://swissquantum.idquantique.com/IMG/jpg/bb84.jpg "BB84 diagram")
 						
 								[doi:10/3d6](http://doi.org/3d6)
 							</div>
-							<div class="right-col" style="width: 30%">
+							<div class="right-col" style="width: 40%">
 								<ol>
 									<li>Share basis choices</li>
 									<li>Error correction</li>
@@ -149,7 +163,7 @@
 						</div>
 					</script>
 				</section>
-
+<!--==================================================================================-->
 				<section data-markdown>
 					<script type="text/template">
 						### QKD performance ###
@@ -162,7 +176,7 @@
 						Explain how bad QBER breaks security/threshold works
 					</script>	
 				</section>
-
+<!--==================================================================================-->
 				<section >	
 					<h3>Commercial QKD devices</h3>
 					<div class="two-col-container">
@@ -186,7 +200,7 @@
 					<img src="figures/idqfront.jpg" alt="id Quantique Clavis 2" style="width: 100%;" />
 				
 				</section>
-
+<!--==================================================================================-->
 <!--				<section  data-markdown data-background="http://ww1.prweb.com/prfiles/2010/05/18/2917774/hybridquantum.jpg" alt="id Quantique Clavis 2" data-background-size="500px">
 					<script type="text/template">
 						### Commercial QKD devices ###
@@ -200,7 +214,7 @@
 						</p>
 					</script>
 				</section>-->
-
+<!--==================================================================================-->
 				<section  data-markdown>
 					<script type="text/template">
 						## Challenges for practical QKD ##
@@ -211,7 +225,7 @@
 						   - *Security proofs with side-channels* [doi:10/dshjwp](http://doi.org/dshjwp)
 					</script>
 				</section>
-
+<!--==================================================================================-->
 				<section  data-markdown>
 					<script type="text/template">
 						### Solutions (?) for practical QKD ###
@@ -224,7 +238,7 @@
 						How can standards inter-operate with security?
 					</script>
 				</section>
-
+<!--==================================================================================-->
 				<section  data-markdown>
 					<script type="text/template">
 						### Space QKD losses ###
@@ -235,7 +249,7 @@
 						</a>
 					</script>
 				</section>
-
+<!--==================================================================================-->
 				<section  data-markdown>
 					<script type="text/template">
 						## Uplink QKD system ##
@@ -252,7 +266,7 @@
 						Dark count rates->QBER
 					</script>
 				</section>
-
+<!--==================================================================================-->
 				<section  data-markdown>
 					<script type="text/template">
 						### QKD receiver satellite ###
@@ -260,14 +274,14 @@
 						
 					</script>
 				</section>
-
+<!--==================================================================================-->
 				<section  data-markdown>
 					<script type="text/template">
 						### QKD receiver lab testing ###
 						<img src="figures/qkdr-hardware.png" alt="lab hardware demo" style="width: 70%">
 					</script>
 				</section>
-
+<!--==================================================================================-->
 				<section  data-markdown >
 					<script type="text/template">
 						### Lab testing results ###
@@ -280,7 +294,7 @@
 						| Finite size secure key length   | 16.3 kbits = <br>65 AES 256 keys  |
 					</script>
 				</section>
-
+<!--==================================================================================-->
 				<section  data-markdown>
 					<script type="text/template">
 						### Airborne receiver hardware ###
@@ -292,7 +306,7 @@
 
 					</script>
 				</section>
-
+<!--==================================================================================-->
 				<section  data-markdown>
 					<script type="text/template">
 						### Airborne receiver hardware ###
@@ -308,11 +322,11 @@
 
 					</script>
 				</section>
-				
+<!--==================================================================================-->				
 				<section data-background="http://cdn.gifbay.com/2013/02/how_keys_work-34063.gif">
 						<h2>Hacking QKD Hardware</h2>
 				</section>
-
+<!--==================================================================================-->
 				<section  data-markdown data-background="figures/hotel.png" data-background-size=110%>
 					<script type="text/template">
 						### Functionality `$\neq$` Security ###
@@ -324,7 +338,7 @@
 						
 					</script>
 				</section>
-
+<!--==================================================================================-->
 				<section  data-markdown data-background="figures/original-bb84-darker.png" data-background-size=110%>
 					<script type="text/template">
 						### QKD hardware security ###
@@ -341,7 +355,7 @@
 						LASER DAMAGE IDEA!!!!!!!!!!!
 					</script>
 				</section>
-
+<!--==================================================================================-->
 				<section data-markdown data-background-video="figures/fiber-fuse-crop-nosound.mp4" >
 					<script type="text/template">
 						<h2 class="fragment" data-fragment-index="1">Fiber fusing</h2>
@@ -349,7 +363,7 @@
 
 					</script>
 				</section>
-
+<!--==================================================================================-->
 				<section  data-markdown data-background="#666666">
 					<script type="text/template">
 						### Laser damage attack ###
@@ -357,8 +371,7 @@
 						
 					</script>
 				</section>
-
-
+<!--==================================================================================-->
 				<section  data-markdown>
 					<script type="text/template">
 						### Device damage ###
@@ -373,8 +386,7 @@
 						<!-- - no patch that works -->
 					</script>
 				</section>
-
-
+<!--==================================================================================-->
 				<section  data-markdown>
 					<script type="text/template">
 						### Attack results ###
@@ -383,7 +395,7 @@
 						<!-- - no patch that works -->
 					</script>
 				</section>
-
+<!--==================================================================================-->
 				<section  data-markdown>
 					<script type="text/template">
 					## What next? ##
@@ -394,7 +406,7 @@
 					- ~~Take over the world~~
 					</script>
 				</section>
-
+<!--==================================================================================-->
 				<section data-markdown >
 					<script type="text/template">
 						# Thank you #
