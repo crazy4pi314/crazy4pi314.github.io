@@ -289,6 +289,48 @@
 					<h3>robust devices up to the task</h3>
 				</section>
 <!--==================================================================================-->
+				<section>	
+					<h2>Single photon detector unit</h2>
+					<div class="two-col-container">
+						<div class="left-col" style="width: 43%">
+							<img src="figures/comp-detag-detectorpkg.jpg" alt="detector unit">
+
+						</div>
+						<div class="right-col" style="width: 57%">
+							<img data-src="figures/comp-detag-det-pcb.png" alt="Geometry model">
+						</div>
+					</div>
+				</section>
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+						### Average Detector Performance ###
+						|                                 |               |
+						| -------------                   |---------------|
+						| Dark counts                     | 24 cps        |
+						| Timing jitter                   | 529 ps        |
+						| Detector efficiency             | 50.4%         |
+						| Dead time                       | 18.9 &micro;s / 52.9 kHz |
+						|                                 |               |
+						Operating temp: -20 C, 27V over breakdown,25 mV threshold  
+						Note:
+						1-1/e=63.2% full
+					</script>
+				</section>
+<!--==================================================================================-->
+				<section>	
+					<h2>Integrated optical assembly (IOA)</h2>
+					<div class="two-col-container">
+						<div class="left-col" style="width: 53%">
+							<img src="figures/comp-ioa-schema.png" alt="IOA schematic">
+
+						</div>
+						<div class="right-col" style="width: 47%">
+							<img data-src="figures/comp-ioa-photo.jpg" alt="IOA photo">
+						</div>
+					</div>
+				</section>
+<!--==================================================================================-->
 				<section  data-markdown>
 					<script type="text/template">
 						### QKD receiver lab testing ###
@@ -302,29 +344,62 @@
 						<!-- <img data-src="figures/recunit.jpg" alt="Reciever hardware"> -->
 						|                                 |                               |
 						| -------------                   |---------------                |
-						| Total loss <br> (channel + receiver) | 43.7dB <br>(38.7 dB + 5 dB)       |
+						| Total loss <br> (channel + receiver) | 43.7dB <br>(38.7 dB + 5 dB)|
 						| Duration                        | 100 s                         |
 						| Average QBER                    | 3.14%                         |
-						| Finite size secure key length   | 16.3 kbits = <br>65 AES 256 keys  |
+						| Finite size secure key length   | 16.3 kbits = <br>65 AES 256 keys|
+						|                   |             |
 					</script>
+				</section>	
+<!--==================================================================================-->
+				<section>	
+					<h2>Acquisition pointing and tracking (APT)</h2>
+					<div class="two-col-container">
+						<div class="left-col" style="width: 50%">
+							<img src="figures/comp-apt-cad.png" alt="detector unit">
+
+						</div>
+						<div class="right-col" style="width: 50%">
+							<img data-src="figures/comp-apt-integration-photo.jpg" alt="Geometry model">
+						</div>
+					</div>
 				</section>
 <!--==================================================================================-->
-				<section  data-markdown>
+				<section>
+					<!-- <h2>Algorithms </h2> -->
+						<div class="two-col-container">
+							<div class="left-col" style="width: 50%">
+							Total Counts
+								<img data-src="figures/comp-apt-phase2-counts.png" alt="counts">
+
+							</div>
+							<div class="right-col" style="width: 50%">
+							QBER
+								<img data-src="figures/comp-apt-phase2-qber.png" alt="QBER">
+							</div>
+						</div>
+						<div align="center">
+						 Secret key<br>
+						<img style="width: 50%" src="figures/comp-apt-phase2-seckey.png" alt="secret key"></div>
+				</section>
+
+<!--==================================================================================-->
+<!-- 				<section  data-markdown>
 					<script type="text/template">
 						### Airborne receiver hardware ###
 						
-						- Rugged electronics and mounting for more extreme conditions (-40° C and vibration)
-						- Fine pointing unit to help reduce loss in receiver optics
+s
 
 						<img data-src="figures/recunit.jpg" alt="Space optical losses" style="width: 60%" >
 
 					</script>
-				</section>
+				</section> -->
 <!--==================================================================================-->
 				<section  data-markdown>
 					<script type="text/template">
 						### Airborne receiver hardware ###
-						
+						- Rugged electronics and mounting for more extreme conditions (-40° C and vibration)
+						- Fine pointing unit to help reduce loss in receiver optic
 						<div class="two-col-container">
 							<div class="left-col">
 								<img data-src="figures/plane-electronics.jpg" alt="Reciever control electronics" >
@@ -339,21 +414,9 @@
 <!--==================================================================================-->
 				<section data-background="http://cdn.gifbay.com/2013/02/how_keys_work-34063.gif">
 					<h1>Security:</h1>
-					<h3>ensuring device model integrity to attacks</h3>
+					<h3>Functionality $\neq$ security</h3>
 				</section>
 
-<!--==================================================================================-->
-				<section  data-markdown data-background="figures/hotel.png" data-background-size=110%>
-					<script type="text/template">
-						### Functionality `$\neq$` Security ###
-
-						- Classical:
-						  - Bad USB [srlabs.de](https://srlabs.de/badusb/)
-						  - Hotel debug port [forbes.com](http://www.forbes.com/sites/andygreenberg/2012/11/26/security-flaw-in-common-keycard-locks-exploited-in-string-of-hotel-room-break-ins/#3bb9bad75e64)
-						  - Stack-On gun safes [forbes.com](http://www.forbes.com/sites/marcwebertobias/2012/07/27/unsafe-gun-safes-can-be-opened-by-a-three-year-old/#5c8ab957303b)
-						
-					</script>
-				</section>
 <!--==================================================================================-->
 				<section  data-markdown data-background="figures/original-bb84-darker.png" data-background-size=110%>
 					<script type="text/template">
@@ -363,13 +426,25 @@
 						  - Timing [doi:10/c97d7r](http://doi.org/c97d7r)
 						  - Detector control [doi:10/d6cgxf](http://doi.org/d6cgxf)
 						  - Multi-wavelength [doi:10/fnqkhz](http://doi.org/fnqkhz)
-						- Both
+						- Classical and Quantum
 						  - Trojan horse
 						  - Man in the middle
 						  - Site vulnerability
 						Note:
 						LASER DAMAGE IDEA!!!!!!!!!!!
 					</script>
+				</section>
+<!--==================================================================================-->
+				<section  data-markdown>
+					<script type="text/template">
+						### Fiber fuse ###
+						<img data-src="figures/dmg-fiberfuse.png" alt="fiber fuse sample 1">
+						<img data-src="figures/dmg-fiberfuse-fusion-gap.png" alt="fiber fuse sample 2">
+					</script>
+				</section>
+<!--==================================================================================-->
+				<section>
+					How to sneak a bull into a china shop?
 				</section>
 
 <!--==================================================================================-->
@@ -381,9 +456,18 @@
 					</script>
 				</section>
 <!--==================================================================================-->
+				<section  data-markdown data-background="#666666">
+					<script type="text/template">
+						### Component damage ###
+						<img data-src="figures/dmg-pin-setup.png" alt="Setup diagram for comp damage">
+						
+					</script>
+				</section>
+
+<!--==================================================================================-->
 				<section  data-markdown>
 					<script type="text/template">
-						### Device damage ###
+						### PIN diode damage ###
 						<div class="two-col-container">
 							<div class="left-col">
 								<img data-src="figures/unburnt.jpg" alt="Undamaged detector sample" >
@@ -395,24 +479,25 @@
 						<!-- - no patch that works -->
 					</script>
 				</section>
-<!--==================================================================================-->
-				<section  data-markdown>
-					<script type="text/template">
-						### Attack results ###
 
-						<img data-src="figures/attackplot.png" alt="Laser damage attack results plot" style="width: 80%">
-						<!-- - no patch that works -->
-					</script>
+<!--==================================================================================-->
+				<section data-background="figures/attackplot.png" data-background-size=60%>
+					
+						<!-- ### Attack results ### -->
+
+					<!-- 	<img data-src="figures/attackplot.png" alt="Laser damage attack results plot" style="width: 80%"> -->
+						<p class="fragment"> No demonstrated successful countermeasures</p>
+					
 				</section>
+
 <!--==================================================================================-->
 				<section  data-markdown>
 					<script type="text/template">
 					## What next? ##
 
-					- Launch a satellite to demonstrate QKD to low earth orbit!
+					- Finish airborne testing of payload
 					- Standards and hardware certification for QKD
 					- InfoSec and OpSec community engagement
-					- ~~Take over the world~~
 					</script>
 				</section>
 <!--==================================================================================-->
@@ -558,5 +643,17 @@
 						<h2 class="fragment" data-fragment-index="1">Fiber fusing</h2>
 						<img class="fragment" data-fragment-index="1"src="figures/fiberfuse.jpg" alt="Laser damage fiber close-up" style="height: 10% width: 100%">
 
+					</script>
+				</section> -->
+	<!--==================================================================================-->
+<!-- 				<section  data-markdown data-background="figures/hotel.png" data-background-size=110%>
+					<script type="text/template">
+						### Functionality `$\neq$` Security ###
+
+						- Classical:
+						  - Bad USB [srlabs.de](https://srlabs.de/badusb/)
+						  - Hotel debug port [forbes.com](http://www.forbes.com/sites/andygreenberg/2012/11/26/security-flaw-in-common-keycard-locks-exploited-in-string-of-hotel-room-break-ins/#3bb9bad75e64)
+						  - Stack-On gun safes [forbes.com](http://www.forbes.com/sites/marcwebertobias/2012/07/27/unsafe-gun-safes-can-be-opened-by-a-three-year-old/#5c8ab957303b)
+						
 					</script>
 				</section> -->
