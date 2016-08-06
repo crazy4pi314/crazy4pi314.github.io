@@ -151,6 +151,8 @@
 						<a href="http://doi.org/bdnw">					
 								doi:10/3d6
 						</a>
+						Note:
+						Mention bob is polarization analyzer
 					</script>
 				</section>
 
@@ -159,7 +161,7 @@
 					<script type="text/template">
 						## QKD performance ##
 				
-						- Security of transmission is tested with the quantum bit error rate: `\[\text{QBER} = \frac{n_{\text{wrong}}}{n_{\text{wrong}}+n_{\text{right}}}\]`	
+						- Security of transmission is tested with the quantum bit error rate (sifted key): `\[\text{QBER} = \frac{n_{\text{wrong}}}{n_{\text{wrong}}+n_{\text{right}}}\]`	
 						- Required key generation threshold `$\text{QBER}\lesssim  10\%$`
 						
 						Note:
@@ -173,7 +175,7 @@
 				<section>
 						<h2> Why don't we all have quantum keys? </h2>
 						<ol>
-							<li><p class="fragment"> Distance/Loss </p></li>
+							<li><p class="fragment"> Distance/Loss: O(300) km</p></li>
 							<li><p class="fragment"> Hardware developments </p></li> 
 							<li><p class="fragment"> Realistic device security models </p></li>
 						<ol>
@@ -220,12 +222,15 @@
 
 <!--==================================================================================-->
 				<section>
-						<h2> How to make them and how to break them </h2>
-						<ol>
-							<li><p class="fragment">Distance &rarr;<br> <span style="color: #fb3550;">Risk assessment for airborne QKD </span></p></li>
-							<li><p class="fragment">Hardware  &rarr;<br> <span style="color: #fb3550;">Robust quantum optical components </span></p></li>						   
-							<li><p class="fragment">Security models &rarr;<br> <span style="color: #fb3550;">Novel laser damage attack on commercial system</span></p></li>
-						<ol>
+					<h2> How to make them and how to break them </h2>
+					<ol>
+						<li><p class="fragment">Distance &rarr;<br> <span style="color: #fb3550;">Modeling for airborne QKD </span></p></li>
+						<li><p class="fragment">Hardware  &rarr;<br> <span style="color: #fb3550;">Robust quantum optical components </span></p></li>						   
+						<li><p class="fragment">Security models &rarr;<br> <span style="color: #fb3550;">Novel laser damage attack on commercial system</span></p></li>
+					<ol>
+					<aside class="notes">
+        				what is physics in each, I DID COOL SHIT
+    				</aside>
 				</section>
 <!--==================================================================================-->
 				<section>
@@ -236,9 +241,12 @@
 				<section>
 					<h2>Risk assessment</h2>
 					<div style="text-align: left;">
-						<h5 style="color: #fb3550; display: inline;">GOAL:</h5> establish a QKD link with parameters representative of a modeled satellite pass.<br style="line-height: 200%;">
-						<h5 style="color: #fb3550; display: inline;">CONSTRAINTS:</h5> minimize probability of mission failure. <br style="line-height: 200%;">
-						<h5 style="color: #fb3550; display: inline;">METRICS:</h5> <i>Link time</i>, angular velocity, and total number of collected photons.  
+						<h5 style="color: #fb3550; display: inline;">GOAL:</h5> establish a QKD link with parameters representative of a modeled, night satellite pass.<br style="line-height: 200%;">
+						<!-- <h5 style="color: #fb3550; display: inline;">CONSTRAINTS:</h5> minimize probability of mission failure. <br style="line-height: 200%;"> -->
+						<h5 style="color: #fb3550; display: inline;">METRICS:</h5> 
+						<br><i>Link time</i> [s] &rarr; O(250)
+						<br> angular velocity [&#730;/sec] &rarr; {0.7,1.2}
+						<br> Raw key rate &rarr; O(kHz)
 					</div>
 				</section>
 
@@ -283,7 +291,7 @@
 <!--==================================================================================-->
 				<section >	
 					<h2>Transmitter placement results</h2>
-					<img style="width: 130%" src="figures/results-table.png" alt="Results">
+					<img class="stretch" src="figures/results-table.png" alt="Results">
 				</section>
 <!--==================================================================================-->
 				<section >	
@@ -314,6 +322,11 @@
 					<h3>robust devices up to the task</h3>
 				</section>
 <!--==================================================================================-->
+				<section>
+						<h3>One approach: <br> QKD receiver satellite </h3>
+						<img data-src="figures/reciever_schematic.png" alt="Reciever payload schematic">
+				</section>
+<!--==================================================================================-->		
 				<section>	
 					<h2>Single photon detector unit</h2>
 					<div class="two-col-container">
@@ -340,6 +353,8 @@
 						Operating temp: -20 C, 27V over breakdown,25 mV threshold  
 						Note:
 						1-1/e=63.2% full
+						Note:
+						what are important for sat 
 					</script>
 				</section>
 <!--==================================================================================-->
@@ -354,6 +369,9 @@
 							<img data-src="figures/comp-ioa-photo.jpg" alt="IOA photo">
 						</div>
 					</div>
+					<aside class="notes">
+        				This is "Bob". 
+    				</aside>
 				</section>
 <!--==================================================================================-->
 				<section  data-markdown>
@@ -374,6 +392,8 @@
 						| Average QBER                    | 3.14%                         |
 						| Finite size secure key length   | 16.3 kbits = <br>65 AES 256 keys|
 						|                   |             |
+						Note:
+						what is AES? symmetric key cypher
 					</script>
 				</section>	
 <!--==================================================================================-->
@@ -388,11 +408,15 @@
 							<img data-src="figures/comp-apt-integration-photo.jpg" alt="Geometry model">
 						</div>
 					</div>
+					<aside class="notes">
+        				lowest order adaptive optics, beam steering. extensive testing and characterization. 
+    				</aside>
 				</section>
 <!--==================================================================================-->
 				<section>
-					<!-- <h2>Algorithms </h2> -->
-						<div class="two-col-container">
+								<h2>QBER</h2>
+								<img data-src="figures/comp-apt-phase2-qber.png" alt="QBER">
+<!-- 						<div class="two-col-container">
 							<div class="left-col" style="width: 50%">
 							Total Counts
 								<img data-src="figures/comp-apt-phase2-counts.png" alt="counts">
@@ -405,7 +429,7 @@
 						</div>
 						<div align="center">
 						 Secret key<br>
-						<img style="width: 50%" src="figures/comp-apt-phase2-seckey.png" alt="secret key"></div>
+						<img style="width: 50%" src="figures/comp-apt-phase2-seckey.png" alt="secret key"></div>  -->
 				</section>
 
 <!--==================================================================================-->
@@ -477,7 +501,8 @@ s
 					<script type="text/template">
 						### Laser damage attack ###
 						<img data-src="figures/ldsetup.png" alt="Setup diagram for laser damage attack">
-						
+					Note:
+					say EDFA, plug and play, phase encoding.
 					</script>
 				</section>
 <!--==================================================================================-->
