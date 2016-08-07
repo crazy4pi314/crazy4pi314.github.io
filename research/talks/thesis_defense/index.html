@@ -110,10 +110,10 @@
 <!--==================================================================================-->
 				<section>
 					<large>Information security is an integral part of modern society.</large>
-					<p class="fragment">It <i> already</i> horribly compromised.</p>
+					<p class="fragment">Classical infrastructure is<i> already</i> horribly compromised.</p>
 				</section>
 <!--==================================================================================-->
-				<section  data-markdown data-background="figures/hotel.png" data-background-size=110%>
+				<section >
 					<script type="text/template">
 						### Functionality `$\neq$` Security ###
 
@@ -152,7 +152,8 @@
 								doi:10/3d6
 						</a>
 						Note:
-						Mention bob is polarization analyzer
+						Mention bob is polarization analyzer.
+						SIFTING,ERROR CORRECTION, PRIVACY AMPLIFICATION
 					</script>
 				</section>
 
@@ -173,21 +174,28 @@
 
 <!--==================================================================================-->
 				<section>
-						<h2> Why don't we all have quantum keys? </h2>
-						<ol>
-							<li><p class="fragment"> Distance/Loss: O(300) km</p></li>
-							<li><p class="fragment"> Hardware developments </p></li> 
-							<li><p class="fragment"> Realistic device security models </p></li>
-						<ol>
+					<h2> Why don't we all have quantum keys? </h2>
+					<ol>
+						<li><p class="fragment"> Distance/Loss: O(300) km</p></li>
+						<li><p class="fragment"> Hardware developments </p></li> 
+						<li><p class="fragment"> Realistic device security models </p></li>
+					</ol>
+					<aside class="notes">
+        				Dont say rep rate
+    				</aside>
 				</section>
 <!--==================================================================================-->
-				<section>
-						<h3>One approach: <br> QKD receiver satellite </h3>
-						<img data-src="figures/reciever_schematic.png" alt="Reciever payload schematic">
+				<section data-background-image="figures/sat-concept.png"
+				         data-background-position="bottom"
+				         data-background-size="80%">
+						<h3 style="position: relative; top: -2em;">
+							One approach: <br> QKD receiver satellite
+						</h3>
+						<!-- <img data-src="figures/sat-concept.png" alt="Reciever payload schematic"> -->
 				</section>
 
 <!--==================================================================================-->
-				<section  data-markdown>
+<!-- 				<section  data-markdown>
 					<script type="text/template">
 						### Free-space QKD losses ###
 						
@@ -197,9 +205,9 @@
 						[doi:10/bdnw](http://doi.org/bdnw)
 					</script>
 				</section>
-
+ -->
 <!--==================================================================================-->
-<!-- 				<section  data-markdown>
+				<section  data-markdown>
 					<script type="text/template">
 						## Uplink QKD system ##
 
@@ -214,7 +222,7 @@
 						Note:
 						Dark count rates->QBER
 					</script>
-				</section> -->
+				</section>
 <!--==================================================================================-->
 				<section>
 					How do we make this happen?
@@ -672,5 +680,17 @@ s
 						<h2 class="fragment" data-fragment-index="1">Fiber fusing</h2>
 						<img class="fragment" data-fragment-index="1"src="figures/fiberfuse.jpg" alt="Laser damage fiber close-up" style="height: 10% width: 100%">
 
+					</script>
+				</section> -->
+<!-- 
+				<section  data-markdown data-background="figures/hotel.png" data-background-size=110%>
+					<script type="text/template">
+						### Functionality `$\neq$` Security ###
+
+						- Classical:
+						  - Bad USB [srlabs.de](https://srlabs.de/badusb/)
+						  - Hotel debug port [forbes.com](http://www.forbes.com/sites/andygreenberg/2012/11/26/security-flaw-in-common-keycard-locks-exploited-in-string-of-hotel-room-break-ins/#3bb9bad75e64)
+						  - Stack-On gun safes [forbes.com](http://www.forbes.com/sites/marcwebertobias/2012/07/27/unsafe-gun-safes-can-be-opened-by-a-three-year-old/#5c8ab957303b)
+						
 					</script>
 				</section> -->
