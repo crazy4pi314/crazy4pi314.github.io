@@ -46,6 +46,46 @@
     			line-height: 0px;
     			font-size: 0px;
 			}*/
+
+			.risk thead td {
+				font-family: Lato, "sans-serif";
+			}
+
+			.risk thead td,
+			.risk tbody td /*.risk-fail, .risk .risk-high, .risk .moderate, .risk .low */{
+				text-align: center !important;
+				width: 6em;	
+
+			}
+
+			.risk tfoot tr {
+				border-top: #ccc 1px solid;
+			}
+
+			.risk tfoot td {
+				margin-top: 0.3em;
+				font-size: 75%;
+			}
+
+			.risk .fail {
+				text-align: center !important;
+				color: #CC79A7;
+			}
+
+			.risk .high {
+				text-align: center !important;
+				color: #D55E00;
+			}
+
+			.risk .mod {
+				text-align: center !important;
+				color: #F0E442;
+			}
+
+			.risk .low {
+				text-align: center !important;
+				color: #0072B2;
+			}
 		</style>
 
 		<!-- Printing and PDF exports -->
@@ -113,21 +153,40 @@
 					<p class="fragment">Classical infrastructure is<i> already</i> horribly compromised.</p>
 				</section>
 <!--==================================================================================-->
-				<section >
-					<script type="text/template">
-						### Functionality `$\neq$` Security ###
-
-						- Classical:
-						  - Bad USB [srlabs.de](https://srlabs.de/badusb/)
-						  - Hotel debug port [forbes.com](http://www.forbes.com/sites/andygreenberg/2012/11/26/security-flaw-in-common-keycard-locks-exploited-in-string-of-hotel-room-break-ins/#3bb9bad75e64)
-						  - Stack-On gun safes [forbes.com](http://www.forbes.com/sites/marcwebertobias/2012/07/27/unsafe-gun-safes-can-be-opened-by-a-three-year-old/#5c8ab957303b)
+				<section>
+					<h3> The key to cryptography </h3>
+					<ul>
+						<li> Key exchange is a task required for many cryptographic protocols</li>
+						<li> Common crypto protocols using keys include:
+						<ul>
+            				<li>Advanced encryption standard (AES)</li>
+            				<li>Rivest-Shamir-Adleman (RSA) </li>
+            				<li>Diffie Hellman (DH)</li>
+        				</ul>
+					</ul>
+					<aside class="notes">
 						
-					</script>
+					</aside>
 				</section>
 <!--==================================================================================-->
+				<section>
+					<div data-markdown>
+						Breaks of classical key exchange will only get worse.
+						(Shor they will.)
+					</div>
+
+					<div class="fragment" data-markdown>
+						## Possibly Secure Key Exchange ##
+
+						- pq (yuck)
+						- qkd (yay) 
+					</div>
+				</section>
 				<section >
 					<h2>Where does quantum technology fit in?</h2> 
-					<span class="fragment"> Shor's algorithm,</span><span class="fragment"> Post-quantum cryptography,</span><p class="fragment" style="color: #fb3550;"> Quantum key distribution. </p>
+					<span class="fragment"> Shor's algorithm,</span>
+					<span class="fragment"> Post-quantum cryptography,</span>
+					<p class="fragment" style="color: #fb3550;"> Quantum key distribution. </p>
 				</section>
 <!--==================================================================================-->
 				<section data-markdown>
@@ -176,7 +235,7 @@
 				<section>
 					<h2> Why don't we all have quantum keys? </h2>
 					<ol>
-						<li><p class="fragment"> Distance/Loss: O(300) km</p></li>
+						<li><p class="fragment"> Distance/Loss: $\approx 300$ km</p></li>
 						<li><p class="fragment"> Hardware developments </p></li> 
 						<li><p class="fragment"> Realistic device security models </p></li>
 					</ol>
@@ -224,9 +283,9 @@
 					</script>
 				</section>
 <!--==================================================================================-->
-				<section>
+<!-- 				<section>
 					How do we make this happen?
-				</section>
+				</section> -->
 
 <!--==================================================================================-->
 				<section>
@@ -252,9 +311,9 @@
 						<h5 style="color: #fb3550; display: inline;">GOAL:</h5> establish a QKD link with parameters representative of a modeled, night satellite pass.<br style="line-height: 200%;">
 						<!-- <h5 style="color: #fb3550; display: inline;">CONSTRAINTS:</h5> minimize probability of mission failure. <br style="line-height: 200%;"> -->
 						<h5 style="color: #fb3550; display: inline;">METRICS:</h5> 
-						<br><i>Link time</i> [s] &rarr; O(250)
+						<br><i>Link time</i> [s] &rarr; $\approx 250$
 						<br> angular velocity [&#730;/sec] &rarr; {0.7,1.2}
-						<br> Raw key rate &rarr; O(kHz)
+						<br> Raw key rate &rarr; $\approx kHz$
 					</div>
 				</section>
 
@@ -289,7 +348,7 @@
 
 							</div>
 							<div class="right-col" style="width: 45%">
-							Visual prediction
+							Visual assessment
 								<img data-src="figures/risk-plot-model.png" alt="Modeled">
 							</div>
 						</div>
@@ -297,10 +356,95 @@
 						<img style="width: 45%" src="figures/risk-plot-altitude.png" alt="Altitude">
 				</section>
 <!--==================================================================================-->
-				<section >	
+				<section>
+					<table class="risk" style='border-collapse: collapse;'>
+						<thead>
+							<tr>
+								<td>Flight #</td>
+								<td>Timmins</td>
+								<td>Visual</td>
+								<td>Altitude</td>
+							</tr>
+						</thead>
+
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td class="fail">❌</td>
+								<td class="fail">❌</td>
+								<td class="fail">❌</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td class="high">❗</td>
+								<td class="mod">➖</td>
+								<td class="mod">➖</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td class="high">❗</td>
+								<td class="mod">➖</td>
+								<td class="low">✔</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td class="fail">❌</td>
+								<td class="mod">➖</td>
+								<td class="low">✔</td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td class="fail">❌</td>
+								<td class="mod">➖</td>
+								<td class="low">✔</td>
+							</tr>
+							<tr>
+								<td>6</td>
+								<td class="fail">❌</td>
+								<td class="fail">❌</td>
+								<td class="fail">❌</td>
+							</tr>
+							<tr>
+								<td>7</td>
+								<td class="fail">❌</td>
+								<td class="fail">❌</td>
+								<td class="low">✔</td>
+							</tr>
+						</tbody>
+
+						<tfoot>
+							<tr>
+								<td class="fail">❌</td>
+								<td colspan="3">
+									Fail (< 5 min)
+								</td>
+							</tr>
+							<tr>
+								<td class="high">❗</td>
+								<td colspan="3">
+									High (< 30 min)
+								</td>
+							</tr>
+							<tr>
+								<td class="mod">➖</td>
+								<td colspan="3">
+									Moderate (< 60 min)
+								</td>
+							</tr>
+							<tr>
+								<td class="low">✔</td>
+								<td colspan="3">
+									Low (> 60 min)
+								</td>
+							</tr>
+						</tfoot>
+					</table>
+				</section>
+
+<!-- 				<section >	
 					<h2>Transmitter placement results</h2>
 					<img class="stretch" src="figures/results-table.png" alt="Results">
-				</section>
+				</section> -->
 <!--==================================================================================-->
 				<section >	
 					<h2>Plane constraints</h2>
@@ -331,7 +475,7 @@
 				</section>
 <!--==================================================================================-->
 				<section>
-						<h3>One approach: <br> QKD receiver satellite </h3>
+						<h3> QKD receiver satellite </h3>
 						<img data-src="figures/reciever_schematic.png" alt="Reciever payload schematic">
 				</section>
 <!--==================================================================================-->		
@@ -571,7 +715,14 @@ s
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
-
+		<script type="text/x-mathjax-config">
+		  MathJax.Hub.Config({
+		    'HTML-CSS': {
+				preferredFont: null,
+				webFont: 'Gyre-Pagella'
+			}
+		  });
+		</script>
 		<script>
 
 			// Full list of configuration options available at:
