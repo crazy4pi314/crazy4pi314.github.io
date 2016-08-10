@@ -51,6 +51,10 @@
 				font-family: Lato, "sans-serif";
 			}
 
+			.risk td {
+    			border-bottom-color: #ccc !important;
+			}
+
 			.risk thead td,
 			.risk tbody td /*.risk-fail, .risk .risk-high, .risk .moderate, .risk .low */{
 				text-align: center !important;
@@ -58,11 +62,12 @@
 
 			}
 
-			.risk tfoot tr {
+			.risk tfoot tr:first-child {
 				border-top: #ccc 1px solid;
 			}
 
 			.risk tfoot td {
+				border-bottom-width: 0px;
 				margin-top: 0.3em;
 				font-size: 75%;
 			}
@@ -153,7 +158,7 @@
 					<p class="fragment">Classical infrastructure is<i> already</i> horribly compromised.</p>
 				</section>
 <!--==================================================================================-->
-				<section>
+<!-- 				<section>
 					<h3> The key to cryptography </h3>
 					<ul>
 						<li> Key exchange is a task required for many cryptographic protocols</li>
@@ -167,27 +172,27 @@
 					<aside class="notes">
 						
 					</aside>
-				</section>
+				</section> -->
 <!--==================================================================================-->
 				<section>
-					<div data-markdown>
-						Breaks of classical key exchange will only get worse.
-						(Shor they will.)
+					<div>
+						Attacks on classical key exchange will only get worse.
+						<p class="fragment" style="font-size: 75%;"> At least many people are Shor... <p>
 					</div>
 
-					<div class="fragment" data-markdown>
-						## Possibly Secure Key Exchange ##
+					<div class="fragment" >
+						<h2> Potentially Secure Key Exchange </h2>
 
-						- pq (yuck)
-						- qkd (yay) 
+						<p class="fragment"> Post-quantum cryptography </p>
+						<p class="fragment" style="color: #fb3550;"> Quantum key distribution</p>
 					</div>
 				</section>
-				<section >
+<!-- 				<section >
 					<h2>Where does quantum technology fit in?</h2> 
 					<span class="fragment"> Shor's algorithm,</span>
 					<span class="fragment"> Post-quantum cryptography,</span>
 					<p class="fragment" style="color: #fb3550;"> Quantum key distribution. </p>
-				</section>
+				</section> -->
 <!--==================================================================================-->
 				<section data-markdown>
 					<script type="text/template">
@@ -304,18 +309,6 @@
 					<h1>Distance:</h1>
 					<h3>Getting to space is costly</h3>
 				</section>
-<!--==================================================================================-->
-				<section>
-					<h2>Risk assessment</h2>
-					<div style="text-align: left;">
-						<h5 style="color: #fb3550; display: inline;">GOAL:</h5> establish a QKD link with parameters representative of a modeled, night satellite pass.<br style="line-height: 200%;">
-						<!-- <h5 style="color: #fb3550; display: inline;">CONSTRAINTS:</h5> minimize probability of mission failure. <br style="line-height: 200%;"> -->
-						<h5 style="color: #fb3550; display: inline;">METRICS:</h5> 
-						<br><i>Link time</i> [s] &rarr; $\approx 250$
-						<br> angular velocity [&#730;/sec] &rarr; {0.7,1.2}
-						<br> Raw key rate &rarr; $\approx kHz$
-					</div>
-				</section>
 
 <!--==================================================================================-->
 				<section>
@@ -330,6 +323,18 @@
 							</div>
 					</div>
 				</section>
+<!--==================================================================================-->
+				<section>
+					<h2>Model risk assessment</h2>
+					<div style="text-align: left;">
+						<h5 style="color: #fb3550; display: inline;">GOAL:</h5> establish a QKD link with parameters representative of a modeled, night satellite pass.<br style="line-height: 200%;">
+						<!-- <h5 style="color: #fb3550; display: inline;">CONSTRAINTS:</h5> minimize probability of mission failure. <br style="line-height: 200%;"> -->
+						<h5 style="color: #fb3550; display: inline;">METRICS:</h5> 
+						<br><i>Link time</i> [s] &rarr; $\approx 250$
+						<br> angular velocity [&#730;/s] &rarr; {0.7,1.2}
+						<br> Raw key rate [kHz] &rarr; $\approx 1$
+					</div>
+				</section>
 
 <!--==================================================================================-->
 				<section data-background="figures/risk-map-tracks.png" data-background-size="contain">
@@ -342,18 +347,18 @@
 				<section>
 					<!-- <h2>Algorithms </h2> -->
 						<div class="two-col-container">
-							<div class="left-col" style="width: 45%">
+							<div class="left-col" style="width: 50%">
 							Timmins
 								<img data-src="figures/risk-plot-timmins.png" alt="Timmins">
 
 							</div>
-							<div class="right-col" style="width: 45%">
+							<div class="right-col" style="width: 50%">
 							Visual assessment
 								<img data-src="figures/risk-plot-model.png" alt="Modeled">
 							</div>
 						</div>
 						Altitude threshold<br>
-						<img style="width: 45%" src="figures/risk-plot-altitude.png" alt="Altitude">
+						<img style="width: 50%" src="figures/risk-plot-altitude.png" alt="Altitude">
 				</section>
 <!--==================================================================================-->
 				<section>
@@ -422,19 +427,19 @@
 							<tr>
 								<td class="high">❗</td>
 								<td colspan="3">
-									High (< 30 min)
+									High risk (< 30 min)
 								</td>
 							</tr>
 							<tr>
 								<td class="mod">➖</td>
 								<td colspan="3">
-									Moderate (< 60 min)
+									Moderate risk (< 60 min)
 								</td>
 							</tr>
 							<tr>
 								<td class="low">✔</td>
 								<td colspan="3">
-									Low (> 60 min)
+									Low risk (> 60 min)
 								</td>
 							</tr>
 						</tfoot>
@@ -498,14 +503,14 @@
 						|                                 |               |
 						| -------------                   |---------------|
 						| Dark counts                     | 24 cps        |
-						| Timing jitter                   | 529 ps        |
 						| Detector efficiency             | 50.4%         |
+						| Timing jitter                   | 529 ps        |
 						| Dead time                       | 18.9 &micro;s / 52.9 kHz |
 						|                                 |               |
-						Operating temp: -20 C, 27V over breakdown,25 mV threshold  
+						-20 C, 27V over breakdown, 25 mV threshold  
+						
 						Note:
 						1-1/e=63.2% full
-						Note:
 						what are important for sat 
 					</script>
 				</section>
@@ -542,7 +547,7 @@
 						| Total loss <br> (channel + receiver) | 43.7dB <br>(38.7 dB + 5 dB)|
 						| Duration                        | 100 s                         |
 						| Average QBER                    | 3.14%                         |
-						| Finite size secure key length   | 16.3 kbits = <br>65 AES 256 keys|
+						| Finite size secure key length   | 16.3 kbits |
 						|                   |             |
 						Note:
 						what is AES? symmetric key cypher
@@ -567,7 +572,7 @@
 <!--==================================================================================-->
 				<section>
 								<h2>QBER</h2>
-								<img data-src="figures/comp-apt-phase2-qber.png" alt="QBER">
+								<img style="width: 80%" data-src="figures/comp-apt-phase2-qber.png" alt="QBER">
 <!-- 						<div class="two-col-container">
 							<div class="left-col" style="width: 50%">
 							Total Counts
@@ -619,22 +624,27 @@ s
 				</section>
 
 <!--==================================================================================-->
-				<section  data-markdown data-background="figures/original-bb84-darker.png" data-background-size=110%>
+				<section  data-markdown data-background="figures/original-bb84-darker.png" data-background-size=cover>
 					<script type="text/template">
 						### QKD hardware security ###
-
-						- Quantum:
-						  - Timing [doi:10/c97d7r](http://doi.org/c97d7r)
-						  - Detector control [doi:10/d6cgxf](http://doi.org/d6cgxf)
-						  - Multi-wavelength [doi:10/fnqkhz](http://doi.org/fnqkhz)
-						- Classical and Quantum
+						- Classical and Quantum attacks:
 						  - Trojan horse
 						  - Man in the middle
 						  - Site vulnerability
+						- Quantum only attacks:
+						  - Timing [doi:10/c97d7r](http://doi.org/c97d7r)
+						  - Detector control [doi:10/d6cgxf](http://doi.org/d6cgxf)
+						  - Multi-wavelength [doi:10/fnqkhz](http://doi.org/fnqkhz)
+
 						Note:
 						LASER DAMAGE IDEA!!!!!!!!!!!
 					</script>
 				</section>
+<!--==================================================================================-->
+				<section>
+					How do we use a sledgehammer to pick a lock?
+				</section>
+
 <!--==================================================================================-->
 				<section  data-markdown>
 					<script type="text/template">
@@ -643,15 +653,13 @@ s
 						<img data-src="figures/dmg-fiberfuse-fusion-gap.png" alt="fiber fuse sample 2">
 					</script>
 				</section>
-<!--==================================================================================-->
-				<section>
-					How do we use a sledgehammer to perform surgery?
-				</section>
+
 
 <!--==================================================================================-->
 				<section  data-markdown data-background="#666666">
 					<script type="text/template">
 						### Laser damage attack ###
+						ID Quantique Clavis<sup>2</sup> 
 						<img data-src="figures/ldsetup.png" alt="Setup diagram for laser damage attack">
 					Note:
 					say EDFA, plug and play, phase encoding.
@@ -688,19 +696,21 @@ s
 						<!-- ### Attack results ### -->
 
 					<!-- 	<img data-src="figures/attackplot.png" alt="Laser damage attack results plot" style="width: 80%"> -->
-						<p class="fragment"> No demonstrated successful countermeasures</p>
+						<h1 class="fragment" style="font-size: 200%; background-color: #333;"> No demonstrated successful countermeasures!</h1>
 					
 				</section>
 
 <!--==================================================================================-->
-				<section  data-markdown>
-					<script type="text/template">
-					## What next? ##
-
-					- Finish airborne testing of payload
-					- Standards and hardware certification for QKD
-					- InfoSec and OpSec community engagement
-					</script>
+				<section>
+					<h2> How we made them and how I broke them </h2>
+					<ol>
+						<li><p>Distance &rarr;<br> <span style="color: #fb3550;">Modeling for airborne QKD </span></p></li>
+						<li><p>Hardware  &rarr;<br> <span style="color: #fb3550;">Robust quantum optical components </span></p></li>						   
+						<li><p>Security models &rarr;<br> <span style="color: #fb3550;">Novel laser damage attack on commercial system</span></p></li>
+					<ol>
+					<aside class="notes">
+        				what is physics in each, I DID COOL SHIT
+    				</aside>
 				</section>
 <!--==================================================================================-->
 				<section data-markdown >
