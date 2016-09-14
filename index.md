@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-I am Sarah Kaiser, a PhD Candidate in the [Institute for Quantum Computing](https://uwaterloo.ca/institute-for-quantum-computing/) at the [University of Waterloo](https://uwaterloo.ca/) in Waterloo, Ontario.
+I am Sarah Kaiser, a Postdoctoral Fellow at [Macquarie University](https://www.mq.edu.au/). I got my PhD from the [Institute for Quantum Computing](https://uwaterloo.ca/institute-for-quantum-computing/) at the [University of Waterloo](https://uwaterloo.ca/) in Waterloo, Ontario.
 
 2016: PhD, Physics (quantum information), [Institute for Quantum Computing](https://uwaterloo.ca/institute-for-quantum-computing/).
 
@@ -15,4 +15,7 @@ I am Sarah Kaiser, a PhD Candidate in the [Institute for Quantum Computing](http
 [Google Scholar](https://scholar.google.ca/citations?user=wUnQwUMAAAAJ&hl=en) •
 [GitHub](https://github.com/crazy4pi314) •
 [Linkedin](https://www.linkedin.com/in/sckaiser1)
-<img src="/public/profile_photo.jpg" alt="Sarah Kaiser" style="width: 60%;" align="middle" />
+
+<p style="text-align: center;">
+	<img src="/public/profile_photo.jpg" alt="Sarah Kaiser" style="width: 40%; display: inline;"/>
+</p>
