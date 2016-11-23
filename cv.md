@@ -31,6 +31,8 @@ title: CV
 
 ## Conferences / Talks ##
 
+* **Sarah Kaiser** [Extending the reach of QKD: Satellite prototype for quantum communication](/research/talks/photonics_connections_2016/), presented at the [Quantum Photonics Connections Conference](http://cudos.org.au/calendar/2016_quantum.shtml) at the University of Sydney, November 2016.
+
 * **Sarah Kaiser**. "Extending the reach of QKD" Talk at Last Frontiers in Quantum Information Science 2016
 
 * **Sarah Kaiser**, Chris Pugh, Jean-Philippe Bourgoin, Brendon Higgins, Thomas Jennewein. "Towards satellite-based quantum communication: field testing the QEYSSAT payload." Talk at [ASTRO 2016](http://www.casi.ca/assets/list%20of%20titles%20from%20astro%202016.pdf).
