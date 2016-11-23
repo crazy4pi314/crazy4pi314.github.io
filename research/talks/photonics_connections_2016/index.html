@@ -75,11 +75,11 @@
 					</p>
 
 					<aside class="notes">
-        				Why space? Gotta go gotta get to space
-    				</aside>
+						Why space? Gotta go gotta get to space
+					</aside>
 				</section>
 
-				<section>
+				<!--<section>
 					<h2>Long story short:</h2>
 					<ol>
 						<li>What is Quantum key distribution (QKD)?</li>
@@ -87,7 +87,7 @@
 						<li>QKD in space</li>
 						<li>What is next for QKD?</li>
 					</ol>
-				</section>
+				</section>-->
 
 				<section data-markdown>
 					<script type="text/template">
@@ -106,23 +106,23 @@
 				<section  data-markdown>
 					<script type="text/template">
 						### Example QKD protocol: BB84 ###
-						#### Quantum phase ####
-						<div class="two-col-container">
-							<div class="left-col" style="width: 70%">
-								![http://swissquantum.idquantique.com/](http://swissquantum.idquantique.com/IMG/jpg/bb84.jpg "BB84 diagram")
-						
-								[doi:10/3d6](http://doi.org/3d6)
-							</div>
-							<div class="right-col" style="width: 30%">
-								<ol>
-									<li>Alice randomly chooses basis and bit</li>
-									<li>Alice prepares state</li>
-									<li>Bob randomly chooses basis and measures</li>
-									<li>Repeat</li>
-								</ol>
+						<img style="width: 90%" data-src="http://swissquantum.idquantique.com/IMG/jpg/bb84.jpg" alt="BB84 diagram">	
+						<a href="http://doi.org/bdnw">					
+								doi:10/3d6
+						</a>
+						Note:
+						Mention bob is polarization analyzer.
+						SIFTING,ERROR CORRECTION, PRIVACY AMPLIFICATION
+					</script>
+				</section>
 
-							</div>
-						</div>
+				<!--<section  data-markdown>
+					<script type="text/template">
+						### Example QKD protocol: BB84 ###
+						#### Quantum phase ####
+						<img src="figures/bb84-quantum.png" alt="diagram for qkd concept" style="width: 80%;" />
+						
+						[doi:10/3d6](http://doi.org/3d6)
 					</script>
 				</section>
 
@@ -130,32 +130,18 @@
 					<script type="text/template">
 						### Example QKD protocol: BB84 ###
 						#### Classical phase ####
-						<div class="two-col-container">
-							<div class="left-col" style="width: 70%">
-								![http://swissquantum.idquantique.com/](http://swissquantum.idquantique.com/IMG/jpg/bb84.jpg "BB84 diagram")
+						<img src="figures/bb84-classical.png" alt="diagram for qkd concept" style="width: 80%;" />
 						
-								[doi:10/3d6](http://doi.org/3d6)
-							</div>
-							<div class="right-col" style="width: 30%">
-								<ol>
-									<li>Share basis choices</li>
-									<li>Error correction</li>
-									<li>Privacy amplification</li>
-									<li>Final key produced</li>
-								</ol>
-
-							</div>
-						</div>
+						[doi:10/3d6](http://doi.org/3d6)
 					</script>
-				</section>
+				</section>-->
 
 				<section data-markdown>
 					<script type="text/template">
-						### QKD performance ###
+						## QKD performance ##
 				
-						- Security of transmission is tested with the quantum bit error rate:
-						`\[\sf{\text{QBER} = \frac{n_{\text{wrong}}}{n_{\text{wrong}}+n_{\text{right}}}}\]`	
-						- Required key generation threshold `$\sf{QBER \lesssim  10\%}$`
+						- Security of transmission is tested with the quantum bit error rate (sifted key): `\[\text{QBER} = \frac{n_{\text{wrong}}}{n_{\text{wrong}}+n_{\text{right}}}\]`	
+						- Required key generation threshold `$\text{QBER}\lesssim  10\%$`
 						
 						Note:
 						Explain how bad QBER breaks security/threshold works
@@ -186,7 +172,7 @@
 				
 				</section>
 
-				<section  data-markdown>
+				<!--<section  data-markdown>
 					<script type="text/template">
 						## Challenges for practical QKD ##
 						- Distance/Loss 
@@ -208,6 +194,27 @@
 						Note:
 						How can standards inter-operate with security?
 					</script>
+				</section>-->
+				
+				<section>
+					<h2> Why don't we all have quantum keys? </h2>
+					<ol>
+						<li><p> Distance/Loss: $\approx 300$ km</p></li>
+						<li><p> Hardware developments </p></li> 
+						<li><p> Realistic device security models </p></li>
+					</ol>
+					<aside class="notes">
+        				Dont say rep rate
+    				</aside>
+				</section>
+<!--==================================================================================-->
+				<section data-background-image="figures/sat-concept.png"
+				         data-background-position="bottom"
+				         data-background-size="80%">
+						<h3 style="position: relative; top: -2em;">
+							One approach: <br> QKD receiver satellite
+						</h3>
+						<!-- <img data-src="figures/sat-concept.png" alt="Reciever payload schematic"> -->
 				</section>
 
 				<section  data-markdown>
@@ -246,7 +253,143 @@
 					</script>
 				</section>
 
+<!--==================================================================================-->
+				<section>	
+					<h2>Integrated optical assembly (IOA)</h2>
+					<div class="two-col-container">
+						<div class="left-col" style="width: 53%">
+							<img src="figures/comp-ioa-schema.png" alt="IOA schematic">
+
+						</div>
+						<div class="right-col" style="width: 47%">
+							<img data-src="figures/comp-ioa-photo.jpg" alt="IOA photo">
+						</div>
+					</div>
+					<aside class="notes">
+        				This is "Bob". 
+    				</aside>
+				</section>
+<!--==================================================================================-->		
+				<section>	
+					<h2>Single photon detector unit</h2>
+					<div class="two-col-container">
+						<div class="left-col" style="width: 43%">
+							<img src="figures/comp-detag-detectorpkg.jpg" alt="detector unit">
+
+						</div>
+						<div class="right-col" style="width: 57%">
+							<img data-src="figures/comp-detag-det-pcb.png" alt="Geometry model">
+						</div>
+					</div>
+				</section>
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+						### Average Detector Performance ###
+						|                                 |               |
+						| -------------                   |---------------|
+						| Dark counts                     | 24 cps        |
+						| Detector efficiency             | 50.4%         |
+						| Timing jitter                   | 529 ps        |
+						| Dead time                       | 18.9 &micro;s / 52.9 kHz |
+						|                                 |               |
+						-20 C, 27V over breakdown, 25 mV threshold  
+						
+						Note:
+						1-1/e=63.2% full
+						what are important for sat 
+					</script>
+				</section>
+
+<!--==================================================================================-->
 				<section  data-markdown>
+					<script type="text/template">
+						### QKD receiver lab testing ###
+						<img data-src="figures/qkdr-hardware.png" alt="lab hardware demo" style="width: 70%">
+					</script>
+				</section>
+<!--==================================================================================-->
+				<section  data-markdown >
+					<script type="text/template">
+						### Lab testing results ###
+						<!-- <img data-src="figures/recunit.jpg" alt="Reciever hardware"> -->
+						|                                 |                               |
+						| -------------                   |---------------                |
+						| Total loss <br> (channel + receiver) | 43.7dB <br>(38.7 dB + 5 dB)|
+						| Duration                        | 100 s                         |
+						| Average QBER                    | 3.14%                         |
+						| Finite size secure key length   | 16.3 kbits |
+						|                   |             |
+						Note:
+						what is AES? symmetric key cypher
+					</script>
+				</section>	
+<!--==================================================================================-->
+				<section>	
+					<h2>Acquisition pointing and tracking (APT)</h2>
+					<div class="two-col-container">
+						<div class="left-col" style="width: 50%">
+							<img src="figures/comp-apt-cad.png" alt="detector unit">
+
+						</div>
+						<div class="right-col" style="width: 50%">
+							<img data-src="figures/comp-apt-integration-photo.jpg" alt="Geometry model">
+						</div>
+					</div>
+					<aside class="notes">
+        				lowest order adaptive optics, beam steering. extensive testing and characterization. 
+    				</aside>
+				</section>
+<!--==================================================================================-->
+				<section>
+								<h2>QBER</h2>
+								<img style="width: 80%" data-src="figures/comp-apt-phase2-qber.png" alt="QBER">
+<!-- 						<div class="two-col-container">
+							<div class="left-col" style="width: 50%">
+							Total Counts
+								<img data-src="figures/comp-apt-phase2-counts.png" alt="counts">
+
+							</div>
+							<div class="right-col" style="width: 50%">
+							QBER
+								<img data-src="figures/comp-apt-phase2-qber.png" alt="QBER">
+							</div>
+						</div>
+						<div align="center">
+						 Secret key<br>
+						<img style="width: 50%" src="figures/comp-apt-phase2-seckey.png" alt="secret key"></div>  -->
+				</section>
+
+<!--==================================================================================-->
+<!-- 				<section  data-markdown>
+					<script type="text/template">
+						### Airborne receiver hardware ###
+						
+s
+
+						<img data-src="figures/recunit.jpg" alt="Space optical losses" style="width: 60%" >
+
+					</script>
+				</section> -->
+<!--==================================================================================-->
+				<section  data-markdown>
+					<script type="text/template">
+						### Airborne receiver hardware ###
+						- Rugged electronics and mounting for more extreme conditions (-40° C and vibration)
+						- Fine pointing unit to help reduce loss in receiver optic
+						<div class="two-col-container">
+							<div class="left-col">
+								<img data-src="figures/plane-electronics.jpg" alt="Reciever control electronics" >
+							</div>
+							<div class="right-col">
+								<img data-src="figures/plane-telescope.jpg" alt="Reciever telescope" >
+							</div>
+						</div>
+
+					</script>
+				</section>
+
+				<!--<section  data-markdown>
 					<script type="text/template">
 						### QKD receiver lab testing ###
 						<img src="figures/qkdr-hardware.png" alt="lab hardware demo" style="width: 70%">
@@ -256,7 +399,6 @@
 				<section  data-markdown >
 					<script type="text/template">
 						### Lab testing results ###
-						<!-- <img src="figures/recunit.jpg" alt="Reciever hardware"> -->
 						|                                     |                                 |
 						| ------------------------------------|---------------------------------|
 						| Total loss <br> (channel + receiver)| 43.7dB <br>(38.7 dB + 5 dB)     |
@@ -292,15 +434,35 @@
 						</div>
 
 					</script>
-				</section>
+				</section>-->
 
 				<section  data-markdown>
 					<script type="text/template">
 						### First flights ###
 						<img src="figures/risk-wifi-test.png" alt="Initial test flights" style="width: 70%">
-
 					</script>
 				</section>
+
+				<!--<section  data-markdown>
+					<script type="text/template">
+						### First flights ###
+						<div class="two-col-container">
+							<div class="left-col">
+								<img src="figures/risk-wifi-test.png" alt="Initial test flights" style="width: 70%">
+							</div>
+							<div class="right-col">
+								| Flight | Ave. Distance (km) | Time (s) |
+								|--------|--------------------|----------|
+								| 1      | 3.7                | 13.50    |
+								| 2      | 4.00               | 28.01    |
+								| 3      | 3.96               | 33.52    |
+								| 4      | 4.43               | 46.08    |
+								| 5      | 4.19               | 60.50    |
+								| *Goal* | \~ 10              | 120      |
+							</div>
+						</div>
+					</script>
+				</section>-->
 
 				<section  data-markdown>
 					<script type="text/template">
@@ -336,7 +498,7 @@
 				center: true,
 				slideNumber: true,
 				 // Turns fragments on and off globally
-    			fragments: true,
+				fragments: true,
 
 				transition: 'slide', // none/fade/slide/convex/concave/zoom
 
