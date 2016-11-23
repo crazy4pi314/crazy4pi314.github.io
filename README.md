@@ -14,22 +14,17 @@ Currently I am a Postdoctoral Fellow at [Macquarie University](https://www.mq.ed
 <a href="https://scholar.google.ca/citations?user=wUnQwUMAAAAJ&hl=en" target="_top">Google Scholar</a> • 
 <a href="https://github.com/crazy4pi314" target="_top">GitHub</a> • 
 <a href="https://www.linkedin.com/in/sckaiser1" target="_top">Linkedin</a><br>
-	<img src="/public/profile_photo.jpg" alt="Sarah Kaiser" style="width: 40%; display: inline;padding-top: 1em;"/>
 </p>
 
 ## Theme: Hyde
 
 Hyde is a brazen two-column [Jekyll](http://jekyllrb.com) theme that pairs a prominent sidebar with uncomplicated content. It's based on [Poole](http://getpoole.com), the Jekyll butler.
 
-![Hyde screenshot](https://f.cloud.github.com/assets/98681/1831228/42af6c6a-7384-11e3-98fb-e0b923ee0468.png)
-
-
 ### Author
 
 **Mark Otto**
 - <https://github.com/mdo>
 - <https://twitter.com/mdo>
-
 
 ## License
 
