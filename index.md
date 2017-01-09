@@ -20,6 +20,7 @@ I am Sarah Kaiser, a Postdoctoral Fellow at [Macquarie University](https://www.m
 <a href="https://www.researchgate.net/profile/Sarah_Kaiser" target="_top">ResearchGate</a> • 
 <a href="https://scholar.google.ca/citations?user=wUnQwUMAAAAJ&hl=en" target="_top">Google Scholar</a> • 
 <a href="https://github.com/crazy4pi314" target="_top">GitHub</a> • 
+<a href="https://keybase.io/skaiser" target="_top">Keybase</a> • 
 <a href="https://www.linkedin.com/in/sckaiser1" target="_top">Linkedin</a><br>
 	<img src="/public/profile_photo.jpg" alt="Sarah Kaiser" style="width: 40%; display: inline;padding-top: 1em;"/>
 </p>
