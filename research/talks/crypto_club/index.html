@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Photon phreaking: What quantum can (actually) do for security</title>
+
+		<meta name="description" content="23 Feb 2017">
+		<meta name="author" content="Sarah Kaiser">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/blood.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<style type="text/css">
+			.reveal section img {
+				border: none;
+				box-shadow: none;
+				background: none;
+			}
+
+			.two-col-container {
+				width: 100%;
+			}
+
+			.left-col {
+				float: left;
+				width: 50%;
+			}
+
+			.right-col {
+				float: right;
+				width: 50%;
+			}
+
+		</style>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+
+<!--==================================================================================-->
+				<section>
+					<h1 style="font-size: 300%; margin-bottom: 0;"> Photon phreaking: </h1>
+					<h2 style="font-size: 100%">What quantum can (actually) do for security</h2>
+					<hr />
+
+					<p>
+						<strong> Gemalto Crypto Club 23 Feb 2017 </strong><br>
+						<a>Alan Robertson</a> <br>
+						<a href="http://www.sckaiser.com">Sarah Kaiser</a> <br>
+					</p>
+
+				</section>
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+						# Part 1:#
+						## Quantum Resources ##
+					</script>
+				</section>
+
+<!--==================================================================================-->
+				<section>
+					<!-- <h2>What is Quantum Computing?</h2> -->
+<!-- 					<p class="fragment">Classical Memory: The Bit</p>
+					<p class="fragment">Quantum Memory: The Qubit</p>
+					<p class="fragment">$0 \rightarrow \left|0\right\rangle$<br/>$1 \rightarrow \left|1\right\rangle$</p>
+					<p class="fragment">$\left|\psi\right\rangle = a\left|0\right\rangle + b\left|1\right\rangle$</p> -->
+					<img data-src="figures/bit_qubit.png" alt="progression from bit to qubit" style="width: 80%;" />
+				</section>
+
+<!--==================================================================================-->
+				<section>
+					<h3>Quantum Operations</h3>
+					<ul>
+						<li class="fragment">Classical: Bitflip</li>
+						<li class="fragment">Quantum: Rotations about some axis <!-- <br/>(any $2 \times 2$ unitary matrix) --></li>
+						<li class="fragment">Quantum: Measurement is the overlap between the state and some basis vector</li>
+					</ul>	
+					<!-- <p class="fragment"> $P\left(\left|0\right\rangle\right) = a^2$ and $P\left(\left|1\right\rangle\right) = b^2$</p> -->
+					<img data-src="figures/bloch.png" alt="bloch sphere" style="width: 40%;" />
+				</section>
+
+<!--==================================================================================-->
+				<section>
+					<h3>Quantum Measurement</h3>
+					<ul>
+						<li class="fragment">Requires a basis</li>
+						<li class="fragment">Outcomes are non-deterministic</li>
+						<li class="fragment">Destroys phase information, only can measure once </li>
+					</ul>
+
+					<img data-src="figures/bloch.png" alt="bloch sphere" style="width: 40%;" />
+				</section>
+
+<!--==================================================================================-->
+				<section>
+					<h3>Quantum System Properties</h3>
+					<ul>
+						<!-- <li class="fragment">Non-deterministic measurements give us access to true random number generation</li> -->
+						<li class="fragment"><font color="fb3550">No-Cloning Theorem:</font> Quantum states cannot be copied</li>
+						<li class="fragment"><font color="fb3550">Entanglement:</font> The state of a qubit is "correlated" with the state of another qubit </li>
+						<ul>
+							<li class="fragment">You cannot describe the effect of a rotation on only one qubit in set of entangled qubits</li>
+						</ul>
+					</ul>
+				</section>
+
+<!--==================================================================================-->
+<!-- 				<section>
+					<h3>Entanglement</h3>
+					<p class="fragment">Entanglement occurs when </p>
+					<p class="fragment">For example, two separated qubits same state, but we do not know which state both are in without measuring
+						<br/><br/>$\left|\psi\right\rangle = \frac{\left|00\right\rangle + \left|11\right\rangle}{\sqrt{2}}$
+					</p>
+				</section> -->
+
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+						# Part 2:#
+						## Quantum Meets Computing ##
+
+					</script>	
+				</section>
+
+<!--==================================================================================-->
+				<section>
+					<h3>A Pathological Example</h3>
+					<img data-src="figures/crypto_talk_classical.png" alt="classical pathological problem" style="width: 60%;" />
+			</section>
+
+<!--==================================================================================-->
+				<section>
+					<h3>A Pathological Example</h3>
+				<img data-src="figures/crypto_talk_quantum_demo.png" alt="classical pathological problem" style="width: 90%;" />
+				</section>
+
+<!--==================================================================================-->
+				<!--<section>
+					<h3>Computers need more than one (Qu)bit</h3>
+					<p class="fragment">Just as classical computers have operations over more than one bit, so do quantum computers</p>
+					<p class="fragment">Operations on $n$ qubits take the form of $2^n \times 2^n$ unitary matricies</p>
+				</section>-->
+
+<!--==================================================================================-->
+				<section>
+					<h3>Quantum Algorithms</h3>
+					<p class="fragment"><font color="fb3550">Deutch-Jozsa:</font> Free$^{*}$ parallelism, reduces from $O(2^{n-1})$ to $O(1)$ function calls
+					<p class="fragment"><font color="fb3550">Grover's Algorithm:</font> Search an unsorted list for an$^{**}$ element in $O(\sqrt{n})$, best classical is $O(n)$
+					<p class="fragment"><font color="fb3550">Shor's Algorithm:</font> A faster prime factoring algorithm, because fourier transforms are unitary</p>
+				</section>
+
+<!--==================================================================================-->
+				<section>
+					<h3>Shor's Algorithm</h3>
+					<p class="fragment"><font color="fb3550">GNFS:</font>  Generate polynomials and hope that their roots form a smooth ring such that the 'square root' of the ring is a homomorphism to the prime factors  </p>
+					<p class="fragment"><font color="fb3550">Shor's algorithm:</font>  Find the period of the prime field using the quantum fourier transform, the 'square root' then gives the prime factors</p>
+				</section>
+
+<!--==================================================================================-->
+				<section data-background="/figures/the-more-you-know-test.png">
+					<h2> Common Myths and Misconceptions </h2>
+						<ul>
+						    <li><p class="fragment"> Quantum computers are <strong>NOT</strong> universally faster or more powerful than classical computers</p>
+							<li><p class="fragment"> Quantum computers will <strong>NOT</strong> be here tomorrow. <br>have:100 qubits / need: 100 million </p>
+							<li><p class="fragment"> Dwave is <strong> NOT </strong> a quantum computer. Evidence shows quantum annealer at best </p>
+							<li><p class="fragment"> There is no one right material or system to make qubits </p>
+						
+						</ul>
+				</section>
+
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+						# Part 3:#
+						## Quantum Technologies ##
+						
+					</script>	
+				</section>
+
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+						## Quantum Key Distribution (QKD) ##
+				
+						<font color="fb3550">Objective:</font> share a secret key between Alice and Bob
+
+						<img data-src="figures/qkd-concept.png" alt="diagram for qkd concept" style="width: 70%;" />
+
+						<font color="fb3550">Proof of security:</font> solid
+
+						<font color="fb3550">Implementations:</font> getting there
+
+						Note:
+						Key EXPANSION protocol, relate to DH 
+					</script>	
+				</section>
+
+<!--==================================================================================-->
+		
+				<section  data-markdown>
+					<script type="text/template">
+						### Example QKD protocol: BB84 ###
+						<img style="width: 90%" data-src="http://swissquantum.idquantique.com/IMG/jpg/bb84.jpg" alt="BB84 diagram">	
+						<a href="http://doi.org/bdnw">					
+								doi:10/3d6
+						</a>
+						Note:
+						Mention bob is polarization analyzer.
+						SIFTING,ERROR CORRECTION, PRIVACY AMPLIFICATION
+					</script>
+				</section>
+
+<!--==================================================================================-->
+				<section>
+					<h2> Why don't we all have quantum keys? </h2>
+					<ol>
+						<li><p class="fragment"> Hardware developments </p></li> 
+						<li><p class="fragment"> Distance/Loss: $\approx 300$ km</p></li>
+						<li><p class="fragment"> Realistic device security models </p></li>
+					</ol>
+					<aside class="notes">
+        				Dont say rep rate
+    				</aside>
+				</section>
+
+<!--==================================================================================-->
+				<section data-background-image="figures/sat-concept.png"
+				         data-background-position="bottom"
+				         data-background-size="80%">
+						<h3 style="position: relative;font-size: 120%; top: -2em;">
+							One approach to <br> overcoming loss: 
+						</h3>
+						<p style="position: relative;font-size: 120%; top: -2em;">
+							QKD receiver satellite
+						</p>
+						<!-- <img data-src="figures/sat-concept.png" alt="Reciever payload schematic"> -->
+				</section>
+	
+<!--==================================================================================-->
+				<section data-background="http://cdn.gifbay.com/2013/02/how_keys_work-34063.gif">
+					<h1 style = "font-size: 300%;">QKD Hardware Security:</h1>
+					<h3>Functionality $\neq$ security</h3>
+				</section>
+
+<!--==================================================================================-->
+				<section  data-markdown data-background="figures/original-bb84-darker.png" data-background-size=cover>
+					<script type="text/template">
+						###  Quantum attacks: ###
+						  - Man in the middle
+						  - Timing [doi:10/c97d7r](http://doi.org/c97d7r)
+						  - Side channel
+							  - Detector control [doi:10/d6cgxf](http://doi.org/d6cgxf)
+							  - Multi-wavelength [doi:10/fnqkhz](http://doi.org/fnqkhz)
+
+						Note:
+						LASER DAMAGE IDEA!!!!!!!!!!!
+					</script>
+				</section>
+
+
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+						## Laser Damage attack ##
+				
+						Objective: Blind Alices's monitoring detectors
+
+						<img data-src="figures/qkd-attack-concept.png" alt="diagram for LD attack concetp" style="width: 70%;" />
+
+					</script>	
+				</section>
+
+<!--==================================================================================-->
+				<section  data-markdown>
+					<script type="text/template">
+						### Monitoring diode damage ###
+						<div class="two-col-container">
+							<div class="left-col">
+								<img data-src="figures/unburnt.jpg" alt="Undamaged detector sample" >
+							</div>
+							<div class="right-col">
+								<img data-src="figures/burnt.jpg" alt="damaged detector sample" >
+							</div>
+						</div>
+						<!-- - no patch that works -->
+					</script>
+				</section>
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+						## Quantum random number generators ##
+
+						<img data-src="figures/qrng.png" alt="diagram for basic qrng device" style="width: 70%;" />
+
+					</script>	
+				</section>
+
+<!--==================================================================================-->	
+				<section data-markdown >
+					<script type="text/template">
+						## Key Takeaways: ##
+						- <h6 style="font-size: 100%;margin: 0 0 0 0;">Be critical of media about quantum computers</h6>
+						    - Quantum computers are not always "better"
+						    - Need 100's of millions of qubits to implement Shor
+						- <h6 style="font-size: 100%;margin: 0 0 0 0;">QKD tech still needs hardening </h6>
+						- <h6 style="font-size: 100%;margin: 0 0 0 0;">No such thing as "quantum safe"</h6>
+						    - Just because it hasn’t been broken with any of the grand total of three algorithms doesn’t make it secure
+					</script>
+				</section>
+
+<!--==================================================================================-->
+<!--==================================================================================-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--==================================================================================-->
+<!--==================================================================================-->
+				<section  data-markdown data-background="#666666">
+					<script type="text/template">
+						### Laser damage attack ###
+						ID Quantique Clavis<sup>2</sup> 
+						<img data-src="figures/ldsetup.png" alt="Setup diagram for laser damage attack">
+					Note:
+					say EDFA, plug and play, phase encoding.
+					</script>
+				</section>
+
+<!--==================================================================================-->
+				<section >	
+					<h3>Commercial QKD devices</h3>
+					<div class="two-col-container">
+						<div class="left-col">
+							<ul>
+								<li><a href="http://www.idquantique.com/">id Quantique</a></li>
+								<li><a href="http://www.quintessencelabs.com/">QuintessenceLabs</a></li>
+							</ul>
+						</div>	
+						<div class="right-col">
+							<ul>
+								<li><a href="http://www.magiqtech.com/Home.html">MagiQ</a></li>
+								<li><a href="http://www.sequrenet.com/">SeQureNet</a></li>
+							</ul>
+						</div>
+					</div>
+				
+					<img data-src="figures/idqfront.jpg" alt="id Quantique Clavis 2" style="width: 100%;" />
+				
+				</section>
+
+<!--==================================================================================-->
+				<section  data-markdown>
+					<script type="text/template">
+						### Fiber fuse ###
+						<img data-src="figures/dmg-fiberfuse.png" alt="fiber fuse sample 1">
+						<img data-src="figures/dmg-fiberfuse-fusion-gap.png" alt="fiber fuse sample 2">
+					</script>
+				</section>
+
+<!--==================================================================================-->
+				<section data-markdown data-background-video="figures/fiber-fuse-crop-nosound.mp4" >
+					<script type="text/template">
+						<h2 class="fragment" data-fragment-index="1">Fiber fusing</h2>
+						<img class="fragment" data-fragment-index="1"src="figures/fiberfuse.jpg" alt="Laser damage fiber close-up" style="height: 10% width: 100%">
+
+					</script>
+				</section>
+
+<!--==================================================================================-->
+				<section  data-markdown>
+					<script type="text/template">
+						### Free-space QKD losses ###
+						
+						<a href="http://doi.org/bdnw">
+							<img data-src="figures/loss.png" style="width: 100%" alt="Space optical losses doi:10/bdnw">
+						</a>
+						[doi:10/bdnw](http://doi.org/bdnw)
+					</script>
+				</section>
+
+<!--==================================================================================-->
+				<section  data-markdown>
+					<script type="text/template">
+						## Uplink QKD system ##
+
+						- Pros: 
+						  - Configurable source
+						  - Simpler space hardware
+						  - Other space QI experiments [doi:10/bdqf](http://doi.org/bdqf)
+						- Cons: 
+						  - Higher loss
+						  - Detector radiation damage [doi:10/dg8xhd](http://doi.org/dg8xhd)
+
+						Note:
+						Dark count rates->QBER
+					</script>
+				</section>
+
+<!--==================================================================================-->
+				<section>
+						<h3> QKD receiver satellite </h3>
+						<img data-src="figures/reciever_schematic.png" alt="Reciever payload schematic">
+				</section>
+
+<!--==================================================================================-->		
+				<section>	
+					<h2>Single photon detector unit</h2>
+					<div class="two-col-container">
+						<div class="left-col" style="width: 43%">
+							<img src="figures/comp-detag-detectorpkg.jpg" alt="detector unit">
+
+						</div>
+						<div class="right-col" style="width: 57%">
+							<img data-src="figures/comp-detag-det-pcb.png" alt="Geometry model">
+						</div>
+					</div>
+				</section>
+
+<!--==================================================================================-->
+				<section>	
+					<h2>Integrated optical assembly (IOA)</h2>
+					<div class="two-col-container">
+						<div class="left-col" style="width: 53%">
+							<img src="figures/comp-ioa-schema.png" alt="IOA schematic">
+
+						</div>
+						<div class="right-col" style="width: 47%">
+							<img data-src="figures/comp-ioa-photo.jpg" alt="IOA photo">
+						</div>
+					</div>
+					<aside class="notes">
+        				This is "Bob". 
+    				</aside>
+				</section>
+
+<!--==================================================================================-->
+				<section>	
+					<h2>Acquisition pointing and tracking (APT)</h2>
+					<div class="two-col-container">
+						<div class="left-col" style="width: 50%">
+							<img src="figures/comp-apt-cad.png" alt="detector unit">
+
+						</div>
+						<div class="right-col" style="width: 50%">
+							<img data-src="figures/comp-apt-integration-photo.jpg" alt="Geometry model">
+						</div>
+					</div>
+					<aside class="notes">
+        				lowest order adaptive optics, beam steering. extensive testing and characterization. 
+    				</aside>
+				</section>
+
+<!--==================================================================================-->
+
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script type="text/x-mathjax-config">
+		  MathJax.Hub.Config({
+		    'HTML-CSS': {
+				preferredFont: null,
+				webFont: 'Gyre-Pagella'
+			}
+		  });
+		</script>
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+				slideNumber: true,
+				 // Turns fragments on and off globally
+    			fragments: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/math/math.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
+
+
+
