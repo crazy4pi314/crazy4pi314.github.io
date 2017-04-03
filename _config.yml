@@ -12,6 +12,8 @@ tagline:          'homepage'
 description:      'Quantum. Lasers. Diamonds.'
 url:              http://sckaiser.com
 baseurl:          /
+exclude:
+    - node_modules
 
 author:
   name:           'Sarah Kaiser'
