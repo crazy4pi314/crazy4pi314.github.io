@@ -41,6 +41,8 @@ title: CV
 
 ## Talks ##
 
+* **Sarah Kaiser**, [Extending the reach of QKD](/research/talks/UTS_seminar_2017/), presented as a seminar at [University of Technology Sydney](https://www.uts.edu.au/) on 5 April 2017.
+
 * **Sarah Kaiser**, Alan Robertson. [Photon phreaking or what quantum can (actually) do for security?](/research/talks/crypto_club/), presented at the Gemalto Crypto Club 23 Feb 2017.
 
 * **Sarah Kaiser** [Extending the reach of QKD: Satellite prototype for quantum communication](/research/talks/photonics_connections_2016/), presented at the [Quantum Photonics Connections Conference](http://cudos.org.au/calendar/2016_quantum.shtml) at the University of Sydney, 24 November 2016.
