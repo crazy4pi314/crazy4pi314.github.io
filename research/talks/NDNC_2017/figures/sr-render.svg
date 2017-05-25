@@ -16,7 +16,10 @@
    width="713.04547"
    height="1008.8182"
    viewBox="0 0 713.04547 1008.8182"
-   sodipodi:docname="sr-render.svg">
+   sodipodi:docname="sr-render.svg"
+   inkscape:export-filename="/home/skaiser/git/crazy4pi314.github.io/research/talks/NDNC_2017/figures/sr-render.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300">
   <metadata
      id="metadata8">
     <rdf:RDF>
@@ -60,6 +63,22 @@
          in2="colormatrix"
          operator="arithmetic"
          k2="0.4"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix4211" />
+      <feColorMatrix
+         id="feColorMatrix4213"
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 5 -1 "
+         result="colormatrix"
+         in="fbSourceGraphic" />
+      <feComposite
+         id="feComposite4215"
+         in2="colormatrix"
+         operator="arithmetic"
+         k2="0.29"
          result="composite" />
     </filter>
   </defs>
