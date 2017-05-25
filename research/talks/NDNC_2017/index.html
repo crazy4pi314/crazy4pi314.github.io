@@ -72,9 +72,9 @@
 							href="http://www.mq.edu.au/about/about-the-university/faculties-and-departments/faculty-of-science-and-engineering/departments-and-centres/department-of-physics-and-astronomy/" style="color: #ffffff"> <h4> Department of Physics and Astronomy, Macquarie University </h4></a>
 							<a 
 							href="http://equs.org/" > <h4 > ARC Centre for Engineered Quantum Systems </h4></a>
-							<img src="figures/mq-logo.png" alt="Macquarie University logo" style="width: 30%;" />
+							<img src="figures/mq-logo.png" alt="Macquarie University logo" style="width: 30%;padding-right: 1em;padding-top:.5em" />
 						
-							<img src="figures/EQuS_logo.png" alt="EQuS logo" style="width: 20%;" />
+							<img src="figures/EQuS_logo.png" alt="EQuS logo" style="width: 20%; padding-left: 1em" />
 						
 			
 				
@@ -87,12 +87,7 @@
 					<aside class="notes"> 
     				</aside>
 				</section>
-<!--==================================================================================-->
-				<section>	
-						<h3> Aside: Research background </h3>
-						<img src="figures/plane-telescope.jpg" alt="Long distance QKD optics payload" style="width: 40%;" />
-						<img src="figures/burnt.jpg" alt="Long distance QKD optics payload" style="width: 45%;" />
-				</section>
+
 
 <!--==================================================================================-->
 				<section>	
@@ -102,13 +97,13 @@
 
 <!--==================================================================================-->
 				<section >
-					<h2> Cooporative behavour of NV in Nanodiamonds </h2>
+					<h2> Cooperative behavior of NV in Nanodiamonds </h2>
 					<div class="two-col-container">
 						<div class="left-col" style="width: 60%">
 							<img src="figures/nv-levels.png" alt="Energy level diagram for NV centers" style="width: 100%;" />
 						</div>
 						<div class="right-col" style="width: 40%">
-							Centers must be <i>indishtinguishable</i>
+							Centers must be <i>indistinguishable</i>
 							<ol>
 								<li>spatial: $V << \lambda^3$</li>
 								<li>spectral</li>
@@ -118,14 +113,14 @@
 					</div>
 
 					<aside class="notes"> 
-						spectral hard in solid state bc inhomogenous broadining and dephasing
+						spectral hard in solid state bc inhomogenous broadening and dephasing
     				</aside> 
 	
 				</section>
 <!--==================================================================================-->
 				<section data-markdown>
 					<script type="text/template">
-						## Singatures of cooporation ##	
+						## Signatures of cooperation ##	
 						- Stronger trapping forces 
 						(See talk by Carlo in Diamond Sensing 2 session!)
 						
@@ -137,7 +132,7 @@
 <!--==================================================================================-->
 				<section data-markdown>
 					<script type="text/template">
-						## Why Nanodiamonds / Cooporation? ##
+						## Why Nanodiamonds / Cooperation? ##
 						- ND: Natural 3D system confinement
 						- ND: Room temperature
 						- Novel applications:
@@ -148,7 +143,7 @@
 				</section>
 
 <!--==================================================================================-->
-				<section data-background="figures/sr-render.jpg" data-background-size=100%>	
+				<section data-background="figures/sr-render.png" data-background-size=100%>	
 						<h1 style="color: #4bc4ed"> Modeling Cooporative Effects </h1>
 				</section>
 
@@ -160,12 +155,23 @@
 					</div>
 					<div class="fragment">
 						$|J,M\rangle =\sqrt{\frac{(J+M)!(J-M)!}{(2J)!}}\sum_{perm}|\underbrace{\uparrow\uparrow\uparrow...}_{\text{J+M}}\underbrace{\downarrow\downarrow\downarrow...}_{\text{J-M}}\rangle$
-						<p>N: # of spin conserving systems <br>
-						M: current spin state<br>
-						J: total spin<br>
+						<table>
+						<tr>
+							<th>N</th>
+							<th># of two&mdash;level emitters</th>
+						</tr>
+							<th>J=$\frac{N}{2}$</th>
+							<th>total spin for the collective system</th>
+							
+						</tr>
+						<tr>							
+							<th>M</th>
+							<th>projection of the spin state, J+M excited emitters</th>
+						</tr>
+						</table>
 					
 						<a href="http://doi.org/cbq3mc">doi:10/cbq3mc</a>
-						</p>
+						
 					</div>
 					<aside class="notes"> 
 						2-level, pseudo spin-1/2 system, due to spin conserving optical decay.
@@ -205,29 +211,34 @@
 <!--==================================================================================-->
 				<section>	
 						<h2> What degrades superradiance? </h2>
-						<div class="two-col-container">
-							<div class="left-col" style="width: 50%" type="text/template">
-								<img src="figures/ladder.png" alt="Energy level diagram for NV centers" style="width: 100%;" />
-							</div>
-							<div class="right-col" style="width: 50%">
-								<ul>
-									<li>spin state switching</li>
-									<li>local phononic modes</li>
-									<li>?</li>
-								</ul>
-							</div>				
+						<h4 class="fragment" style="color: #4bc4ed">Distinguishability.</h4>
+						<div class="fragment">
+							<ul>
+								<li>spin&ndash;spin coupling</li>
+								<li>local phononic environments</li>
+								<li>localized charge fields</li>
+								<li>lattice stress/strain</li>
+								<li>etc.</li>
+							</ul>
+						</div>
 				</section>
 
 <!--==================================================================================-->
 				<section>	
-						<h2> Model parameters</h2>
+						<h2> Distinguishable = Dephasing </h2>
+						<img src="figures/ladder.png" alt="Energy level diagram for NV centers" style="width: 60%;" />				
+				</section>
+
+<!--==================================================================================-->
+				<section>	
+						<h2> Superradiance model parameters</h2>
 						<ol>
-							<li># of Cooporating centers</li>
+							<li># of cooperating centers</li>
 							<li>Initial state of system</li>
 							<li>Bright/dark decay rates</li>
 							<li>Local dephasing rates</li>
-						</ol>
-									
+						</ol><br>
+						<a href="https://arxiv.org/abs/1608.03119">[arXiv:1608.03119]</a>
 				</section>
 
 <!--==================================================================================-->
@@ -237,8 +248,8 @@
 				</section>	
 <!--==================================================================================-->
 				<section>	
-						<h2> Decay rates for excitaitons</h2>
-						<img src="figures/coop-all.png" alt="Energy level diagram for NV centers" style="width:80%;" />
+						<h2> Decay rates for excitations</h2>
+						<img src="figures/coop-all.png" alt="Energy level diagram for NV centers" style="width:70%;" />
 				</section>
 					
 <!--==================================================================================-->
@@ -246,7 +257,32 @@
 						<h2>Super-possionian emission</h2>
 						<img src="figures/SP-emission.png" alt="Energy level diagram for NV centers" style="width:70%;" />
 				</section>
-					
+<!--==================================================================================-->
+				<section data-background-video="figures/cylon-cryo.mp4">	
+						<h2> Extensions: Low temp</h2>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+				</section>
+
+<!--==================================================================================-->
+				<section >	
+						<h2> Extensions: Low temp</h2>
+						<ol>
+							<li class="fragment"># of cooperating centers : <font style="color: #A6192E">$\downarrow$</font></li>
+							<li class="fragment">Initial state of system : <font style="color: #A6192E"> &mdash; </font></li>
+							<li class="fragment">Bright/dark decay rates : <font style="color: #A6192E">?</font></li>
+							<li class="fragment">Local dephasing rates : <font style="color: #A6192E">?$\uparrow$</font><br><a href="https://arxiv.org/abs/1705.07847">[arXiv:1705.07847]</a></li>
+						</ol>	
+						<br>
+						<br>
+						<br>	
+				</section>
+
 <!--==================================================================================-->
 				<section>	
 						<h1 style="color: #4bc4ed"> Summary: </h1>
@@ -279,17 +315,24 @@
 					<script type="text/template">
 						## Sample info ##
 
-						- source: Nitration purified detonation diamonds
-							- consentrated $H_2SO_4-HNO_3$
+						- Source: Nitration purified detonation diamonds
+							- concentrated $H_2SO_4-HNO_3$
 							- deionized water rinse
-							- 3 MeV proton beam, $1\times10^6$ ions per $cm^2$. By Academia Sinica, Taipei Taiwan [[doi: ctg9d4](http://doi.org/ctg9d4)
-						- size: MSY $\leq 0.1 \mu m$ from Microdiamant
+							- 3 MeV proton beam, $1\times10^6$ ions per $cm^2$. By Academia Sinica, Taipei Taiwan [[doi: ctg9d4]](http://doi.org/ctg9d4)
+						- Size: MSY $\leq 0.1 \mu m$ from Microdiamant
 						- NV density: $\approx 3\times10^6~ NV/ \mu m^3$
-						- dispursed on BK7 cover slip $170 \mu m$ thick
+						- Dispersed on BK7 cover slip $170 \mu m$ thick
 
 						Note:
 						
 					</script>	
+				</section>
+
+<!--==================================================================================-->
+				<section>	
+						<h3> Aside: Research background </h3>
+						<img src="figures/plane-telescope.jpg" alt="Long distance QKD optics payload" style="width: 40%;" />
+						<img src="figures/burnt.jpg" alt="Long distance QKD optics payload" style="width: 45%;" />
 				</section>
 <!--==================================================================================-->
 			</div>
