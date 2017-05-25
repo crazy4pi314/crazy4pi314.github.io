@@ -96,7 +96,7 @@
 
 <!--==================================================================================-->
 				<section>	
-						<h1 style="color: #A6192E"> Motivation </h1>
+						<h1 style="color: #4bc4ed"> Motivation </h1>
 						
 				</section>
 
@@ -131,45 +131,41 @@
 						
 						<img src="figures/trapping-forces.png" alt="Trapping forces on nanodiamonds" style="width: 60%;" />
 							
-						[doi:10/b7ds](http://doi.org/b7ds)				
+						[[doi:10/b7ds]](http://doi.org/b7ds)				
 					</script>	
 				</section>
 <!--==================================================================================-->
 				<section data-markdown>
 					<script type="text/template">
 						## Why Nanodiamonds / Cooporation? ##
-						<div class="two-col-container">
-							<div class="left-col" style="width: 50%" type="text/template">
-								<h4>ND:</h4> 
-								- Natural 3D system confinement
-								- Room temperature
-								<br><h4>Cooporation:</h4>
-								- Novel applications:
-								- Super absorption?
-							</div>
-							<div class="right-col" style="width: 50%">
-								<img src="figures/sr-render.jpg" alt="Energy level diagram for NV centers" style="width: 40%;" />
-							</div>
-
-						Note:
-						
+						- ND: Natural 3D system confinement
+						- ND: Room temperature
+						- Novel applications:
+							- Superradiant sources [[doi:10/b7k6]](http://doi.org/b7k6)
+							- Improved metrology [[doi:10/b7k4]](http://doi.org/b7k4) [[doi:10/b7k5]](http://doi.org/b7k5)
+							- Energy harvesting [[doi:10/d72mdb]](http://doi.org/d72mdb)
 					</script>	
 				</section>
 
 <!--==================================================================================-->
-				<section>	
-						<h1 style="color: #A6192E"> Modeling Cooporative Effects </h1>
+				<section data-background="figures/sr-render.jpg" data-background-size=100%>	
+						<h1 style="color: #4bc4ed"> Modeling Cooporative Effects </h1>
 				</section>
 
 <!--==================================================================================-->
 				<section>	
 						<h4> How to describe cooporation? </h4>
 					<div class="fragment">
-						<h2  style="color:#4bc4ed"> Dicke States </h2><a href="http://doi.org/cbq3mc">doi:10/cbq3mc</a>
+						<h2  style="color:#4bc4ed"> Dicke States </h2>
 					</div>
 					<div class="fragment">
-						<p>N, spin conserving systems:</p>
 						$|J,M\rangle =\sqrt{\frac{(J+M)!(J-M)!}{(2J)!}}\sum_{perm}|\underbrace{\uparrow\uparrow\uparrow...}_{\text{J+M}}\underbrace{\downarrow\downarrow\downarrow...}_{\text{J-M}}\rangle$
+						<p>N: # of spin conserving systems <br>
+						M: current spin state<br>
+						J: total spin<br>
+					
+						<a href="http://doi.org/cbq3mc">doi:10/cbq3mc</a>
+						</p>
 					</div>
 					<aside class="notes"> 
 						2-level, pseudo spin-1/2 system, due to spin conserving optical decay.
@@ -208,20 +204,68 @@
 
 <!--==================================================================================-->
 				<section>	
-						<h2> Enviromental interactions </h2>
-						<img src="figures/ladder.png" alt="Energy level diagram for NV centers" style="width: 50%;" />
-					
-				
+						<h2> What degrades superradiance? </h2>
+						<div class="two-col-container">
+							<div class="left-col" style="width: 50%" type="text/template">
+								<img src="figures/ladder.png" alt="Energy level diagram for NV centers" style="width: 100%;" />
+							</div>
+							<div class="right-col" style="width: 50%">
+								<ul>
+									<li>spin state switching</li>
+									<li>local phononic modes</li>
+									<li>?</li>
+								</ul>
+							</div>				
 				</section>
+
 <!--==================================================================================-->
 				<section>	
-						<h1 style="color: #A6192E"> Observations </h1>
+						<h2> Model parameters</h2>
+						<ol>
+							<li># of Cooporating centers</li>
+							<li>Initial state of system</li>
+							<li>Bright/dark decay rates</li>
+							<li>Local dephasing rates</li>
+						</ol>
+									
+				</section>
+
+<!--==================================================================================-->
+				<section data-background="figures/cf-bkg.png" data-background-size=100%>	
+						<h1 style="color: #ffffff"> Observations </h1>
+						
 				</section>	
+<!--==================================================================================-->
+				<section>	
+						<h2> Decay rates for excitaitons</h2>
+						<img src="figures/coop-all.png" alt="Energy level diagram for NV centers" style="width:80%;" />
+				</section>
 					
 <!--==================================================================================-->
 				<section>	
-						<h1 style="color: #A6192E"> Takeaways: </h1>
-						<h4>tl;dr</h4>
+						<h2>Super-possionian emission</h2>
+						<img src="figures/SP-emission.png" alt="Energy level diagram for NV centers" style="width:70%;" />
+				</section>
+					
+<!--==================================================================================-->
+				<section>	
+						<h1 style="color: #4bc4ed"> Summary: </h1>
+						<!--<h4>tl;dr</h4>-->
+						<div class="left-col" style="width: 50%" type="text/template">
+						<h3>Seen:</h3>
+						<ul>
+							<li>Ultrafast radiative lifetimes $\approx1\text{ns}$</li>
+							<li>Super-possionian photon statistics from SR diamonds</li>
+						</ul>
+						</div>
+						<div class="right-col" style="width: 50%" type="text/template">
+						<h3>To Do:</h3>
+						<ul>
+							<li>Temperature dependance?</li>
+							<li>Other color centers?</li>
+							<li>Super absorption?</li>	
+						</ul>
+						</div>
 				</section>	
 
 <!--==================================================================================-->
@@ -235,10 +279,13 @@
 					<script type="text/template">
 						## Sample info ##
 
-						- source:
-						- size:
-						- density: $\approx 3 * 10^6 NV/ \mu m^3$
-						- water prep?
+						- source: Nitration purified detonation diamonds
+							- consentrated $H_2SO_4-HNO_3$
+							- deionized water rinse
+							- 3 MeV proton beam, $1\times10^6$ ions per $cm^2$. By Academia Sinica, Taipei Taiwan [[doi: ctg9d4](http://doi.org/ctg9d4)
+						- size: MSY $\leq 0.1 \mu m$ from Microdiamant
+						- NV density: $\approx 3\times10^6~ NV/ \mu m^3$
+						- dispursed on BK7 cover slip $170 \mu m$ thick
 
 						Note:
 						
