@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Super Cool Science: An Exploration of Modern Experiment</title>
+
+        <meta name="description" content="NDNC, May 2017">
+        <meta name="author" content="Sarah Kaiser">
+
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+        <!-- Code syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <style type="text/css">
+            .reveal section img {
+                border: none;
+                box-shadow: none;
+                background: none;
+            }
+
+            .two-col-container {
+                width: 100%;
+            }
+
+            .left-col {
+                float: left;
+                width: 50%;
+            }
+
+            .right-col {
+                float: right;
+                width: 50%;
+            }
+        </style>
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+<!--==================================================================================-->				
+                <section>
+                    <h1 style="font-size: 150%; margin-bottom: 0; color: #4bc4ed;">Super Cool Science: <br> An Exploration of Modern Experiment</h1>
+                    <!--<h3 style="font-size: 110%">how to make them and how to break them</h3>-->
+                    <hr/>
+
+                    <p>
+                        <small>
+                            <strong><a href="http://www.sckaiser.com">Sarah Kaiser</a></strong></br>
+                             Carlo Bradac, Mattias Johnsson, Matthew van Breugel, Ben Baragiola, Rochelle Martin, Mathieu L. Juan, Gavin Brennen, Thomas Volz 
+                            <br>	
+                            <a 
+                            href="http://www.mq.edu.au/about/about-the-university/faculties-and-departments/faculty-of-science-and-engineering/departments-and-centres/department-of-physics-and-astronomy/" style="color: #ffffff"> <h4> Department of Physics and Astronomy, Macquarie University </h4></a>
+                            <a 
+                            href="http://equs.org/" > <h4 > ARC Centre for Engineered Quantum Systems </h4></a>
+                            <img src="figures/mq-logo.png" alt="Macquarie University logo" style="width: 30%;padding-right: 1em;padding-top:.5em" />
+                        
+                            <img src="figures/EQuS_logo.png" alt="EQuS logo" style="width: 20%; padding-left: 1em" />
+                        
+            
+                
+                        
+                        <!--<img src="http://ndnc2017.org/wp-content/uploads/2016/05/cropped-NDNC2017-logo-solid-orange-web-banner-with-date.png" alt="diagram for qkd concept" style="width: 80%;" />-->
+                            <!--<a href="http://www.sckaiser.com/research/talks/NDNC_2017/">http://www.sckaiser.com/research/talks/NDNC_2017/</a>-->
+                            </small>
+                    </p>
+
+                    <aside class="notes"> 
+                    </aside>
+                </section>
+
+<!--==================================================================================-->
+                <section data-markdown>
+                    <script type="text/template">
+                        ## This story comes in two parts:
+
+                        - <div style="color: #4bc4ed">Superradiance:</div> *What do we want to know*
+
+                        - <div style="color: #4bc4ed">Laboratory/Experiment design:</div> *How can we figure it out*
+
+                        note:
+                        
+                    </script>
+                </section>
+
+<!--==================================================================================-->
+                <section>	
+                        <h2 style="color: #4bc4ed"> What do we want to know? </h2>
+                        <img src="figures/sr-concept.png" alt="Energy level diagram for NV centers" style="width: 50%;" />
+                </section>
+
+<!--==================================================================================-->
+                <section >
+                    <h2> Cooperative behavior of NV in Nanodiamonds </h2>
+                    <div class="two-col-container">
+                        <div class="left-col" style="width: 60%">
+                            <img src="figures/sketch.png" alt="Energy level diagram for NV centers" style="width: 80%;" />
+                        </div>
+                        <div class="right-col" style="width: 40%">
+                            Centers must be <i style="color:#4bc4ed;">indistinguishable</i>
+                            <ol>
+                                <li>spatial: $V << \lambda^3$</li>
+                                <li>spectral</li>
+                                <li>spin manifold</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <aside class="notes"> 
+                        spectral hard in solid state bc inhomogenous broadening and dephasing
+                    </aside> 
+    
+                </section>
+<!--==================================================================================-->
+                <section data-markdown data-background="figures/trapping.png" data-background-size=100%>
+                    <script type="text/template">
+                        ## Signatures of cooperation ##	
+                        $\rightarrow$ Stronger trapping forces 
+                        (See talk by Carlo in Diamond Sensing 2 session!)
+                        
+                        <!--<img src="figures/trapping-forces.png" alt="Trapping forces on nanodiamonds" style="width: 60%;" />-->
+                            
+                        [M L Juan, C Bradac <em>et al.</em> [doi:10/b7ds]](http://doi.org/b7ds)				
+                    </script>	
+                </section>
+<!--==================================================================================-->
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Why is this interesting? ##
+                        - Natural 3D system confinement in $V << \lambda^3$
+                        - Room temperature
+                        - Possibility for engineered systems &#x1F496;
+
+                    </script>
+                    <aside class="notes"> 
+                        - gasses didn't confine in small enough size or all directions.
+                        - 1st solid state demonstration at ROOM TEMP
+                    </aside>	
+                </section>
+                
+<!--==================================================================================-->
+
+                <section data-markdown>
+                    <script type="text/template">
+                        ## How could we apply this cool behavior? ##
+                        - Superradiant sources <br><small>[J G Bohnet, Z Chen <em>et al.</em>[doi:10/b7k6]](http://doi.org/b7k6)</small>
+                        - Improved metrology <br><small>[Z Zhang, L M Duan [doi:10/b7k4]](http://doi.org/b7k4) | [Da-Wei Wang, M O Scully [doi:10/b7k5]](http://doi.org/b7k5)</small>
+                        - Energy harvesting <br><small>[R Monshouwer, M Abrahamsson, <em>et al.</em> [doi:10/d72mdb]](http://doi.org/d72mdb)</small>
+                    </script>	
+                </section>
+
+<!--==================================================================================-->
+                <section data-background="figures/sr-render.png" data-background-size=100%>	
+                        <h1 style="color: #4bc4ed"> Modeling Cooperative Effects </h1>
+                </section>
+
+<!--==================================================================================-->
+                <section>	
+                        <h4> How to describe cooperation? </h4>
+                    <div class="fragment">
+                        <h2  style="color:#4bc4ed"> Dicke States </h2>
+                    </div>
+                    <div class="fragment">
+                        $|J,M\rangle =\sqrt{\frac{(J+M)!(J-M)!}{(2J)!}}\sum_{perm}|\underbrace{111...}_{\text{J+M}}\underbrace{000...}_{\text{J-M}}\rangle$
+                        <br>
+                        <small>
+                            <table>
+                            <tr>
+                                <th>$N$</th>
+                                <th># of two-level emitters</th>
+                            </tr>
+                                <th>$J=\frac{N}{2}$</th>
+                                <th>total spin for the collective system</th>
+                                
+                            </tr>
+                            <tr>							
+                                <th>$M\in\{-J,J\}$</th>
+                                <th>projection of the spin state, J+M excited emitters</th>
+                            </tr>
+                            </table>
+                        </small><br><br>
+                        <a href="http://doi.org/cbq3mc">R H Dicke [doi:10/cbq3mc]</a>
+                        
+                    </div>
+                    <aside class="notes"> 
+                        2-level, pseudo spin-1/2 system, due to spin conserving optical decay.
+                    </aside> 
+                
+                </section>
+<!--==================================================================================-->
+                <section>	
+                        <h2> Example: Dicke States </h2>
+                        
+
+                        <table>
+                        <tr>
+                            <th>$M,~N=3$</th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td>3/2</td>
+                            <td>$|111\rangle$</td>
+                        </tr>
+                        <tr>
+                            <td>1/2</td>
+                            <td>$|110\rangle+|101\rangle+|011\rangle$</td>
+                        </tr>
+                        <tr>
+                            <td>&minus;1/2</td>
+                            <td>$|100\rangle+|010\rangle+|001\rangle$</td>
+                        </tr>
+                        <tr>
+                            <td>&minus;3/2</td>
+                            <td>$|000\rangle$</td>
+                        </tr>
+                        </table>
+                
+                </section>
+
+<!--==================================================================================-->
+                <section>	
+                        <h2> What degrades superradiance? </h2>
+                        <h4 class="fragment" style="color: #4bc4ed">(Local) Distinguishability.</h4>
+                        <div class="fragment">
+                            <ul>
+                                <li>spin&ndash;spin coupling</li>
+                                <li>local phononic environments</li>
+                                <li>localized charge fields</li>
+                                <li>lattice stress/strain</li>
+                                <li>etc.</li>
+                            </ul>
+                        </div>
+                </section>
+
+<!--==================================================================================-->
+                <section>	
+                        <h2> Distinguishable = Dephasing </h2>
+                        <img src="figures/ladder.png" alt="Energy level diagram for NV centers" style="width: 50%;" />				
+                </section>
+
+<!--==================================================================================-->
+                <section>	
+                        <h2> Superradiance model parameters</h2>
+                        <ol>
+                            <li>Domain Size: max # of cooperating centers</li>
+                            <li>Initial state of system</li>
+                            <li>Bright/dark decay rates</li>
+                            <li>Local dephasing rates</li>
+                        </ol><br>
+                        <a href="https://arxiv.org/abs/1608.03119">C Bradac <em>et al.</em> [arXiv:1608.03119]</a>
+                </section>
+
+<!--==================================================================================-->
+                <section data-background="figures/cf-bkg.png" data-background-size=100%>	
+                        <h1 style="color: #ffffff"> Observations </h1>
+                        
+                </section>	
+<!--==================================================================================-->
+                <section>	
+                        <h2> Decay rates for excitations</h2>
+                        <img src="figures/coop-all.png" alt="Energy level diagram for NV centers" style="width:60%;" />
+                        <aside class="notes"> 
+                        slowest process was the weakest signal --> bringer ones SR
+                        </aside> 
+                </section>
+
+<!--==================================================================================-->
+                <section>	
+                        <h2> Comparing rates to model:</h2>
+                        <img src="figures/model-fits.png" alt="Model fits for SR data" style="width:60%;" />
+                        <aside class="notes"> 
+                        we assume the same initial state for all
+                        </aside> 
+                </section>
+
+<!--==================================================================================-->
+                <!--<section>	
+                        <h4>How can we determine cooperative and not collective behavior?</h4>
+                        <img src="figures/correlator.png" alt="Photon correlation setup" style="width:60%;" />
+                </section>-->
+
+<!--==================================================================================-->
+                <section data-background="#666666">	
+                        <h2>Initial state exploration</h2>
+                        <img src="figures/g2-measure-new.png" alt="g2^{bar}(\tau) measurements" style="width:50%;" />
+                        <aside class="notes">
+                            we have an initial state that is consistent with our model' (we've also done some correlation measurements which are consistent with the intial state we have assumes with our model)
+                        </aside>
+                </section>
+
+<!--==================================================================================-->
+                <section >	
+                        <h2> Extensions: Low temp</h2>
+                        <ol>
+                            <li class="fragment"># of cooperating centers : &#x2716;</li>
+                            <li class="fragment">Initial state of system :  &#x2796; </li>
+                            <li class="fragment">Bright/dark decay rates : ?</li>
+                            <li class="fragment">Local dephasing rates : &#x2714;?<br><a href="https://arxiv.org/abs/1705.07847">B. B Prasanna Venkatesh, M L Juan, <br>O Romero-Isart [arXiv:1705.07847]</a></li>
+                        </ol>	
+                        <br>
+                        <br>
+                        <br>	
+                </section>
+
+<!--==================================================================================-->
+                <section data-background-video="figures/cylon-cryo.mp4">	
+                        <h2> Extensions: Low temp</h2>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                </section>
+
+<!--==================================================================================-->
+                <section data-markdown>
+                    <script type="text/template">
+                        # How can we figure this out?
+                    </script>
+                </section>
+
+<!--==================================================================================-->
+                <section data-markdown>
+                    <script type="text/template">
+                        - ## Reliability <br><small>$\rightarrow$ modern hardware</small>
+
+                        - ## Reproducability <br><small>$\rightarrow$ open source, scriptable tools</small>
+                        <!--- Scaleability $\rightarrow$ scriptable/fast code-->
+
+                        note:
+                        
+                    </script>
+                </section>
+
+<!--==================================================================================-->
+                <section data-background="figures/doom.jpg" data-background-size=100%>
+                        <h1 >	 Reliability</h1>
+                      
+                            
+                </section>
+
+<!--==================================================================================-->
+                <section data-markdown>
+                    <script type="text/template">
+                        ## A tail of two emergenci(ti)es:
+                        <img src="figures\fire.jpg" alt="disc-o inferno" style="width:80%;"/>
+
+                        note:
+                        
+                    </script>
+                </section>
+
+
+<!--==================================================================================-->
+                <section>
+                    <div class="two-col-container">
+                        <h2>Hardware reliability</h2>
+                        <div class="left-col" style="width: 50%">
+                            <img src="figures\nuc.jpg" alt="Next unit of computing"> 
+                        </div>
+                        <div class="right-col" style="width: 50%">
+                            <img src="figures\nuc-guts.jpg" alt="guts of nuc">
+                        </div>
+                    </div>
+
+                    <aside class="notes">
+
+                    </aside>
+                </section>
+
+<!--==================================================================================-->
+                <section data-markdown>
+                    <script type="text/template">
+                        <h1 style="color: #4bc4ed">Reproducability</h1> 
+                        ## the right tool for the job
+
+
+                        *See lots more in Chris' talk*
+                        
+                    </script>
+                </section>
+<!--==================================================================================-->
+                <section>
+                    <h2>Practical tools need:</h2>
+                    <ul>
+                        <li>NO LICENCE SERVERS: Open source</li>
+                        <li>Documentation: Community developed tools</li>
+                        <li>Version controllable: Git or similar</li>
+                    </ul>
+                </section>
+
+<!--==================================================================================-->
+                <section>
+                    <h2>Example: Package control and device setup</h2>
+                    
+                    <pre><code class="powershell" data-trim>
+######################################################
+# Install apps using Chocolatey
+######################################################
+Write-Host "Installing Chocolatey"
+iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))
+Write-Host
+
+Write-Host "Installing applications from Chocolatey"
+cinst 7zip.install anaconda3 arduino ConEmu firefox `
+    git.install git-annex googlechrome putty ruby sublimetext3 vcxsrv visualstudiocode -y
+Write-Host
+                    </code></pre>
+                </section>
+
+<!--==================================================================================-->
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Example: Gitlab project management
+                        ![gitlab.com](figures/git.png)
+                      
+                    </script>
+                </section>
+
+<!--==================================================================================-->
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Example: Git for managing data
+                        - Git LFS (large file system)
+                        - Git Annex
+                    </script>
+                </section>
+
+<!--==================================================================================-->
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Example: Jupyter notebooks
+                        ![jupyter.com](figures/jupyter.png)
+                        
+                    </script>
+                </section>
+
+<!--==================================================================================-->
+                <section>	
+                        <h1 style="color: #4bc4ed"> Summary: </h1>
+                        <div class="left-col" style="width: 50%" type="text/template">
+                        <h3 align="left">Done:</h3>
+                        <small>
+                        <ul>
+                            <li>Ultrafast radiative lifetimes $\approx1\text{ns}$</li>
+                            <li>Photon correlations consistency check model</li>
+                            <li>Design hardware configurations/test control for new cryostat</li>
+                            <li>Data collection and storage framework setup</li>
+                        </ul>
+                        </small>
+                        </div>
+                        <div class="right-col" style="width: 50%" type="text/template">
+                        <h3 align="left">To Do:</h3>
+                        <small>
+                        <ul>
+                            <li>Temperature dependance of superradiance?</li>
+                            <li>Expand model: Dipole dipole interactions </li>
+                            <li>Super absorption?</li>	
+                            <li>Full experimental automation</li>
+                        </ul>
+                        </small>
+                        </div>
+                </section>	
+
+<!--==================================================================================-->
+                <section data-markdown >
+                    <script type="text/template">
+                        <h1 style ="color: #4bc4ed;"> Thank you </h1>
+
+                        ![done](figures/hw-connect.jpg)
+                    </script>
+                </section>
+
+<!--==================================================================================-->
+                <!--<section data-markdown>
+                    <script type="text/template">
+                        ## Sample info ##
+
+                        - Source: Nitration purified detonation diamonds
+                            - concentrated $H_2SO_4-HNO_3$
+                            - deionized water rinse
+                            - 3 MeV proton beam, $1\times10^6$ ions per $cm^2$. By Academia Sinica, Taipei Taiwan [[doi: ctg9d4]](http://doi.org/ctg9d4)
+                        - Size: MSY $\leq 0.1 \mu m$ from Microdiamant
+                        - NV density: $\approx 3\times10^6~ NV/ \mu m^3$
+                        - Dispersed on BK7 cover slip $170 \mu m$ thick
+
+                        Note:
+                        
+                    </script>	
+                </section>-->
+
+<!--==================================================================================-->
+            </div>
+
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+
+        <script>
+
+            // Full list of configuration options available at:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: false,
+                progress: true,
+                history: true,
+                center: true,
+                slideNumber: true,
+                width: '80%',
+                 // Turns fragments on and off globally
+                fragments: true,
+
+                transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+                // Optional reveal.js plugins
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true },
+                    { src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/math/math.js', async: true }
+                ]
+            });
+
+        </script>
+
+    </body>
+</html>
