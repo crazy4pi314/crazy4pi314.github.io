@@ -5,6 +5,8 @@ title: Talks
 
 ## 2017 ##
 
+- ### [Super Cool Science](./LFQIS-2017): LFQIS 2017
+
 - ### [Spontaneous Superradiance from Single Diamond Nanocrystals](./NDNC_2017): NDNC 2017###
 
 - ### [Extending the reach of QKD](./UTS_seminar_2017): UTS Seminar ###
@@ -17,5 +19,5 @@ title: Talks
 ## 2016 ##
 
 - ### [Extending the reach of QKD: Satellite prototype for quantum communication](./photonics_connections_2016): Photonic Connections 2016### 
-- ### [Practical Quantum Cryptography Devices: how to make them and how to break them](./Macquarie_seminar_2016): Maquarie QuSciTech seminar### 
+- ### [Practical Quantum Cryptography Devices: how to make them and how to break them](./Macquarie_seminar_2016): Macquarie QuSciTech seminar### 
 - ### [Quantum key distribution devices: How to make them and how to break them (Thesis defense)](./thesis_defense) : PhD thesis defense### 
