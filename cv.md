@@ -3,7 +3,17 @@ layout: page
 title: CV
 ---
 
-[Download detailed CV as PDF](/public/download/cv.pdf) 
+[Download detailed CV as PDF](./public/download/cv.pdf) 
+
+## Education ##
+
+* **PhD in Physics (Quantum Information)**  
+	University of Waterloo, Institute for Quantum Computing<br>
+	[*Quantum key distribution devices: How to make them and how to break them*](http://hdl.handle.net/10012/10725)  
+
+* **Bachelor of Science in Physics, Bachelor of Arts in Math**  
+	Bethel University  
+	*Summa Cum Laude with Honors*
 
 ## Research interests ##
 
@@ -11,22 +21,11 @@ title: CV
 
 * Quantum key distribution 
 
-* Long distance quantum communication
-
 * Color centers in diamond
-
-## Education ##
-
-* **PhD in Physics (Quantum Information)**  
-	University of Waterloo, Institute for Quantum Computing  
-
-* **Bachelor of Science in Physics, Bachelor of Arts in Math**  
-	Bethel University  
-	*Summa Cum Laude with Honors*
 
 ## Publications ##
 
-* Christopher J. Pugh, **Sarah Kaiser**, Jean-Philippe Bourgoin, Jeongwan Jin, Nigar Sultana, Sascha Agne, Elena Anisimova, Vadim Makarov, Eric Choi, Brendon L. Higgins, Thomas Jennewein. _Airborne demonstration of a quantum key distribution receiver payload._ [arXiv:1612.06396 [quant-ph]}](https://arxiv.org/abs/1612.06396)
+* Christopher J. Pugh, **Sarah Kaiser**, Jean-Philippe Bourgoin, Jeongwan Jin, Nigar Sultana, Sascha Agne, Elena Anisimova, Vadim Makarov, Eric Choi, Brendon L. Higgins, Thomas Jennewein. _Airborne demonstration of a quantum key distribution receiver payload._ [Quantum Science and Technology, 2, 2, 024009 (2017)](https://doi.org/10.1088/2058-9565/aa701f)
 
 * Vadim Makarov, Jean-Philippe Bourgoin, Poompong Chaiwongkhot, Mathieu Gagne, Thomas Jennewein, **Sarah Kaiser**, Raman Kashyap, Matthieu Legre, Carter Minshull, Shihan Sajeed. _Laser damage creates backdoors in quantum communications._ [Phys. Rev. A 94, 030302 (2016)](http://journals.aps.org/pra/abstract/10.1103/PhysRevA.94.030302)
 
@@ -40,6 +39,10 @@ title: CV
 
 
 ## Talks ##
+
+* **Sarah Kaiser**. "Super Cool Science" Talk at Last Frontiers in Quantum Information Science 2017.
+
+* **Sarah Kaiser**, Carlo Bradac, Mattias Johnsson, Matthew van Breugel, Ben Baragiola, Rochelle Martin, Mathieu L. Juan, Gavin Brennen, Thomas Volz. [Spontaneous Superradiance from Single Diamond Nanocrystals](http://www.sckaiser.com/research/talks/NDNC_2017/), presented at [NDNC 2017](http://ndnc2017.org/wp-content/uploads/2015/07/NDNC-2017-Program-FINAL-1.pdf) on 29 May 2017. 
 
 * **Sarah Kaiser**, [Extending the reach of QKD](/research/talks/UTS_seminar_2017/), presented as a seminar at [University of Technology Sydney](https://www.uts.edu.au/) on 5 April 2017.
 
