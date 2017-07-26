@@ -8,7 +8,7 @@ title: CV
 ## Education ##
 
 * **PhD in Physics (Quantum Information)**  
-	University of Waterloo, Institute for Quantum Computing<br>
+	University of Waterloo, Institute for Quantum Computing <br>
 	[*Quantum key distribution devices: How to make them and how to break them*](http://hdl.handle.net/10012/10725)  
 
 * **Bachelor of Science in Physics, Bachelor of Arts in Math**  
