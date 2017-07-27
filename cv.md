@@ -42,21 +42,34 @@ title: CV
 
 * **Sarah Kaiser**. "Super Cool Science" Talk at Last Frontiers in Quantum Information Science 2017.
 
-* **Sarah Kaiser**, Carlo Bradac, Mattias Johnsson, Matthew van Breugel, Ben Baragiola, Rochelle Martin, Mathieu L. Juan, Gavin Brennen, Thomas Volz. [Spontaneous Superradiance from Single Diamond Nanocrystals](http://www.sckaiser.com/research/talks/NDNC_2017/), presented at [NDNC 2017](http://ndnc2017.org/wp-content/uploads/2015/07/NDNC-2017-Program-FINAL-1.pdf) on 29 May 2017. 
+* **Sarah Kaiser**, Carlo Bradac, Mattias Johnsson, Matthew van Breugel, Ben Baragiola, Rochelle Martin, Mathieu L. Juan, Gavin Brennen, Thomas Volz. [Spontaneous Superradiance from Single Diamond Nanocrystals](./research/talks/NDNC_2017/), presented at [NDNC 2017](http://ndnc2017.org/wp-content/uploads/2015/07/NDNC-2017-Program-FINAL-1.pdf) on 29 May 2017. 
+
+    [PDF abstract](../../public/download/kaiser-NDNC17-abstract.pdf)
 
 * **Sarah Kaiser**, [Extending the reach of QKD](/research/talks/UTS_seminar_2017/), presented as a seminar at [University of Technology Sydney](https://www.uts.edu.au/) on 5 April 2017.
 
-* **Sarah Kaiser**, Alan Robertson. [Photon phreaking or what quantum can (actually) do for security?](/research/talks/crypto_club/), presented at the Gemalto Crypto Club 23 Feb 2017.
+    Cryptography is an important social and technical aspect of our modern world. The physical nature by which we can obscure or encrypt information has changed drastically with new technologies that allow for the manipulation of quantum information. We now use Quantum Key Distribution (QKD) quite readily to exchange random bit strings called keys between parties. I will discuss some of the possible paths forward to making this a practical technology, including looking at hardware vulnerabilities as well as how to extend the physical reach of the systems. 
+
+* **Sarah Kaiser**, Alan Robertson. [Photon phreaking or what quantum can (actually) do for security?](./research/talks/crypto_club/), presented at the Gemalto Crypto Club 23 Feb 2017.
+ 
+    What properties of quantum systems can be useful for cryptography? Quantum systems have the potential to be new cryptographic tools and force us to re-examine our current assumptions of computational complexity. We will look at some interesting examples of the new tech and protocols like quantum key distribution and "quantum hacking", quantum random number generators, quantum computing and algorithms. What consequences do these technologies have for our current cryptographic infrastructure?
 
 * **Sarah Kaiser** [Extending the reach of QKD: Satellite prototype for quantum communication](/research/talks/photonics_connections_2016/), presented at the [Quantum Photonics Connections Conference](http://cudos.org.au/calendar/2016_quantum.shtml) at the University of Sydney, 24 November 2016.
 
 * **Sarah Kaiser**. "Extending the reach of QKD" Talk at Last Frontiers in Quantum Information Science 2016.
 
-* **Sarah Kaiser**, Chris Pugh, Jean-Philippe Bourgoin, Brendon Higgins, Thomas Jennewein. "Towards satellite-based quantum communication: field testing the QEYSSAT payload." Talk at [ASTRO 2016](http://www.casi.ca/assets/list%20of%20titles%20from%20astro%202016.pdf).
+* **Sarah Kaiser**, Chris Pugh, Jean-Philippe Bourgoin, Brendon Higgins, Thomas Jennewein. "Towards satellite-based quantum communication: field testing the QEYSSAT payload." Talk at [ASTRO 2016](http://www.casi.ca/casi/wp-content/uploads/2016/06/Abstract-book-draft-6-complete.pdf).
 
-* **Sarah Kaiser**, [Practical Quantum Cryptography Devices: how to make them and how to break them](/research/talks/macquarie_seminar_2016/), presented as a seminar at [Macquarie University](https://www.mq.edu.au/) on 1 April 2016.
+    Long‐distance quantum communication systems are of interest for commercial and fundamental scientific projects. Currently, the link length of these systems is limited by optical fiber losses or free‐ space line of sight. Our goal is to use low earth orbit satellites as a relay, enabling distant locations to establish a link and exchange quantum systems, including those that were too far apart to link previously. In this talk, I will describe our progress towards a proposed quantum receiver satellite payload that has a passive polarization analyzer to detect photons sent from ground stations. We have designed and constructed prototypes of the QEYSSAT (Quantum EncrYption and Science SATellite) payload with commercial and government assistance. These prototypes comprise almost the entire system needed for a form‐fit‐function payload and ground station. I will present tests of our system in realistic scenarios representing the environments it will face. In particular, I will present the latest results of testing this system in an aircraft. Finally, I will also identify remaining challenges for practical long distance quantum communication.
+
+* **Sarah Kaiser**, [Practical Quantum Cryptography Devices: how to make them and how to break them](/research/talks/macquarie_seminar_2016/), presented as a [QuSciTech seminar](http://www.mq.edu.au/research/research-centres-groups-and-facilities/innovative-technologies/centres/qscitech/news-and-events/past-seminars) at [Macquarie University](https://www.mq.edu.au/) on 1 April 2016.
+
+    Long-distance quantum communication systems are of interest for commercial and fundamental scientific projects. Commercially available Quantum Key Distribution (QKD) devices that claim physical security of generated keys rely on telecom fiber networks to link communicating parties.  This talk will address two main aspects to making QKD devices practical: satellites can be used to extend the range of the QKD devices past the current limit of ~200km, and all current implementations of QKD are insecure due to hardware vulnerabilities. I will also identify remaining challenges for practical long distance quantum communication.
+
 
 * **Sarah Kaiser**, Chris Pugh, Jean-Philippe Bourgoin, Brendon Higgins, Thomas Jennewein. "Towards satellite-based quantum communication: field testing the QEYSSAT payload." Talk at [SQuInT 2016](http://physics.unm.edu/SQuInT/2016/abstracts.php?speaker=Kaiser).
+
+    Long-distance quantum communication systems are of interest for commercial and fundamental scientific projects. Currently, the link length of these systems is limited by optical fiber losses or free-space line of sight. Our goal is to use low earth orbit satellites as a relay, enabling distant locations to establish a link and exchange quantum systems, including those that were too far apart to link previously. In this talk, I will describe our progress towards a proposed quantum receiver satellite payload that has a passive polarization analyzer to detect photons sent from ground stations. We have designed and constructed prototypes of the QEYSSAT (Quantum EncrYption and Science SATellite) payload with commercial and government assistance. These prototypes comprise almost the entire system needed for a form-fit-function payload and ground station. I will present tests of our system in realistic scenarios representing the environments it will face. In particular, I will present the latest results of testing this system in an aircraft. Finally, I will also identify remaining challenges for practical long distance quantum communication.
 
 * **Sarah Kaiser**. "What QKD can learn from Classical Cryptography." Talk at Last Frontiers in Quantum Information Science 2015
 
