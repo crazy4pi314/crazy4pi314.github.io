@@ -1,7 +1,7 @@
 # Dependencies
 markdown:         kramdown
 highlighter:      rouge
-
+gems: [jekyll-paginate]
 # Permalinks
 permalink:        pretty
 #relative_permalinks: true
@@ -10,18 +10,28 @@ permalink:        pretty
 title:            sckaiser
 tagline:          'homepage'
 description:      'Quantum. Lasers. Robots.'
-url:              http://sckaiser.com
+url:              https://sckaiser.com
 baseurl:          /
-exclude:
-    - node_modules
+# exclude:
+#     - node_modules
 
 author:
   name:           'Sarah Kaiser'
   url:            https://sckaiser.com
+  email : sckaiser@sckaiser.com
+  github : crazy4pi314
+  twitter : crazy4pi314
 
 
 # Custom vars
 version:          0.0.1
 
 github:
-  repo:           https://github.com/poole/hyde
+  repo: https://github.com/crazy4pi314/crazy4pi314.github.io
+
+permalink: /blog/:year/:month/:day/:title.html
+
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+exclude: ["*.ipynb"]
