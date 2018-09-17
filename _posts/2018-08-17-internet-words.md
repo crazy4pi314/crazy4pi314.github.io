@@ -1,13 +1,14 @@
 ---
 layout: post
-title: Introducing Hyde
+title: Let's start the internet words!
 ---
 
-Hyde is a brazen two-column [Jekyll](http://jekyllrb.com) theme that pairs a prominent sidebar with uncomplicated content. It's based on [Poole](http://getpoole.com), the Jekyll butler.
+### Finally!
+Now that I have gotten around to getting a blog working on my site again, I can finally write up some of my projects! I also intend to document some other side projects here like my opinions on to make STEM more inclusive and the writing process for some of my upcoming writing projects.
 
-### Built on Poole
 
-Poole is the Jekyll Butler, serving as an upstanding and effective foundation for Jekyll themes by [@mdo](https://twitter.com/mdo). Poole, and every theme built on it (like Hyde here) includes the following:
+
+<!-- Poole is the Jekyll Butler, serving as an upstanding and effective foundation for Jekyll themes by [@mdo](https://twitter.com/mdo). Poole, and every theme built on it (like Hyde here) includes the following:
 
 * Complete Jekyll setup included (layouts, config, [404](/404), [RSS feed](/atom.xml), posts, and [example page](/about))
 * Mobile friendly design and development
@@ -34,4 +35,4 @@ Hyde is by preference a forward-thinking project. In addition to the latest vers
 
 Hyde is developed on and hosted with GitHub. Head to the <a href="https://github.com/poole/hyde">GitHub repository</a> for downloads, bug reports, and features requests.
 
-Thanks!
+Thanks! -->

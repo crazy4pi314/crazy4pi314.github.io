@@ -79,7 +79,7 @@ html {
 .sidebar-about h1 {
   color: #fff;
   margin-top: 0;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Megrim', serif;
   font-size: 3.75rem;
 }
 
@@ -221,11 +221,11 @@ a.sidebar-nav-item:focus {
 
 /* Cyan */
 .theme-base-0c .sidebar {
-  background-color: #75b5aa;
+  background-color: #008B8B;
 }
 .theme-base-0c .content a,
 .theme-base-0c .related-posts li a:hover {
-  color: #75b5aa;
+  color: #008B8B;
 }
 
 /* Blue */
