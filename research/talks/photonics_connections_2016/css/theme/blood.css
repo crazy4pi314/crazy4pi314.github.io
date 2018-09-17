@@ -9,8 +9,7 @@
  * For other themes, change $codeBackground accordingly.
  *
  */
-@import 'https://fonts.googleapis.com/css?family=Lato';
-@import 'https://fonts.googleapis.com/css?family=Droid+Serif';
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,700,300italic,700italic);
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
@@ -20,7 +19,7 @@ body {
   background-color: #222; }
 
 .reveal {
-  font-family: Palatino, Palatino Linotype, URW Palladio L, "Droid Serif", "serif";
+  font-family: Ubuntu, "sans-serif";
   font-size: 36px;
   font-weight: normal;
   color: #eee; }

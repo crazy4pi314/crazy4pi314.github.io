@@ -2,7 +2,7 @@
 
 Personal webpage for Sarah Kaiser. Built with Jekyll using the Hyde theme below.
 
-Currently I am a Postdoctoral Fellow at [Macquarie University](https://www.mq.edu.au/). I got my PhD from the [Institute for Quantum Computing](https://uwaterloo.ca/institute-for-quantum-computing/) at the [University of Waterloo](https://uwaterloo.ca/) in Waterloo, Ontario.
+Currently I am a Research Engineer at Pensar Development in Settle, WA. Most recently I was a Postdoctoral Fellow at [Macquarie University](https://www.mq.edu.au/). I got my PhD from the [Institute for Quantum Computing](https://uwaterloo.ca/institute-for-quantum-computing/) at the [University of Waterloo](https://uwaterloo.ca/) in Waterloo, Ontario.
 
 **Links to me other places:**
 <p style="text-align: center;">

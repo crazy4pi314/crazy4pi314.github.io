@@ -3,7 +3,7 @@ layout: page
 title: CV
 ---
 
-[Download detailed CV as PDF](./public/download/cv.pdf) 
+[Download detailed CV as PDF](/public/download/cv.pdf) 
 
 ## Education ##
 
@@ -40,9 +40,9 @@ title: CV
 
 ## Talks ##
 
-* **Sarah Kaiser**. "Super Cool Science" Talk at Last Frontiers in Quantum Information Science 2017.
+* **Sarah Kaiser**. [Super Cool Science](/research/talks/LFQIS-2017/) Talk at Last Frontiers in Quantum Information Science 2017.
 
-* **Sarah Kaiser**, Carlo Bradac, Mattias Johnsson, Matthew van Breugel, Ben Baragiola, Rochelle Martin, Mathieu L. Juan, Gavin Brennen, Thomas Volz. [Spontaneous Superradiance from Single Diamond Nanocrystals](./research/talks/NDNC_2017/), presented at [NDNC 2017](http://ndnc2017.org/wp-content/uploads/2015/07/NDNC-2017-Program-FINAL-1.pdf) on 29 May 2017. 
+* **Sarah Kaiser**, Carlo Bradac, Mattias Johnsson, Matthew van Breugel, Ben Baragiola, Rochelle Martin, Mathieu L. Juan, Gavin Brennen, Thomas Volz. [Spontaneous Superradiance from Single Diamond Nanocrystals](/research/talks/NDNC_2017/), presented at [NDNC 2017](http://ndnc2017.org/wp-content/uploads/2015/07/NDNC-2017-Program-FINAL-1.pdf) on 29 May 2017. 
 
     [PDF abstract](../../public/download/kaiser-NDNC17-abstract.pdf)
 
@@ -50,7 +50,7 @@ title: CV
 
     Cryptography is an important social and technical aspect of our modern world. The physical nature by which we can obscure or encrypt information has changed drastically with new technologies that allow for the manipulation of quantum information. We now use Quantum Key Distribution (QKD) quite readily to exchange random bit strings called keys between parties. I will discuss some of the possible paths forward to making this a practical technology, including looking at hardware vulnerabilities as well as how to extend the physical reach of the systems. 
 
-* **Sarah Kaiser**, Alan Robertson. [Photon phreaking or what quantum can (actually) do for security?](./research/talks/crypto_club/), presented at the Gemalto Crypto Club 23 Feb 2017.
+* **Sarah Kaiser**, Alan Robertson. [Photon phreaking or what quantum can (actually) do for security?](/research/talks/crypto_club/), presented at the Gemalto Crypto Club 23 Feb 2017.
  
     What properties of quantum systems can be useful for cryptography? Quantum systems have the potential to be new cryptographic tools and force us to re-examine our current assumptions of computational complexity. We will look at some interesting examples of the new tech and protocols like quantum key distribution and "quantum hacking", quantum random number generators, quantum computing and algorithms. What consequences do these technologies have for our current cryptographic infrastructure?
 
