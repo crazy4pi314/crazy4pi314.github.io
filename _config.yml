@@ -10,7 +10,7 @@ permalink:        pretty
 title:            sckaiser
 tagline:          'homepage'
 description:      'Quantum. Lasers. Robots.'
-url:              https://sckaiser.com
+url:              https://www.sckaiser.com
 baseurl:          /
 # exclude:
 #     - node_modules
