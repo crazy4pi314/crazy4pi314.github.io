@@ -5,6 +5,14 @@ title: Selected Talks
 
 Here is some of the talks I have given, that I made as webpages with [reveal.js](http://lab.hakim.se/reveal-js/#/). 
 
+## 2018 ##
+
+- ### [Quantum Machine Learning in context: What is a quantum algorithm anyway?](./qml_portland_2018): Portland Data Science Group
+
+In the rush to add the word _quantum_ to everything from batteries to banking, Quantum machine learning has entered the fray. A perfect combination of buzzwords that will get all of the funding....right? In this talk I want to look at quantum algorithms and what actually constitutes programming a quantum computer. With this context, we can look at what machine learning tasks are being explored for possible speedups with quantum computing.
+
+Talk details [here](https://www.meetup.com/Portland-Data-Science-Group/events/255093322)!
+
 ## 2017 ##
 
 - ### [Super Cool Science](./LFQIS-2017): LFQIS 2017
