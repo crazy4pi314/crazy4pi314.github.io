@@ -1,21 +1,33 @@
 # Quantum machine learning in context
 
 <!-- In the rush to add the word _quantum_ to everything from batteries to banking, Quantum machine learning has entered the fray. A perfect combination of buzzwords that will get all of the funding....right? In this talk I want to look at quantum algorithms and what actually constitutes programming a quantum computer. With this context, we can look at what machine learning tasks are being explored for possible speedups with quantum computing. -->
-
+- About me!
 - Part 1: Quantum Expectation | What can we reasonably expect from quantum resources?
     - Ask them what sorts of things they know about QC?
     - What are some common claims in media?
     - What can we actually expect?
 - Part 2: Key concepts in Quantum computing
-        - qubit
+    - What do we need to make a classical computer?
+    - what do we need for a quantum computer
+    - qubit (bit)
         - superposition
+    - operations
         - entanglement
-- Part 2: Quantum Programing | What does a quantum algorithim look like?
+    - measurement (readout)
+- Part 3: Quantum Programing | What does a quantum algorithim look like?
+    - How is a quantum algorithim like a writing desk?
     - How do we represent algorithims now?
+        - circuit diagrams are common in theory
+        - but are hard to translate to coding/simulations
     - Many options, Q# allows us to program the way we think at an algorithimic level. 
-    - 
+    - How many quantum algorthims do we know?
+        - < 20, only about ~5 that are known to have some potentially useful advantages
+    - The one you have probably heard of
+    - The ones you should know about
+    - The real anwser is *WE HAVE NO CLUE*
     
-- Part 3: Where can we apply _quantum_ to ML?
+- Part 4: Where can we apply _quantum_ to ML?
+    - Ummm no real idea, anyone who says otherwise wants your money
     - deep learning
     - reinforcement learning
     - 
