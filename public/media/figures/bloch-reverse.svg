@@ -15,7 +15,10 @@
    id="svg4194"
    version="1.1"
    inkscape:version="0.92.1 r15371"
-   sodipodi:docname="bloch.svg">
+   sodipodi:docname="bloch-reverse.svg"
+   inkscape:export-filename="C:\Users\skais\git\crazy4pi314.github.io\public\media\figures\bloch-reverse.png"
+   inkscape:export-xdpi="299.95499"
+   inkscape:export-ydpi="299.95499">
   <defs
      id="defs4196">
     <marker
@@ -87,7 +90,7 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="477.93596"
+     inkscape:cx="164.36453"
      inkscape:cy="293.67265"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -264,17 +267,6 @@
        r="5" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#008b8b;fill-opacity:1;stroke:#008b8b;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
-       x="246.57143"
-       y="343.52432"
-       id="text5416-1"><tspan
-         sodipodi:role="line"
-         id="tspan5418-7"
-         x="246.57143"
-         y="343.52432"
-         style="font-size:40px;line-height:1.25;fill:#008b8b;fill-opacity:1;stroke:#008b8b;stroke-opacity:1;">|ψ</tspan></text>
-    <text
-       xml:space="preserve"
        style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="490"
        y="892.36218"
@@ -284,17 +276,5 @@
          x="490"
          y="892.36218"
          style="font-size:40px;line-height:1.25"> </tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#008b8b;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
-       x="472.36581"
-       y="216.02109"
-       id="text5416-11"
-       transform="scale(0.60616145,1.6497255)"><tspan
-         sodipodi:role="line"
-         id="tspan5418-1"
-         x="472.36581"
-         y="216.02109"
-         style="font-size:45.28197098px;line-height:1.25;fill:#008b8b;fill-opacity:1;">&gt;</tspan></text>
   </g>
 </svg>

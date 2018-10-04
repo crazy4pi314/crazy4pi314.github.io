@@ -24,7 +24,8 @@
         - < 20, only about ~5 that are known to have some potentially useful advantages
     - The one you have probably heard of
     - The ones you should know about
-    - The real anwser is *WE HAVE NO CLUE*
+    - The real anwser is *TBD*
+    - dj: smaller questions= less information needed out
     
 - Part 4: Where can we apply _quantum_ to ML?
     - Ummm no real idea, anyone who says otherwise wants your money
