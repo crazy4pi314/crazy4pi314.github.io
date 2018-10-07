@@ -28,15 +28,32 @@
     - dj: smaller questions= less information needed out
     
 - Part 4: Where can we apply _quantum_ to ML?
-    - Ummm no real idea, anyone who says otherwise wants your money
+
     - deep learning
     - reinforcement learning
     - 
+Solve:
+    A.x = b
+    if A is invertable then x = A^{-1}b
     
+    A.|x> = |b> ->
+
+    HHL can do this in exponentially less time than classical
+
+    But what do you do with x?
+
+    If you try to read out x, you will do log worse than classical
+
+    So either we have to make |x> very small, or only need to know some restricted info about |x>
+
+    - looks like linear least squares fitting from ML! b-> Data, A->Model, x->parameters
+
+    N.B. only works for A that are easily simulateable
+
+
+Can train faster restricted boltzman machines faster on a quantum computer, but encoding the problem you blow away  
     
-    
-    
-    
+N.B. All of these make great _subroutines_ in larger algorithims, but we need structure for problems that does not blow away advantages of translating between classical and quantum.  
     
     
     • Part 1: quantum resources, what are they?
