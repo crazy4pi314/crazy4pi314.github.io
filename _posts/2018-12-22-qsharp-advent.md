@@ -32,7 +32,9 @@ While I love having GUI tools to do certain tasks, I ♥ it when I can script se
 Disclaimer: I am an avid [Visual Studio Code](https://code.visualstudio.com/) user ([Live Share](https://visualstudio.microsoft.com/services/live-share/) and [git integration](https://code.visualstudio.com/docs/editor/versioncontrol) 😍) and am using it with live markdown preview to write this post! I have to use lots of different IDEs for work that are often specially made for the embedded system's language or just because it was how the project was set up. I was so happy to see some awesome Q# integrations to some of the [most popular editors](https://www.cnbc.com/2018/12/20/microsoft-cmo-capossela-says-google-employees-use-visual-studio-code.html) and IDEs, which means I can use some familiar tools and get a lot of creature comforts like [IntelliSense for real-time feedback on errors](https://cloudblogs.microsoft.com/quantum/2018/10/30/updated-quantum-development-kit-offers-new-chemistry-library-and-improved-developer-tools/).
 I have listed more links below, but if you use Visual Studio or Visual Studio Code definitely check out the integration for Q#
 
-- TODO:
+- [Visual Studio](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)
+- [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode)
+
 
 ## 3. Project-local v. installing ## 
 
@@ -74,7 +76,7 @@ The very act of inspecting or measuring a qubit changes our qubits where as our 
 Now, if you are using a simulator backend to run your quantum program, it has to record things about what states a qubit could be in and in principle you could look at those values debugging something.
 However, this should _never_ be relied on part of a quantum program, because you would not be able to do this inspection step without consequences on real hardware.
 The state of a qubit is not some inherent property of the system, but more of a formalism we have imposed to help us understand their behavior.
-There are [other ways](TODO:) to debug quantum programs but like actual quantum algorithms they are different and interesting in their own right.
+There are other ways to debug quantum programs but like actual quantum algorithms they are different and interesting in their own right.
 (Let's not open _allllll_ of the presents early, after all.)
 
 ## 7. Don't forget to clean up after your qubits! ## 
