@@ -3,6 +3,8 @@ layout: post
 title: "Opening Presents Early: Q# Tips and tricks for a Happy Hamiltonian"
 ---
 
+_This is a post contributing to [#QsAdvent](https://twitter.com/search?f=tweets&q=%23QsAdvent) 2018_
+
 We are approaching a day of the year where many will open presents from family and friends, after eating until they are uncomfortably full. I thought it would be fun to highlight some tips for working with Q# this holiday break, so you can work on designing quantum algorithms snuggled up by a fire (or at least a space heater if in the northern hemisphere). Some of these may be obvious to different folks, so if you already know then give yourself a pat on the back 😃. Also they are in no particular order other than the order in which they occurred to me while drinking some eggnog and enjoying some Christmas Cake from Smitha, Naomi, and [@johnazariah](https://twitter.com/johnazariah/)! 🍒 🍰 🎄
 
 Let's just jump right in!
@@ -118,3 +120,4 @@ Happy Hamiltonians and may you find your ground state in 2019! 🎁⛄❄🍷�
 
 - [Q# stack overflow](https://stackoverflow.com/questions/tagged/q%23?sort=newest)
 - [MSFT Quantum Team Blog](https://cloudblogs.microsoft.com/quantum/)
+- [Q# Advent Calendar](https://blogs.msdn.microsoft.com/visualstudio/2018/11/15/q-advent-calendar-2018/)
