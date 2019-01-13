@@ -1,0 +1,93 @@
+---
+layout: post
+title: "Give an engineer a book to sign..."
+---
+
+### ... and they will want a laser to go with it! 😄⚡
+
+_tl;dr CONTEST TO WIN LASER SIGNED BOOK COPY, SEE END OF POST FOR INSTRUCTIONS_
+
+I always start maker projects with the best of intentions to blog what [@cgranade](https://twitter.com/cgranade) and I work on, but the fun part of making is over and blogging is forgotten.
+But, an important part of the engineering process is **documentation**, so it seems fitting to kick-off posting some of the stuff we make with a fun way to personalize books!
+
+In this episode, my partner and I had just gone out and bought a bunch of sharpies because my first book (?!) is now out, [The ABCs of Engineering](https://amzn.to/2COVYW5) with [Chris Ferrie](https://csferrie.com/).
+I had promised a bunch of people signed copies, and wanted some good ammo.
+I started working on the signature I wanted to use, but really didn't like how the sharpies made it look/how easy they could be wiped off some of the printing.
+<p style="text-align: center;">
+<img src="/public/media/blog/2019-01-12-signature-practice.jpeg" alt="Sharpie signature practice" style="width: 60%; display: inline;padding-top: 1em;"/>
+</p>
+So I thought, how could I make this more permanent and more personal...
+
+>"Can this problem be solved with lasers (y/n)?"
+>
+> y
+
+## _The mission_:
+
+Take my signature I was practicing to sign the books with and turn that into something that could be etched on a board book.
+
+I have to thank [@cgranade] for his help on this, he was the official laser cutter whisperer for this project because I don't have access to a laser cutter at the moment ♥
+
+## _The plan_:
+
+1. I started by using a surface pen to draw what I wanted in a OneNote page. 
+
+    Pretty straight forward, also considered paper with sharpies and photo and then tracing but that seemed like it would take longer.
+    <p style="text-align: center;">
+	<img src="/public/media/blog/2019-01-12-onenote-signature.png" alt="Onenote signature with straight lines" style="width: 60%; display: inline;padding-top: 1em;"/>
+    </p>
+    Also it had to involve lasers, so there is an homage to laser safety signs:
+    <p style="text-align: center;">
+	<img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Laser-symbol-text.svg" alt="Laser warning symbol, from wikipedia" style="width: 60%; display: inline;padding-top: 1em;"/>
+    </p>
+
+2. Figure out what parts of the design to etch or cut.
+
+    Laser cutters often have two modes, and there are tradeoffs for both.
+    - Cutting is faster, better for finer detail often, and well, cuts stuff.
+    - Etching works when you want to change larger areas of your material, kinda like an adjustable laser peeler.
+    I decided that because I can't draw a straight line for anything, I wanted to do the laser emission symbol as a cut that I would use the computer to design.
+    The rest of the letters I wanted to etch to maintain the look as if I had signed it.
+    <p style="text-align: center;">
+	<img src="/public/media/blog/2019-01-12-lasercutter-mode.jpg" alt="Laser cutting v. etching" style="width: 60%; display: inline;padding-top: 1em;"/>
+    </p>
+
+    After the types of cut are chosen, the digital file is prepped (varies highly on the laser cutter itself, check the manual or software for a guide).
+
+3. Experiment with setting of the laser on a similar material to achieve desired cut.
+
+    With the file loaded on the control computer, we need to figure out what laser settings achieve the cuts and etches we want.
+    On the laser cutter used here it meant varying the speed and power of the laser for each part of the design.
+    These settings do not hold for all materials, so we had to find good ones for the kind of paperboard the books were.
+    Rather than messing up a book, we used some corrugated cardboard from the box they came in to test.
+    [@cgranade](https://twitter.com/cgranade) has a real knack from experience for guessing good values for these parameters, so this testing went pretty quick.
+    You can see some of his tests here, with notes of what settings he used for each:
+    <p style="text-align: center;">
+	<img src="/public/media/blog/2019-01-12-cardboard-test.jpg" alt="Cardboard test of laser cutter settings" style="width: 60%; display: inline;padding-top: 1em;"/>
+    </p>
+
+    We ended up going with the one below (with a style modification suggested by [@cgranade](https://twitter.com/cgranade)) because I liked the depth of the etch and the cut was not so deep it would risk cutting through the back page.
+
+    <p style="text-align: center;">
+	<img src="/public/media/blog/2019-01-12-winning-settings.jpeg" alt="Winning laser cutter settings" style="width: 60%; display: inline;padding-top: 1em;" rotate="90"/>
+    </p>
+
+4. Test on an actual book!!!
+
+    After testing some parameters that worked on our cardboard proxy, it was time to try it on the real thing!
+    I would have normally used some blue painter tape to cover the area I was going to cut to reduce scorching from the laser, but we didn't see much on the cardboard we were testing on and if it did happen it would add to the ambiance :)
+    Also, since each book was not quite flat, the focus of the laser was adjusted for each book to make sure the design looked the same on each.
+    Here is some photos and a video of the cut!
+
+    <p style="text-align: center;">
+	<img src="/public/media/blog/2019-01-12-book-on-cutter.jpg" alt="Book on laser cutter" style="width: 60%; display: inline;padding-top: 1em;"/>
+    </p>
+
+    <video width="640" height="480" controls>
+    <source src="/public/media/blog/2019-01-12-book-signing.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+
+## Now for the fun part: A GIVEAWAY!
+
+Post a picture or description of what word/term you would add to the ABCs of Engineering on Facebook, Instagram, or Twitter with the hashtag [#ABCsofEngineering]() and I will pick 3 at random on Feb 1st and mail a laser signed copy of The ABCs of Engineering to you!
