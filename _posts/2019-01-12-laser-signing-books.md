@@ -11,6 +11,11 @@ I always start maker projects with the best of intentions to blog what my partne
 An important part of the engineering process is **documentation**, though, so it seems fitting to kick-off posting some of the stuff we make with a fun way to personalize books!
 
 In this episode, my partner and I had just gone out and bought a bunch of sharpies because my first book (such an amazing feeling!!) is now out, [The ABCs of Engineering](https://amzn.to/2COVYW5) with [Chris Ferrie](https://csferrie.com/).
+
+<p style="text-align: center;">
+<img src="/public/media/blog/2019-01-12-book-stack.png" alt="Newly arrived author copies of my new book" style="width: 60%; display: inline;padding-top: 1em;"/>
+</p>
+
 I had promised a bunch of people signed copies, and wanted some good ammo.
 I started working on the signature I wanted to use, but really didn't like how the Sharpies made it look, or how easily the signatures could be wiped off some of the printing.
 <p style="text-align: center;">
@@ -26,7 +31,7 @@ So I thought, how could I make this more permanent and more personal...
 
 Take the signature that I was practicing to sign the books with, and turn that into something that could be etched on a board book.
 
-I have to thank [@cgranade] for his help on this, he was the official laser cutter whisperer for this project (and because I don't have access to a laser cutter at the moment ♥).
+I have to thank [@cgranade](https://twitter.com/cgranade) for his help on this, he was the official laser cutter whisperer for this project (and because I don't have access to a laser cutter at the moment ♥).
 
 ## _The plan_:
 
