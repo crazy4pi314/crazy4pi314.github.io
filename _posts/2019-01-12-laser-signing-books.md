@@ -99,7 +99,7 @@ I have to thank [@cgranade](https://twitter.com/cgranade) for his help on this, 
 Post a picture or description of what word/term you would add to the _ABCs of Engineering_ on Facebook, Instagram, or Twitter with the hashtag [#ABCsofEngineering](https://twitter.com/search?f=tweets&q=%23ABCsofEngineering) and I will pick 3 at random on Feb 1st and mail a **laser signed** copy of The ABCs of Engineering to you!
 
 You can find copies of ABCs of Engineering at all of the following retailers:
-- [Amazon](amzn.to/2COVYW5)
+- [Amazon](https://t.co/jnvIIUAmN7)
 - [Indiebound](https://www.indiebound.org/book/9781492671213)
 - [Barnes & Noble](https://www.barnesandnoble.com/w/abcs-of-engineering-chris-ferrie/1128189926?ean=9781492671213#/)
 - [Books a Million](https://www.booksamillion.com/p/ABCs-Engineering/Chris-Ferrie/9781492671213?id=6892826005771)
