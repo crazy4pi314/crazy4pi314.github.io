@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Quantum Machine Learning in context: What is a quantum algorithm anyway?</title>
+
+		<meta name="description" content="23 Feb 2017">
+		<meta name="author" content="Sarah Kaiser">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/dark-aqua.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<style type="text/css">
+			.reveal section img {
+				border: none;
+				box-shadow: none;
+				background: none;
+			}
+
+			.two-col-container {
+				width: 100%;
+			}
+
+			.left-col {
+				float: left;
+				width: 50%;
+			}
+
+			.right-col {
+				float: right;
+				width: 50%;
+			}
+
+		</style>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+
+<!--==================================================================================-->
+				<section>
+					<h1 style="font-size: 200%; color:#008B8B">Learning Q# with Python:</h1>
+					<h2 style="font-size: 100%">Building the quantum programming community</h2>
+					<hr />
+
+					<p>
+						<strong> Build 
+						<br>
+						May 2019 </strong><br>
+						<a href="https://www.sckaiser.com">Dr. Sarah Kaiser</a> <br>
+						Find me online: @crazy4pi314 www.sckaiser.com
+						<br>
+					</p>
+
+				</section>	
+
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+					## Quick introduction!
+					<div class="two-col-container">
+						<div class="left-col">
+							<img data-src="../../../public/media/figures/pensar-bio.png" alt="Selfie at work with pink hard hat" style="width: 75%;"/>
+						</div>	
+						<!--TODO: update-->
+						<div class="right-col">
+							<img data-src="../../../public/media/figures/books.png" alt="Kaiser Baby books" style="width: 100%;"/>
+						</div>
+					</div>
+
+					</script>
+				</section>
+
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+						### Tell me what you have heard about quantum computing? ###
+					</script>
+				</section>
+
+<!--==================================================================================-->			
+				<section data-markdown data-background="../../../public/media/figures/wtf-quantum.png" data-background-size=contain>
+					
+				</section>
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+					### So if its that good... why are we all not doing this?! 
+					</script>
+				</section>
+
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+					1. There is a certain "type" of person who we imagine does quantum computing...
+					2. Its really hard/you need x degree to do quantum
+					3. You have no idea who would pay you to do so :P
+					<!--TODO: COllage of pics or old white men--> 
+					</script>
+				</section>
+
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+					## How can we do better?
+					_Communities of *people* make software_
+					</script>
+				</section>
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+					### Let's look at Successfull OSS communities
+					<!--TODO: word cloud of names of groups-->>
+					</script>
+				</section>
+
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+					### Helpful pratices
+					- First PR welcome
+					- ecouraging and supporting contribution
+					- Meetup groups/Hacknights
+					- Codes of conduct
+					- Tutorials 
+					</script>
+				</section>
+
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+					## Quantum Programming — let's do it ##
+					
+					</script>
+				</section>
+
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+					### what the `$&@_!&$` is a qc anyway? ###
+					<img data-src="../../../public/media/figures/what-is-qc.png" alt="progression from bit to qubit" style="width: 100%;"/>
+												
+					<em class="fragment">N.B. similar to use case for GPUs</em>
+					</script>
+				</section>
+<!--==================================================================================-->
+				<section data-background="../../../public/media/figures/the-more-you-know-darker.png" data-background-size=cover>
+					<h2> TL;DR </h2>
+						<ul>
+						    <li><p class="fragment"> Quantum computers are <strong>NOT</strong> universally faster or more powerful than classical computers</p>
+							<li><p class="fragment"> Quantum computers will <strong>NOT</strong> be here tomorrow. <br>have:100 qubits / need: 100 million </p>
+								<li><p class="fragment"> Dwave is <strong> NOT </strong> a quantum computer. Evidence shows quantum annealer at best </p>
+							<li><p class="fragment"> We only have clues to where we can apply quantum resources machine learning </p>	
+						</ul>
+				</section>
+
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+						# BUT! # 
+						<div class="fragment">There is potential for everyone to get involved and help figure this out!</div>
+					</script>
+				</section>
+
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+						# Part 2: # 
+						### Key concepts in Quantum computing ###
+						_back to the bits_
+					</script>
+				</section>
+
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+						### How do you build a classical computer storage? ###
+						- Information storage $\rightarrow$ magnetic bits
+						- Manipulations $\rightarrow$ digital logic
+						- Readout $\rightarrow$ measure magnetic field
+					</script>
+				</section>
+
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+						### What do you build a <text style="color:#008B8B">quantum</text> computer? ### 
+						- Information storage $\rightarrow$ qubits
+						- Manipulations $\rightarrow$ quantum gates
+						- Readout $\rightarrow$ measure qubits
+					</script>
+				</section>
+
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+						<img data-src="../../../public/media/figures/bit_qubit_labeled.png" alt="progression from bit to qubit" style="width: 80%;"/>
+					</script>
+				</section>
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+						#### Information storage ####
+						<h2 style="color:#008B8B"> Qubits </h2>
+						<img data-src="../../../public/media/figures/bloch-reverse.png" alt="bloch sphere" style="width: 30%"/>
+						<div class="fragment">|ψ⟩=α|0⟩+β|1⟩ </div>
+						<em class="fragment">N.B. model for single qubits only!</em>
+					</script>
+				</section>
+
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+						#### Manipulations ####
+						<h2 style="color:#008B8B"> Quantum NOT Gate</h2>
+						<img data-src="../../../public/media/figures/bloch-NOT.png" alt="bloch sphere" style="width: 45%;"/>
+					</script>
+				</section>
+
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+						#### Manipulations ####
+						<h2 style="color:#008B8B"> Arbitrary Gates </h2>
+						<img data-src="../../../public/media/figures/bloch-rotation.png" alt="bloch sphere" style="width: 45%;"/>
+					</script>
+				</section>
+
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+						#### Readout ####
+						<h2 style="color:#008B8B"> Measurement </h2>
+						<img data-src="../../../public/media/figures/bloch-measure.png" alt="bloch sphere" style="width: 45%;"/>
+					</script>
+				</section>
+
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+						
+						<h2 > Superposition </h2>
+						|ψ⟩=$\frac{1}{\sqrt{2}}$|0⟩+$\frac{1}{\sqrt{2}}$|1⟩ 
+
+						<img data-src="../../../public/media/figures/bloch-superposition.png" alt="bloch sphere superposition" style="width: 35%;"/>
+					</script>
+				</section>
+
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+					## That's nice but I need more than 1 qubit! ##
+					<img data-src="https://i.imgur.com/s4eamxv.jpg" alt="porque no los dos gif" style="width: 45%;"/>
+					</script>
+				</section>
+
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+						<h2 > Entanglement </h2>
+						|ψ⟩=$\frac{1}{\sqrt{2}}$|00⟩+$\frac{1}{\sqrt{2}}$|11⟩
+
+						<img data-src="../../../public/media/figures/bloch-entangle.png" alt="bloch sphere superposition" style="width: 50%;"/>
+					</script>
+				</section>
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+					## Review ##
+					- _Qubits_ are the quantum analog to classical computer bits
+					- _Superposition_ is **NOT** being in the same place at the same time
+					- _Entanglement_ describes when we have performed operations on qubits such that we cannot describe them individually anymore.
+					</script>
+				</section>
+
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+						# Part 3: # 
+						### Quantum Programming ###
+						_What does a quantum algorithim look like?_
+					</script>
+				</section>
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+					Poll: 
+					How do you write or record algorithims?
+					</script>
+				</section>
+<!--==================================================================================-->
+				<section data-markdown data-background="#666666">
+					<script type="text/template">
+						<img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Shore_code.svg/500px-Shore_code.svg.png" alt="bloch sphere" style="width: 100%;"/>
+					</script>
+				</section>
+
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+						<img data-src="../../../public/media/figures/pseudocode.png" alt="bloch sphere" style="width: 100%;"/>
+						[Gilyén et. al. 1711.00465](https://arxiv.org/pdf/1711.00465.pdf)
+					</script>
+				</section>
+
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+						### Commercial Platforms [Q#] ###
+						<img data-src="https://icdn9.digitaltrends.com/image/microsoft-q-quantum-coding-python-interop-jpg-3605-1920x1080.jpg" alt="bloch sphere" style="width: 100%;"/>
+					</script>
+				</section>
+
+<!--==================================================================================-->			
+				<section data-markdown data-background="../../../public/media/figures/qsharp-teleport.png" data-background-size=contain>
+					
+				</section>
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+					### How do I know if I should use quantum resoures for my problem? ###
+					<em class="fragment">Sadly there are no hard and fast rules...</em>
+					</script>
+				</section>
+
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+					### Features of problems that can be accelerated by quantum computers ###
+					<ol>
+						<li><p class="fragment"> They have a "simple" output </p></li> 
+						<li><p class="fragment"> Small amounts of input/output</p></li>
+						<li><p class="fragment"> There is lots of intermediate calculations that you don't care about the anwsers for </p></li>
+					</ol>
+					</script>
+				</section>
+
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+					<h3>Notable quantum algorithims</h3>
+						<ul>
+							<li><p class="fragment"> <text style="color:#008B8B">Grover's algorithm:</text> searches a list of $N$ items in $\sqrt{N}$ steps.</p></li>
+							<li><p class="fragment"> <text style="color:#008B8B">Shor's algorithm:</text> quickly factors large integers, such as those used by cryptography to protect private data.</p></li>
+							<li><p class="fragment"> <text style="color:#008B8B">Deutsch–Jozsa algorithm:</text> With a single query can detemine properties of a black box function</p></li>
+						</ul>
+					</script>
+				</section>
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+					#### An example ####
+					## Deutsch–Jozsa Algorithim ##
+					</script>
+				</section>
+
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+					#### Deutsch–Jozsa Algorithim ####
+					## Problem statement ##
+					<text style="color:#008B8B">**GIVEN:**</text> A black box quantum operation which takes 1 input bit and produces either a 0 or a 1 as output. We are promised that the box is either _constant_ or _balanced_. 
+					
+					<text style="color:#008B8B">**GOAL:**</text> to determine if the box output is _constant_ or _balanced_ by evaluating sample inputs.
+					</script>
+				</section>
+
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+					#### Deutsch–Jozsa Algorithim ####
+					<img data-src="../../../public/media/figures/twobitDJ.png" alt="bloch sphere" style="width: 80%;"/>
+					</script>
+				</section>
+
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+					## Asking Less is More ##
+					<ul>
+							<li><p class="fragment">Rather than asking for a description of the function in the box, we are looking for generalized behaviours about the box.</p></li>
+							<li><p class="fragment">Quantum resources are not necessarily faster or better, but by asking the right questions you can play to their strengths!</p></li>
+					</ul>
+					</script>
+				</section>
+
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+						# Part 3: # 
+						### Quantum Machine Learning ###
+						_How can we apply quantum algorithims to accelerate ML?_
+					</script>
+				</section>
+
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+						#### Short anwser: ####
+						### There is smoke but no fire ###
+						<ul>
+						<li><p class="fragment"> Most known QML algorithims make great <text style="color:#008B8B">_subroutines_</text> in larger algorithims. </p></li>
+						<li><p class="fragment"> We need structure for problems that does not blow away advantages of translating between classical and quantum.</p></li>
+					</ul>
+					</script>
+				</section>
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+						#### Common problem: ####
+						###Linear Least Squares Fitting###
+						**Solve:**  $A.x = b$
+
+						If $A$ is invertable,
+
+						$x = A^{-1}.b$
+						
+						<h4 class="fragment">[HHL](https://en.wikipedia.org/wiki/Quantum_algorithm_for_linear_systems_of_equations) can do this in exponentially less time than a classical computer</h4>
+
+					</script>
+				</section>
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+						### Quantum problem: HHL###
+						**Solve:**  $A.|x\rangle = |b\rangle$
+
+						With some conditions* on $A$,
+
+						$|x\rangle = A^{-1}.|b\rangle$
+						
+						<div class="fragment">Great, but now what do we do with $|x\rangle$?</div>
+
+					</script>
+				</section>
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+						### HHL algorithim###
+						$|x\rangle = A^{-1}.|b\rangle$
+						- If you try to read out $|x\rangle$, you will do log worse than classical, need multiple copies
+						- So either we have to make $|x\rangle$ very small, or only want to know some restricted infomation about $|x\rangle$
+
+					</script>
+				</section>
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+						## Quantum Neural Nets? ##
+						
+						- We know we train restricted boltzman machines faster on a quantum computer, but encoding the problem in qubits you blow away 😞
+
+						[For more look here!](https://arxiv.org/abs/1611.09347)
+
+
+					</script>
+				</section>
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+					##Summary:##
+					- Keep it real* when reading a/b quantum computing 😎  
+					- Quantum resources necessitate changing how we think about algorithims!
+						- BUT THEY ARE NOT WEIRD OR SpOoKy
+					- Quantum machine learning is exciting, but very alpha
+						- Need to figure out how to use quantum computers like GPUs for targeted acceleration
+						- Also need to reduce translation/encoding costs for representing the problem in qubits
+
+					</script>
+				</section>
+
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+					##Thanks!##
+					[More on QML from Quantum Zoo](https://math.nist.gov/quantum/zoo/)
+					<img data-src="../../../public/media/figures/dwave-fail.jpg" alt="bloch sphere" style="width: 80%;"/>
+
+					</script>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script type="text/x-mathjax-config">
+		  MathJax.Hub.Config({
+		    'HTML-CSS': {
+				preferredFont: null,
+				webFont: 'Gyre-Pagella'
+			}
+		  });
+		</script>
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+				slideNumber: true,
+				 // Turns fragments on and off globally
+    			fragments: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/math/math.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
+
+
+
