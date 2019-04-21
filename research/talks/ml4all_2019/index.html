@@ -114,7 +114,7 @@
 <!--==================================================================================-->
 				<section data-markdown>
 					<script type="text/template">
-					### So... what _are_ reasonable expetations? 
+					### So... what _are_ reasonable expectations? 
 					<div class="fragment">It helps to establish come common understanding</div>
 					</script>
 				</section>
@@ -123,7 +123,7 @@
 				<section data-markdown>
 					<script type="text/template">
 					### Hardware model for quantum computer###
-					<img data-src="../../../public/media/figures/what-is-qc.png" alt="progression from bit to qubit" style="width: 100%;"/>
+					<img data-src="../../../public/media/figures/what-is-qc-ML4ALL19.png" alt="progression from bit to qubit" style="width: 100%;"/>
 												
 					<em class="fragment">N.B. similar to use case for GPUs</em>
 					</script>
@@ -193,13 +193,14 @@
 					<script type="text/template">
 						# Part 2: # 
 						### Quantum Programming ###
-						_What does a quantum algorithim look like?_
+						_What does a quantum algorithm look like?_
 					</script>
 				</section>
 
 <!--==================================================================================-->			
-				<section data-markdown data-background="../../../public/media/figures/qsharp-teleport.png" data-background-size=contain>
-					
+				<section data-markdown data-background="../../../public/media/figures/qsharp-teleport-ML4ALL19.png" data-background-size=contain>
+
+
 				</section>
 <!--==================================================================================-->
 				<section data-markdown>
@@ -224,11 +225,11 @@
 <!--==================================================================================-->
 				<section data-markdown>
 					<script type="text/template">
-					<h3>Notable quantum algorithims</h3>
+					<h3>Notable quantum algorithms</h3>
 						<ul>
 							<li><p class="fragment"> <text style="color:#008B8B">Grover's algorithm:</text> searches a list of $N$ items in $\sqrt{N}$ steps.</p></li>
 							<li><p class="fragment"> <text style="color:#008B8B">Shor's algorithm:</text> quickly factors large integers, such as those used by cryptography to protect private data.</p></li>
-							<li><p class="fragment"> <text style="color:#008B8B">Deutsch–Jozsa algorithm:</text> with a single query can detemine global properties of an unknown function</p></li>
+							<li><p class="fragment"> <text style="color:#008B8B">Deutsch–Jozsa algorithm:</text> with a single query can determine global properties of an unknown function</p></li>
 						</ul>
 					</script>
 				</section>
@@ -246,7 +247,7 @@
 <!--==================================================================================-->
 				<section data-markdown>
 					<script type="text/template">
-					#### Deutsch–Jozsa Algorithim ####
+					#### Deutsch–Jozsa Algorithm ####
 					## Example Problem ##
 					<text style="color:#008B8B">**GIVEN:**</text> A black box quantum operation which takes 1 input bit and produces either a 0 or a 1 as output. We are promised that the box is either _constant_ or _balanced_. 
 					
@@ -257,7 +258,7 @@
 <!--==================================================================================-->
 				<section data-markdown>
 					<script type="text/template">
-					#### Deutsch–Jozsa Algorithim ####
+					#### Deutsch–Jozsa Algorithm ####
 					<img data-src="../../../public/media/figures/twobitDJ.png" alt="bloch sphere" style="width: 80%;"/>
 					</script>
 				</section>
@@ -267,7 +268,7 @@
 					<script type="text/template">
 					## Asking Less is More ##
 					<ul>
-							<li><p class="fragment">We only want to know one yes/no question about the function, not the entiren function</p></li>
+							<li><p class="fragment">We only want to know one yes/no question about the function, not the entire function</p></li>
 							<li><p class="fragment">Quantum resources are not necessarily faster or better, but by asking the right questions you can play to their strengths!</p></li>
 					</ul>
 					</script>
@@ -285,16 +286,16 @@
 					<script type="text/template">
 						# Part 3: # 
 						### Quantum Machine Learning ###
-						_How can we apply quantum algorithims to accelerate ML?_
+						_How can we apply quantum algorithms to accelerate ML?_
 					</script>
 				</section>
 
 <!--==================================================================================-->
 				<section data-markdown>
 					<script type="text/template">
-						### Short anwser: 🤔###
+						### Short answer: 🤔###
 						<ul>
-						<li><p class="fragment"> Most known QML algorithims make great <text style="color:#008B8B">_subroutines_</text> in larger algorithims </p></li>
+						<li><p class="fragment"> Most known QML algorithms make great <text style="color:#008B8B">_subroutines_</text> in larger algorithms </p></li>
 						<li><p class="fragment"> We need structure for problems that does not blow away advantages of translating between classical and quantum</p></li>
 					</ul>
 					</script>
@@ -307,7 +308,7 @@
 						###Linear Least Squares Fitting###
 						**Solve:**  $~A\cdot x = b$
 
-						If $A$ is invertable,
+						If $A$ is invertible,
 
 						$x = A^{-1}\cdot b$
 						
@@ -318,7 +319,7 @@
 <!--==================================================================================-->
 				<section data-markdown>
 					<script type="text/template">
-						###<div style="color:#008B8B">HHL Algorithim</div>###
+						###<div style="color:#008B8B">HHL Algorithm</div>###
 						**Solve:**  $~A\cdot|x\rangle = |b\rangle$
 
 						With some conditions* on $A$,
@@ -332,10 +333,10 @@
 <!--==================================================================================-->
 				<section data-markdown>
 					<script type="text/template">
-						###<div style="color:#008B8B">HHL Algorithim</div>###
+						###<div style="color:#008B8B">HHL Algorithm</div>###
 						$|x\rangle = A^{-1}\cdot|b\rangle$
 						- If you try to read out $|x\rangle$, you will do $log$ worse than classical, need multiple copies
-						- So either we have to make $|x\rangle$ very small, or only want to know some restricted infomation about $|x\rangle$
+						- So either we have to make $|x\rangle$ very small, or only want to know some restricted information about $|x\rangle$
 
 					</script>
 				</section>
@@ -374,7 +375,7 @@
 					<h2>Takeaways:</h2>
 						<ul>
 						    <li><p class="fragment">Keep it real* when reading a/b quantum computing 😎</p></li>
-								<li><p class="fragment">Quantum resources necessitate changing how we think about algorithims!</p></li>
+								<li><p class="fragment">Quantum resources necessitate changing how we think about algorithms!</p></li>
 								<li><p class="fragment">Quantum machine learning is exciting, but very alpha
 									<ul class="square">
 											<li><p class="fragment">Need to figure out how to use quantum computers like GPUs for targeted acceleration</p></li>
@@ -390,7 +391,7 @@
 					<script type="text/template">
 					##Thanks!##
 					[More on QML from Quantum Zoo](https://math.nist.gov/quantum/zoo/)
-					<img data-src="../../../public/media/figures/dwave-fail.jpg" alt="Sarah in an award-winning halloween costume which is a big balck box that looks like a DWAVE machine" style="width: 80%;"/>
+					<img data-src="../../../public/media/figures/dwave-fail.jpg" alt="Sarah in an award-winning halloween costume which is a big black box that looks like a DWAVE machine" style="width: 80%;"/>
 
 					</script>
 				</section>
