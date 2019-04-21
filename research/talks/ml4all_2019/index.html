@@ -62,16 +62,13 @@
 
 <!--==================================================================================-->
 				<section>
-					<h1 style="font-size: 200%; color:#008B8B">Quantum Machine Learning in context:</h1>
-					<h2 style="font-size: 100%">What is a quantum algorithm anyway?</h2>
-					<hr />
-
+					<h1 style="font-size: 175%; color:#008B8B">What is Quantum Machine Learning, and is it a Thing?</h1>
+	
+					<br>
 					<p>
-						<strong> Portland Data Science Group 
-						<br>
-						04 Oct 2018 </strong><br>
-						<a href="https://www.sckaiser.com">Sarah Kaiser</a> <br>
-						@crazy4pi314
+						<strong> #ML4ALL </strong> | <strong> 30 April 2019 </strong><br>
+						<a href="https://www.sckaiser.com">Sarah Kaiser</a> <br>  
+						<a href="https://twitter.com/crazy4pi314">@crazy4pi314</a>
 						<br>
 					</p>
 
@@ -86,7 +83,7 @@
 							<img data-src="../../../public/media/figures/pensar-bio.png" alt="Selfie at work with pink hard hat" style="width: 75%;"/>
 						</div>	
 						<div class="right-col">
-							<img data-src="../../../public/media/figures/books.png" alt="Kaiser Baby books" style="width: 100%;"/>
+							<img data-src="../../../public/media/figures/kaiser-book-collection.jpg" alt="Kaiser Baby books" style="width: 100%;"/>
 						</div>
 					</div>
 
@@ -118,53 +115,30 @@
 				<section data-markdown>
 					<script type="text/template">
 					### So... what _are_ reasonable expetations? 
+					<div class="fragment">It helps to establish come common understanding</div>
 					</script>
 				</section>
 
 <!--==================================================================================-->
 				<section data-markdown>
 					<script type="text/template">
-					### Hardware model ###
+					### Hardware model for quantum computer###
 					<img data-src="../../../public/media/figures/what-is-qc.png" alt="progression from bit to qubit" style="width: 100%;"/>
 												
 					<em class="fragment">N.B. similar to use case for GPUs</em>
 					</script>
 				</section>
-<!--==================================================================================-->
-				<section data-background="../../../public/media/figures/the-more-you-know-darker.png" data-background-size=cover>
-					<h2> TL;DR </h2>
-						<ul>
-						    <li><p class="fragment"> Quantum computers are <strong>NOT</strong> universally faster or more powerful than classical computers</p>
-							<li><p class="fragment"> Quantum computers will <strong>NOT</strong> be here tomorrow. <br>have:100 qubits / need: 100 million </p>
-								<li><p class="fragment"> Dwave is <strong> NOT </strong> a quantum computer. Evidence shows quantum annealer at best </p>
-							<li><p class="fragment"> We only have clues to where we can apply quantum resources machine learning </p>	
-						</ul>
-				</section>
 
 <!--==================================================================================-->
 				<section data-markdown>
 					<script type="text/template">
-						# BUT! # 
-						<div class="fragment">There is alot potential for everyone to get involved and help figure this out!</div>
-					</script>
-				</section>
-
-<!--==================================================================================-->
-				<section data-markdown>
-					<script type="text/template">
-						# Part 2: # 
-						### Key concepts in Quantum computing ###
-						_back to the bits_
-					</script>
-				</section>
-
-<!--==================================================================================-->
-				<section data-markdown>
-					<script type="text/template">
-						### How do you build a classical computer storage? ###
+						### How do you build a classical computer? ###
 						- Information storage $\rightarrow$ magnetic bits
 						- Manipulations $\rightarrow$ digital logic
 						- Readout $\rightarrow$ measure magnetic field
+						- Represenataion $\rightarrow$ "0" or "1"
+
+						<em>ex. register of 3 bits</em> "101"
 					</script>
 				</section>
 
@@ -172,129 +146,53 @@
 				<section data-markdown>
 					<script type="text/template">
 						### What do you build a <text style="color:#008B8B">quantum</text> computer? ### 
-						- Information storage $\rightarrow$ qubits
-						- Manipulations $\rightarrow$ quantum gates
-						- Readout $\rightarrow$ measure qubits
+						- Information storage $\rightarrow$ <text style="color:#008B8B">qubits</text>
+						- Manipulations $\rightarrow$ <text style="color:#008B8B">quantum operations</text>
+						- Readout $\rightarrow$ <text style="color:#008B8B">measure qubits</text>
+						- Representation $\rightarrow$ <text style="color:#008B8B">vector of complex numbers</text>
 					</script>
+				</section>
+<!--==================================================================================-->
+				<section>
+					<h3>QUBITS!</h3>
+					To represent $n$ qubits, we use a complex valued vector $2^n$ elements long, called a <em>ket</em>.
+					<br>
+					$$|x_{n}\rangle = \begin{bmatrix} \alpha_{1}\\ \alpha_{2}\\ \alpha_{3}\\ ...\\ \alpha_{2^n}\end{bmatrix}$$
+
+				</section>
+
+<!--==================================================================================-->
+				<section>
+					<h4>Example: 3 qubit register</h4>
+					To represent 3 qubits, we use a complex valued vector $2^3 = 8$ elements long.
+					<br>
+					$$|💖\rangle = \begin{bmatrix} 0\\ 1\\ 0\\ 0\\ 0\\ 	0\\ 0\\ 0 \end{bmatrix}$$
+
+				</section>
+
+<!--==================================================================================-->
+				<section data-background="../../../public/media/figures/the-more-you-know-darker.png" data-background-size=cover>
+					<h2> TL;DR on Quantum Computing</h2>
+						<ul>
+						    <li><p class="fragment"> Quantum computers are <strong>NOT</strong> universally faster or more powerful than classical computers</p>
+							<li><p class="fragment"> Quantum computers will <strong>NOT</strong> be here tomorrow. <br>have:100 qubits / need: 100 million </p>
+								<li><p class="fragment"> Most all commercial hardware is only a few qubits or a quantum annealer at best </p>
+						</ul>
 				</section>
 
 <!--==================================================================================-->
 				<section data-markdown>
 					<script type="text/template">
-						<img data-src="../../../public/media/figures/bit_qubit_labeled.png" alt="progression from bit to qubit" style="width: 80%;"/>
+						# What Now! # 
+						<div class="fragment">Let's use software tools to help us learn and simulate how quantum computers work!</div>
 					</script>
 				</section>
 <!--==================================================================================-->
 				<section data-markdown>
 					<script type="text/template">
-						#### Information storage ####
-						<h2 style="color:#008B8B"> Qubits </h2>
-						<img data-src="../../../public/media/figures/bloch-reverse.png" alt="bloch sphere" style="width: 30%"/>
-						<div class="fragment">|ψ⟩=α|0⟩+β|1⟩ </div>
-						<em class="fragment">N.B. model for single qubits only!</em>
-					</script>
-				</section>
-
-<!--==================================================================================-->
-				<section data-markdown>
-					<script type="text/template">
-						#### Manipulations ####
-						<h2 style="color:#008B8B"> Quantum NOT Gate</h2>
-						<img data-src="../../../public/media/figures/bloch-NOT.png" alt="bloch sphere" style="width: 45%;"/>
-					</script>
-				</section>
-
-<!--==================================================================================-->
-				<section data-markdown>
-					<script type="text/template">
-						#### Manipulations ####
-						<h2 style="color:#008B8B"> Arbitrary Gates </h2>
-						<img data-src="../../../public/media/figures/bloch-rotation.png" alt="bloch sphere" style="width: 45%;"/>
-					</script>
-				</section>
-
-<!--==================================================================================-->
-				<section data-markdown>
-					<script type="text/template">
-						#### Readout ####
-						<h2 style="color:#008B8B"> Measurement </h2>
-						<img data-src="../../../public/media/figures/bloch-measure.png" alt="bloch sphere" style="width: 45%;"/>
-					</script>
-				</section>
-
-<!--==================================================================================-->
-				<section data-markdown>
-					<script type="text/template">
-						
-						<h2 > Superposition </h2>
-						|ψ⟩=$\frac{1}{\sqrt{2}}$|0⟩+$\frac{1}{\sqrt{2}}$|1⟩ 
-
-						<img data-src="../../../public/media/figures/bloch-superposition.png" alt="bloch sphere superposition" style="width: 35%;"/>
-					</script>
-				</section>
-
-<!--==================================================================================-->
-				<section data-markdown>
-					<script type="text/template">
-					## That's nice but I need more than 1 qubit! ##
-					<img data-src="https://i.imgur.com/s4eamxv.jpg" alt="porque no los dos gif" style="width: 45%;"/>
-					</script>
-				</section>
-
-<!--==================================================================================-->
-				<section data-markdown>
-					<script type="text/template">
-						<h2 > Entanglement </h2>
-						|ψ⟩=$\frac{1}{\sqrt{2}}$|00⟩+$\frac{1}{\sqrt{2}}$|11⟩
-
-						<img data-src="../../../public/media/figures/bloch-entangle.png" alt="bloch sphere superposition" style="width: 50%;"/>
-					</script>
-				</section>
-<!--==================================================================================-->
-				<section data-markdown>
-					<script type="text/template">
-					## Review ##
-					- _Qubits_ are the quantum analog to classical computer bits
-					- _Superposition_ is **NOT** being in the same place at the same time
-					- _Entanglement_ describes when we have performed operations on qubits such that we cannot describe them individually anymore.
-					</script>
-				</section>
-
-<!--==================================================================================-->
-				<section data-markdown>
-					<script type="text/template">
-						# Part 3: # 
+						# Part 2: # 
 						### Quantum Programming ###
 						_What does a quantum algorithim look like?_
-					</script>
-				</section>
-<!--==================================================================================-->
-				<section data-markdown>
-					<script type="text/template">
-					Poll: 
-					How do you write or record algorithims?
-					</script>
-				</section>
-<!--==================================================================================-->
-				<section data-markdown data-background="#666666">
-					<script type="text/template">
-						<img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Shore_code.svg/500px-Shore_code.svg.png" alt="bloch sphere" style="width: 100%;"/>
-					</script>
-				</section>
-
-<!--==================================================================================-->
-				<section data-markdown>
-					<script type="text/template">
-						<img data-src="../../../public/media/figures/pseudocode.png" alt="bloch sphere" style="width: 100%;"/>
-						[Gilyén et. al. 1711.00465](https://arxiv.org/pdf/1711.00465.pdf)
-					</script>
-				</section>
-
-<!--==================================================================================-->
-				<section data-markdown>
-					<script type="text/template">
-						### Commercial Platforms [Q#] ###
-						<img data-src="https://icdn9.digitaltrends.com/image/microsoft-q-quantum-coding-python-interop-jpg-3605-1920x1080.jpg" alt="bloch sphere" style="width: 100%;"/>
 					</script>
 				</section>
 
@@ -305,20 +203,20 @@
 <!--==================================================================================-->
 				<section data-markdown>
 					<script type="text/template">
-					### How do I know if I should use quantum resoures for my problem? ###
-					<em class="fragment">Sadly there are no hard and fast rules...</em>
+					### How do I know if I should use quantum resources for my problem? ###
+					<div class="fragment"><em>There are no hard and fast rules...</em>😭</div>
 					</script>
 				</section>
 
 <!--==================================================================================-->
 				<section data-markdown>
 					<script type="text/template">
-					### Features of problems that can be accelerated by quantum computers ###
-					<ol>
-						<li><p class="fragment"> They have a "simple" output </p></li> 
-						<li><p class="fragment"> Small amounts of input/output</p></li>
-						<li><p class="fragment"> There is lots of intermediate calculations that you don't care about the anwsers for </p></li>
-					</ol>
+					### Near-term quantum computers can help with:###
+					<ul>
+						<li><p class="fragment"> Problems that have a "simple" output</p></li> 
+						<li><p class="fragment"> Problems with small amounts of input/output</p></li>
+						<li><p class="fragment"> Problems with lots of intermediate calculations that you don't care about</p></li>
+					</ul>
 					</script>
 				</section>
 
@@ -329,15 +227,18 @@
 						<ul>
 							<li><p class="fragment"> <text style="color:#008B8B">Grover's algorithm:</text> searches a list of $N$ items in $\sqrt{N}$ steps.</p></li>
 							<li><p class="fragment"> <text style="color:#008B8B">Shor's algorithm:</text> quickly factors large integers, such as those used by cryptography to protect private data.</p></li>
-							<li><p class="fragment"> <text style="color:#008B8B">Deutsch–Jozsa algorithm:</text> With a single query can detemine properties of a black box function</p></li>
+							<li><p class="fragment"> <text style="color:#008B8B">Deutsch–Jozsa algorithm:</text> with a single query can detemine global properties of an unknown function</p></li>
 						</ul>
 					</script>
 				</section>
 <!--==================================================================================-->
 				<section data-markdown>
 					<script type="text/template">
-					#### An example ####
-					## Deutsch–Jozsa Algorithim ##
+					#### I CHOOSE YOU! ####
+					## Deutsch–Jozsa ##
+					<!--<video data-src="https://media.giphy.com/media/HQuZn367GgytO/giphy.mp4" alt="Misty from Pokemon throwing a pokeball" style="width: 45%;" autoplay/>-->
+					<iframe src="https://giphy.com/embed/HQuZn367GgytO" width="480" height="258" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/pokemon-misty-pokeball-HQuZn367GgytO">via GIPHY</a></p>
+				
 					</script>
 				</section>
 
@@ -345,7 +246,7 @@
 				<section data-markdown>
 					<script type="text/template">
 					#### Deutsch–Jozsa Algorithim ####
-					## Problem statement ##
+					## Example Problem ##
 					<text style="color:#008B8B">**GIVEN:**</text> A black box quantum operation which takes 1 input bit and produces either a 0 or a 1 as output. We are promised that the box is either _constant_ or _balanced_. 
 					
 					<text style="color:#008B8B">**GOAL:**</text> to determine if the box output is _constant_ or _balanced_ by evaluating sample inputs.
@@ -372,6 +273,13 @@
 				</section>
 
 <!--==================================================================================-->
+				<section data-markdown data-background="../../../public/media/figures/kirby-at-laptop.jpg" data-background-size=contain>
+					<script type="text/template">
+					#Demo#
+					</script>
+				</section>
+
+<!--==================================================================================-->
 				<section data-markdown>
 					<script type="text/template">
 						# Part 3: # 
@@ -383,24 +291,24 @@
 <!--==================================================================================-->
 				<section data-markdown>
 					<script type="text/template">
-						#### Short anwser: ####
-						### There is smoke but no fire ###
+						### Short anwser: 🤔###
 						<ul>
-						<li><p class="fragment"> Most known QML algorithims make great <text style="color:#008B8B">_subroutines_</text> in larger algorithims. </p></li>
-						<li><p class="fragment"> We need structure for problems that does not blow away advantages of translating between classical and quantum.</p></li>
+						<li><p class="fragment"> Most known QML algorithims make great <text style="color:#008B8B">_subroutines_</text> in larger algorithims </p></li>
+						<li><p class="fragment"> We need structure for problems that does not blow away advantages of translating between classical and quantum</p></li>
 					</ul>
 					</script>
 				</section>
+
 <!--==================================================================================-->
 				<section data-markdown>
 					<script type="text/template">
-						#### Common problem: ####
+						#### Example 1: ####
 						###Linear Least Squares Fitting###
-						**Solve:**  $A.x = b$
+						**Solve:**  $~A\cdot x = b$
 
 						If $A$ is invertable,
 
-						$x = A^{-1}.b$
+						$x = A^{-1}\cdot b$
 						
 						<h4 class="fragment">[HHL](https://en.wikipedia.org/wiki/Quantum_algorithm_for_linear_systems_of_equations) can do this in exponentially less time than a classical computer</h4>
 
@@ -409,12 +317,12 @@
 <!--==================================================================================-->
 				<section data-markdown>
 					<script type="text/template">
-						### Quantum problem: HHL###
-						**Solve:**  $A.|x\rangle = |b\rangle$
+						###<div style="color:#008B8B">HHL Algorithim</div>###
+						**Solve:**  $~A\cdot|x\rangle = |b\rangle$
 
 						With some conditions* on $A$,
 
-						$|x\rangle = A^{-1}.|b\rangle$
+						$|x\rangle = A^{-1}\cdot|b\rangle$
 						
 						<div class="fragment">Great, but now what do we do with $|x\rangle$?</div>
 
@@ -423,9 +331,9 @@
 <!--==================================================================================-->
 				<section data-markdown>
 					<script type="text/template">
-						### HHL algorithim###
-						$|x\rangle = A^{-1}.|b\rangle$
-						- If you try to read out $|x\rangle$, you will do log worse than classical, need multiple copies
+						###<div style="color:#008B8B">HHL Algorithim</div>###
+						$|x\rangle = A^{-1}\cdot|b\rangle$
+						- If you try to read out $|x\rangle$, you will do $log$ worse than classical, need multiple copies
 						- So either we have to make $|x\rangle$ very small, or only want to know some restricted infomation about $|x\rangle$
 
 					</script>
@@ -433,27 +341,47 @@
 <!--==================================================================================-->
 				<section data-markdown>
 					<script type="text/template">
-						## Quantum Neural Nets? ##
+						#### Example 2: ####
+						## Quantum Perceptron 1 ##
+						
+
+					</script>
+				</section>
+
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+						## Quantum Perceptron 2: Code ##
+						
+
+					</script>
+				</section>
+
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+						## Quantum Neural Nets ##
 						
 						- We know we train restricted boltzman machines faster on a quantum computer, but encoding the problem in qubits you blow away 😞
 
 						[For more look here!](https://arxiv.org/abs/1611.09347)
 
-
 					</script>
 				</section>
 <!--==================================================================================-->
-				<section data-markdown>
-					<script type="text/template">
-					##Summary:##
-					- Keep it real* when reading a/b quantum computing 😎  
-					- Quantum resources necessitate changing how we think about algorithims!
-						- BUT THEY ARE NOT WEIRD OR SpOoKy
-					- Quantum machine learning is exciting, but very alpha
-						- Need to figure out how to use quantum computers like GPUs for targeted acceleration
-						- Also need to reduce translation/encoding costs for representing the problem in qubits
-
-					</script>
+				<section >
+					<h2>Takeaways:</h2>
+						<ul>
+						    <li><p class="fragment">Keep it real* when reading a/b quantum computing 😎</p></li>
+								<li><p class="fragment">Quantum resources necessitate changing how we think about algorithims!</p></li>
+								<li><p class="fragment">Quantum machine learning is exciting, but very alpha
+									<ul class="square">
+											<li><p class="fragment">Need to figure out how to use quantum computers like GPUs for targeted acceleration</p></li>
+											<li><p class="fragment">Also need to reduce translation/encoding costs for representing the problem in qubits</p></li>
+									</ul>
+								</p>
+								</li>
+						</ul>
 				</section>
 
 <!--==================================================================================-->
@@ -461,7 +389,7 @@
 					<script type="text/template">
 					##Thanks!##
 					[More on QML from Quantum Zoo](https://math.nist.gov/quantum/zoo/)
-					<img data-src="../../../public/media/figures/dwave-fail.jpg" alt="bloch sphere" style="width: 80%;"/>
+					<img data-src="../../../public/media/figures/dwave-fail.jpg" alt="Sarah in an award-winning halloween costume which is a big balck box that looks like a DWAVE machine" style="width: 80%;"/>
 
 					</script>
 				</section>

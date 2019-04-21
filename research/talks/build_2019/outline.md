@@ -16,8 +16,7 @@
   - improve how we communicate + teach about QC (no more shitty headlines)
     - Analogies must be used with extreme caution
     - Choose language carefully, lets not be spooky, fearmonger, or talk about quantum supremacy
-    - more cat gifs (NO NOT SCHRODINGERS CAT, LEAVE THEM ALONE )
-
+    - more cat gifs (NO NOT SCHRODINGER'S CAT, LEAVE THEM ALONE )
 - examples of more successful stem/tech communities
   - PYTHONS ISSsssssss one of many
     - R as well
@@ -36,7 +35,7 @@
     - Jupyter notebook + binder
 - Q# is Domain specific, high level quantum programming language
     - it doesn't have to be hard, can do with tools you are familiar with C#, F# or Python for convenience
-- QUBITS
+- QUBITS    
     - `let`s allocate one
     - what can we do with one?
 - operations
