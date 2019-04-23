@@ -78,14 +78,8 @@
 				<section data-markdown>
 					<script type="text/template">
 					## Quick introduction!
-					<div class="two-col-container">
-						<div class="left-col">
-							<img data-src="../../../public/media/figures/pensar-bio.png" alt="Selfie at work with pink hard hat" style="width: 80%;"/>
-						</div>	
-						<div class="right-col">
-							<img data-src="../../../public/media/figures/kaiser-book-collection.jpg" alt="Kaiser Baby books" style="width: 80%;"/>
-						</div>
-					</div>
+					<img data-src="../../../public/media/figures/bio-books.png" alt="Selfie at work with pink hard hat" style="width: 90%;"/>
+					
 
 					</script>
 				</section>
@@ -125,10 +119,10 @@
 					### Hardware model for quantum computer###
 					<img data-src="../../../public/media/figures/what-is-qc-ML4ALL19.png" alt="progression from bit to qubit" style="width: 100%;"/>
 												
-					<em class="fragment">N.B. similar to use case for GPUs</em>
+					<!--<em class="fragment">N.B. similar to use case for GPUs</em>-->
 					</script>
 				</section>
-
+<!--TODO: Transition better here-->
 <!--==================================================================================-->
 			<section data-markdown>
 					<script type="text/template">
@@ -194,6 +188,27 @@
 
 				</section>
 =================================================-->
+
+<!--==================================================================================-->
+<section data-markdown>
+		<script type="text/template">
+		### How do I know if I should use quantum resources for my problem? ###
+		<div class="fragment"><em>There are no hard and fast rules...</em>😭</div>
+		</script>
+	</section>
+
+<!--==================================================================================-->
+	<section data-markdown>
+		<script type="text/template">
+		### Near-term quantum computers can help with:###
+		<ul>
+			<li><p class="fragment"> Problems that have a "simple" output</p></li> 
+			<li><p class="fragment"> Problems with small amounts of input/output</p></li>
+			<li><p class="fragment"> Problems with lots of intermediate calculations that you don't care about</p></li>
+		</ul>
+		</script>
+	</section>
+
 <!--==================================================================================-->
 			<section data-markdown>
 					<script type="text/template">
@@ -205,9 +220,9 @@
 				<section data-background="../../../public/media/figures/the-more-you-know-darker.png" data-background-size=cover>
 					<h2> TL;DR on quantum computing</h2>
 						<ul>
-								<li><p class="fragment"> Quantum computers are <strong>not universally</strong> faster or more powerful. Think like GPU usecase</p>
-								<li><p class="fragment"> We need <strong>orders of magnitude</strong> more qubits than we currently have </p>
-								<li><p class="fragment"> The definition of <strong>"computer"</strong> varies  </p>
+							<li><p class="fragment"> Quantum computers are <strong>not universally</strong> faster or more powerful. Think like GPUs</p>
+							<li><p class="fragment"> The definition of <strong>"computer"</strong> varies  </p>
+							<li><p class="fragment"> We need <strong>orders of magnitude</strong> more qubits than we currently have </p>
 						</ul>
 				</section>	
 <!--==================================================================================-->
@@ -229,28 +244,10 @@
 
 <!--==================================================================================-->			
 				<section data-markdown data-background="../../../public/media/figures/qsharp-teleport-ML4ALL19.png" data-background-size=contain>
-
+					<div class="fragment"># 💖 Q# 💖 #</div>
 
 				</section>
-<!--==================================================================================-->
-				<section data-markdown>
-					<script type="text/template">
-					### How do I know if I should use quantum resources for my problem? ###
-					<div class="fragment"><em>There are no hard and fast rules...</em>😭</div>
-					</script>
-				</section>
 
-<!--==================================================================================-->
-				<section data-markdown>
-					<script type="text/template">
-					### Near-term quantum computers can help with:###
-					<ul>
-						<li><p class="fragment"> Problems that have a "simple" output</p></li> 
-						<li><p class="fragment"> Problems with small amounts of input/output</p></li>
-						<li><p class="fragment"> Problems with lots of intermediate calculations that you don't care about</p></li>
-					</ul>
-					</script>
-				</section>
 
 <!--==================================================================================-->
 				<section data-markdown>
@@ -303,7 +300,7 @@
 <!--==================================================================================-->
 				<section data-markdown>
 					<script type="text/template">
-					#### Deutsch–Jozsa review ####
+					#### quantum algorithm review ####
 					## Asking Less is More ##
 					<ul>
 							<li><p class="fragment">We only want to know one yes/no question about the function, not the entire function</p></li>
@@ -324,7 +321,8 @@
 <!--==================================================================================-->
 				<section data-markdown>
 					<script type="text/template">
-						### Short answer: 🤔###
+						#### How can QC help ML? ####
+						## Short answer: 🤔##
 						<ul>
 						<li><p class="fragment"> Most known QML algorithms make great <text style="color:#008B8B">_subroutines_</text> in larger algorithms </p></li>
 						<li><p class="fragment"> We need structure for problems that does not blow away advantages of translating between classical and quantum</p></li>
@@ -378,7 +376,7 @@
 						#### Example 2: ####
 						## Quantum Perceptron ##
 						
-
+<!--TODO: finish-->
 
 					</script>
 				</section>
@@ -387,7 +385,7 @@
 				<section data-markdown>
 					<script type="text/template">
 						## Quantum Perceptron 2: Code ##
-						
+<!--TODO: finish-->						
 
 					</script>
 				</section>
@@ -399,8 +397,8 @@
 						
 						- We know we train restricted boltzman machines faster on a quantum computer, but encoding the problem in qubits you blow away 😞
 
-						[For more look here!](https://arxiv.org/abs/1611.09347)
-
+						For more look here: [Quantum Machine Learning](https://arxiv.org/abs/1611.09347)
+<!--TODO: review-->	
 					</script>
 				</section>
 
@@ -425,7 +423,10 @@
 					<script type="text/template">
 					##Thanks!##
 					[More on QML from Quantum Zoo](https://math.nist.gov/quantum/zoo/)
-					<img data-src="../../../public/media/figures/dwave-fail.jpg" alt="Sarah in an award-winning halloween costume which is a big black box that looks like a DWAVE machine" style="width: 80%;"/>
+
+					More fun stuff I do:
+					<iframe src="https://giphy.com/embed/j0jZfApoQEOznBUqqd" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+					<!--<img data-src="../../../public/media/figures/dwave-fail.jpg" alt="Sarah in an award-winning halloween costume which is a big black box that looks like a DWAVE machine" style="width: 80%;"/>-->
 
 					</script>
 				</section>
