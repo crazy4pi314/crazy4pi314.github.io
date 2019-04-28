@@ -5,6 +5,16 @@ title: Selected Talks
 
 Here is some of the talks I have given, that I made as webpages with [reveal.js](http://lab.hakim.se/reveal-js/#/). 
 
+## 2019 ##
+
+- ### [What is Quantum Machine Learning, and Is It A Thing?](./ml4all_2019): ML4ALL Conference 
+
+In the rush to add the word _quantum_ to everything from batteries to banking, Quantum machine learning has entered the fray. A perfect combination of buzzwords that will get all of the funding....right? In this talk I want to look at: quantum computers are and how you program one. With this context, we can look at what machine learning tasks are being explored for possible speedups with quantum computing. Talk details [here](http://ml4all.org/schedule.html#abstract-dr-sarah-kaiser).
+
+- ### Learning Q# with Python: building the quantum programming community: Microsoft BUILD 2019
+
+Quantum computing is an exciting and growing field that needs to train a new generation of programmers to leverage quantum technologies. There are lots of barriers to engaging new learners in quantum computing, which often stem from the language and traditional methods by which it is usually taught. Q# is the new quantum programming language developed by Microsoft, and offers a unique new approach to teaching quantum programming concepts with a domain-specific language. In this session, I will demo some core quantum computing concepts using Q# and Python. Leveraging Python as a language and a community helps newcomers to quantum programing get up and going faster. Talk details [here](https://mybuild.techcommunity.microsoft.com/sessions/77163?source=sessions#top-anchor).
+
 ## 2018 ##
 
 - ### [Quantum Machine Learning in context: What is a quantum algorithm anyway?](./qml_portland_2018): Portland Data Science Group
