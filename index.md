@@ -23,8 +23,14 @@ I am Sarah Kaiser and currently I am a Research Engineer at [Pensar Development]
 <a href="https://scholar.google.ca/citations?user=wUnQwUMAAAAJ&hl=en" target="_top">Google Scholar</a> • 
 <a href="https://github.com/crazy4pi314" target="_top">GitHub</a> • 
 <a href="https://keybase.io/skaiser" target="_top">Keybase</a> • 
-<a href="https://www.linkedin.com/in/sckaiser1" target="_top">Linkedin</a><br>• 
-<a href="https://www.amazon.com/Sarah-Kaiser/e/B07H4VDXW5/" target="_top">Baby Books</a><br>
+<a href="https://www.linkedin.com/in/sckaiser1" target="_top">Linkedin</a><br>
+<br>
+</p>
+
+**Check out my books!**
+
+<p style="text-align: center;"><a href="https://www.amazon.com/Sarah-Kaiser/e/B07H4VDXW5/" target="_top">Baby University Books</a> with <a href="https://csferrie.com/">Chris Ferrie</a></a><br> 
+<a href="https://www.manning.com/books/learn-quantum-computing-with-python-and-q-sharp" target="_top">Learn Quantum Computing with Python and Q#</a> with <a href="https://cgranade.com/">Chris Granade</a>
 	<!-- <img src="/public/profile-photo.jpg" alt="Sarah Kaiser" style="width: 60%; display: inline;padding-top: 1em;"/> -->
 </p>
 
