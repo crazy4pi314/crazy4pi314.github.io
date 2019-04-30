@@ -29,7 +29,7 @@ I am Sarah Kaiser and currently I am a Research Engineer at [Pensar Development]
 
 **Check out my books!**
 
-<p style="text-align: center;"><a href="https://www.amazon.com/Sarah-Kaiser/e/B07H4VDXW5/" target="_top">Baby University Books</a> with <a href="https://csferrie.com/">Chris Ferrie</a></a><br> 
+<p style="text-align: center;"><a href="https://www.amazon.com/Sarah-Kaiser/e/B07H4VDXW5/" target="_top">Baby University Books</a> with <a href="https://csferrie.com/">Chris Ferrie</a><br> 
 <a href="https://www.manning.com/books/learn-quantum-computing-with-python-and-q-sharp" target="_top">Learn Quantum Computing with Python and Q#</a> with <a href="https://cgranade.com/">Chris Granade</a>
 	<!-- <img src="/public/profile-photo.jpg" alt="Sarah Kaiser" style="width: 60%; display: inline;padding-top: 1em;"/> -->
 </p>
