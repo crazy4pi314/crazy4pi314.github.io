@@ -3,12 +3,19 @@ layout: default
 title: Home
 ---
  
-# Welcome! #
+# Hi! #
 
 I am Sarah Kaiser and currently I am a Research Engineer at [Pensar Development](https://pensardevelopment.com/) in Settle, WA. Most recently I was a Postdoctoral Fellow at [Macquarie University](https://www.mq.edu.au/). I got my PhD from the [Institute for Quantum Computing](https://uwaterloo.ca/institute-for-quantum-computing/) at the [University of Waterloo](https://uwaterloo.ca/) in Waterloo, Ontario. I am physics experimentalist specialized in building and breaking opto-electronic systems. Some of my favorite things: Writing about science and technology, laser cutters, and how fun it is to break things! (to learn how they work of course 😉)
 
 <p style="text-align: center;">
 	<img src="/public/profile-photo.jpg" alt="Sarah Kaiser" style="width: 60%; display: inline;padding-top: 1em;"/>
+</p>
+
+**Check out my books!**
+
+<p style="text-align: center;"><a href="https://www.amazon.com/Sarah-Kaiser/e/B07H4VDXW5/" target="_top">Baby University Books</a> with <a href="https://csferrie.com/">Chris Ferrie</a><br> 
+<a href="https://www.manning.com/books/learn-quantum-computing-with-python-and-q-sharp" target="_top">Learn Quantum Computing with Python and Q#</a> with <a href="https://cgranade.com/">Chris Granade</a>
+	<!-- <img src="/public/profile-photo.jpg" alt="Sarah Kaiser" style="width: 60%; display: inline;padding-top: 1em;"/> -->
 </p>
 
 **Links to me other places:**
@@ -27,12 +34,7 @@ I am Sarah Kaiser and currently I am a Research Engineer at [Pensar Development]
 <br>
 </p>
 
-**Check out my books!**
 
-<p style="text-align: center;"><a href="https://www.amazon.com/Sarah-Kaiser/e/B07H4VDXW5/" target="_top">Baby University Books</a> with <a href="https://csferrie.com/">Chris Ferrie</a><br> 
-<a href="https://www.manning.com/books/learn-quantum-computing-with-python-and-q-sharp" target="_top">Learn Quantum Computing with Python and Q#</a> with <a href="https://cgranade.com/">Chris Granade</a>
-	<!-- <img src="/public/profile-photo.jpg" alt="Sarah Kaiser" style="width: 60%; display: inline;padding-top: 1em;"/> -->
-</p>
 
 ---
 
