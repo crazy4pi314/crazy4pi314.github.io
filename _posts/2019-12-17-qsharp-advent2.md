@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Party Invitations: Inclusive teaching tools for Q#"
+title: "Party Invitations: How Q# enables inclusive teaching"
 ---
 
 _This is a post contributing to [#QsAdvent](https://twitter.com/hashtag/qsadvent) 2019_
