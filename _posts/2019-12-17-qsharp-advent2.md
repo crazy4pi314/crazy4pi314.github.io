@@ -39,8 +39,8 @@ For example, phase estimation is a very common quantum algorithm that is useful 
 This is important as we can only measure local phases so we need a way to shuffle phase around.
 If we look at the way [Wikipedia](https://en.wikipedia.org/wiki/Quantum_phase_estimation_algorithm) and [Quantum Computation and Quantum Information](https://en.wikipedia.org/wiki/Quantum_Computation_and_Quantum_Information) describes phase estimation:
 
-> Given a unitary matrix 𝑈 and a quantum state |𝜓⟩ such that 𝑈|𝜓⟩ =e^{2𝜋𝑖𝛳}|𝜓⟩, the algorithm estimates the value of 𝛳 with high probability within additive error 𝜀 , using 𝑶(1/𝜀) controlled-U operations.
-> Given a unitary matrix $U$ and a quantum state $|\psi \rangle$  such that $U|\psi \rangle =e^{2\pi i\theta }|\psi \rangle }{\displaystyle U|\psi \rangle =e^{2\pi i\theta }|\psi \rangle }, the algorithm estimates the value of {\displaystyle \theta }\theta  with high probability within additive error {\displaystyle \varepsilon }\varepsilon , using {\displaystyle O(1/\varepsilon )}{\displaystyle O(1/\varepsilon )} controlled-U operations.
+> Given a unitary matrix 𝑈 and a quantum state \|𝜓⟩ such that 𝑈\|𝜓⟩ =e^{2𝜋𝑖𝛳}\|𝜓⟩, the algorithm estimates the value of 𝛳 with high probability within additive error 𝜀 , using 𝑶(1/𝜀) controlled-U operations.
+
 
 If you don't already know why this might be cool, unpacking it can take a fair bit of math.
 <p style="text-align: center;">
