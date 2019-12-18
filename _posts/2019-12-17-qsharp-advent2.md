@@ -47,7 +47,7 @@ If you don't already know why this might be cool, unpacking it can take a fair b
 	<img src="/public/media/blog/chewie-mikeandike.jpg" alt="German shepard dog named Chewie laying on the couch on a book" style="width: 60%; display: inline;padding-top: 1em;"/>
 </p>
 
-_Even my new pup Chewie was not really interested in unitaries 😂_
+_Even my new pup [Chewie](https://www.instagram.com/chewieborka/) was not really interested in unitaries_ 😂
 
 You can take the same algorithms and put it in terms of a game like in Chapter 8 of my book (where yes, many of the games involve characters from Arthurian legends):
 
