@@ -85,7 +85,7 @@ Having run some workshops and tutorials, I know the hard way what its like to ha
 That's where having the [Q# Katas as Jupyter notebooks you can run in your browser](https://mybinder.org/v2/gh/Microsoft/QuantumKatas/master?filepath=index.ipynb) and the entire Quantum Development Kit useable from the browser with [Visual Studio Online](https://visualstudio.microsoft.com/services/visual-studio-online/) can really be handy.
 I can just prepare a notebook and conda enviroment ahead of time and with just one click, everyone can be on the same page, ready to start developing together💖
 
-_On Dec 22nd, keep an eye out for Chris Granade's #QSadvent post on reproducible research, which gets into more detail on containerizing and reproducible use of the QDK._
+_On Dec 22nd, check out Chris Granade's #QsAdvent [post on reproducible research](https://www.cgranade.com/blog/2019/12/22/reproducible-research-with-qsharp.html), which gets into more detail on containerizing and reproducible use of the QDK._
 
 
 ### Use language effectively
