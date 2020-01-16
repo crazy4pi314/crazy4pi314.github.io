@@ -7,7 +7,7 @@ Here is some of the talks I have given, most I have made as webpages with [revea
 
 ## 2020 ##
 
-- ### [The science isn't magic, but we are ✨](./cuwip_2020): Washington State University Physics Colloquium
+- ### [The science isn't magic, but we are ✨](./cuwip_2020): Washington State University Physics and Astronomy Colloquium
 
     Science isn't — and can't — be done in isolation.
     I have spent much of my life in dark labs counting single photons, but it took a team to achieve our goals.
