@@ -7,6 +7,10 @@ Here is some of the talks I have given, most I have made as webpages with [revea
 
 ## 2020 ##
 
+- ### [Science Communication and K-12 Outreach](./cuwip_2020_scicomm): Conference for Undergraduate Women in Physics at Washington State University
+
+    Workshops given at CUWiP, discussion questions at the end of the talk.
+
 - ### [The science isn't magic, but we are ✨](./cuwip_2020): Washington State University Physics and Astronomy Colloquium
 
     Science isn't — and can't — be done in isolation.
