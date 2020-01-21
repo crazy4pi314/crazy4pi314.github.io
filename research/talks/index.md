@@ -7,7 +7,7 @@ Here is some of the talks I have given, most I have made as webpages with [revea
 
 ## 2020 ##
 
-- ### [Science Communication and K-12 Outreach](./cuwip_2020_scicomm): Conference for Undergraduate Women in Physics at Washington State University
+- ### [Science Communication and K-12 Outreach](./cuwip_2020_scicomm) and [Building Inclusive Communities](./cuwip_2020_community): Conference for Undergraduate Women in Physics at Washington State University
 
     Workshops given at CUWiP, discussion questions at the end of the talk.
 
@@ -27,7 +27,7 @@ Here is some of the talks I have given, most I have made as webpages with [revea
     Quantum devices are the next big addition to the general computing and technology landscape.
     However, just like classical hardware, quantum hardware can be hacked.
     I will share some of my (successful) attempts to break the security of quantum key distribution hardware with the biggest laser I could find!
-    Talk video [here](https://www.youtube.com/watch?v=j3QV5_Me-v4) and schedule [here](https://hackaday.io/superconference/#schedule).
+    Talk video [here](https://www.youtube.com/watch?v=j3QV5_Me-v4), slides as [pptx](../../public/download/kaiser-hackaday-2019.pptx)/[pdf](../../public/download/kaiser-hackaday-2019.pdf), and [schedule](https://hackaday.io/superconference/#schedule).
 
 - ### Python + Quantum Computing = 💖: Seattle PyLadies September Talk Night
 
