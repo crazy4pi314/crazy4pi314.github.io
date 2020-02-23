@@ -52,7 +52,7 @@ Dr. Sarah Kaiser is an experimental quantum physicist who excels at building par
 
 * **Sarah Kaiser**. [Hacking Quantum Key Distribution Hardware](https://www.youtube.com/watch?v=j3QV5_Me-v4) Talk at [Hackaday Superconference](https://hackaday.io/superconference/\#schedule) 2019.
 
-* **Sarah Kaiser**. [Python + Quantum Computing = 💖](/research/talks//) Talk at [Seattle PyLadies September Talknight](https://www.meetup.com/Seattle-PyLadies/events/264536005/) 2019.
+* **Sarah Kaiser**. Python + Quantum Computing = 💖. Talk at [Seattle PyLadies September Talknight](https://www.meetup.com/Seattle-PyLadies/events/264536005/) 2019.
 
 * **Sarah Kaiser**. [Learning Q# with Python: building the quantum programming community](https://mybuild.techcommunity.microsoft.com/sessions/77163?source=sessions) Talk at [Microsoft Build](https://www.microsoft.com/en-us/build) 2019.
 
