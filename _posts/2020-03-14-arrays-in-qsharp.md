@@ -40,7 +40,7 @@ Message($"{b}");
 What will the value of `b` be after running all the code above?
 _Reminder you can run all the code in this post [on Binder](https://mybinder.org/v2/gist/cgranade/09dabfe1cc2e650cd88d2cfc98185791/master)._
 
-![look around you](https://thumbs.gfycat.com/PrestigiousAggravatingEastsiberianlaika-mobile.mp4)
+<div style='position:relative; padding-bottom:calc(54.40% + 44px)'><iframe src='https://gfycat.com/ifr/PrestigiousAggravatingEastsiberianlaika' frameborder='0' scrolling='no' width='100%' height='100%' style='position:absolute;top:0;left:0;' allowfullscreen></iframe></div><p> <a href="https://gfycat.com/prestigiousaggravatingeastsiberianlaika">via Gfycat</a></p>
 
 The answer here comes down to the difference between whether we think of a variable as storing a _value_, or as being a _reference_ to something.
 In Q#, everything is a value, so when we define a new variable with `let b = a`, we tell the Q# compiler that we want the _value_ of `b` to be equal to whatever the value of `a` is.
