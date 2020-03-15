@@ -20,6 +20,8 @@ At their core, quantum programs are classical programs that send instructions to
 That means that _a lot of what you already know about classical programming still applies_.
 In this post, we'll look at how Q# represents one incredibly common _classical_ data structure in what may seem to be a slightly unusual way, and how that helps make Q# a great classical language for controlling quantum devices.
 
+## Arrays in Q#
+
 <div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/QfGYYVrbay6kssMrYn" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/quintab-quinta-brunson-b-QfGYYVrbay6kssMrYn">via GIPHY</a></p>
 
 Whatever they might be called in a particular language, arrays are an incredibly common and useful data structure for developers.
