@@ -228,6 +228,7 @@ a.sidebar-nav-item:focus {
   color: #008B8B;
 }
 
+
 /* Blue */
 .theme-base-0d .sidebar {
   background-color: #6a9fb5;
@@ -253,4 +254,13 @@ a.sidebar-nav-item:focus {
 .theme-base-0f .content a,
 .theme-base-0f .related-posts li a:hover {
   color: #8f5536;
+}
+
+/* Pink Vaporwave */
+.theme-base-0g .sidebar {
+  background-color: #FF6AD5;
+}
+.theme-base-0g .content a,
+.theme-base-0g .related-posts li a:hover {
+  color: #FF6AD5;
 }
