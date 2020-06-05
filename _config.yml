@@ -22,6 +22,8 @@ author:
   github : crazy4pi314
   twitter : crazy4pi314
 
+# Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
+google_analytics: UA-168719669-1
 
 # Custom vars
 version:          0.0.1
