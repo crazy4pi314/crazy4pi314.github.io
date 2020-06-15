@@ -41,7 +41,7 @@ title: Home
     <h2>Watch me develop quantum software on Twitch!</h2>
   </div>
 
-<iframe src="https://player.twitch.tv/?autoplay=false&collection=zNmwPZWAERanCw" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe><a href="https://www.twitch.tv/collections/zNmwPZWAERanCw?tt_content=text_link&tt_medium=vod_embed" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px; text-decoration:underline;">Watch Quantum Develop with Me from crazy4pi314 on www.twitch.tv</a>
+<iframe src="https://player.twitch.tv/?collection=zNmwPZWAERanCw&video=videoId&parent=www.sckaiser.com" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
 
 ---
 
