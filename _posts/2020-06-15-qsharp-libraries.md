@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Building and Packaging a Q# Library"
-image: public/media/blog/2020-06-15-cover.png
+image: /public/media/blog/2020-06-15-cover.png
 excerpt: "One of our goals with the qRAM project is to show how leverage the existing Q# libraries and runtime and extend them to add new features and content."
 ---
 
