@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Party Invitations: How Q# enables inclusive teaching"
-image: public/media/blog/chewie-mikeandike.jpg
+image: /public/media/blog/chewie-mikeandike.jpg
 ---
 
 _This is a post contributing to [#QsAdvent](https://twitter.com/hashtag/qsadvent) 2019_

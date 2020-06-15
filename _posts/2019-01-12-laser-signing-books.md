@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Give an engineer a book to sign..."
-image: public/media/blog/2019-01-12-finished-product.jpg
+image: /public/media/blog/2019-01-12-finished-product.jpg
 ---
 
 ### ... and they will want a laser to go with it! 😄⚡
