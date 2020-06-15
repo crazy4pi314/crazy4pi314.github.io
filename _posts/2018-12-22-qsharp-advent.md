@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Opening Presents Early: Q# Tips and tricks for a Happy Hamiltonian"
+image: public/media/blog/2018-12-22-cover.jpg
 ---
 
 _This is a post contributing to [#QsAdvent](https://twitter.com/search?f=tweets&q=%23QsAdvent) 2018_

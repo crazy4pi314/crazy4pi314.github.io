@@ -1,10 +1,18 @@
 ---
 layout: post
 title: "Building and Packaging a Q# Library"
+image: public/media/blog/2020-06-15-cover.png
+excerpt: "One of our goals with the qRAM project is to show how leverage the existing Q# libraries and runtime and extend them to add new features and content."
 ---
+
+> tl;dr If you want to get started developing a new library for Q#, check out this [template repo](https://github.com/crazy4pi314/qsharp-library-template) I made to get you going with the right structure, project files, and build automation with GitHub actions.
 
 I have been really excited to start working on a new project with some colleagues building a [new library for Q#](https://github.com/qsharp-community/qram), and wanted to share with you our journey so far!
 The team will probably post more about the content of what the library is doing (implementing memory for a quantum computer), but here I want to focus on the infrastructure that we needed to get from an empty repo to a built and hosted NuGet package for a Q# library via [GitHub Packages](https://github.com/features/packages).
+
+<p style="text-align: center;">
+<img src="/public/media/blog/2020-06-15-cover.png" alt="template repo for new q# libraries by yours truly" style="width: 80%; display: inline;padding-top: 1em;"/>
+</p>
 
 Libraries in general are a great way to extend languages without having to expand the base language thus increasing the maintenance and scope of the language.
 Q# has a bunch of official libraries already provided already in the [Microsoft/QuantumLibraries](https://github.com/Microsoft/QuantumLibraries) repo.
@@ -320,19 +328,19 @@ This action will fire whenever you make a pull request on the master branch.
 In the PR window you will see the feedback from the tests (passing/not passing).
 
 <p style="text-align: center;">
-<img src="/public/media/blog/2020-06-11-pr.png" alt="Test feedback in PR page" style="width: 80%; display: inline;padding-top: 1em;"/>
+<img src="/public/media/blog/2020-06-15-pr.png" alt="Test feedback in PR page" style="width: 80%; display: inline;padding-top: 1em;"/>
 </p>
 
 You may want to modify this flow to fire on other branches or conditions, check out [all the possible triggers](https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#on) for GitHub actions.
 
 > If you want to see all of the actions that have been run on your repo you can look at the actions tab:
 > <p style="text-align: center;">
-> <img src="/public/media/blog/2020-06-11-actions.png" alt="GitHub Actions tab for the qRAM repo" style="width: 80%; display: inline;padding-top: 1em;"/>
+> <img src="/public/media/blog/2020-06-15-actions.png" alt="GitHub Actions tab for the qRAM repo" style="width: 80%; display: inline;padding-top: 1em;"/>
 > </p>
 > The above screen cap is from the [qRAM library's actions page](https://github.com/qsharp-community/qram/actions).
 > You can see the details of a particular action run here:
 > <p style="text-align: center;">
-> <img src="/public/media/blog/2020-06-11-test-run.png" alt="Details of a particular action run" style="width: 80%; display: inline;padding-top: 1em;"/>
+> <img src="/public/media/blog/2020-06-15-test-run.png" alt="Details of a particular action run" style="width: 80%; display: inline;padding-top: 1em;"/>
 > </p>
 
 Now that you are sure your code is building and ready to merge it into master, let's take a look at the workflow that will package our library!

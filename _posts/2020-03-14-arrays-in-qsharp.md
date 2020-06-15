@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "An array of facts on arrays in Q#"
+image: public/media/blog/2020-03-14-cover.png
 ---
 
 _Post co-authored with [Chris Granade](https://www.cgranade.com/), my co-author on [Learn Quantum Computing with Python and Q#](https://www.manning.com/books/learn-quantum-computing-with-python-and-q-sharp?a_aid=learn-qc-granade&a_bid=ee23f338)!_

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Quantum Sweepstakes Machine"
+image: public/media/blog/2020-05-14-quantum-sweepstakes.png
 ---
 
 *TL;DR I wrote a quantum random number generator in Q# to play games. Run the code in your browser here:* [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/crazy4pi314/90c74fd23f084de8e78b150ba1987c1c/master?filepath=START-HERE.ipynb) 
