@@ -264,3 +264,11 @@ a.sidebar-nav-item:focus {
 .theme-base-0g .related-posts li a:hover {
   color: #FF6AD5;
 }
+/* Pink Twitch */
+.theme-base-0h .sidebar {
+  background-color: #FF0072;
+}
+.theme-base-0h .content a,
+.theme-base-0h .related-posts li a:hover {
+  color: #FF0072;
+}
