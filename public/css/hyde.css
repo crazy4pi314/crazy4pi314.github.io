@@ -272,3 +272,11 @@ a.sidebar-nav-item:focus {
 .theme-base-0h .related-posts li a:hover {
   color: #FF0072;
 }
+/* Purple Accessible Twitch */
+.theme-base-0j .sidebar {
+  background-color: #52007f;
+}
+.theme-base-0j .content a,
+.theme-base-0j .related-posts li a:hover {
+  color: #e60067;
+}

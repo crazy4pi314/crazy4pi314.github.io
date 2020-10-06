@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Selected Talks
+title: Selected Talks & Podcasts
 ---
 
-Here is some of the talks I have given, most I have made as webpages with [reveal.js](http://lab.hakim.se/reveal-js/#/).
+Here are some of the talks I have given, check out available recordings on this [YouTube playlist](https://www.youtube.com/playlist?list=PLA9uqQmuXqOArixbAYPE0ILJ9uBqZDWbC).
 
 ## 2020 ##
 
