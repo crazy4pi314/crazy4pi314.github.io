@@ -1,11 +1,11 @@
 ---
 layout: page
-title: CV
+title: About Me
 ---
 
-Dr. Sarah Kaiser is an experimental quantum physicist who excels at building partnerships and communities. Over eight years experience specializing in quantum cryptography, experimental design, and science communication. Loves working with Python, lasers, and lathes.
+Dr. Sarah Kaiser is an experimental quantum physicist who excels at building partnerships and communities. She has over 10 years experience specializing in quantum technology, experimental design, and science communication. Working with Python, lasers, and lathes is her jam.
 
-> [Download detailed CV as PDF](/public/download/cv.pdf)
+#### [Download detailed CV as PDF](/public/download/cv.pdf)
 
 ## Education ##
 
@@ -17,13 +17,29 @@ Dr. Sarah Kaiser is an experimental quantum physicist who excels at building par
 	Bethel University
 	*Summa Cum Laude with Honors*
 
-## Research interests ##
+## Honors ##
 
-* Quantum information and computation
+* MVP Award — Developer Technologies, Microsoft 2020
+* UW Equity and Inclusivity Award for founding FemPhys Organization 2016
+* IQC David Johnston Award for Scientific Outreach 2015
+* Mike and Ophelia Lazaridis Fellowship  2012-2016
+* Best Poster Presentation, Sigma Zeta National Convention 2009
+* COMAP Competition, Meritorious Award Winner  2008, 2009, 2010, 2011
 
-* Quantum key distribution
+## Leadership ##
 
-* Color centers in diamond
+* Advisor at [Unitary Fund](https://unitary.fund/)
+* Mentor at the [Quantum Open Source Foundation](https://qosf.org/)
+* Founder of [Women in Quantum Computing and Applications Meetup group](https://wiqca.dev/) 2020
+* Co-Founder, Maintainer of [Q# Community](https://qsharp.community/) 2019 - Present
+* Member of the Women in Physics committee at Australian Institute of Physics 2016-2017
+* IQC Equity and Inclusion committee member 2015-2016
+* FemPhys Co-founder and officer 2014-2015
+* Optical Society of America University of Waterloo chapter officer 2014-2016
+* IQC Graduate student association officer  2014-2015
+* IQC Entrepreneurship club Co-organizer  2014-2015
+* QCRYPT conference student organizer 2013
+
 
 ## Publications ##
 
@@ -48,7 +64,7 @@ Dr. Sarah Kaiser is an experimental quantum physicist who excels at building par
 * Feihu Xu, Shihan Sajeed, **Sarah Kaiser**, Zhiyuan Tang, Li Qian, Vadim Makarov, and Hoi-Kwong Lo. _Experimental quantum key distribution with source flaws and tight finite-key analysis._ [Phys. Rev. A 92, 032305 (2015)](http://journals.aps.org/pra/abstract/10.1103/PhysRevA.92.032305)
 
 ---
-## Talks ##
+<!-- ## Selected Talks ##
 
 * **Sarah Kaiser**. [Hacking Quantum Key Distribution Hardware](https://www.youtube.com/watch?v=j3QV5_Me-v4) Talk at [Hackaday Superconference](https://hackaday.io/superconference/\#schedule) 2019.
 
@@ -91,30 +107,9 @@ Dr. Sarah Kaiser is an experimental quantum physicist who excels at building par
 
     Long-distance quantum communication systems are of interest for commercial and fundamental scientific projects. Currently, the link length of these systems is limited by optical fiber losses or free-space line of sight. Our goal is to use low earth orbit satellites as a relay, enabling distant locations to establish a link and exchange quantum systems, including those that were too far apart to link previously. In this talk, I will describe our progress towards a proposed quantum receiver satellite payload that has a passive polarization analyzer to detect photons sent from ground stations. We have designed and constructed prototypes of the QEYSSAT (Quantum EncrYption and Science SATellite) payload with commercial and government assistance. These prototypes comprise almost the entire system needed for a form-fit-function payload and ground station. I will present tests of our system in realistic scenarios representing the environments it will face. In particular, I will present the latest results of testing this system in an aircraft. Finally, I will also identify remaining challenges for practical long distance quantum communication.
 
-* **Sarah Kaiser**. "What QKD can learn from Classical Cryptography." Talk at Last Frontiers in Quantum Information Science 2015
+* **Sarah Kaiser**. "What QKD can learn from Classical Cryptography." Talk at Last Frontiers in Quantum Information Science 2015 -->
 
-## Honors ##
 
-* MVP Award — Developer Technologies, Microsoft 2020
-* UW Equity and Inclusivity Award for founding FemPhys Organization 2016
-* IQC David Johnston Award for Scientific Outreach 2015
-* Mike and Ophelia Lazaridis Fellowship  2012-2016
-* Best Poster Presentation, Sigma Zeta National Convention 2009
-* COMAP Competition, Meritorious Award Winner  2008, 2009, 2010, 2011
-
-## Leadership ##
-
-* Founder of [Women in Quantum Computing and Applications Meetup group](https://wiqca.dev/) 2020
-* Co-Founder, Maintainer of [Q# Community](https://qsharp.community/) 2019 - Present
-* Member of the Women in Physics committee at Australian Institute of Physics 2016-2017
-* IQC Equity and Inclusion committee member 2015-2016
-* FemPhys Co-founder and officer 2014-2015
-* Optical Society of America University of Waterloo chapter officer 2014-2016
-* IQC Graduate student association officer  2014-2015
-* IQC Entrepreneurship club Co-organizer  2014-2015
-* QCRYPT conference student organizer 2013
-* Sigma Pi Sigma Chapter President 2010-2011
-* Sigma Zeta Chapter Officer 2009-2011
 
 ## Outreach ##
 
