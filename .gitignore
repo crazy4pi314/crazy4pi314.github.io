@@ -41,3 +41,18 @@ validation-report.json
 
 # Folders to ignore
 node_modules
+
+# From reveal slides
+.idea/
+*.iml
+*.iws
+*.eml
+out/
+.DS_Store
+.svn
+log/*.log
+tmp/**
+node_modules/
+.sass-cache
+public/css/reveal.min.css
+public/js/reveal.min.js

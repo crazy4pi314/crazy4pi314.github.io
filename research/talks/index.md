@@ -7,6 +7,13 @@ Here are some of the talks I have given, check out available recordings on this 
 
 ## 2020 ##
 
+- ### [Finding your Community: Together we can be tech leaders of tomorrow](./manninglive_community_2020): [live@manning conferences: Women in Tech](https://freecontent.manning.com/livemanning-conferences-women-in-tech/)
+
+    Technology can’t be developed in isolation, nor can we separate the tech from the people that develop it. 
+    The communities of people you connect with throughout your career will be one of the best resource you have to grow and develop as both a tech professional and human. 
+    I will talk a bit about how each of the different communities I have been a part of have shaped my career path and success. 
+    I will also give some tips on how we can be intentional about the communities we build and participate in so that they can be that critical resource to everyone.
+
 - ### [Science Communication and K-12 Outreach](./cuwip_2020_scicomm) and [Building Inclusive Communities](./cuwip_2020_community): Conference for Undergraduate Women in Physics at Washington State University
 
     Workshops given at CUWiP, discussion questions at the end of the talk.
