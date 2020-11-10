@@ -48,7 +48,7 @@ title: Home
       frameborder="0"
       scrolling="no"
       allowfullscreen="true"
-      height="378%"
+      height="378"
       width="620">
     </iframe>
 
