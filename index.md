@@ -13,25 +13,7 @@ title: Home
       <img src="/public/profile-photo.jpg" alt="Sarah Kaiser" style="width: 100%; display: inline;"/>
     </div>
   </div>
-<hr>
-<h2>Links to me other places:</h2>
-<p style="text-align: center;">
-<!-- [arXiv](http://arxiv.org/a/kaiser_s_1) •
-[ResearchGate](https://www.researchgate.net/profile/Sarah_Kaiser) •
-[Google Scholar](https://scholar.google.ca/citations?user=wUnQwUMAAAAJ&hl=en) •
-[GitHub](https://github.com/crazy4pi314) •
-[Linkedin](https://www.linkedin.com/in/sckaiser1) -->
-<a href="https://twitter.com/crazy4pi314" target="_top">Twitter</a> • 
-<a href="https://www.instagram.com/crazy4pi314" target="_top">Instagram</a> •
-<a href="https://www.linkedin.com/in/sckaiser1" target="_top">Linkedin</a> • 
-<a href="https://www.twitch.tv/crazy4pi314" target="_top">Twitch</a> • 
-<a href="https://github.com/crazy4pi314" target="_top">GitHub</a> • 
-<a href="http://arxiv.org/a/kaiser_s_1" target="_top">arXiv</a> • 
-<a href="https://www.researchgate.net/profile/Sarah_Kaiser" target="_top">ResearchGate</a> • 
-<a href="https://scholar.google.ca/citations?user=wUnQwUMAAAAJ&hl=en" target="_top">Google Scholar</a> • 
-<a href="https://keybase.io/skaiser" target="_top">Keybase</a><br>
-<br>
-</p>
+
   <div style="flex-direction: row; width: 100%">
     <h2>Check out my books!</h2>
   </div>
@@ -59,7 +41,16 @@ title: Home
     <h2>Watch me develop quantum software on Twitch!</h2>
   </div>
 
-<iframe src="https://player.twitch.tv/?collection=zNmwPZWAERanCw&video=videoId&parent=www.sckaiser.com" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+<!-- <iframe src="https://player.twitch.tv/?collection=zNmwPZWAERanCw&video=videoId&parent=www.sckaiser.com" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe> -->
+
+<iframe
+      src="https://player.twitch.tv/?channel=crazy4pi314&parent=www.sckaiser.com&autoplay=false"
+      frameborder="0"
+      scrolling="no"
+      allowfullscreen="true"
+      height="378%"
+      width="620">
+    </iframe>
 
 ---
 
@@ -95,3 +86,18 @@ title: Home
     }
   }
 </style>
+
+<hr>
+<h2>Links to me other places:</h2>
+<p style="text-align: center;">
+<a href="https://twitter.com/crazy4pi314" target="_top">Twitter</a> • 
+<a href="https://www.instagram.com/crazy4pi314" target="_top">Instagram</a> •
+<a href="https://www.linkedin.com/in/sckaiser1" target="_top">Linkedin</a> • 
+<a href="https://www.twitch.tv/crazy4pi314" target="_top">Twitch</a> • 
+<a href="https://github.com/crazy4pi314" target="_top">GitHub</a> • 
+<a href="http://arxiv.org/a/kaiser_s_1" target="_top">arXiv</a> • 
+<a href="https://www.researchgate.net/profile/Sarah_Kaiser" target="_top">ResearchGate</a> • 
+<a href="https://scholar.google.ca/citations?user=wUnQwUMAAAAJ&hl=en" target="_top">Google Scholar</a> • 
+<a href="https://keybase.io/skaiser" target="_top">Keybase</a><br>
+<br>
+</p>
