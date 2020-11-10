@@ -15,7 +15,7 @@ title: Home
   </div>
 
   <div style="flex-direction: row; width: 100%">
-    <h2>Check out my books!</h2>
+    <h2>My Books:</h2>
   </div>
 
   <div style="flex-direction: row; flex-wrap: wrap; width: 100%;">
@@ -38,7 +38,7 @@ title: Home
   </div>
 </div>
   <div style="flex-direction: row; width: 100%">
-    <h2>Watch me develop quantum software on Twitch!</h2>
+    <h2>Watch me write code on Twitch:</h2>
   </div>
 
 <!-- <iframe src="https://player.twitch.tv/?collection=zNmwPZWAERanCw&video=videoId&parent=www.sckaiser.com" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe> -->
@@ -71,6 +71,12 @@ title: Home
 {% endfor %}
 </div>
 
+-----
+  <div style="flex-direction: row; width: 100%">
+    <h2>Chat with me on Discord:</h2>
+  </div>
+
+<iframe src="https://discordapp.com/widget?id=713831924451377193&theme=light" width="620" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
 -----
 
 <h2>What am I up to right now?</h2>
