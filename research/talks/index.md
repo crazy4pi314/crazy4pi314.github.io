@@ -7,6 +7,10 @@ Here are some of the talks I have given, check out available recordings on this 
 
 ## 2020 ##
 
+- ### [Growing the open source quantum software community](../../public/download/qworld-open-quantum.pdf): [QWorld Webinar](https://qworld.lu.lv/index.php/2020/11/21/our-6th-qwebinar-with-dr-sarah-kaiser/)
+
+    I want to share with you my journey from academia working as an open source quantum developer at the Unitary Fund, what I have learned about the role that open source software has to play in developing quantum technologies, and how you can help grow our quantum community.
+
 - ### [Finding your Community: Together we can be tech leaders of tomorrow](./manninglive_community_2020): [live@manning conferences: Women in Tech](https://freecontent.manning.com/livemanning-conferences-women-in-tech/)
 
     Technology can’t be developed in isolation, nor can we separate the tech from the people that develop it. 
