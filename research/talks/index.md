@@ -7,6 +7,10 @@ Here are some of the talks I have given, check out available recordings on this 
 
 ## 2020 ##
 
+- ### [Science is not a safe space](../../public/download/qturn-science-not-safe-space.pdf): [Q-Turn](https://www.q-turn.org/speakers/) invited talk
+
+    I will talk about tools to build inclusive scientific communities that are also safe spaces. All the links cited in the presentation as well as some helpful additional resources can be found at [sckaiser.com/qturn-resources](https://sckaiser.com/qturn-resources).
+
 - ### [Growing the open source quantum software community](../../public/download/qworld-open-quantum.pdf): [QWorld Webinar](https://qworld.lu.lv/index.php/2020/11/21/our-6th-qwebinar-with-dr-sarah-kaiser/)
 
     I want to share with you my journey from academia working as an open source quantum developer at the Unitary Fund, what I have learned about the role that open source software has to play in developing quantum technologies, and how you can help grow our quantum community.
