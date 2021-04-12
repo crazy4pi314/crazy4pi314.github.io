@@ -7,7 +7,7 @@ title: Home
   <div style="flex-direction: row; flex-wrap: wrap; width: 100%;">
     <div style="flex-direction: column; flex-basis: 100%; flex: 2;">
       <h1> Welcome! </h1>
-      <p>I'm Dr. Sarah Kaiser and I love everything about quantum technology! Some of my favorite things inclued: writing about science and technology, laser cutters, and playing with my pupper,<a href="https://www.instagram.com/chewieborka/"> Chewie</a>.</p>
+      <p>I'm Dr. Sarah Kaiser and I love everything about quantum technology! Some of my favorite things include: writing about science and technology, laser cutters, and playing with my pup,<a href="https://www.instagram.com/chewieborka/"> Chewie</a>.</p>
     </div>
     <div style="flex-direction: column; flex-basis: 100%; flex: 1; margin: 0.4em;">
       <img src="/public/profile-photo.jpg" alt="Sarah Kaiser" style="width: 100%; display: inline;"/>
