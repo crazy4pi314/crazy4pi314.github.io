@@ -81,17 +81,6 @@ title: Home
 
 <h2>What am I up to right now?</h2>
 <a class="twitter-timeline" data-theme="light" data-tweet-limit="5" href="https://twitter.com/crazy4pi314?ref_src=twsrc%5Etfw">Tweets by crazy4pi314</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<style type="text/css">
-  .flex-grid div {
-    display: flex;
-  }
-
-  @media(max-width: 501px) {
-    .flex-grid div {
-      display: block;
-    }
-  }
-</style>
 
 <hr>
 <h2>Links to me other places:</h2>

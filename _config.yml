@@ -28,6 +28,12 @@ google_analytics: UA-168719669-1
 
 # Custom vars
 version:          0.0.1
+social:
+  twitter: https://twitter.com/crazy4pi314
+  github: https://github.com/crazy4pi314
+  discord: https://discord.com/invite/RmReNjt
+  linkedin: https://www.linkedin.com/in/sckaiser1
+  twitch: https://twitch.tv/crazy4pi314
 
 github:
   repo: https://github.com/crazy4pi314/crazy4pi314.github.io

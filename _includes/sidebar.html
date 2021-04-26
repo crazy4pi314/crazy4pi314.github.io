@@ -3,14 +3,15 @@
     <div class="sidebar-about">
       <h1>
         <a href="{{ site.url }}">
-          {{ site.title }}
+          <!-- {{ site.title }} -->
+          <img src="/public/logo.png"/>
         </a>
       </h1>
       <p class="lead">{{ site.description }}</p>
     </div>
 
     <nav class="sidebar-nav">
-        <a class="sidebar-nav-item" href="{{ site.url }}">Home</a>
+        <!-- <a class="sidebar-nav-item" href="{{ site.url }}">Home</a> -->
       <!-- {% comment %}
         The code below dynamically generates a sidebar nav of pages with
         `layout: page` in the front-matter. See readme for usage.
@@ -25,9 +26,11 @@
         {% endif %}
       {% endfor %} -->
 
-      <a class="sidebar-nav-item" href="{{site.baseurl}}cv">About Me</a>
-      <a class="sidebar-nav-item" href="{{site.baseurl}}research\talks">Selected Talks & Podcasts</a>
-      <a class="sidebar-nav-item" href="{{site.baseurl}}archive">Blog</a>      
+      <a class="sidebar-nav-item" href="{{site.baseurl}}about">About</a>
+      <a class="sidebar-nav-item" href="{{site.baseurl}}archive">Blog</a>  
+      <a class="sidebar-nav-item" href="{{site.baseurl}}talks">Talks + Podcasts</a>
+      <a class="sidebar-nav-item" href="{{site.baseurl}}books">Books</a>  
+      <a class="sidebar-nav-item" href="{{site.baseurl}}speaker">Speaker Requests</a>  
       <a class="sidebar-nav-item" href="{{ site.github.repo }}">Website Repo</a>
       <a href="https://twitch.tv/crazy4pi314"><i class='fa fa-twitch'></i></a>&nbsp;
       <a href="https://discord.com/invite/RmReNjt"><i class='fab fa-discord'></i></a>&nbsp;

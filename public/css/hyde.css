@@ -280,3 +280,15 @@ a.sidebar-nav-item:focus {
 .theme-base-0j .related-posts li a:hover {
   color: #e60067;
 }
+
+/* Flexgrid stuff*/
+
+.flex-grid div {
+  display: flex;
+}
+
+@media(max-width: 501px) {
+  .flex-grid div {
+    display: block;
+  }
+}
