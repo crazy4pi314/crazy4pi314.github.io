@@ -1,18 +1,18 @@
 <div class="sidebar">
-  <div class="container sidebar">
-    <div class="sidebar-about">
-      <h1>
-        <a href="{{ site.url }}">
-          <!-- {{ site.title }} -->
-          <img src="/public/logo.png"/>
-        </a>
-      </h1>
-      <p class="lead">{{ site.description }}</p>
-    </div>
+    <div class="container sidebar">
+        <div class="sidebar-about">
+            <h1>
+                <a href="{{ site.url }}">
+                    <!-- {{ site.title }} -->
+                    <img src="/public/logo.png" />
+                </a>
+            </h1>
+            <p class="lead">{{ site.description }}</p>
+        </div>
 
-    <nav class="sidebar-nav">
-        <!-- <a class="sidebar-nav-item" href="{{ site.url }}">Home</a> -->
-      <!-- {% comment %}
+        <nav class="sidebar-nav">
+            <!-- <a class="sidebar-nav-item" href="{{ site.url }}">Home</a> -->
+            <!-- {% comment %}
         The code below dynamically generates a sidebar nav of pages with
         `layout: page` in the front-matter. See readme for usage.
       {% endcomment %}
@@ -26,22 +26,22 @@
         {% endif %}
       {% endfor %} -->
 
-      <a class="sidebar-nav-item" href="{{site.baseurl}}about">About</a>
-      <a class="sidebar-nav-item" href="{{site.baseurl}}archive">Blog</a>  
-      <a class="sidebar-nav-item" href="{{site.baseurl}}talks">Talks + Podcasts</a>
-      <a class="sidebar-nav-item" href="{{site.baseurl}}books">Books</a>  
-      <a class="sidebar-nav-item" href="{{site.baseurl}}speaker">Speaker Requests</a>  
-      <a class="sidebar-nav-item" href="{{ site.github.repo }}">Website Repo</a>
-      <a href="https://twitch.tv/crazy4pi314"><i class='fa fa-twitch'></i></a>&nbsp;
-      <a href="https://discord.com/invite/RmReNjt"><i class='fab fa-discord'></i></a>&nbsp;
-      <a href="https://twitter.com/crazy4pi314"><i class='fa fa-twitter'></i></a>&nbsp;
-      <a href="https://www.instagram.com/crazy4pi314"><i class='fa fa-instagram'></i></a>&nbsp;
-      <a href="https://www.linkedin.com/in/sckaiser1"><i class='fa fa-linkedin'></i></a>&nbsp;
-      <a href="https://github.com/crazy4pi314"><i class='fa fa-github'></i></a>
-      <!-- <a href="https://keybase.io/skaiser"><i class='fab fa-keybase'></i></a>&nbsp;
+            <a class="sidebar-nav-item" href="{{ 'about' | relative_url }}">About</a>
+            <a class="sidebar-nav-item" href="{{ 'archive' | relative_url }}">Blog</a>
+            <a class="sidebar-nav-item" href="{{ 'talks' | relative_url }}">Talks + Podcasts</a>
+            <a class="sidebar-nav-item" href="{{ 'books' | relative_url }}">Books</a>
+            <a class="sidebar-nav-item" href="{{ 'speaker' | relative_url }}">Speaker Requests</a>
+            <a class="sidebar-nav-item" href="{{ site.github.repo }}">Website Repo</a>
+            <a href="https://twitch.tv/crazy4pi314"><i class='fa fa-twitch'></i></a>&nbsp;
+            <a href="https://discord.com/invite/RmReNjt"><i class='fab fa-discord'></i></a>&nbsp;
+            <a href="https://twitter.com/crazy4pi314"><i class='fa fa-twitter'></i></a>&nbsp;
+            <a href="https://www.instagram.com/crazy4pi314"><i class='fa fa-instagram'></i></a>&nbsp;
+            <a href="https://www.linkedin.com/in/sckaiser1"><i class='fa fa-linkedin'></i></a>&nbsp;
+            <a href="https://github.com/crazy4pi314"><i class='fa fa-github'></i></a>
+            <!-- <a href="https://keybase.io/skaiser"><i class='fab fa-keybase'></i></a>&nbsp;
       <a href="https://www.researchgate.net/profile/Sarah_Kaiser"><i class='fab fa-researchgate'></i></a> -->
-    </nav>
+        </nav>
 
-    <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
-  </div>
+        <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
+    </div>
 </div>
