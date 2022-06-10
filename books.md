@@ -10,7 +10,7 @@ title: Books
     </div>
     <div style="flex-direction: column; flex-basis: 100%; flex: 2;">
       <p>
-        <a href="https://www.manning.com/books/learn-quantum-computing-with-python-and-q-sharp" target="_top">Learn Quantum Computing with Python and Q#</a> with <a href="https://cgranade.com/">Chris Granade</a>
+        <a href="https://www.manning.com/books/learn-quantum-computing-with-python-and-q-sharp" target="_top">Learn Quantum Computing with Python and Q#</a> with <a href="https://www.cgranade.com/">Chris Granade</a>
       </p>
     </div>
     <div style="flex-direction: column; flex-basis: 100%; flex: 1; margin: 0.4em;">
