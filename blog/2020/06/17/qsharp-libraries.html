@@ -1,0 +1,187 @@
+<!doctype html><html data-current="post" lang="en"><head><meta charset="utf-8"><link rel="dns-prefetch" href="https://identity.netlify.com"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Building and Packaging a Q# Library</title><meta name="description" content="Building and Packaging a Q# Library"><script async src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script><style>/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}:root{--color-primary:#222222;--color-secondary:#7b2fc2;--color-bg:#ffffff;--color-bg-secondary:#f7f7f7;--color-bg-accent:#c8ade2;--color-text:#222222;--color-text-alt:#ffffff;--color-border:rgba(0, 0, 0, 0.06);--color-danger:#e03ec5;--font-family-base:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;--font-family-heading:var(--font-family-base);--site-width:850px;--border-radius:12px;--border-radius-sm:5px}html{font-size:62.5%;font-family:var(--font-family-base)}body{display:flex;flex-direction:column;min-height:100vh;margin:0;font-size:1.8rem;line-height:1.618;color:var(--color-text);background-color:var(--color-bg)}main{padding:13px}@media (max-width:684px){body{font-size:1.53rem}}@media (max-width:382px){body{font-size:1.35rem}}footer{margin-top:auto}h1,h2,h3,h4,h5,h6{line-height:1.1;font-family:var(--font-family-heading);font-weight:700;margin-top:3rem;margin-bottom:1.5rem;overflow-wrap:break-word;word-wrap:break-word;-ms-word-break:break-all;word-break:break-word}h1{font-size:2.35em}h2{font-size:2em}h3{font-size:1.75em}h4{font-size:1.5em}h5{font-size:1.25em}h6{font-size:1em}p{margin-top:0;margin-bottom:2.5rem}small,sub,sup{font-size:75%}hr{border-color:var(--color-border)}a{text-decoration:none;color:var(--color-secondary)}a:hover{color:var(--color-secondary);border-bottom:2px solid var(--color-secondary)}ul{padding-left:1.4em;margin-top:0;margin-bottom:2.5rem}li{margin-bottom:.4em}blockquote{margin-left:0;margin-right:0;padding-left:1em;padding-top:.8em;padding-bottom:.8em;padding-right:.8em;border-left:5px solid var(--color-primary);margin-bottom:2.5rem;background-color:var(--color-bg-secondary)}blockquote h1,blockquote h2,blockquote h3,blockquote h4,blockquote h5,blockquote h6{margin:.4em 0}blockquote p{margin-bottom:0}img,video{height:auto;max-width:100%;margin-top:0;margin-bottom:2.5rem}pre{background-color:var(--color-bg-secondary);display:block;padding:1em;overflow-x:auto;margin-top:0;margin-bottom:2.5rem}code{font-size:.9em;padding:0 .5em;background-color:var(--color-bg-secondary);white-space:pre-wrap}pre>code{padding:0;background-color:transparent;white-space:pre}table{text-align:justify;width:100%;border-collapse:collapse}td,th{padding:.5em;border-bottom:1px solid var(--color-bg-secondary)}input,textarea{border:1px solid var(--color-text)}input:focus,textarea:focus{border:1px solid var(--color-primary)}textarea{width:100%;max-width:100%;min-height:35px}.btn,button,input[type=button],input[type=reset],input[type=submit]{display:inline-block;padding:5px 10px;text-align:center;text-decoration:none;white-space:nowrap;background-color:var(--color-primary);color:var(--color-bg);border-radius:1px;cursor:pointer;box-sizing:border-box}.btn[disabled],button[disabled],input[type=button][disabled],input[type=reset][disabled],input[type=submit][disabled]{cursor:default;opacity:.5}.btn:focus:enabled,.btn:hover:enabled,button:focus:enabled,button:hover:enabled,input[type=button]:focus:enabled,input[type=button]:hover:enabled,input[type=reset]:focus:enabled,input[type=reset]:hover:enabled,input[type=submit]:focus:enabled,input[type=submit]:hover:enabled{outline:0}input,select,textarea{color:var(--color-text);padding:6px 10px;margin-bottom:10px;background-color:var(--color-bg-secondary);border:1px solid var(--color-bg-secondary);border-radius:4px;box-shadow:none;box-sizing:border-box}input:focus,select:focus,textarea:focus{border:1px solid var(--color-primary);outline:0}input[type=checkbox]:focus{outline:1px dotted var(--color-primary)}fieldset,label,legend{display:block;margin-bottom:.5rem;font-weight:600}.page-container{max-width:var(--site-width);margin-right:auto;margin-left:auto;padding:1rem}.page-container img{display:flex;width:100%;max-width:700px;margin:4rem auto}.shadow{box-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -2px rgba(0,0,0,.05)}.gradient-text{background:linear-gradient(130deg,#3b6de4,#b13cb1 41.07%,#8337ca 76.05%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}.btn{padding:10px 15px;border:none;border-radius:var(--border-radius-sm);background-color:var(--color-secondary);color:var(--color-text-alt);font-size:14px;white-space:nowrap}.btn:focus,.btn:hover{border:none;filter:brightness(90%)}.btn--danger{background-color:var(--color-danger);color:var(--color-text-alt)}.btn--danger:focus,.btn--danger:hover{border:none;background-color:var(--color-danger);color:var(--color-text-alt);filter:brightness(90%)}.site-header{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:15px;border-top:3px solid var(--color-secondary)}@media (min-width:1024px){.site-header{padding:15px 30px}}.site-header__logo-container{margin:0 auto;font-weight:700}@media (min-width:1024px){.site-header__logo-container{margin:0}}.site-header__logo{width:50px;height:25px;margin:0 10px 0 0}.site-header__nav{width:100%;margin-top:15px}@media (min-width:1024px){.site-header__nav{width:auto;margin-top:0}}.site-header__items{display:flex;align-items:center;flex-wrap:wrap;justify-content:center;margin:0;padding:0;list-style:none}.site-header__item{margin:0 6px;font-weight:500;font-size:14px}@media (min-width:1024px){.site-header__item{margin:0 20px;font-size:15px}}.site-header__link{display:flex;align-items:center;color:var(--color-text)}.site-header__link:hover{border-bottom:none}.site-footer{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;padding:15px;border-top:1px solid var(--color-border)}@media (min-width:1024px){.site-footer{padding:15px 30px}}.social-icons{color:var(--color-secondary);border:none;border-radius:var(--border-radius-sm);font-size:14px;white-space:nowrap}.social-icons:focus,.social-icons:hover{text-decoration:none;border:none}.social-icons .icon{width:25px;height:25px;margin:0}.social-icons .icon:hover{color:var(--color-primary)}.article-card{margin-top:35px}.article-card__title{color:var(--color-text)}.article-card__summary{margin-bottom:15px}.tag-list{display:flex;flex-wrap:wrap}.tag-list--no-wrap{display:flex;flex-wrap:wrap;align-items:center;padding:40px 0 30px;border-bottom:2px solid var(--color-border)}@media (min-width:1024px){.tag-list--no-wrap{flex-wrap:nowrap;justify-content:space-between}}.tag-list__title{width:100%;margin-top:0;margin-right:20px;margin-bottom:20px}@media (min-width:1024px){.tag-list__title{margin-bottom:0}}.tag{margin:10px 10px 0 0;padding:6px 8px;background-color:var(--color-bg-secondary);border-radius:var(--border-radius-sm);color:var(--color-secondary);white-space:nowrap;font-size:13px;font-weight:500}.tag:hover{border:none}.tag:first-child{margin-left:0}.project-grid{display:grid;grid-template-columns:repeat(1,1fr);gap:40px;margin:40px 0}@media (min-width:1024px){.project-grid{grid-template-columns:repeat(2,1fr)}}.project-card{display:block;display:flex;flex-direction:column;justify-content:center;padding:15px 30px;border:2px solid var(--color-border);background-color:var(--color-bg-secondary);border-radius:var(--border-radius)}.project-card__title{color:var(--color-text)}.project-card__tag{background-color:var(--color-secondary);color:var(--color-text-alt)}.project-card__tag:hover{color:var(--color-text-alt);filter:brightness(90%)}.project-card__emoji{margin-right:8px}</style><script>window.netlifyIdentity&&window.netlifyIdentity.on("init",n=>{n||window.netlifyIdentity.on("login",()=>{document.location.href="/admin/"})});</script></head><body><header class="site-header"><span class="site-header__logo-container"><a class="site-header__link" href="/"><img class="site-header__logo" src="/static/img/logolaser.svg" alt="Site Logo" width="50px" height="25px" loading="lazy"> Sarah Kaiser</a></span><nav class="site-header__nav"><ul class="site-header__items"><li class="site-header__item"><a class="site-header__link" href="/about/">About</a></li><li class="site-header__item"><a class="site-header__link" href="/blog/">Blog</a></li><li class="site-header__item"><a class="site-header__link" href="/books/">Books</a></li><li class="site-header__item"><a class="site-header__link" href="/events/">Events</a></li><li class="site-header__item"><a class="site-header__link" href="/projects/">Projects</a></li><li class="site-header__item"><a class="site-header__link" href="/contact/">Contact</a></li></ul></nav></header><main><div class="page-container"><article><h1>Building and Packaging a Q# Library</h1><p><small><time datetime="2020-06-17">17 Jun 2020</time> by <a href="/authors/sarah-kaiser/">Sarah Kaiser</a></small></p><hr><blockquote><p>tl;dr If you want to get started developing a new library for Q#, check out this <a href="https://github.com/crazy4pi314/qsharp-library-template">template repo</a> I made to get you going with the right structure, project files, and build automation with GitHub actions.</p></blockquote><p>I have been really excited to start working on a new project with some colleagues building a <a href="https://github.com/qsharp-community/qram">new library for Q#</a>, and wanted to share with you our journey so far!<br>The team will probably post more about the content of what the library is doing (implementing memory for a quantum computer), but here I want to focus on the infrastructure that we needed to get from an empty repo to a built and hosted NuGet package for a Q# library via <a href="https://github.com/features/packages">GitHub Packages</a>.</p><p style="text-align: center;"><img src="/static/img/2020-06-15-cover.png" alt="template repo for new q# libraries by yours truly" style="width: 80%; display: inline;padding-top: 1em;"></p><p>Libraries in general are a great way to extend languages without having to expand the base language thus increasing the maintenance and scope of the language.<br>Q# has a bunch of official libraries already provided already in the <a href="https://github.com/Microsoft/QuantumLibraries">Microsoft/QuantumLibraries</a> repo.<br>Part of our goal with this project is to show how leverage the existing Q# libraries and runtime and extend them to add new features and content.<br>This is certainly not a complete guide, and I'll highlight some improvements I plan to make in the future as we go!</p><h2 id="step-0%3A-setup-your-repo">Step 0: Setup your repo</h2><p>This is probably a step that most of you can skip, but I wanted to add a few notes/reminders of things that are good to setup on a new git repo for a project like this.<br>Don't forget to:</p><ul><li>Add a licence file (otherwise people won't be able to use your library!)<ul><li>If you want to learn more about your options, check out this <a href="https://choosealicense.com/">licence selection assistant</a> from GitHub.</li></ul></li><li>Add a <code>.gitignore</code> file for Q#, you can just use the same <a href="https://github.com/qsharp-community/qram/blob/master/.gitignore"><code>.gitignore</code></a> we did for our qRAM library.</li><li>Add a <code>README.md</code> so that there is a nice description of your project to folks visiting your repo 💖<ul><li>There are some good references out there for writing a good README, like this post from <a href="https://medium.com/@meakaakka/a-beginners-guide-to-writing-a-kickass-readme-7ac01da88ab3">Akash Nimare<br></a>, this one from <a href="https://blog.bitsrc.io/how-to-write-beautiful-and-meaningful-readme-md-for-your-next-project-897045e3f991">Divyansh Tripathi</a>, and this one by <a href="https://www.makeareadme.com/">Danny Guo</a>.</li></ul></li><li>Add a <code>CODE_OF_CONDUCT.md</code> to your repo, check out GitHub's <a href="https://help.github.com/en/github/building-a-strong-community/adding-a-code-of-conduct-to-your-project">documentation for adding a code of conduct to your repo</a>.</li></ul><p>Also for running Q# code you will want to <a href="https://docs.microsoft.com/en-us/quantum/install-guide/">install the QDK</a>, or setup a <a href="https://github.com/crazy4pi314/learn-qc-with-python-and-qsharp#using-devcontainers">Docker container</a> to do your work in.</p><h2 id="step-1%3A-create-your-directory-structure">Step 1: Create your Directory Structure</h2><p>After looking at the <a href="https://github.com/Microsoft/QuantumLibraries">microsoft/QuantumLibraries</a> repo for a bit, I worked out how I wanted to structure the code in our repo.<br>There are three main directories that we needed, one for the source of the library, one for the samples demonstrating the library, and one for tests.<br>The samples directory will have a bunch of subdirectories (eventually) for each qRAM implementation we want to demo, as well as some samples showing how to do resource estimation for the various implementations.</p><pre><code class="language-bash">│   .gitignore
+│   LICENSE
+│   README.md
+│   CODE_OF_CONDUCT.md
+│
+├───samples
+│
+├───src
+│
+└───tests
+
+</code></pre><p>You can make these folders/directories however you want, you will just need three folders in your base or root project folder called <code>src</code>, <code>tests</code>, and <code>samples</code>.</p><blockquote><p>NOTE: There is nothing magical about these names, it just happens to be what my team and I decided so if you have other naming conventions, go ahead and change them!<br>Just make sure then as you are reading the rest of this post to make the right replacements for your names in the commands and files I show below 👍</p></blockquote><h2 id="step-2%3A-create-the-q%23-projects">Step 2: Create the Q# projects</h2><p>Now that you have the folder structure, its time to create the Q# project files that will allow you and the later automation to build your library.<br>These project files are kinda like Makefiles and use the C# infrastructure (MsBuild) to actually control the Q# compilation.</p><h3 id="library-source">Library source</h3><p>Navigate to the <code>src</code> folder and run the following command:</p><pre><code class="language-bash">dotnet new classlib -lang Q#
+</code></pre><p>This will create two files in the <code>src/</code> directory: <code>Library.qs</code> and <code>src.csproj</code>.<br>You can see the contents below.</p><h3 id="library.qs"><code>Library.qs</code></h3><pre><code class="language-Q#">namespace src {
+
+    open Microsoft.Quantum.Canon;
+    open Microsoft.Quantum.Intrinsic;
+
+
+    operation HelloQ () : Unit {
+        Message(&quot;Hello quantum world!&quot;);
+    }
+}
+</code></pre><blockquote><p>NOTE: You can change the namespace name to better reflect what your library is about!<br>The <a href="https://docs.microsoft.com/en-us/quantum/contributing/api-design-principles#namespaces-and-organization">Q# API design documentation</a> has some good guidance on how to make good namespace names, e.g.: Organization.Product.DomainArea.</p></blockquote><h3 id="src.csproj"><code>src.csproj</code></h3><pre><code class="language-xml">&lt;Project Sdk=&quot;Microsoft.Quantum.Sdk/0.11.2004.2825&quot;&gt;
+
+  &lt;PropertyGroup&gt;
+    &lt;TargetFramework&gt;netstandard2.1&lt;/TargetFramework&gt;
+  &lt;/PropertyGroup&gt;
+
+&lt;/Project&gt;
+</code></pre><p>You can see that the <code>src.csproj</code> file has a reference to the version of the QDK that it was created with as well as what .NET framework it is being built for.</p><p>You can test that this template was created correctly by running:</p><pre><code class="language-bash">&gt; dotnet build
+Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Core
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Restore completed in 284.96 ms for C:\Users\skais\qsharp-library-template\src\src.csproj.
+  Restore completed in 29.64 ms for C:\Users\skais\qsharp-library-template\src\src.csproj.
+  
+  ____________________________________________
+
+  Q#: Success! (0 errors, 0 warnings)
+  
+  src -&gt; C:\Users\skais\qsharp-library-template\src\bin\Debug\netstandard2.1\src.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:12.79
+</code></pre><p>Generally you will not need to do much with the project files here in Q# other than to make sure to add references to other projects and packages you might take as dependencies for your project.<br>Speaking of, let's try that now by starting our tests project.</p><h3 id="testing">Testing</h3><p>Navigate to the <code>tests/</code> folder and run the following command:</p><pre><code class="language-bash">dotnet new xunit -lang Q#
+</code></pre><p>This should create two new files in the <code>tests/</code> directory, <code>Tests.qs</code> and <code>tests.csproj</code></p><h3 id="tests.qs"><code>Tests.qs</code></h3><pre><code class="language-Q#">namespace tests {
+
+    open Microsoft.Quantum.Canon;
+    open Microsoft.Quantum.Diagnostics;
+    open Microsoft.Quantum.Intrinsic;
+
+
+    @Test(&quot;QuantumSimulator&quot;)
+    operation AllocateQubit () : Unit {
+
+        using (q = Qubit()) {
+            Assert([PauliZ], [q], Zero, &quot;Newly allocated qubit must be in |0&gt; state.&quot;);
+        }
+
+        Message(&quot;Test passed.&quot;);
+    }
+}
+</code></pre><h3 id="tests.csproj"><code>tests.csproj</code></h3><pre><code class="language-Q#">&lt;Project Sdk=&quot;Microsoft.Quantum.Sdk/0.11.2004.2825&quot;&gt;
+
+  &lt;PropertyGroup&gt;
+    &lt;TargetFramework&gt;netcoreapp3.1&lt;/TargetFramework&gt;
+    &lt;IsPackable&gt;false&lt;/IsPackable&gt;
+  &lt;/PropertyGroup&gt;
+
+  &lt;ItemGroup&gt;
+    &lt;PackageReference Include=&quot;Microsoft.Quantum.Xunit&quot; Version=&quot;0.11.2004.2825&quot; /&gt;
+    &lt;PackageReference Include=&quot;Microsoft.NET.Test.Sdk&quot; Version=&quot;16.4.0&quot; /&gt;
+    &lt;PackageReference Include=&quot;xunit&quot; Version=&quot;2.4.1&quot; /&gt;
+    &lt;PackageReference Include=&quot;xunit.runner.visualstudio&quot; Version=&quot;2.4.1&quot; /&gt;
+    &lt;DotNetCliToolReference Include=&quot;dotnet-xunit&quot; Version=&quot;2.3.1&quot; /&gt;
+  &lt;/ItemGroup&gt;
+
+&lt;/Project&gt;
+</code></pre><p>Now the project file here is almost good to go, but it needs to know about our library project in the <code>src/</code> folder.<br>Let's add that now by running this command in the <code>tests/</code> directory.</p><pre><code class="language-bash">dotnet add reference ..\src\src.csproj
+</code></pre><p>That should add the following <code>&lt;ItemGroup&gt;</code> to your <code>tests.csproj</code> file:</p><pre><code class="language-xml">  &lt;ItemGroup&gt;
+    &lt;ProjectReference Include=&quot;..\src\src.csproj&quot; /&gt;
+  &lt;/ItemGroup&gt;
+</code></pre><p>Now when you go to run the tests you write for your library the compiler knows where to find your actual library code!<br>You can test that this tests project is setup correctly by running <code>dotnet test</code>.</p><pre><code class="language-bash">&gt; dotnet test
+Test run for C:\Users\skais\foo\tests\bin\Debug\netcoreapp3.1\tests.dll(.NETCoreApp,Version=v3.1)
+Microsoft (R) Test Execution Command Line Tool Version 16.3.0
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+
+A total of 1 test files matched the specified pattern.
+
+
+Test Run Successful.
+Total tests: 1
+     Passed: 1
+ Total time: 1.7436 Seconds
+</code></pre><h3 id="samples">Samples</h3><p>The last directory we need to setup is <code>samples/</code>.<br>Navigate back to the project root and into the <code>samples/</code> folder.<br>Now, I plan to have multiple samples for my project so I'll make one more folder in <code>samples/</code> called <code>sample1</code>.<br>Navigate into the <code>sample1</code> folder and run the following command:</p><pre><code class="language-bash">dotnet new console -lang Q#
+</code></pre><p>This should create two files, <code>Program.qs</code> and <code>sample1.csproj</code>.</p><h3 id="program.qs"><code>Program.qs</code></h3><pre><code class="language-Q#">namespace sample1 {
+
+    open Microsoft.Quantum.Canon;
+    open Microsoft.Quantum.Intrinsic;
+
+
+    @EntryPoint()
+    operation HelloQ() : Unit {
+        Message(&quot;Hello quantum world!&quot;);
+    }
+}
+</code></pre><blockquote><p>NOTE: You can change the namespace name to better reflect what your sample is about!</p></blockquote><h3 id="sample1.csproj"><code>sample1.csproj</code></h3><pre><code class="language-xml">&lt;Project Sdk=&quot;Microsoft.Quantum.Sdk/0.11.2004.2825&quot;&gt;
+
+  &lt;PropertyGroup&gt;
+    &lt;OutputType&gt;Exe&lt;/OutputType&gt;
+    &lt;TargetFramework&gt;netcoreapp3.1&lt;/TargetFramework&gt;
+  &lt;/PropertyGroup&gt;
+
+&lt;/Project&gt;
+</code></pre><p>Again, you will want to run <code>dotnet add reference</code> to make sure the sample also knows about your library.</p><pre><code class="language-bash">dotnet add reference ..\..\src\src.csproj
+</code></pre><p>This will add the same <code>ProjectReference</code> to your <code>sample1.csproj</code> file.</p><p>You can check that this sample was created correctly by running the following:</p><pre><code class="language-bash">&gt; dotnet run
+Hello quantum world!
+</code></pre><h2 id="step-3%3A-setup-the-github-actions-to-build-and-publish-a-package">Step 3: Setup the GitHub Actions to build and publish a package</h2><p>Now that you have your repo structure setup, it's time to hook up the GitHub automation that will automatically do some maintenance on the repo.</p><p>We will setup two automation workflows for this repo, one that will make sure tests pass on code that is committed to master, and the other will build and publish a NuGet package when a new commit is made to master.</p><p>Both of these workflows are examples of GitHub Actions, learn more about <a href="https://github.com/features/actions">this feature of GitHub repos here</a>.</p><h3 id="automating-test-builds">Automating test builds</h3><p>We can use yaml files to configure these workflows, and to make sure that GitHub finds these files let's make the following folders at the root of your project: <code>.github/workflows/</code></p><p>In the <code>workflows</code> folder create a file called <code>test.yml</code> with the following contents.</p><pre><code class="language-yml"># This is a workflow that will run `dotnet test` on your tests directory.
+
+name: Run Tests
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch.
+on:
+  pull_request:
+    branches: [ master ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called &quot;build&quot;
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - uses: actions/checkout@v2
+
+    # Runs a set of commands using the runners shell
+    - name: .NET tests
+      run: dotnet test
+      working-directory: tests
+</code></pre><p>This action will fire whenever you make a pull request on the master branch.<br>In the PR window you will see the feedback from the tests (passing/not passing).</p><p style="text-align: center;"><img src="/static/img/2020-06-15-pr.png" alt="Test feedback in PR page" style="width: 80%; display: inline;padding-top: 1em;"></p><p>You may want to modify this flow to fire on other branches or conditions, check out <a href="https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#on">all the possible triggers</a> for GitHub actions.</p><blockquote><p>If you want to see all of the actions that have been run on your repo you can look at the actions tab:</p><p style="text-align: center;"><img src="/static/img/2020-06-15-actions.png" alt="GitHub Actions tab for the qRAM repo" style="width: 80%; display: inline;padding-top: 1em;"></p>The above screen cap is from the [qRAM library's actions page](https://github.com/qsharp-community/qram/actions). You can see the details of a particular action run here:<p style="text-align: center;"><img src="/static/img/2020-06-15-test-run.png" alt="Details of a particular action run" style="width: 80%; display: inline;padding-top: 1em;"></p></blockquote><p>Now that you are sure your code is building and ready to merge it into master, let's take a look at the workflow that will package our library!</p><h3 id="automating-packaging">Automating packaging</h3><p>In the same <code>workflows/</code> folder, create a file called <code>publish.yml</code> with the following contents:</p><pre><code class="language-yml">name: Build and publish NuGet package to GitHub packages
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    # Same checkout action as before, but adding an authentication token to
+    # help push the package to the GPR.
+    - uses: actions/checkout@v2
+    # NUGET_AUTH_TOKEN trick from https://stackoverflow.com/questions/57889719/how-to-push-nuget-package-in-github-actions
+    - name: &quot;Setup .NET Core @ Latest&quot;
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '3.1.x'
+        source-url: https://nuget.pkg.github.com/qsharp-community/index.json
+      env:
+        NUGET_AUTH_TOKEN: $
+
+    # The command `dotnet pack` will build your project and then pack it up in 
+    # a NuGet package. The `-c` switch to indicate the build configuration
+    # here &quot;Release&quot; and `-o` indicates where it will put the output. We just
+    # make a new directory called `drop` at the project root and will get the 
+    # built package from there later.
+    - name: .NET pack
+      run: dotnet pack -c Release -o ../drop /p:Version=&quot;0.1.$Env:GITHUB_RUN_NUMBER&quot;
+      shell: pwsh
+      working-directory: src
+
+    # The command `dotnet nuget push` takes the package we made in the previous
+    # step in the `drop` directory and pushes it to the GitHub Package Registry.
+    - name: Push to GitHub Packages
+      run: dotnet nuget push (Join-Path &quot;drop&quot; &quot;*.nupkg&quot;)
+      shell: pwsh
+</code></pre><p>The line you will have to change for your repo is the <code>source-url: https://nuget.pkg.github.com/qsharp-community/index.json</code> line.<br>Change the <code>qsharp-community</code> to the repo owner of the repo you are working in.<br>For more information on this configuration see the <a href="https://help.github.com/en/packages/using-github-packages-with-your-projects-ecosystem/configuring-dotnet-cli-for-use-with-github-packages">docs</a>.</p><blockquote><p><code>FIXME</code>: So the numbering of the packages here is still not perfect, and is keyed off of the <code>GITHUB_RUN_NUMBER</code> of the action.<br>In order to be <a href="">SemVer 2.0 compliant</a>, it needs to start over when the minor or major version is incremented but I haven't figured out a good way to do this yet. 😆</p></blockquote><h2 id="next-steps%3A-templates-and-nuget.org">Next steps: Templates and <a href="http://NuGet.org">NuGet.org</a></h2><p>So if you made it here and haven't made your repo yet, I saved you some time by making a <a href="https://github.com/crazy4pi314/qsharp-library-template">template repo on GitHub</a>.<br>I will keep it up to date while we continue with the qRAM project and when I figure out how to increment versions numbers better, I'll push the fix there too.<br>Also when the qRAM library is ready to go to version 1.0 and publish it on <a href="http://NuGet.org">NuGet.org</a>, I will add another workflow to the template repo to publish your library there too!</p><p>Hopefully you found this post helpful, and are ready to start making your own library for Q# today! 💖</p><p class="tag-list"><a class="tag btn" href="/tags/quantum/" rel="tag">quantum</a> <a class="tag btn" href="/tags/programming/" rel="tag">programming</a> <a class="tag btn" href="/tags/qsharp/" rel="tag">qsharp</a></p></article><nav><a href="/blog/">← View All Posts</a></nav></div></main><footer class="site-footer"><ul class="site-header__items social-icons box-flex"><li class="social-icons box-flex site-header__item"><a class="site-header__link" href="https://github.com/crazy4pi314" target="_blank" rel="noreferrer noopener"><p style="padding:.5em;">github</p></a></li><li class="social-icons box-flex site-header__item"><a class="site-header__link" href="https://mathstodon.xyz/@crazy4pi314" target="_blank" rel="noreferrer noopener"><p style="padding:.5em;">mastodon</p></a></li><li class="social-icons box-flex site-header__item"><a class="site-header__link" href="https://dev.to/crazy4pi314" target="_blank" rel="noreferrer noopener"><p style="padding:.5em;">dev.to</p></a></li><li class="social-icons box-flex site-header__item"><a class="site-header__link" href="https://www.linkedin.com/in/sckaiser1/" target="_blank" rel="noreferrer noopener"><p style="padding:.5em;">linkedin</p></a></li><li class="social-icons box-flex site-header__item"><a class="site-header__link" href="https://discord.com/invite/RmReNjt" target="_blank" rel="noreferrer noopener"><p style="padding:.5em;">discord</p></a></li><li class="social-icons box-flex site-header__item"><a class="site-header__link" href="https://www.twitch.tv/crazy4pi314" target="_blank" rel="noreferrer noopener"><p style="padding:.5em;">twitch</p></a></li><li class="social-icons box-flex site-header__item"><a class="site-header__link" href="https://keybase.io/skaiser" target="_blank" rel="noreferrer noopener"><p style="padding:.5em;">keybase</p></a></li><li class="social-icons box-flex site-header__item"><a class="site-header__link" href="https://twitter.com/crazy4pi314" target="_blank" rel="noreferrer noopener"><p style="padding:.5em;">twitter</p></a></li></ul><small>© 2021 Sarah Kaiser. Made with ♥ + the <a href="https://github.com/tylerMRoderick/fernfolio-11ty-template">Fernfolio</a> template. <a href="https://github.com/crazy4pi314/crazy4pi314.github.io">GitHub repo</a>.</small></footer><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Building and Packaging a Q# Library | "><meta name="twitter:description" content="Building and Packaging a Q# Library 17 Jun 2020 by Sarah Kaiser tl;dr If you want to get started developing a new library for Q#, check out..."><meta name="twitter:site" content="@crazy4pi314"><meta name="twitter:creator" content="@crazy4pi314"><meta name="twitter:image:src" content="/images/meta/twitter.jpg"><meta name="og:title" content="Building and Packaging a Q# Library | "><meta name="og:description" content="Building and Packaging a Q# Library 17 Jun 2020 by Sarah Kaiser tl;dr If you want to get started developing a new library for Q#, check out..."><meta name="og:image" content="/images/meta/og.jpg"><meta name="og:url" content="/blog/2020/06/17/qsharp-libraries.html"><meta name="og:site_name" content=""><meta name="og:locale" content="en_GB"><meta name="og:type" content="website"></body></html>
