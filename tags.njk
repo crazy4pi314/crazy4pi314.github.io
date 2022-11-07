@@ -1,0 +1,15 @@
+---
+title: "Tags"
+subtitle: "What kinds of topics can you find on this site?"
+metaDescription: "What kinds of topics can you find on this site?"
+pagination:
+  data: collections
+  size: Infinity
+  alias: tag
+  filter:
+    - all
+    - nav
+permalink: /tags/index.html
+layout: layouts/page.njk
+---
+{% include "components/tagslist.njk" %}

@@ -1,0 +1,8 @@
+{% for tag in collections.tagList %}
+  {% set tagUrl %}/tags/{{ tag.tagName | slug }}/{% endset %}
+  <a href="{{ '/tags/' | url }}{{ tag.tagName | slug }}" class="tag btn">{{ tag.tagName }}
+    <span class="ms-1 badge bg-dark">
+    {{ tag.tagCount }}
+    </span>
+  </a>
+{% endfor %}

@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Selected Talks & Podcasts
 ---
 

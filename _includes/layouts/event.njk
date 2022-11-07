@@ -1,0 +1,41 @@
+---
+layout: layouts/base.njk
+section: events
+---
+<div class="page-container">
+  <article>
+  <h1>{{title}}</h1>
+  {% if subtitle %}
+  <h2>{{subtitle}}</h2>
+  {% endif %}
+  <time datetime="{{ date | machineDate }}">{{ date | readableDate }}</time> | <a href="{{ event_url }}/">{{ event }}</a>
+  <br>{{ location }}
+  <p>
+    {% if video %}
+    <a class="tag btn" href="{{ videoUrl | url }}" rel="tag">Video</a>
+    {% endif %}
+    {% if slides %}
+    <a class="tag btn" href="{{ slides | url }}" rel="tag">Slides</a>
+    {% endif %}
+<br>
+
+  </p>
+  <p>{{ abstract }}</p>
+  <hr>
+  {{ layoutContent | safe }}
+  Tags:
+  {% if tags %}
+      <p class="tag-list">
+      {% for tag in tags %}
+        {%- if tag != "events" -%}
+          {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+          <a class="tag btn" href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>
+        {%- endif -%}
+      {% endfor %}
+      </p>
+    {% endif %}
+  </article>
+  <nav>
+    <a href="{{ '/events/' | url }}">← View All Events</a>
+  </nav>
+</div>

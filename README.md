@@ -1,35 +1,34 @@
-# Welcome!
+Hiya!
 
-Personal webpage for Sarah Kaiser. Built with Jekyll using the Hyde theme below.
 
-Currently I am a Research Engineer at Pensar Development in Settle, WA. Most recently I was a Postdoctoral Fellow at [Macquarie University](https://www.mq.edu.au/). I got my PhD from the [Institute for Quantum Computing](https://uwaterloo.ca/institute-for-quantum-computing/) at the [University of Waterloo](https://uwaterloo.ca/) in Waterloo, Ontario.
+I has spent most of her career developing technology in the lab, from virtual reality hardware to satellites. My Ph.D. is in Physics, which she got by starting fires with lasers in space controlled by Python and Jupyter Notebooks. She is now a Cloud Advocate for Python at Microsoft, contributing to open source projects and building communities for scientific Python tools. She has written tech books for all ages like Learn Quantum Computing with Python and Q# and ABCs of Engineering.
 
-**Links to me other places:**
-<p style="text-align: center;">
-<!-- [arXiv](http://arxiv.org/a/kaiser_s_1) •
-[ResearchGate](https://www.researchgate.net/profile/Sarah_Kaiser) •
-[Google Scholar](https://scholar.google.ca/citations?user=wUnQwUMAAAAJ&hl=en) •
-[GitHub](https://github.com/crazy4pi314) •
-[Linkedin](https://www.linkedin.com/in/sckaiser1) -->
-<a href="http://arxiv.org/a/kaiser_s_1" target="_top">arXiv</a> • 
-<a href="https://www.researchgate.net/profile/Sarah_Kaiser" target="_top">ResearchGate</a> • 
-<a href="https://scholar.google.ca/citations?user=wUnQwUMAAAAJ&hl=en" target="_top">Google Scholar</a> • 
-<a href="https://github.com/crazy4pi314" target="_top">GitHub</a> • 
-<a href="https://www.linkedin.com/in/sckaiser1" target="_top">Linkedin</a><br>
-</p>
+Find me on your favorite sites:
 
-## Theme: Hyde
+[mastodon](https://mathstodon.xyz/@crazy4pi314) | [dev.to](https://dev.to/crazy4pi314) | [github](https://github.com/crazy4pi314) | [linkedin](https://www.linkedin.com/in/sckaiser1/) | [discord](https://discord.com/invite/RmReNjt) | [twitch](https://www.twitch.tv/crazy4pi314) | [keybase](https://keybase.io/skaiser) | [twitter](https://twitter.com/crazy4pi314)
 
-Hyde is a brazen two-column [Jekyll](http://jekyllrb.com) theme that pairs a prominent sidebar with uncomplicated content. It's based on [Poole](http://getpoole.com), the Jekyll butler.
+---
 
-### Author
+### 11ty: Fernfolio template
+The super simple portfolio template built with [Eleventy](https://www.11ty.io/) and [Netlify CMS](https://www.netlifycms.org/)
 
-**Mark Otto**
-- <https://github.com/mdo>
-- <https://twitter.com/mdo>
+<img width="1280" alt="fernfolio screenshot" src="https://raw.githubusercontent.com/TylerMRoderick/fernfolio-11ty-template/master/fernfolio-preview.png">
 
-## License
+#### Setup local environment for the site
+- Clone the repo locally `git clone https://github.com/TylerMRoderick/fernfolio-11ty-template.git`
+- Navigate to root folder `cd your-site`
+- Install the goods `npm install`
+- Run it `npm start`
+- You should now be able to see everything running on localhost:8080
+- Add some changes (view [theme customizations](https://fernfolio.netlify.app/posts/theme-customizations/) for some options) 
+- Push your changes to github and an auto-deploy should be triggered
 
-Open sourced under the [MIT license](LICENSE.md).
+#### 💻 Development Scripts
 
-<3
+**`npm start`**
+
+> Run 11ty with hot reload at localhost:8080
+
+**`npm run build`**
+
+> Generate minified production build

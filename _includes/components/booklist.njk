@@ -1,0 +1,16 @@
+  <section>
+    <div class="project-grid">
+    {% for book in books %}
+    <div class="project-card">
+      <article>
+        <h3>
+          <a href="/projects/{{ book.data.title | slug }}">
+          <img src="{{ book.data.image | url }}" alt="{{ book.data.title | safe }}" />
+          {{ book.data.title | safe }}
+          </a>
+        </h3>
+      </article>
+    </div>  
+    {% endfor %}
+    </div>
+  </section>

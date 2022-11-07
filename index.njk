@@ -1,0 +1,46 @@
+---
+layout: layouts/base.njk
+section: home
+---
+<div class="home-page">
+	<div class="home-page__bg-square"></div>
+
+  <div class="hero">
+    <div class="hero__col">
+      <h1 class="hero__title gradient-text">{{ home.title }}</h1>
+      {% if home.subtitle %}
+        <h2 class="hero__subtitle">{{ home.subtitle }}</h2>
+      {% endif %}
+    </div>
+    <div class="hero__col">
+      <img
+        class="hero__image shadow"
+        src="{% if home.image %}{{ home.image }}{% else %}https://source.unsplash.com/random/600x600{% endif %}"
+        alt="{{ home.image_alt }}"
+        width="750px"
+        height="750px"
+        loading="lazy">
+    </div>
+  </div>
+
+  <hr>
+  <h2>Recent posts</h2>
+  {% set postslist = collections.post %}
+  {% set show_postslist_tags = true %}
+  {% set limit = 3 %}
+  {% include "components/postslist.njk" %}
+  <nav>
+    <a href="{{ '/blog/' | url }}">View All Blogs ➡️</a>
+  </nav>
+
+  <hr>
+  <h2>Projects</h2>
+  {% set projectlist = collections.project %}
+  {% set limit = 4 %}
+  {% include "components/projectlist.njk" %}
+  <nav>
+    <a href="{{ '/projects/' | url }}">View All Projects ➡️</a>
+  </nav>
+
+</div>
+

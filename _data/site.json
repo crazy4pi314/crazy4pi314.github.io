@@ -1,0 +1,25 @@
+{
+    "author": {
+        "name": "Sarah Kaiser",
+        "email": "sckaiser@sckaiser.com",
+        "url": "https://sckaiser.dev",
+        "handle": "@crazy4pi314"
+    },
+    "social_links": {
+        "github": "https://github.com/crazy4pi314",
+        "mastodon": "https://mathstodon.xyz/@crazy4pi314",
+        "dev.to": "https://dev.to/crazy4pi314",
+        "linkedin": "https://www.linkedin.com/in/sckaiser1/",
+        "discord": "https://discord.com/invite/RmReNjt",
+        "twitch": "https://www.twitch.tv/crazy4pi314",
+        "keybase": "https://keybase.io/skaiser",
+        "twitter": "https://twitter.com/crazy4pi314"
+    },
+    "images": {
+        "favicon": "/favicon.png",
+        "favicon_svg": "/favicon.svg",
+        "apple_touch_icon": "/images/meta/apple-touch-icon.png",
+        "twitter": "/images/meta/twitter.jpg",
+        "og": "/images/meta/og.jpg"
+    }
+}

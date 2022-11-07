@@ -1,0 +1,16 @@
+---
+title: Books
+subtitle: "Whatever is fit to print"
+metaDescription: Books Sarah has written
+layout: layouts/base.njk
+permalink: /books/index.html
+eleventyNavigation:
+  key: Books
+  order: 3
+---
+
+<div class="page-container">
+  <h1>{{ title }}</h1>
+
+{% set books = collections.publication %}
+{% include "components/booklist.njk" %}

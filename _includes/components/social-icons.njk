@@ -1,0 +1,16 @@
+<ul class="site-header__items social-icons box-flex">
+    {% for icon, link in site.social_links %}
+      <li class="social-icons box-flex site-header__item">
+        <a class="site-header__link" href="{{ link | safe }}"  target="_blank" rel="noreferrer noopener">
+          {% if show_site_icon %}
+            <svg class="social-icon icon" fill="currentColor" aria-hidden="true">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/static/img/icon-library.svg#icon-{{ icon }}"></use>
+            </svg>
+          {% endif %}
+          {% if show_site_name %}
+            <p style="padding:.5em;">{{ icon }}</p>
+          {% endif %}
+        </a>   
+      </li>
+    {%- endfor %}
+  </ul>

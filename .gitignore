@@ -1,4 +1,7 @@
 # Ignore docs files
+_site/
+node_modules/
+package-lock.json
 _gh_pages
 _site
 .ruby-version
