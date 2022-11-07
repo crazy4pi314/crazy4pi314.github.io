@@ -22,8 +22,8 @@ jobs:
           npm i --package-lock-only
           npm ci
           npm run build
-            - name: Upload artifact
-      - uses: actions/upload-pages-artifact@v1
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
         with:
           path: './_site'
       - name: Deploy to GitHub Pages
