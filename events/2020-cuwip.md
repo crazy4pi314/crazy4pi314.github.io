@@ -8,10 +8,12 @@ location: Washington State University
 video: 
 slides: 
 code:
-date: 
+date: 2020-01-17T12:00:00+00:00
 abstract: |
   
 tags:
-  - 
+  - scicomm
+  - research
+  - community
 ---
 ["./cuwip_2020_scicomm","./cuwip_2020_community"]
