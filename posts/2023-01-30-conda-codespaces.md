@@ -74,4 +74,4 @@ Sometimes after the Codespace or Dev Container has started, the shell will not h
 Depending on the loading order of the extensions in VS Code, if it has not seen any Python file or tool in use yet it will not necessarily load the terminal settings for environments right away.
 If I open a Jupyter notebook or any Python file that will usually prompt the extension to load the terminal parts and then I just open another terminal window and it's all fixed.
 
-Anyway, hope this helps you get the best Conda experience in Codespaces and Dev Containers! If you have any other questions, tips, or tricks, feel free to reach out to me on [Mastodon](https://mathstodon.xyz/@crazy4pi314) or in the comments below! 💖
+Anyway, hope this helps you get the best Conda experience in Codespaces and Dev Containers! If you have any other questions, tips, or tricks, feel free to reach out to me on [Mastodon](https://mathstodon.xyz/@crazy4pi314)! 💖
