@@ -12,16 +12,16 @@ tags:
   - conda
 ---
 
-I often use Conda enviroments when working on my Python projects, as it helps me manage dependancies for projects outside of just pure Python packages. In porting some of these projects to [Codespaces](https://github.com/features/codespaces) and [Dev Containers](https://containers.dev/), I have found some tricks to getting the fastest and most reliable experience with Conda and Codespaces.
+I often use Conda environments when working on my Python projects, as it helps me manage dependencies for projects outside of just pure Python packages. In porting some of these projects to [Codespaces](https://github.com/features/codespaces) and [Dev Containers](https://containers.dev/), I have found some tricks to getting the fastest and most reliable experience with Conda and Codespaces.
 
-> _tl;dr_ Check out this [template repo](https://github.com/crazy4pi314/conda-devcontainer-demo) for a sample Dev Container that is fast and reduces codespace resource consumption.
+> _tl;dr_ Check out this [template repo](https://github.com/crazy4pi314/conda-devcontainer-demo) for a sample Dev Container that is fast and reduces Codespace resource consumption.
 
 ## Base image size matters
 
-When you start a Codespace on a project, it will try to use whatever Dev Container you have specified in your repo, else it will try to use a kitchen sink container.
+When you start a Codespace for a project, it will try to use whatever Dev Container you have specified in your repo, else it will try to use a kitchen sink container.
 That default kitchen sink is can be way too much and so if you will be working with Conda environments with an Anaconda or Miniconda [Dev Container template](https://containers.dev/templates) instead.
 
-- **Tip 1:** To use less of your Codespaces resources start with a smaller image like Miniconda or [miniforge](https://github.com/conda-forge/miniforge) and install only what you need.
+- **Tip 1:** To use less of your Codespaces resources start with a smaller image like Miniconda or [Miniforge](https://github.com/conda-forge/miniforge) and install only what you need.
 
 It is worth noting as well that if you use one of these template docker images or start with the same original docker image on the `FROM` line, the memory for those layers is pre-cached in Codespaces and seems to download faster.
 
@@ -39,16 +39,16 @@ RUN if [ -f "/tmp/conda-tmp/environment.yml" ]; then umask 0002 && /opt/conda/bi
 
 ## Conda process uses lots of memory, gets killed
 
-The other challenge I ran into sometimes was that if I was running a lower memory/storage Codespace instance, when I tried to use Condafrom the command line to modify environments, the process would be killed after a few seconds.
-This turns out to be related to some [performance issues](https://github.com/conda/conda/issues/5003) Condahas that make it consume a lot of memory when trying to work with the conda-forge installation channel.
+The other challenge I ran into sometimes was that if I was running a lower memory/storage Codespace instance, when I tried to use Conda from the command line to modify environments, the process would be killed after a few seconds.
+This turns out to be related to some [performance issues](https://github.com/conda/conda/issues/5003) Conda has that make it consume a lot of memory when trying to work with the conda-forge installation channel.
 You can always then just increase the size of the Codespace your are working with (just go to your Codespaces list and use the triple dots to change the settings for a Codespace).
 
 There is another option that will fix the performance issues so that it can be run on smaller Codespaces.
-[Mamaba](https://mamba.readthedocs.io/en/latest/index.html#) is a faster dependancy solver that can wrap Conda and resolve some of these performance issues.
+[Mamaba](https://mamba.readthedocs.io/en/latest/index.html#) is a faster dependency solver that can wrap Conda and resolve some of these performance issues.
 You use all the same Conda syntax for things except use the command `mamba` and if it's not something Mamba improves on, it just drops back to `conda`.
-To use mamba in your Dev Container to speed up working with environments, you will need to install it into your base Conda profile, and the use `mamba` to create the Condaenvironment for your environment.
+To use mamba in your Dev Container to speed up working with environments, you will need to install it into your base Conda profile, and the use `mamba` to create the Conda environment for your environment.
 
-- **Tip 3:** Install and use `mamba` to speed up the Condaenvironment creation process.
+- **Tip 3:** Install and use `mamba` to speed up the Conda environment creation process.
 
 The snippet below is a minimal example of a Dockerfile for your dev containers and Codespaces with all the tips included:
 
