@@ -2,7 +2,7 @@
 title: VS Code Profiles for fun and profit
 summary: How to use profiles to customize VS Code
 metaDescription: How to use profiles to customize VS Code
-date: 2023-01-30T00:00:00.000Z # 2000-01-01T00:00:00.000Z
+date: 2023-02-27T00:00:00.000Z # 2000-01-01T00:00:00.000Z
 author: Sarah Kaiser
 slug: vscode-profiles
 tags:
@@ -43,7 +43,7 @@ There are definitely more ways to use profiles, and I would love to hear about t
 To create a profile, you can either use the command palette (_Profiles: Create an empty profile_ / _Profiles: Create from current profile_) or click on the settings icon in the bottom left corner of the VS Code window.
 
 <figure style="text-align: center;">
-<img src="/static/img/2023-02-28-vscode-profiles-menu.png" alt="Screenshot of VS Code menu for selecting profiles" style="width: 100%;"><figcaption><strong>Screenshot of VS Code menu for selecting profiles, the yellow arrow points to the settings icon in the bottom left</strong></figcaption>
+<img src="/static/img/2023-02-27-vscode-profiles-menu.png" alt="Screenshot of VS Code menu for selecting profiles" style="width: 100%;"><figcaption><strong>Screenshot of VS Code menu for selecting profiles, the yellow arrow points to the settings icon in the bottom left</strong></figcaption>
 </figure>
 
 Once you have opened the settings, select the _Create Profile_ menu option, which will give you the option of starting with a blank profile or copying the current window's settings to the new profile.
@@ -53,7 +53,7 @@ When you go to export a profile, there is a helpful panel that opens up to show 
 From that panel it is easy to inspect and edit if needed the settings, UI state, and extensions that will be included in the export.
 
 <figure style="text-align: center;">
-<img src="/static/img/2023-02-28-vscode-profiles-export.png" alt="Screenshot of VS Code menu for exporting profiles" style="width: 100%;"><figcaption><strong>Screenshot of VS Code menu for exporting profiles</strong></figcaption>
+<img src="/static/img/2023-02-27-vscode-profiles-export.png" alt="Screenshot of VS Code menu for exporting profiles" style="width: 100%;"><figcaption><strong>Screenshot of VS Code menu for exporting profiles</strong></figcaption>
 </figure>
 
 When you export a profile, you can either save it as a file, or if you save it to a gist, it will give you a URL you can share with others.
