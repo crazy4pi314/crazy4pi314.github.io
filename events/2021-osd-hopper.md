@@ -3,7 +3,7 @@ title: Everyone Can Be a Quantum Open Source Developer! 💖
 subtitle: 
 event: Grace Hopper Summer Open Source day 2021
 eventUrl: https://ghc.anitab.org/programs-and-awards/open-source-day/
-eventAsset: # ../../public/download/kaiser-NDNC17-abstract.pdf
+eventAsset: # /static/kaiser-NDNC17-abstract.pdf
 location: Online
 video: #full url
 slides: 

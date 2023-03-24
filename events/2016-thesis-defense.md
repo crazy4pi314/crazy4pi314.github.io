@@ -6,7 +6,8 @@ eventUrl:
 eventAsset: 
 location: University of Waterloo
 video: 
-slides: ./thesis_defense
+slides:
+  reveal: thesis_defense
 code:
 date: 2016-08-10T09:00:00-05:00
 abstract: |

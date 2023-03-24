@@ -3,7 +3,7 @@ title: Introduction to Q#
 subtitle: A high level quantum development language for everyone
 event: Seminar at International Graduate School for Quantum Technologies
 eventUrl: https://igsqt.ac.uk/events/
-eventAsset: # ../../public/download/kaiser-NDNC17-abstract.pdf
+eventAsset: # /static/kaiser-NDNC17-abstract.pdf
 location: Online
 video: #full url
 slides: https://github.com/crazy4pi314/igsqt-qsharp-intro/blob/master/demo.ipynb

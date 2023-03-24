@@ -114,7 +114,7 @@ For more information on the type system in Q# see [here](https://docs.microsoft.
 
 Probably one the most common issues I see on forums and whatnot is installation problems with .NET Core SDK. This is understandable, I myself had to do some research on what the difference was between .NET Core, .NET Standard, and .NET Framework. Plus, each has an option to just install a runtime or a full SDK. The tl;dr is that .NET Framework is for Windows, while .NET Core is a cross-platform version of .NET --- it's not a strict subset of the functionality, but adds in a few nice things along the way. .NET Standard is the proper subset of both .NET Core and .NET Framework that works on all systems (see below figure).
 
-![.NET Venn diagram](../../../../../../public/media/figures/dotnet-ven.png)
+![.NET Venn diagram](/static/img/figures/dotnet-ven.png)
 
 The bottom line is that Q# is designed to only need the .NET Standard components, but that is not distributed separately from the other two .NET versions. So the [install guide](https://docs.microsoft.com/en-ca/quantum/install-guide/command-line?view=qsharp-preview) for Q# suggests to download and install the .NET Core SDK and then you will have the components you need from .NET Standard for use on either .NET Framework or .NET Core, as well as a more cross-platform SDK. 
 

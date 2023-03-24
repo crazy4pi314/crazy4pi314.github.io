@@ -6,7 +6,8 @@ eventUrl: "https://www.uts.edu.au/research-and-teaching/our-research/centre-quan
 eventAsset:
 location: University of Technology Sydney
 video: "https://twitter.com/UTS_QSI/status/849410643417604097"
-slides: ./UTS_seminar_2017
+slides:
+  reveal: UTS_seminar_2017
 code:
 date: 2017-04-05T15:00:00+10:00
 abstract: |

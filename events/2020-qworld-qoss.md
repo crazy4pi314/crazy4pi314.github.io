@@ -6,7 +6,7 @@ eventUrl: https://qworld.net/qwebinar6/
 eventAsset: see static
 location: 
 video: https://www.youtube.com/watch?v=G8-2iPwZRMo
-slides: ../../public/download/qworld-open-quantum.pdf
+slides: /static/qworld-open-quantum.pdf
 code:
 date: 2020-11-23T14:10:00+6:00
 abstract: |

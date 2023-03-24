@@ -12,10 +12,17 @@ section: events
   <br>{{ location }}
   <p>
     {% if video %}
-    <a class="tag btn" href="{{ videoUrl | url }}" rel="tag">Video</a>
+    <a class="tag btn" href="{{ video | url }}" rel="tag">Video</a>
     {% endif %}
     {% if slides %}
-    <a class="tag btn" href="{{ slides | url }}" rel="tag">Slides</a>
+      {% if slides.reveal %}
+        {% set slidesUrl %}/talks/{{ slides.reveal }}/{% endset %}
+        <a class="tag btn" href="{{ slidesUrl | url }}" rel="tag">Slides (Reveal.js)</a>
+      {% endif %}
+      {% if slides.local %}
+        {% set slidesUrl %}/static/{{ slides.local }}{% endset %}
+        <a class="tag btn" href="{{ slidesUrl | url }}" rel="tag">Slides (PDF)</a>
+      {% endif %}
     {% endif %}
 <br>
 

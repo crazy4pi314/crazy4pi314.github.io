@@ -6,7 +6,8 @@ eventUrl: https://www.meetup.com/Portland-Data-Science-Group/events/255093322
 eventAsset:
 location: "Portland, OR, USA"
 video: 
-slides: ./qml_portland_2018
+slides:
+  reveal: qml_portland_2018
 code:
 date: 2018-10-04T19:00:00-07:00
 abstract: |

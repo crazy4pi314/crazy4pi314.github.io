@@ -6,7 +6,8 @@ eventUrl: https://hackaday.io/superconference/#schedule
 eventAsset:
 location: 
 video: https://www.youtube.com/watch?v=j3QV5_Me-v4
-slides: 
+slides:
+  local: kaiser-hackaday-2019.pdf
 code:
 date: 2019-11-16T11:55:00-06:00
 abstract: |
@@ -20,4 +21,4 @@ tags:
   - security
 ---
 
-Talk video [here](https://www.youtube.com/watch?v=j3QV5_Me-v4), slides as [pptx](../../public/download/kaiser-hackaday-2019.pptx)/[pdf](../../public/download/kaiser-hackaday-2019.pdf), and [schedule](https://hackaday.io/superconference/#schedule).
+Talk video [here](https://www.youtube.com/watch?v=j3QV5_Me-v4), slides as [pptx](/static/kaiser-hackaday-2019.pptx)/[pdf](/static/kaiser-hackaday-2019.pdf), and [schedule](https://hackaday.io/superconference/#schedule).

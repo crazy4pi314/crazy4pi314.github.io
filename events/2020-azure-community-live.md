@@ -3,7 +3,7 @@ title: Get started developing for Quantum computers today
 subtitle: 
 event: Azure Community Live \#16
 eventUrl: https://www.youtube.com/watch?v=NdROr0zyMrI
-eventAsset: # ../../public/download/kaiser-NDNC17-abstract.pdf
+eventAsset: # /static/kaiser-NDNC17-abstract.pdf
 location: Online
 video: https://www.youtube.com/watch?v=NdROr0zyMrI
 slides: 
