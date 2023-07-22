@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "building lasers to melt the cishetropatrearchy",
   "scripts": {
-    "start": "npx @11ty/eleventy --serve",
+    "start": "npx @11ty/eleventy --serve --watch",
     "build": "npx @11ty/eleventy"
   },
   "repository": {
@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "@11ty/eleventy-navigation": "^0.1.6",
+    "@kevingimbel/eleventy-plugin-mermaid": "^2.1.0",
     "clean-css": "^4.2.1",
     "eleventy-plugin-unfurl": "^0.0.6",
     "html-minifier": "^4.0.0",
