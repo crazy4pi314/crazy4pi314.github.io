@@ -1,5 +1,14 @@
 ---
+section: Talks
+layout: layouts/page.njk
 title: Selected Talks & Podcasts
+date: 2018-01-01
+permalink: /talks/index.html
+metaDescription: Cool things I've spoke about
+subtitle: 
+eleventyNavigation:
+  key: Talks
+  order: 6
 ---
 
 Here are some of the talks I have given, check out available recordings on this [YouTube playlist](https://www.youtube.com/playlist?list=PLA9uqQmuXqOArixbAYPE0ILJ9uBqZDWbC).

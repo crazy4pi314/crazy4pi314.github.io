@@ -5,8 +5,6 @@ const htmlmin = require("html-minifier");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const pluginUnfurl = require("eleventy-plugin-unfurl");
 
-
-
 module.exports = function(eleventyConfig) {
 
     // Eleventy Navigation https://www.11ty.dev/docs/plugins/navigation/
@@ -133,6 +131,25 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.setLibrary("md", markdownIt(options)
         .use(markdownItAnchor, opts)
     );
+	eleventyConfig.addPairedShortcode("callout", function(content, level = "", format = "html", customLabel = "") {
+		if( format === "md" ) {
+			content = mdIt.renderInline(content);
+		} else if( format === "md-block" ) {
+			content = mdIt.render(content);
+		}
+		let label = "";
+		if(customLabel) {
+			label = customLabel;
+		} else if(level === "info" || level === "error") {
+			label = level.toUpperCase() + ":";
+		} else if(level === "warn") {
+			label = "WARNING:";
+		}
+		let labelHtml = label ? `<div class="elv-callout-label">${customLabel || label}</div>` : "";
+		let contentHtml = (content || "").trim().length > 0 ? `<div class="elv-callout-c">${content}</div>` : "";
+
+		return `<div class="elv-callout${level ? ` elv-callout-${level}` : ""}">${labelHtml}${contentHtml}</div>`;
+	});
 
     return {
         templateFormats: ["md", "njk", "html", "liquid"],
