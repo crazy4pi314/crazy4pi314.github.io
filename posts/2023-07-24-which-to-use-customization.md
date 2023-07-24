@@ -72,8 +72,8 @@ I think the scope of what you can set with the dotfiles (a lot of scripting) is 
 
 ### Workspaces
 
-In general, VS Code assumes you have a single folder (a "workspace") you are opening to work from, but with larger projects that may not be true.
-[Workspaces](https://code.visualstudio.com/docs/editor/workspaces) in VS Code are geared towards workflows that are comprised of multiple projects/directories, and let you specify any VS Code setting you could normally.
+In general, VS Code assumes you have a single folder (a "workspace") you are opening to work from, but with larger projects that may not be true. [Workspaces](https://code.visualstudio.com/docs/editor/workspaces) in VS Code are geared towards workflows that are comprised of multiple projects/directories, and let you specify any VS Code setting you could normally.
+
 Here is a [good article](https://code.visualstudio.com/docs/getstarted/settings#_workspace-settings) on how to configure Workspaces.
 
 ### Dev Containers
@@ -87,11 +87,14 @@ For more on Dev Containers, see the [VS Code docs](https://code.visualstudio.com
 
 ## Hybrid: personal and project
 
-### [Profiles](https://code.visualstudio.com/docs/editor/profiles)
+### Profiles
+
+[Profiles](https://code.visualstudio.com/docs/editor/profiles)
 
 See my [earlier blog post]() to learn more about how I use profiles 😄
 
 ### [Extension Packs](https://code.visualstudio.com/api/references/extension-manifest#extension-packs)
+
 https://code.visualstudio.com/blogs/2017/03/07/extension-pack-roundup
 
 ## How do the different Customization features interact?
