@@ -58,7 +58,7 @@ If you prefer to look at the settings files yourself, you can also use `Preferen
 
 If you work on more than one machine, [Settings Sync](https://code.visualstudio.com/docs/editor/settings-sync) can help keep your VS Code experience the same no matter where you are working. It uses a GitHub or Microsoft login to connect VS Code to your synced profile, and has a lot of nice tools to manage what machines/settings are kept in sync as well as versioning and conflict resolution tools.
 
-Often settings can involve specifying paths, keybinds, and other things that are machine specific, so [you can configure](https://code.visualstudio.com/docs/editor/settings-sync#_configuring-synced-data) if they get synced (they are not synced by default).
+Often settings can involve specifying paths, keybindings, and other things that are machine specific, so [you can configure](https://code.visualstudio.com/docs/editor/settings-sync#_configuring-synced-data) if they get synced (they are not synced by default).
 
 > **When to use:** Settings Sync also syncs [profiles](#profiles) so my strategy is to move any settings I want to sync to profiles, and turn setting sync on.
 
@@ -89,11 +89,12 @@ For more on Dev Containers, see the [VS Code docs](https://code.visualstudio.com
 
 ### Profiles
 
-[Profiles](https://code.visualstudio.com/docs/editor/profiles)
+[Profiles](https://code.visualstudio.com/docs/editor/profiles) in VS Code are a way to specify everything about the editor, without anything about the execution environment. Say you do a lot of web dev, Python dev, and presentation recordings in VS Code. It can be _a lot_ to have all the extensions for each modality in which you use VS Code, so profiles can create different spaces for each kind of project. See my [earlier blog post](https://www.sckaiser.com/blog/2023/02/27/vscode-profiles.html) to learn more about how I use profiles 😄
 
-See my [earlier blog post]() to learn more about how I use profiles 😄
+### Extension Packs
 
-### [Extension Packs](https://code.visualstudio.com/api/references/extension-manifest#extension-packs)
+[Extension Packs](https://code.visualstudio.com/api/references/extension-manifest#extension-packs) are one of the original ways to make customizing VS Code easier, and basically create meta extensions that take dependencies on all the other extensions that you want to install at once. They are useful when you want to share stuff 
+
 
 https://code.visualstudio.com/blogs/2017/03/07/extension-pack-roundup
 
