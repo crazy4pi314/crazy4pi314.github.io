@@ -3,7 +3,7 @@ name: Build Eleventy Site
 on:
   push:
     branches:
-      - master
+      - main
   workflow_dispatch:
     inputs: {}
     
