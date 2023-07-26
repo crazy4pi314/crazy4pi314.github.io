@@ -5,8 +5,8 @@
 	// "postCreateCommand": "yarn install",
 	"remoteUser": "node",
 	"features": {
-		"ghcr.io/devcontainers/features/anaconda:1": {},
-		"ghcr.io/rocker-org/devcontainer-features/pandoc:1": {}
+		// "ghcr.io/devcontainers/features/anaconda:1": {},
+		// "ghcr.io/rocker-org/devcontainer-features/pandoc:1": {}
 	},
 	"customizations": {
 		"vscode": {

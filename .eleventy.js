@@ -4,10 +4,10 @@ const UglifyJS = require("uglify-es");
 const htmlmin = require("html-minifier");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const pluginUnfurl = require("eleventy-plugin-unfurl");
-const pluginMermaid = require("@kevingimbel/eleventy-plugin-mermaid");
+// const pluginMermaid = require("@kevingimbel/eleventy-plugin-mermaid");
 
 module.exports = function(eleventyConfig) {
-    eleventyConfig.addPlugin(pluginMermaid);
+    // eleventyConfig.addPlugin(pluginMermaid);
 
     // Eleventy Navigation https://www.11ty.dev/docs/plugins/navigation/
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
