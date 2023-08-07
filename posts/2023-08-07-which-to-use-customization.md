@@ -1,7 +1,7 @@
 ---
 title: Customizing VS Code for every situation
 metaDescription: How I choose what VS Code customization options to use
-date: 2023-07-26T00:00:00.000Z
+date: 2023-08-07T00:00:00.000Z
 slug: which-to-use-customization
 author: Sarah Kaiser
 summary: How I choose what VS Code customization options to use
