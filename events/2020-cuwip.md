@@ -6,7 +6,7 @@ eventUrl:
 eventAsset:
 location: Washington State University
 video: 
-slides: 
+slides: cuwip_2020_scicomm
 code:
 date: 2020-01-17T12:00:00+00:00
 abstract: |

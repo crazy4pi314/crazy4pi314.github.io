@@ -16,8 +16,8 @@ eleventyNavigation:
 
 ### Speaker Requests
 
-To contact me via email for speaking/teaching opportunities: sckaiser [at] sckaiser.com.
-My biggest rule is I will not participate in an event that does not:
+Please reach out via LinkedIn for speaking/teaching opportunities.
+I am especially interested in events that:
 
 - Have an enforceable code of conduct
 - Make a best effort to have diverse speakers and participants

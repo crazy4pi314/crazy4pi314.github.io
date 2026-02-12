@@ -6,7 +6,7 @@ eventUrl: https://freecontent.manning.com/livemanning-conferences-women-in-tech/
 eventAsset:
 location: Online
 video: https://www.youtube.com/watch?v=HOgbrqfc5Ns
-slides: 
+slides: manninglive_community_2020
 code:
 date: 2020-10-13T12:00:00+00:00
 abstract: |

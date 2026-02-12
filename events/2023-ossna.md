@@ -5,7 +5,7 @@ event: Open Source Summit North America 2023
 eventUrl: https://ossna2023.sched.com/event/1K5J6/panel-discussion-finding-the-right-comms-for-your-community-exploring-how-tech-platforms-influence-culture-sophia-yang-dave-clements-anaconda-sarah-kaiser-microsoft-nyah-macklin-suborbital-jocelyn-matthews-devrel-collective?iframe=no
 eventAsset:
 location: Vancouver, BC, Canada
-video: #full url
+video: https://www.youtube.com/watch?v=-W8ETN8aar0
 slides: 
 code: 
 date: 2023-05-11T08:00:00+0:00
