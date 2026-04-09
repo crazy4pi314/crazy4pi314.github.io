@@ -1,0 +1,65 @@
+---
+layout: layouts/base.njk
+title: Journal
+description: Long-form posts, field notes, and other dispatches from this handmade corner of the web.
+eyebrow: journal/index.njk
+section: archive
+---
+<div class="content-grid">
+  <div class="stack-rows">
+    <retro-panel>
+      <span slot="title">archive.log</span>
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Journal archive</p>
+          <h1 class="section-title">Posts with read time, tags, and feed support</h1>
+        </div>
+      </div>
+      <div class="panel-grid">
+        {% for post in collections.posts %}
+          <article class="post-card h-entry">
+            <p class="post-card__meta">
+              <time class="dt-published" datetime="{{ post.date | machineDate }}">{{ post.date | formatDate }}</time>
+              <span aria-hidden="true">::</span>
+              <span>{{ post.templateContent | stripTags | readTime }}</span>
+            </p>
+            <h2 class="post-card__title">
+              <a class="p-name u-url" href="{{ post.url }}">{{ post.data.title }}</a>
+            </h2>
+            <p>{{ post.data.description }}</p>
+            {% set tags = post.data.tags | publicTags %}
+            {% if tags.length %}
+              <ul class="tag-list" aria-label="Post tags">
+                {% for tag in tags %}
+                  <li><a class="tag-pill" href="/tags/{{ tag | slugify }}/">{{ tag }}</a></li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </article>
+        {% endfor %}
+      </div>
+    </retro-panel>
+  </div>
+  <aside class="stack-rows">
+    <retro-panel>
+      <span slot="title">feeds.opml</span>
+      <div class="sidebar-block">
+        <p class="eyebrow">Subscribe</p>
+        <p class="home-note">Publish once, syndicate widely, and leave a clean feed behind for other humans.</p>
+        <div class="badge-wall">
+          {% button88 "RSS FEED", "/feed.xml", "ember" %}
+          {% button88 "JSON FEED", "/feed.json", "surf" %}
+        </div>
+      </div>
+      <pixel-divider></pixel-divider>
+      <div class="sidebar-block">
+        <p class="eyebrow">Popular tags</p>
+        <ul class="tag-list">
+          {% for tag in collections.tagList %}
+            <li><a class="tag-pill" href="/tags/{{ tag | slugify }}/">{{ tag }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </retro-panel>
+  </aside>
+</div>

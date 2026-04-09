@@ -1,0 +1,52 @@
+{
+  "name": "eleventy-theme-retro-garden",
+  "version": "0.1.0",
+  "description": "Retro Garden is an open source Eleventy theme that blends IndieWeb publishing habits with playful 90s personal-site energy.",
+  "homepage": "https://retro-garden.vercel.app",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "11ty",
+    "eleventy",
+    "theme",
+    "indieweb",
+    "retro",
+    "tailwindcss",
+    "webc"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "clean": "rm -rf _site",
+    "build:css": "tailwindcss -i ./src/assets/css/theme.css -o ./_site/assets/css/theme.css --minify",
+    "watch:css": "tailwindcss -i ./src/assets/css/theme.css -o ./_site/assets/css/theme.css --watch",
+    "build:11ty": "eleventy",
+    "dev:11ty": "eleventy --serve",
+    "build": "npm run clean && npm run build:css && npm run build:11ty",
+    "dev": "run-p watch:css dev:11ty",
+    "start": "npm run dev",
+    "audit:a11y": "start-server-and-test \"python3 -m http.server 4173 --directory _site\" http://127.0.0.1:4173 \"pa11y-ci\""
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.5",
+    "@11ty/eleventy-fetch": "^5.1.2",
+    "@11ty/eleventy-plugin-rss": "^3.0.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
+    "@11ty/eleventy-plugin-webc": "^0.11.2",
+    "@11ty/is-land": "^5.0.1",
+    "@fontsource/atkinson-hyperlegible": "^5.2.8",
+    "@fontsource/silkscreen": "^5.2.8",
+    "@tailwindcss/cli": "^4.2.2",
+    "eleventy-plugin-og-image": "^4.2.1",
+    "markdown-it": "^14.1.1",
+    "markdown-it-anchor": "^9.2.0",
+    "markdown-it-attrs": "^4.3.1",
+    "npm-run-all": "^4.1.5",
+    "pa11y-ci": "^4.1.0",
+    "reading-time": "^1.5.0",
+    "slugify": "^1.6.9",
+    "start-server-and-test": "^3.0.0",
+    "tailwindcss": "^4.2.2"
+  }
+}

@@ -1,0 +1,151 @@
+---
+layout: layouts/page.njk
+title: Style Guide
+description: A visual map of Retro Garden’s typography, panels, badges, palettes, and content patterns.
+eyebrow: style-guide.njk
+section: design system
+---
+<div class="guide-grid">
+  <div class="guide-card">
+    <p class="eyebrow">Typography</p>
+    <h2 class="section-title">Readable body, deliberate display</h2>
+    <p>The body face stays calm for long reading sessions while the Silkscreen headings keep the hand-made retro voice.</p>
+  </div>
+  <div class="guide-card">
+    <p class="eyebrow">Surface language</p>
+    <h2 class="section-title">Panels, chrome, and gentle noise</h2>
+    <p>Instead of using nostalgia as a joke, the theme uses window chrome and grid-paper backgrounds to frame content with intent.</p>
+  </div>
+  <div class="guide-card">
+    <p class="eyebrow">Customization</p>
+    <h2 class="section-title">Designed to be edited</h2>
+    <p>Retro Garden works best when people can quickly delete what they do not need and add their own personality without a refactor.</p>
+  </div>
+</div>
+
+<h2>Palette previews</h2>
+<p>Each palette uses the same layout skeleton, but changes the emotional temperature of the whole site.</p>
+
+<div class="palette-grid">
+  {% for palette in site.palettes %}
+    <article class="palette-card palette-card--{{ palette.slug }}">
+      <p class="eyebrow">{{ palette.vibe }}</p>
+      <h3 class="post-card__title">{{ palette.name }}</h3>
+      <p>{{ palette.note }}</p>
+      <div class="palette-card__window">
+        <div class="palette-card__bar">
+          <span>{{ palette.slug }}.theme</span>
+          <div class="palette-card__dots"><span></span><span></span><span></span></div>
+        </div>
+        <div class="palette-card__body">
+          <div class="palette-swatch-grid">
+            {% for swatch in palette.swatches %}
+              <div class="palette-swatch">
+                <span class="palette-swatch__chip" style="background: {{ swatch.value }}"></span>
+                <strong>{{ swatch.label }}</strong>
+                <code>{{ swatch.value }}</code>
+              </div>
+            {% endfor %}
+          </div>
+          <div class="badge-wall">
+            {% button88 "RSS FEED", "/feed.xml", palette.slug %}
+            {% button88 "JOURNAL", "/journal/", palette.slug %}
+          </div>
+        </div>
+      </div>
+    </article>
+  {% endfor %}
+</div>
+
+<h2>Common interface pieces</h2>
+<p>The theme leans on a small set of recognizable building blocks instead of a huge design system.</p>
+
+<div class="guide-grid">
+  <div class="guide-card">
+    <p class="eyebrow">88x31 buttons</p>
+    <div class="badge-wall">
+      {% button88 "RSS FEED", "/feed.xml", "ember" %}
+      {% button88 "STYLE GUIDE", "/style-guide/", "surf" %}
+      {% button88 "CUSTOMIZE", "/customize/", "mint" %}
+    </div>
+  </div>
+  <div class="guide-card">
+    <p class="eyebrow">Tags</p>
+    <ul class="tag-list">
+      <li><span class="tag-pill">indieweb</span></li>
+      <li><span class="tag-pill">theme</span></li>
+      <li><span class="tag-pill">retro web</span></li>
+    </ul>
+  </div>
+  <div class="guide-card">
+    <p class="eyebrow">Status card</p>
+    <div class="status-chip">
+      <strong>Accessible by default</strong>
+      <span>Visible focus, feed support, reduced motion awareness, and clean landmarks are all included.</span>
+    </div>
+  </div>
+</div>
+
+<h2>Content samples</h2>
+<p>The journal posts exercise these patterns too, but it helps to see them in one place.</p>
+
+<blockquote>
+  Keep the reading surface calm. Put the loud personality around it, not on top of it.
+</blockquote>
+
+{% raw %}
+<pre><code>---
+layout: layouts/post.njk
+title: A New Entry
+description: Show the theme in action.
+postSidebar: false
+tags:
+  - post
+  - indieweb
+---
+
+{% button88 "RSS FEED", "/feed.xml", "ember" %}</code></pre>
+{% endraw %}
+
+{% set syntaxShowcase %}
+```html
+<article class="h-entry">
+  <h1 class="p-name">Palette Tour</h1>
+  <p class="p-summary">Same layout, different emotional temperature.</p>
+</article>
+```
+
+```css
+.palette-card--surf {
+  --palette-main: #2578e7;
+  --palette-soft: #e5f3ff;
+  --palette-strong: #174da2;
+  --palette-secondary: #17b7b3;
+}
+```
+
+```js
+const params = new URLSearchParams(window.location.search);
+const theme = params.get("theme") ?? "ember";
+document.documentElement.dataset.accent = theme;
+```
+
+```json
+{
+  "title": "Retro Garden",
+  "defaultTheme": "ember",
+  "features": ["rss", "webc", "og-image", "share-links", "syntax-highlight"]
+}
+```
+
+```bash
+npm run start
+npm run build
+npm run audit:a11y
+```
+{% endset %}
+
+<h2>Syntax samples</h2>
+<p>These blocks use different language grammars so you can see how the token colors shift across common theme files.</p>
+
+{{ syntaxShowcase | renderMarkdown | safe }}

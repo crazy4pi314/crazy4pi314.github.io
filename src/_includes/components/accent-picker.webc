@@ -1,0 +1,17 @@
+<is-land on:idle webc:root>
+  <nav class="accent-picker" data-accent-picker aria-label="Switch the accent palette">
+    <span class="accent-picker__label">Palette</span>
+    <a class="accent-picker__button" href="?theme=ember" data-accent-choice="ember" data-accent-link>
+      ember
+    </a>
+    <a class="accent-picker__button" href="?theme=surf" data-accent-choice="surf" data-accent-link>
+      surf
+    </a>
+    <a class="accent-picker__button" href="?theme=mint" data-accent-choice="mint" data-accent-link>
+      mint
+    </a>
+  </nav>
+  <template data-island="once" webc:raw>
+    <script type="module" src="/assets/js/accent-picker.js"></script>
+  </template>
+</is-land>

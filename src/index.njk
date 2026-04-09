@@ -1,0 +1,212 @@
+---
+layout: layouts/base.njk
+title: Home
+description: The home page for Retro Garden, a retro IndieWeb-flavored Eleventy theme.
+eyebrow: index.html
+section: welcome screen
+---
+<div class="content-grid">
+  <div class="stack-rows">
+    <retro-panel>
+      <span slot="title">home.exe</span>
+      <section class="hero-grid">
+        <div class="hero-copy">
+          <p class="hero-kicker">Retro Garden // IndieWeb x 90s personal site mixtape</p>
+          <h1 class="hero-title">A garden for dial-up charm and modern publishing parts.</h1>
+          <div class="hero-lead">
+            {{ site.heroLead | renderMarkdown | safe }}
+          </div>
+          <ul class="tag-list" aria-label="Theme highlights">
+            <li><span class="tag-pill">Microformats</span></li>
+            <li><span class="tag-pill">RSS</span></li>
+            <li><span class="tag-pill">WebC</span></li>
+            <li><span class="tag-pill">OG cards</span></li>
+            <li><span class="tag-pill">Tailwind</span></li>
+          </ul>
+        </div>
+        <div class="status-grid">
+          <div class="status-chip">
+            <strong>View source friendly</strong>
+            <span>Readable templates, markdown posts, and shortcodes you can actually edit.</span>
+          </div>
+          <div class="status-chip">
+            <strong>Accessible by default</strong>
+            <span>Skip links, strong focus rings, reduced motion guards, and contrast that holds up.</span>
+          </div>
+          <div class="status-chip">
+            <strong>Personal-site energy</strong>
+            <span>Badge walls, retro chrome, webring vibes, and room for personality over polish.</span>
+          </div>
+        </div>
+      </section>
+    </retro-panel>
+
+    <retro-panel>
+      <span slot="title">journal/</span>
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Latest entries</p>
+          <h2 class="section-title">Fresh notes from the Retro Garden demo</h2>
+        </div>
+        <a class="text-link" href="/journal/">Browse the archive</a>
+      </div>
+      <div class="panel-grid">
+        {% for post in collections.posts | limit(3) %}
+          <article class="post-card h-entry">
+            <p class="post-card__meta">
+              <time class="dt-published" datetime="{{ post.date | machineDate }}">{{ post.date | formatDate }}</time>
+              <span aria-hidden="true">::</span>
+              <span>{{ post.templateContent | stripTags | readTime }}</span>
+            </p>
+            <h3 class="post-card__title">
+              <a class="p-name u-url" href="{{ post.url }}">{{ post.data.title }}</a>
+            </h3>
+            <p>{{ post.data.description }}</p>
+            {% set tags = post.data.tags | publicTags %}
+            {% if tags.length %}
+              <ul class="tag-list" aria-label="Post tags">
+                {% for tag in tags %}
+                  <li><a class="tag-pill" href="/tags/{{ tag | slugify }}/">{{ tag }}</a></li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </article>
+        {% endfor %}
+      </div>
+    </retro-panel>
+
+    <retro-panel>
+      <span slot="title">examples/</span>
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Example pages</p>
+          <h2 class="section-title">Built to show what you can keep, trim, or remix</h2>
+        </div>
+      </div>
+      <ul class="example-list">
+        {% for item in site.examplePages %}
+          <li class="example-list__item">
+            <div>
+              <a class="stack-name" href="{{ item.url }}">{{ item.label }}</a>
+              <p class="stack-description">{{ item.note }}</p>
+            </div>
+            <span class="toolbox-version">{{ item.layout }}</span>
+          </li>
+        {% endfor %}
+      </ul>
+    </retro-panel>
+
+    <retro-panel>
+      <span slot="title">palettes.css</span>
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Built-out palettes</p>
+          <h2 class="section-title">Three moods for the same skeleton</h2>
+        </div>
+        <a class="text-link" href="/style-guide/">Open the full style guide</a>
+      </div>
+      <div class="palette-grid">
+        {% for palette in site.palettes %}
+          <article class="palette-card palette-card--{{ palette.slug }}">
+            <p class="eyebrow">{{ palette.vibe }}</p>
+            <h3 class="post-card__title">{{ palette.name }}</h3>
+            <p>{{ palette.note }}</p>
+            <div class="palette-card__window">
+              <div class="palette-card__bar">
+                <span>{{ palette.slug }}.theme</span>
+                <div class="palette-card__dots"><span></span><span></span><span></span></div>
+              </div>
+              <div class="palette-card__body">
+                <div class="palette-swatch-grid">
+                  {% for swatch in palette.swatches %}
+                    <div class="palette-swatch">
+                      <span class="palette-swatch__chip" style="background: {{ swatch.value }}"></span>
+                      <strong>{{ swatch.label }}</strong>
+                      <code>{{ swatch.value }}</code>
+                    </div>
+                  {% endfor %}
+                </div>
+                <div class="badge-wall">
+                  {% button88 "RSS FEED", "/feed.xml", palette.slug %}
+                </div>
+              </div>
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    </retro-panel>
+
+  </div>
+
+  <aside class="stack-rows">
+    <retro-panel>
+      <span slot="title">profile.card</span>
+      <div class="sidebar-block h-card">
+        <p class="eyebrow">Home page h-card</p>
+        <h2 class="section-title p-name">{{ site.author.name }}</h2>
+        <p class="home-note p-note">{{ site.author.summary }}</p>
+        <ul class="footer-links home-card-links">
+          <li><a class="u-url" href="{{ site.author.url }}">Primary site URL</a></li>
+          <li><a class="u-email" href="mailto:{{ site.author.email }}">Send email</a></li>
+          <li><a href="/about/">Read the about page</a></li>
+        </ul>
+        <div class="badge-wall">
+          {% for badge in site.badges %}
+            {% button88 badge.label, badge.url, badge.accent %}
+          {% endfor %}
+        </div>
+      </div>
+    </retro-panel>
+
+    <retro-panel>
+      <span slot="title">toolbox.log</span>
+      <div class="sidebar-block">
+        <p class="eyebrow">Fetched with Eleventy Fetch</p>
+        <ul class="toolbox-list">
+          {% for item in toolbox %}
+            <li class="toolbox-list__item">
+              <div>
+                <a class="stack-name" href="{{ item.url }}">{{ item.name }}</a>
+                <p class="stack-description">{{ item.description }}</p>
+              </div>
+              <span class="toolbox-version">{{ item.version }}</span>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </retro-panel>
+
+    <retro-panel>
+      <span slot="title">neighbors.net</span>
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Inspiration</p>
+          <h2 class="section-title">Sites and starters worth studying</h2>
+        </div>
+      </div>
+      <ul class="mini-list">
+        {% for item in site.neighborhood %}
+          <li>
+            <a href="{{ item.url }}">{{ item.name }}</a>
+            <p>{{ item.note }}</p>
+          </li>
+        {% endfor %}
+      </ul>
+    </retro-panel>
+
+    <retro-panel>
+      <span slot="title">features.txt</span>
+      <div class="sidebar-block">
+        <p class="eyebrow">Theme stack</p>
+        <ul class="stack-list">
+          {% for item in site.stack %}
+            <li class="stack-list__item">
+              <strong class="stack-name">{{ item.name }}</strong>
+              <p class="stack-description">{{ item.detail }}</p>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </retro-panel>
+  </aside>
+</div>

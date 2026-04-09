@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="favicon-title">
+  <title id="favicon-title">Retro window icon</title>
+  <rect width="64" height="64" rx="8" fill="#fff7e8"/>
+  <rect x="6" y="8" width="52" height="48" fill="#fffdf7" stroke="#16202a" stroke-width="4"/>
+  <rect x="6" y="8" width="52" height="10" fill="#ef7f45" stroke="#16202a" stroke-width="4"/>
+  <circle cx="16" cy="13" r="3" fill="#fff4d8" stroke="#16202a" stroke-width="2"/>
+  <circle cx="25" cy="13" r="3" fill="#fff4d8" stroke="#16202a" stroke-width="2"/>
+  <circle cx="34" cy="13" r="3" fill="#fff4d8" stroke="#16202a" stroke-width="2"/>
+  <path d="M18 31h28M18 40h22" stroke="#16202a" stroke-width="4" stroke-linecap="square"/>
+  <path d="M20 53l10-8 6 5 10-10" fill="none" stroke="#2578e7" stroke-width="4" stroke-linecap="square" stroke-linejoin="round"/>
+</svg>

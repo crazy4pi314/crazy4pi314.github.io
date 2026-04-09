@@ -1,0 +1,105 @@
+<style>
+  .frame {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 54px;
+    background: linear-gradient(135deg, #fff0d0 0%, #ffd7b7 38%, #c8f0df 100%);
+    color: #18202a;
+  }
+
+  .panel {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 6px solid #18202a;
+    background: rgba(255, 253, 246, 0.94);
+    box-shadow: 16px 16px 0 #18202a;
+  }
+
+  .bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 24px;
+    background: linear-gradient(90deg, #ef7f45, #4ca8ff);
+    border-bottom: 6px solid #18202a;
+    font-family: "Silkscreen";
+    font-size: 26px;
+  }
+
+  .lights {
+    display: flex;
+    gap: 10px;
+  }
+
+  .light {
+    width: 20px;
+    height: 20px;
+    border-radius: 999px;
+    background: #fff7dd;
+    border: 3px solid #18202a;
+  }
+
+  .body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 24px;
+    padding: 38px 42px 44px;
+  }
+
+  .eyebrow {
+    font-family: "Silkscreen";
+    font-size: 24px;
+    color: #3f5160;
+  }
+
+  .title {
+    margin: 0;
+    font-family: "Silkscreen";
+    font-size: 68px;
+    line-height: 1.12;
+  }
+
+  .description {
+    margin: 0;
+    font-family: "Atkinson Hyperlegible";
+    font-size: 34px;
+    line-height: 1.35;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 6px dashed #18202a;
+    padding-top: 22px;
+    font-family: "Atkinson Hyperlegible";
+    font-size: 28px;
+  }
+</style>
+
+<div class="frame">
+  <div class="panel">
+    <div class="bar">
+      <span>{{ title }}</span>
+      <div class="lights">
+        <span class="light"></span>
+        <span class="light"></span>
+        <span class="light"></span>
+      </div>
+    </div>
+    <div class="body">
+      <p class="eyebrow">{{ kicker }}</p>
+      <h1 class="title">{{ title }}</h1>
+      <p class="description">{{ description }}</p>
+      <div class="footer">
+        <span>{{ eyebrow }}</span>
+        <span>{{ site.title }}</span>
+      </div>
+    </div>
+  </div>
+</div>

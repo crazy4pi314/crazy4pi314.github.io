@@ -1,0 +1,120 @@
+{% set metaTitle = site.title %}
+{% if title and title != "Home" %}
+  {% set metaTitle = title + " | " + site.title %}
+{% endif %}
+{% set metaDescription = description or site.description %}
+<!doctype html>
+<html lang="{{ site.language }}" data-accent="ember">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ metaTitle }}</title>
+    <meta name="description" content="{{ metaDescription }}" />
+    <link rel="canonical" href="{{ page.url | absoluteUrl(site.url) }}" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }} RSS" href="/feed.xml" />
+    <link rel="alternate" type="application/feed+json" title="{{ site.title }} JSON Feed" href="/feed.json" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ title or site.title }}" />
+    <meta property="og:description" content="{{ metaDescription }}" />
+    <meta property="og:url" content="{{ page.url | absoluteUrl(site.url) }}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ title or site.title }}" />
+    <meta name="twitter:description" content="{{ metaDescription }}" />
+    {% if not skipOgImage %}
+      {% ogImage "./og/entry.og.njk", {
+        title: title or site.title,
+        description: metaDescription,
+        kicker: section or site.tagline,
+        eyebrow: eyebrow or page.url
+      } %}
+    {% endif %}
+    <script>
+      (() => {
+        const allowedAccents = new Set(["ember", "surf", "mint"]);
+
+        try {
+          const params = new URLSearchParams(window.location.search);
+          const queryAccent = params.get("theme");
+          const storedAccent = window.localStorage.getItem("retro-accent");
+          const accent = allowedAccents.has(queryAccent)
+            ? queryAccent
+            : allowedAccents.has(storedAccent)
+              ? storedAccent
+              : "ember";
+
+          document.documentElement.dataset.accent = accent;
+        } catch {
+          document.documentElement.dataset.accent = "ember";
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="/assets/css/theme.css" />
+    <script type="module" src="/assets/js/is-land.js"></script>
+  </head>
+  <body class="site-body">
+    <a class="skip-link" href="#content">Skip to content</a>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="site-brand">
+          <a class="site-brand__link" href="/">{{ site.title }}</a>
+          <p class="site-tagline">{{ site.tagline }}</p>
+        </div>
+        <nav class="site-nav" aria-label="Primary">
+          {% for item in site.navigation %}
+            <a
+              class="site-nav__link{% if page.url == item.url %} is-current{% endif %}"
+              href="{{ item.url }}"
+              {% if page.url == item.url %}aria-current="page"{% endif %}
+            >
+              {{ item.label }}
+            </a>
+          {% endfor %}
+        </nav>
+        <accent-picker></accent-picker>
+      </header>
+
+      <site-marquee>
+        RSS ready :: WebC components online :: microformats inside :: view-source encouraged :: accessible by default
+      </site-marquee>
+
+      <main id="content" class="site-main">
+        {{ content | safe }}
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-grid">
+          <div class="micro-card">
+            <p class="eyebrow">feeds + buttons</p>
+            <p>Keep the small-web pieces visible so readers can subscribe, explore, and steal the good ideas.</p>
+            <div class="badge-wall">
+              {% for badge in site.badges %}
+                {% button88 badge.label, badge.url, badge.accent %}
+              {% endfor %}
+            </div>
+          </div>
+          <div class="micro-card">
+            <p class="eyebrow">example pages</p>
+            <ul class="footer-links">
+              {% for item in site.examplePages %}
+                <li><a href="{{ item.url }}">{{ item.label }}</a> <span class="footer-inline-note">:: {{ item.layout }}</span></li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="micro-card">
+            <p class="eyebrow">social + note</p>
+            <ul class="footer-links">
+              {% for item in site.social %}
+                <li><a href="{{ item.url }}">{{ item.label }}</a></li>
+              {% endfor %}
+            </ul>
+            <p class="footer-note">Customize the sample identity data before publishing your own fork.</p>
+          </div>
+        </div>
+        <p class="footer-copyright">
+          Built with Eleventy and a taste for neon beige. {% year %}
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

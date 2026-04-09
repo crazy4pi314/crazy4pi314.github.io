@@ -1,0 +1,13 @@
+<div webc:root class="retro-panel">
+  <div class="retro-panel__chrome">
+    <div class="retro-panel__title"><slot name="title"></slot></div>
+    <div class="retro-panel__lights" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <div class="retro-panel__body">
+    <slot></slot>
+  </div>
+</div>

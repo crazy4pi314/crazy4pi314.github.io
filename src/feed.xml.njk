@@ -1,0 +1,24 @@
+---
+permalink: /feed.xml
+eleventyExcludeFromCollections: true
+skipOgImage: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>{{ site.title | escape }}</title>
+    <link>{{ site.url }}</link>
+    <description>{{ site.description | escape }}</description>
+    <language>{{ site.language }}</language>
+    <lastBuildDate>{{ collections.posts[0].date | dateToRfc822 }}</lastBuildDate>
+    {% for post in collections.posts | limit(10) %}
+      <item>
+        <title>{{ post.data.title | escape }}</title>
+        <link>{{ post.url | absoluteUrl(site.url) }}</link>
+        <guid>{{ post.url | absoluteUrl(site.url) }}</guid>
+        <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
+        <description><![CDATA[{{ post.templateContent | safe }}]]></description>
+      </item>
+    {% endfor %}
+  </channel>
+</rss>

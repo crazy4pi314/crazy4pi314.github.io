@@ -1,0 +1,56 @@
+{% set shareUrl = page.url | absoluteUrl(site.url) %}
+{% set shareTitle = title + " — " + site.title %}
+{% set shareMessage = shareTitle + "\n\n" + shareUrl %}
+
+<section class="share-panel" aria-labelledby="share-heading">
+  <p class="eyebrow">Spread the link</p>
+  <h2 class="author-panel__title" id="share-heading">Share this post</h2>
+  <p class="home-note">A small share row, inspired by the IndieWeb Blog Starter pattern, with direct links and a copy button.</p>
+  <div class="share-list" role="list">
+    <a
+      class="share-link"
+      role="listitem"
+      href="https://twitter.com/intent/tweet?text={{ shareTitle | urlencode }}&url={{ shareUrl | urlencode }}"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      X / Twitter
+    </a>
+    <a
+      class="share-link"
+      role="listitem"
+      href="https://www.linkedin.com/sharing/share-offsite/?url={{ shareUrl | urlencode }}"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      LinkedIn
+    </a>
+    <a
+      class="share-link"
+      role="listitem"
+      href="https://share.joinmastodon.org/#text={{ shareMessage | urlencode }}"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Mastodon
+    </a>
+    <a
+      class="share-link"
+      role="listitem"
+      href="mailto:?subject={{ shareTitle | urlencode }}&body={{ shareMessage | urlencode }}"
+    >
+      Email
+    </a>
+    <button
+      class="share-link share-link--button"
+      type="button"
+      data-copy-link
+      data-copy-url="{{ shareUrl }}"
+      aria-describedby="share-copy-status"
+    >
+      Copy Link
+    </button>
+  </div>
+  <p class="share-copy-status" id="share-copy-status" data-copy-status aria-live="polite"></p>
+  <script type="module" src="/assets/js/share-links.js"></script>
+</section>

@@ -1,0 +1,42 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: collections.tagList
+  size: 1
+  alias: tag
+permalink: /tags/{{ tag | slugify }}/index.html
+eleventyComputed:
+  title: Tagged "{{ tag }}"
+  description: Posts filed under {{ tag }}.
+  eyebrow: tags/{{ tag | slugify }}/index.njk
+  section: tag archive
+---
+<div class="content-grid">
+  <div class="stack-rows">
+    <retro-panel>
+      <span slot="title">tag://{{ tag | slugify }}</span>
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Filtered archive</p>
+          <h1 class="section-title">Posts tagged “{{ tag }}”</h1>
+        </div>
+        <a class="text-link" href="/tags/">Back to all tags</a>
+      </div>
+      <div class="panel-grid">
+        {% for post in collections[tag] | reverse %}
+          <article class="post-card h-entry">
+            <p class="post-card__meta">
+              <time class="dt-published" datetime="{{ post.date | machineDate }}">{{ post.date | formatDate }}</time>
+              <span aria-hidden="true">::</span>
+              <span>{{ post.templateContent | stripTags | readTime }}</span>
+            </p>
+            <h2 class="post-card__title">
+              <a class="p-name u-url" href="{{ post.url }}">{{ post.data.title }}</a>
+            </h2>
+            <p>{{ post.data.description }}</p>
+          </article>
+        {% endfor %}
+      </div>
+    </retro-panel>
+  </div>
+</div>

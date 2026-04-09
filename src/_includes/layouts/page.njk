@@ -1,0 +1,32 @@
+---
+layout: layouts/base.njk
+---
+{% set hasSidebar = sidebar or sidebarTitle %}
+<div class="content-grid{% if not hasSidebar %} content-grid--single{% endif %}">
+  <div class="stack-rows">
+    <retro-panel>
+      <span slot="title">{{ eyebrow or "page.html" }}</span>
+      <div class="entry-shell">
+        <p class="eyebrow">{{ section or "page" }}</p>
+        <h1 class="entry-title">{{ title }}</h1>
+        {% if description %}
+          <p class="entry-lead">{{ description }}</p>
+        {% endif %}
+        <pixel-divider></pixel-divider>
+        <div class="entry-body">
+          {{ content | safe }}
+        </div>
+      </div>
+    </retro-panel>
+  </div>
+  {% if hasSidebar %}
+    <aside class="stack-rows">
+      <retro-panel>
+        <span slot="title">{{ sidebarTitle or "sidebar.txt" }}</span>
+        <div class="sidebar-block">
+          {{ sidebar | renderMarkdown | safe }}
+        </div>
+      </retro-panel>
+    </aside>
+  {% endif %}
+</div>

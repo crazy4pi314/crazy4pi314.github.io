@@ -1,0 +1,75 @@
+---
+layout: layouts/base.njk
+section: journal entry
+---
+{% set hasSidebar = postSidebar != false %}
+<div class="content-grid{% if not hasSidebar %} content-grid--single{% endif %}">
+  <div class="stack-rows">
+    <retro-panel>
+      <span slot="title">{{ eyebrow or "journal-entry.md" }}</span>
+      <article class="entry-shell h-entry">
+        <header class="entry-header">
+          <p class="eyebrow">{{ section }}</p>
+          <h1 class="entry-title p-name">{{ title }}</h1>
+          {% if description %}
+            <p class="entry-lead p-summary">{{ description }}</p>
+          {% endif %}
+          <div class="entry-meta">
+            <time class="dt-published" datetime="{{ page.date | machineDate }}">{{ page.date | formatDate }}</time>
+            <span aria-hidden="true">::</span>
+            <span>{{ content | stripTags | readTime }}</span>
+          </div>
+          {% set tags = tags | publicTags %}
+          {% if tags.length %}
+            <ul class="tag-list" aria-label="Tags">
+              {% for tag in tags %}
+                <li><a class="tag-pill" href="/tags/{{ tag | slugify }}/">{{ tag }}</a></li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </header>
+        <pixel-divider></pixel-divider>
+        <div class="entry-body e-content">
+          {{ content | safe }}
+        </div>
+        <pixel-divider></pixel-divider>
+        {% include "partials/share-links.njk" %}
+        <pixel-divider></pixel-divider>
+        <section class="author-panel">
+          <p class="eyebrow">About the author</p>
+          <h2 class="author-panel__title">{{ site.author.name }}</h2>
+          <p class="home-note">{{ site.author.summary }}</p>
+          <div class="badge-wall">
+            {% button88 "ABOUT", "/about/", "mint" %}
+            {% button88 "RSS FEED", "/feed.xml", "ember" %}
+            {% button88 "STYLE GUIDE", "/style-guide/", "surf" %}
+          </div>
+        </section>
+      </article>
+    </retro-panel>
+  </div>
+  {% if hasSidebar %}
+    <aside class="stack-rows">
+      <retro-panel>
+        <span slot="title">sidebar.sys</span>
+        <div class="sidebar-block">
+          <p class="eyebrow">Publishing hooks</p>
+          <ul class="sidebar-list">
+            <li>RSS and JSON feeds are wired in.</li>
+            <li>OG images are generated at build time.</li>
+            <li>The author box now lives with the article instead of the footer.</li>
+          </ul>
+        </div>
+        <pixel-divider></pixel-divider>
+        <div class="sidebar-block">
+          <p class="eyebrow">Quick links</p>
+          <div class="badge-wall">
+            {% button88 "ALL POSTS", "/journal/", "mint" %}
+            {% button88 "CUSTOMIZE", "/customize/", "ember" %}
+            {% button88 "TAG CLOUD", "/tags/", "surf" %}
+          </div>
+        </div>
+      </retro-panel>
+    </aside>
+  {% endif %}
+</div>

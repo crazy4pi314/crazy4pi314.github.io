@@ -1,0 +1,29 @@
+---
+layout: layouts/base.njk
+title: Tags
+description: Browse the journal by topic.
+eyebrow: tags/index.njk
+section: archive map
+---
+<div class="content-grid">
+  <div class="stack-rows">
+    <retro-panel>
+      <span slot="title">tags.map</span>
+      <div class="entry-shell">
+        <p class="eyebrow">Tag archive</p>
+        <h1 class="entry-title">A small tag cloud with clean slugs</h1>
+        <p class="entry-lead">Tag archive pages are generated with the slugify filter and Eleventy pagination.</p>
+        <pixel-divider></pixel-divider>
+        {% if collections.tagList.length %}
+          <ul class="tag-list" aria-label="Available tags">
+            {% for tag in collections.tagList %}
+              <li><a class="tag-pill" href="/tags/{{ tag | slugify }}/">{{ tag }}</a></li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <p class="empty-state">No tags yet. Write a few posts and they will show up here.</p>
+        {% endif %}
+      </div>
+    </retro-panel>
+  </div>
+</div>
