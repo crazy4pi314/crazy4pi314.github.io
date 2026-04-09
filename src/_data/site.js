@@ -166,7 +166,7 @@ export default {
   ],
   social: [
     { label: "Email", url: "mailto:hello@example.com" },
-    { label: "GitHub", url: "https://github.com/yourname/retro-garden" },
+    { label: "GitHub", url: "https://github.com/kylereddoch/retro-garden-eleventy-theme" },
     { label: "Vercel Demo", url: siteUrl },
     { label: "RSS", url: "/feed.xml" }
   ]

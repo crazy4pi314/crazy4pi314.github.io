@@ -101,9 +101,9 @@ Preview deployments will render cleanly on common platforms because the theme ca
 
 If Retro Garden helps you ship something fun, you can support its maintenance here. Replace the placeholder handles before publishing your own fork. GitHub's funding button can be configured in [.github/FUNDING.yml](./.github/FUNDING.yml).
 
-- GitHub Sponsors: [https://github.com/sponsors/yourname](https://github.com/sponsors/yourname)
-- Ko-fi: [https://ko-fi.com/yourname](https://ko-fi.com/yourname)
-- Buy Me a Coffee: [https://buymeacoffee.com/yourname](https://buymeacoffee.com/yourname)
+- GitHub Sponsors: [https://github.com/sponsors/yourname](https://github.com/sponsors/kylereddoch)
+- Ko-fi: [https://ko-fi.com/yourname](https://ko-fi.com/kylereddoch)
+- Buy Me a Coffee: [https://buymeacoffee.com/yourname](https://buymeacoffee.com/kylereddoch)
 
 ## Contributing
 
