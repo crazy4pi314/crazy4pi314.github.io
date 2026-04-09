@@ -6,7 +6,7 @@ const inferredDeployUrl =
   process.env.CF_PAGES_URL ||
   (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null);
 
-const siteUrl = inferredDeployUrl || "https://retro-garden.vercel.app";
+const siteUrl = inferredDeployUrl || "https://retro-garden-eleventy-theme.vercel.app";
 
 export default {
   title: "Retro Garden",

@@ -10,10 +10,10 @@ Retro Garden is an open source Eleventy theme for personal sites that want Indie
 
 ## Demo
 
-- Production demo: [https://retro-garden.vercel.app](https://retro-garden.vercel.app)
+- Production demo: [https://retro-garden-eleventy-theme.vercel.app](https://retro-garden-eleventy-theme.vercel.app)
 - Local development: <http://127.0.0.1:8080>
 
-`src/_data/site.js` will use `SITE_URL` when you provide it and can also infer common preview URLs on Vercel, Netlify, and Cloudflare Pages. The production default is `https://retro-garden.vercel.app`, so swap that if you deploy under a different hostname.
+`src/_data/site.js` will use `SITE_URL` when you provide it and can also infer common preview URLs on Vercel, Netlify, and Cloudflare Pages. The production default is `https://retro-garden-eleventy-theme.vercel.app`, so swap that if you deploy under a different hostname.
 
 ## Features
 

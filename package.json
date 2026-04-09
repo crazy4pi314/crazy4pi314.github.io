@@ -2,7 +2,7 @@
   "name": "eleventy-theme-retro-garden",
   "version": "0.1.0",
   "description": "Retro Garden is an open source Eleventy theme that blends IndieWeb publishing habits with playful 90s personal-site energy.",
-  "homepage": "https://retro-garden.vercel.app",
+  "homepage": "https://retro-garden-eleventy-theme.vercel.app",
   "type": "module",
   "license": "MIT",
   "keywords": [
