@@ -6,3 +6,4 @@ _site/
 .env.*
 npm-debug.log*
 launch/
+.cache/
