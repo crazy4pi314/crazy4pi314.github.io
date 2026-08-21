@@ -1,0 +1,40 @@
+{% set postMentions = webmentions | webmentionsForUrl(page.url, site.url) %}
+{% set replies = postMentions | webmentionsOfType("in-reply-to") %}
+{% set likes = postMentions | webmentionsOfType("like-of") %}
+{% set reposts = postMentions | webmentionsOfType("repost-of") %}
+{% set reactions = likes | concat(reposts) %}
+
+<section class="webmentions" aria-labelledby="webmentions-heading">
+  <p class="eyebrow">Across the small web</p>
+  <h2 class="author-panel__title" id="webmentions-heading">Replies, likes, and reposts</h2>
+  {% if postMentions.length %}
+    {% if likes.length or reposts.length %}
+      <div class="webmention-reactions" aria-label="Reactions">
+        {% for mention in reactions %}
+          <a class="webmention-avatar" href="{{ (mention.author.url or mention.source) | escape }}" title="{{ mention.author.name | escape }}">
+            {% if mention.author.photo %}
+              <img src="{{ mention.author.photo | escape }}" alt="{{ mention.author.name | escape }}" width="44" height="44" eleventy:ignore />
+            {% else %}
+              <span aria-hidden="true">★</span><span class="visually-hidden">{{ mention.author.name | escape }}</span>
+            {% endif %}
+          </a>
+        {% endfor %}
+      </div>
+    {% endif %}
+    {% if replies.length %}
+      <ol class="webmention-list">
+        {% for mention in replies %}
+          <li class="webmention-card h-cite">
+            <p class="webmention-card__author p-author h-card">
+              <a class="u-url" href="{{ (mention.author.url or mention.source) | escape }}">{{ mention.author.name | escape }}</a>
+            </p>
+            {% if mention.content %}<p class="p-content">{{ mention.content | escape }}</p>{% endif %}
+            {% if mention.published %}<time class="dt-published" datetime="{{ mention.published | escape }}">{{ mention.published | formatDate }}</time>{% endif %}
+          </li>
+        {% endfor %}
+      </ol>
+    {% endif %}
+  {% else %}
+    <p class="empty-state">No webmentions yet. Send a reply from your own site and it can appear here.</p>
+  {% endif %}
+</section>

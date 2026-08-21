@@ -3,25 +3,37 @@
   {% set metaTitle = title + " | " + site.title %}
 {% endif %}
 {% set metaDescription = description or site.description %}
-<!doctype html>
-<html lang="{{ site.language }}" data-accent="ember">
+<!DOCTYPE html>
+<html lang="{{ site.language }}" data-accent="ember" data-accent-choice="{{ site.defaultPalette }}" data-default-accent="{{ site.defaultPalette }}">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{{ metaTitle }}</title>
     <meta name="description" content="{{ metaDescription }}" />
+    <meta name="author" content="{{ site.author.name }}" />
+    {% if noindex %}<meta name="robots" content="noindex" />{% endif %}
+    <meta name="theme-color" content="#fff7e8" data-theme-color />
     <link rel="canonical" href="{{ page.url | absoluteUrl(site.url) }}" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }} RSS" href="/feed.xml" />
     <link rel="alternate" type="application/feed+json" title="{{ site.title }} JSON Feed" href="/feed.json" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="/site.webmanifest" />
+    {% if pagination and pagination.href.previous %}<link rel="prev" href="{{ pagination.href.previous | absoluteUrl(site.url) }}" />{% endif %}
+    {% if pagination and pagination.href.next %}<link rel="next" href="{{ pagination.href.next | absoluteUrl(site.url) }}" />{% endif %}
+    {% if site.features.webmentions and site.indieweb.webmentionEndpoint %}
+      <link rel="webmention" href="{{ site.indieweb.webmentionEndpoint }}" />
+      {% if site.indieweb.pingbackEndpoint %}<link rel="pingback" href="{{ site.indieweb.pingbackEndpoint }}" />{% endif %}
+    {% endif %}
+    {% for identityUrl in site.indieweb.relMe %}<link rel="me" href="{{ identityUrl }}" />{% endfor %}
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="{{ site.title }}" />
     <meta property="og:title" content="{{ title or site.title }}" />
     <meta property="og:description" content="{{ metaDescription }}" />
     <meta property="og:url" content="{{ page.url | absoluteUrl(site.url) }}" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="{{ title or site.title }}" />
     <meta name="twitter:description" content="{{ metaDescription }}" />
-    {% if not skipOgImage %}
+    {% if site.features.ogImages and not skipOgImage %}
       {% ogImage "./og/entry.og.njk", {
         title: title or site.title,
         description: metaDescription,
@@ -29,29 +41,49 @@
         eyebrow: eyebrow or page.url
       } %}
     {% endif %}
+    {% getBundle "html", "head" %}
     <script>
       (() => {
-        const allowedAccents = new Set(["ember", "surf", "mint"]);
+        const root = document.documentElement;
+        const allowedAccents = new Set({{ site.palettes | paletteSlugs | json | safe }});
+        const allowedChoices = new Set([...allowedAccents, "system"]);
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+        const resolveAccent = choice => choice === "system"
+          ? (prefersDark.matches ? "midnight" : "ember")
+          : choice;
 
         try {
           const params = new URLSearchParams(window.location.search);
-          const queryAccent = params.get("theme");
-          const storedAccent = window.localStorage.getItem("retro-accent");
-          const accent = allowedAccents.has(queryAccent)
-            ? queryAccent
-            : allowedAccents.has(storedAccent)
-              ? storedAccent
-              : "ember";
+          const queryChoice = params.get("theme");
+          const storedChoice = window.localStorage.getItem("retro-accent");
+          const defaultChoice = root.dataset.defaultAccent || "system";
+          const choice = allowedChoices.has(queryChoice)
+            ? queryChoice
+            : allowedChoices.has(storedChoice)
+              ? storedChoice
+              : defaultChoice;
 
-          document.documentElement.dataset.accent = accent;
+          const accent = resolveAccent(choice);
+          root.dataset.accentChoice = choice;
+          root.dataset.accent = accent;
+          root.style.colorScheme = accent === "midnight" ? "dark" : "light";
+          document.querySelector("[data-theme-color]")?.setAttribute(
+            "content",
+            accent === "midnight" ? "#0c1118" : "#fff7e8"
+          );
         } catch {
-          document.documentElement.dataset.accent = "ember";
+          root.dataset.accentChoice = "ember";
+          root.dataset.accent = "ember";
+          root.style.colorScheme = "light";
         }
       })();
     </script>
     <link rel="stylesheet" href="/assets/css/theme.css" />
     <script type="module" src="/assets/js/is-land.js"></script>
-    <script src="https://tinylytics.app/embed/9wkwYHRH1PwsTv-5bjtp.js" defer></script>
+    {% if site.features.analytics and site.analytics.tinylyticsId %}
+      <script src="https://tinylytics.app/embed/{{ site.analytics.tinylyticsId }}.js" defer></script>
+    {% endif %}
   </head>
   <body class="site-body">
     <a class="skip-link" href="#content">Skip to content</a>
@@ -63,23 +95,27 @@
         </div>
         <nav class="site-nav" aria-label="Primary">
           {% for item in site.navigation %}
-            <a
-              class="site-nav__link{% if page.url == item.url %} is-current{% endif %}"
-              href="{{ item.url }}"
-              {% if page.url == item.url %}aria-current="page"{% endif %}
-            >
-              {{ item.label }}
-            </a>
+            {% if not item.feature or site.features[item.feature] %}
+              <a
+                class="site-nav__link{% if page.url | isCurrentNavigation(item.url) %} is-current{% endif %}"
+                href="{{ item.url }}"
+                {% if page.url | isCurrentNavigation(item.url) %}aria-current="page"{% endif %}
+              >
+                {{ item.label }}
+              </a>
+            {% endif %}
           {% endfor %}
         </nav>
         <accent-picker></accent-picker>
       </header>
 
       <site-marquee>
-        RSS ready :: WebC components online :: microformats inside :: view-source encouraged :: accessible by default
+        Search indexed :: responsive images online :: webmentions ready :: RSS flowing :: accessible by default
       </site-marquee>
 
-      <main id="content" class="site-main">
+      {% include "partials/breadcrumbs.njk" %}
+
+      <main id="content" class="site-main" data-pagefind-body>
         {{ content | safe }}
       </main>
 
@@ -90,7 +126,7 @@
             <p>Keep the small-web pieces visible so readers can subscribe, explore, and steal the good ideas.</p>
             <div class="badge-wall">
               {% for badge in site.badges %}
-                {% button88 badge.label, badge.url, badge.accent %}
+                {% if not badge.feature or site.features[badge.feature] %}{% button88 badge.label, badge.url, badge.accent %}{% endif %}
               {% endfor %}
             </div>
           </div>
@@ -98,7 +134,9 @@
             <p class="eyebrow">example pages</p>
             <ul class="footer-links">
               {% for item in site.examplePages %}
-                <li><a href="{{ item.url }}">{{ item.label }}</a> <span class="footer-inline-note">:: {{ item.layout }}</span></li>
+                {% if not item.feature or site.features[item.feature] %}
+                  <li><a href="{{ item.url }}">{{ item.label }}</a> <span class="footer-inline-note">:: {{ item.layout }}</span></li>
+                {% endif %}
               {% endfor %}
             </ul>
           </div>
@@ -106,7 +144,7 @@
             <p class="eyebrow">social + note</p>
             <ul class="footer-links">
               {% for item in site.social %}
-                <li><a href="{{ item.url }}">{{ item.label }}</a></li>
+                <li><a href="{{ item.url }}"{% if item.relMe %} rel="me"{% endif %}>{{ item.label }}</a></li>
               {% endfor %}
             </ul>
             <p class="footer-note">Customize the sample identity data before publishing your own fork.</p>
@@ -117,5 +155,6 @@
         </p>
       </footer>
     </div>
+    {% getBundle "html", "body-end" %}
   </body>
 </html>

@@ -4,6 +4,8 @@ title: Style Guide
 description: A visual map of Retro Garden’s typography, panels, badges, palettes, and content patterns.
 eyebrow: style-guide.njk
 section: design system
+eleventyNavigation:
+  key: Style Guide
 ---
 <div class="guide-grid">
   <div class="guide-card">
@@ -24,7 +26,7 @@ section: design system
 </div>
 
 <h2>Palette previews</h2>
-<p>Each palette uses the same layout skeleton, but changes the emotional temperature of the whole site.</p>
+<p>Each palette uses the same layout skeleton, but changes the emotional temperature of the whole site. System mode chooses Ember or Midnight from the visitor’s color-scheme preference.</p>
 
 <div class="palette-grid">
   {% for palette in site.palettes %}
@@ -67,6 +69,7 @@ section: design system
       {% button88 "RSS FEED", "/feed.xml", "ember" %}
       {% button88 "STYLE GUIDE", "/style-guide/", "surf" %}
       {% button88 "CUSTOMIZE", "/customize/", "mint" %}
+      {% button88 "SEARCH", "/search/", "midnight" %}
     </div>
   </div>
   <div class="guide-card">
@@ -126,22 +129,22 @@ tags:
 
 ```js
 const params = new URLSearchParams(window.location.search);
-const theme = params.get("theme") ?? "ember";
+const theme = params.get("theme") ?? "system";
 document.documentElement.dataset.accent = theme;
 ```
 
 ```json
 {
   "title": "Retro Garden",
-  "defaultTheme": "ember",
-  "features": ["rss", "webc", "og-image", "share-links", "syntax-highlight"]
+  "defaultTheme": "system",
+  "features": ["search", "responsive-images", "webmentions", "rss", "webc"]
 }
 ```
 
 ```bash
 npm run start
 npm run build
-npm run audit:a11y
+npm run check
 ```
 {% endset %}
 

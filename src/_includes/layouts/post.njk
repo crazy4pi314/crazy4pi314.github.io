@@ -2,7 +2,7 @@
 layout: layouts/base.njk
 section: journal entry
 ---
-{% set hasSidebar = postSidebar != false %}
+{% set hasSidebar = postSidebar != false and site.features.postSidebars %}
 <div class="content-grid{% if not hasSidebar %} content-grid--single{% endif %}">
   <div class="stack-rows">
     <retro-panel>
@@ -11,6 +11,7 @@ section: journal entry
         <header class="entry-header">
           <p class="eyebrow">{{ section }}</p>
           <h1 class="entry-title p-name">{{ title }}</h1>
+          <a class="u-url visually-hidden" href="{{ page.url | absoluteUrl(site.url) }}">Permalink for {{ title }}</a>
           {% if description %}
             <p class="entry-lead p-summary">{{ description }}</p>
           {% endif %}
@@ -33,12 +34,19 @@ section: journal entry
           {{ content | safe }}
         </div>
         <pixel-divider></pixel-divider>
-        {% include "partials/share-links.njk" %}
-        <pixel-divider></pixel-divider>
-        <section class="author-panel">
+        {% if site.features.shareLinks %}
+          {% include "partials/share-links.njk" %}
+          <pixel-divider></pixel-divider>
+        {% endif %}
+        {% if site.features.webmentions %}
+          {% include "partials/webmentions.njk" %}
+          <pixel-divider></pixel-divider>
+        {% endif %}
+        <section class="author-panel p-author h-card">
           <p class="eyebrow">About the author</p>
-          <h2 class="author-panel__title">{{ site.author.name }}</h2>
-          <p class="home-note">{{ site.author.summary }}</p>
+          <h2 class="author-panel__title p-name">{{ site.author.name }}</h2>
+          <p class="home-note p-note">{{ site.author.summary }}</p>
+          <p class="home-note"><a class="u-url" href="{{ site.author.url }}">Visit the author’s home page</a></p>
           <div class="badge-wall">
             {% button88 "ABOUT", "/about/", "mint" %}
             {% button88 "RSS FEED", "/feed.xml", "ember" %}
@@ -57,7 +65,8 @@ section: journal entry
           <ul class="sidebar-list">
             <li>RSS and JSON feeds are wired in.</li>
             <li>OG images are generated at build time.</li>
-            <li>The author box now lives with the article instead of the footer.</li>
+            <li>Responsive images and static search are generated during the build.</li>
+            <li>Optional webmentions and stronger author microformats are ready to configure.</li>
           </ul>
         </div>
         <pixel-divider></pixel-divider>

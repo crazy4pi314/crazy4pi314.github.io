@@ -11,7 +11,12 @@ eyebrow: field-note-003.md
 ---
 The stack here is intentionally practical.
 
-`Eleventy` handles the publishing flow. `WebC` gives us reusable little interface chunks. `is-land` keeps optional JavaScript from becoming a tax on every page view. `eleventy-plugin-og-image` makes social cards part of the build instead of a separate design chore.
+`Eleventy` handles the publishing flow. `WebC` gives us reusable little interface chunks. `is-land` keeps optional JavaScript from becoming a tax on every page view. `Eleventy Image` turns ordinary local images into responsive assets, and `Pagefind` adds search without a hosted service.
+
+<figure>
+  <img class="content-image" src="/assets/images/retro-garden-map.svg" alt="A pixel-inspired map connecting a profile card to a growing garden through static paths." sizes="(min-width: 64rem) 65vw, 100vw" eleventy:widths="320,640,960" />
+  <figcaption class="image-caption">One source image becomes correctly sized AVIF, WebP, and fallback output during the build.</figcaption>
+</figure>
 
 I also wanted a setup that feels open to tinkering:
 

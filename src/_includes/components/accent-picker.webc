@@ -1,4 +1,4 @@
-<is-land on:idle webc:root>
+<is-land on:idle webc:root="override">
   <nav class="accent-picker" data-accent-picker aria-label="Switch the accent palette">
     <span class="accent-picker__label">Palette</span>
     <a class="accent-picker__button" href="?theme=ember" data-accent-choice="ember" data-accent-link>
@@ -9,6 +9,12 @@
     </a>
     <a class="accent-picker__button" href="?theme=mint" data-accent-choice="mint" data-accent-link>
       mint
+    </a>
+    <a class="accent-picker__button" href="?theme=midnight" data-accent-choice="midnight" data-accent-link>
+      midnight
+    </a>
+    <a class="accent-picker__button" href="?theme=system" data-accent-choice="system" data-accent-link>
+      system
     </a>
   </nav>
   <template data-island="once" webc:raw>

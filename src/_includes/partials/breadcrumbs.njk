@@ -1,0 +1,22 @@
+{% set currentNavigationKey = breadcrumbKey or eleventyNavigation.key %}
+{% if site.features.breadcrumbs and currentNavigationKey and page.url != "/" %}
+  {% set breadcrumbItems = collections.all | eleventyNavigationBreadcrumb(currentNavigationKey, { includeSelf: true, allowMissing: true }) %}
+  {% set appendCurrentTitle = breadcrumbKey and title and title != breadcrumbKey %}
+  {% if breadcrumbItems.length %}
+    <nav class="breadcrumbs" aria-label="Breadcrumb" data-pagefind-ignore>
+      <ol class="breadcrumbs__list">
+        <li><a href="/">Home</a></li>
+        {% for item in breadcrumbItems %}
+          <li>
+            {% if loop.last and not appendCurrentTitle %}
+              <span aria-current="page">{{ item.title }}</span>
+            {% else %}
+              <a href="{{ item.url }}">{{ item.title }}</a>
+            {% endif %}
+          </li>
+        {% endfor %}
+        {% if appendCurrentTitle %}<li><span aria-current="page">{{ title }}</span></li>{% endif %}
+      </ol>
+    </nav>
+  {% endif %}
+{% endif %}

@@ -1,5 +1,6 @@
 {
   "layout": "layouts/post.njk",
   "tags": ["post"],
+  "breadcrumbKey": "Journal",
   "permalink": "/journal/{{ title | slugify }}/index.html"
 }

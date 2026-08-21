@@ -8,6 +8,18 @@ const packages = [
     fallback: "Static-first site generator"
   },
   {
+    name: "Eleventy Image",
+    packageName: "@11ty/eleventy-img",
+    url: "https://www.npmjs.com/package/@11ty/eleventy-img",
+    fallback: "Responsive build-time image processing"
+  },
+  {
+    name: "Pagefind",
+    packageName: "pagefind",
+    url: "https://www.npmjs.com/package/pagefind",
+    fallback: "Private static search"
+  },
+  {
     name: "WebC",
     packageName: "@11ty/eleventy-plugin-webc",
     url: "https://www.npmjs.com/package/@11ty/eleventy-plugin-webc",

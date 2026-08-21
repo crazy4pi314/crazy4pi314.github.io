@@ -1,0 +1,34 @@
+---
+layout: layouts/base.njk
+title: Search
+description: Search the complete Retro Garden site with a private static index.
+eyebrow: search/index.njk
+section: site search
+eleventyNavigation:
+  key: Search
+---
+{% html "head" %}
+<link rel="stylesheet" href="/pagefind/pagefind-component-ui.css" />
+{% endhtml %}
+{% html "body-end" %}
+<script type="module" src="/pagefind/pagefind-component-ui.js"></script>
+{% endhtml %}
+
+<div class="content-grid content-grid--single" data-pagefind-ignore>
+  <div class="stack-rows">
+    <retro-panel>
+      <span slot="title">search.exe</span>
+      <div class="entry-shell search-shell">
+        <p class="eyebrow">Static and private</p>
+        <h1 class="entry-title">Search this corner of the web</h1>
+        <p class="entry-lead">Pagefind builds the index alongside the site. Searches stay in your browser and do not require a hosted service.</p>
+        <pixel-divider></pixel-divider>
+        <pagefind-config excerpt-length="24"></pagefind-config>
+        <pagefind-input placeholder="Search posts and pages…" autofocus></pagefind-input>
+        <pagefind-summary></pagefind-summary>
+        <pagefind-results></pagefind-results>
+        <noscript><p class="search-note">Search needs JavaScript. The journal and tag archives remain available without it.</p></noscript>
+      </div>
+    </retro-panel>
+  </div>
+</div>

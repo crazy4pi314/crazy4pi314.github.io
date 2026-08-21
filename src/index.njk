@@ -21,6 +21,8 @@ section: welcome screen
             <li><span class="tag-pill">RSS</span></li>
             <li><span class="tag-pill">WebC</span></li>
             <li><span class="tag-pill">OG cards</span></li>
+            <li><span class="tag-pill">Pagefind</span></li>
+            <li><span class="tag-pill">Responsive images</span></li>
             <li><span class="tag-pill">Tailwind</span></li>
           </ul>
         </div>
@@ -75,7 +77,7 @@ section: welcome screen
       </div>
     </retro-panel>
 
-    <retro-panel>
+    {% if site.features.sampleContent %}<retro-panel>
       <span slot="title">examples/</span>
       <div class="section-heading">
         <div>
@@ -85,23 +87,25 @@ section: welcome screen
       </div>
       <ul class="example-list">
         {% for item in site.examplePages %}
-          <li class="example-list__item">
-            <div>
-              <a class="stack-name" href="{{ item.url }}">{{ item.label }}</a>
-              <p class="stack-description">{{ item.note }}</p>
-            </div>
-            <span class="toolbox-version">{{ item.layout }}</span>
-          </li>
+          {% if not item.feature or site.features[item.feature] %}
+            <li class="example-list__item">
+              <div>
+                <a class="stack-name" href="{{ item.url }}">{{ item.label }}</a>
+                <p class="stack-description">{{ item.note }}</p>
+              </div>
+              <span class="toolbox-version">{{ item.layout }}</span>
+            </li>
+          {% endif %}
         {% endfor %}
       </ul>
-    </retro-panel>
+    </retro-panel>{% endif %}
 
     <retro-panel>
       <span slot="title">palettes.css</span>
       <div class="section-heading">
         <div>
           <p class="eyebrow">Built-out palettes</p>
-          <h2 class="section-title">Three moods for the same skeleton</h2>
+          <h2 class="section-title">Four moods plus a system-aware default</h2>
         </div>
         <a class="text-link" href="/style-guide/">Open the full style guide</a>
       </div>
@@ -152,13 +156,13 @@ section: welcome screen
         </ul>
         <div class="badge-wall">
           {% for badge in site.badges %}
-            {% button88 badge.label, badge.url, badge.accent %}
+            {% if not badge.feature or site.features[badge.feature] %}{% button88 badge.label, badge.url, badge.accent %}{% endif %}
           {% endfor %}
         </div>
       </div>
     </retro-panel>
 
-    <retro-panel>
+    {% if site.features.sampleContent %}<retro-panel>
       <span slot="title">toolbox.log</span>
       <div class="sidebar-block">
         <p class="eyebrow">Fetched with Eleventy Fetch</p>
@@ -174,9 +178,9 @@ section: welcome screen
           {% endfor %}
         </ul>
       </div>
-    </retro-panel>
+    </retro-panel>{% endif %}
 
-    <retro-panel>
+    {% if site.features.sampleContent %}<retro-panel>
       <span slot="title">neighbors.net</span>
       <div class="section-heading">
         <div>
@@ -192,7 +196,7 @@ section: welcome screen
           </li>
         {% endfor %}
       </ul>
-    </retro-panel>
+    </retro-panel>{% endif %}
 
     <retro-panel>
       <span slot="title">features.txt</span>

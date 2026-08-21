@@ -4,6 +4,8 @@ title: About
 description: What Retro Garden is trying to do, and why it leans into personality over sterile defaults.
 eyebrow: about.md
 section: who + why
+eleventyNavigation:
+  key: About
 ---
 Retro Garden is built for people who want their site to feel **lived in**.
 
@@ -21,7 +23,7 @@ It also borrows from the earlier web without trying to become a parody:
 
 ## Example routes to click through
 
-- [Style Guide](/style-guide/) shows the component language, typography, badges, code colors, and all three palettes.
+- [Style Guide](/style-guide/) shows the component language, typography, badges, code colors, and all four palettes.
 - [Customize](/customize/) demonstrates the optional page sidebar and maps out which files control which features.
 - [Journal](/journal/) shows the read-time, tag archive, share links, feed links, and the author panel at the bottom of each post.
 
@@ -39,4 +41,4 @@ The theme includes a skip link, visible focus outlines, reduced-motion-aware ani
 
 1. Update the sample identity values in `src/_data/site.js`.
 2. Replace the demo posts in `src/posts/`.
-3. Set `SITE_URL` to your real production domain before publishing feeds or OG images on Vercel.
+3. Set `SITE_URL` to your real production domain before publishing feeds, search results, or OG images.

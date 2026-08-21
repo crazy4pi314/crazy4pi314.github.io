@@ -1,0 +1,22 @@
+---
+permalink: /site.webmanifest
+eleventyExcludeFromCollections: true
+skipOgImage: true
+---
+{
+  "name": {{ site.title | json | safe }},
+  "short_name": {{ site.title | json | safe }},
+  "description": {{ site.description | json | safe }},
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff7e8",
+  "theme_color": "#ef7f45",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

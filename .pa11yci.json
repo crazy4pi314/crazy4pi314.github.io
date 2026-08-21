@@ -6,6 +6,12 @@
   "urls": [
     "http://127.0.0.1:4173/",
     "http://127.0.0.1:4173/journal/",
-    "http://127.0.0.1:4173/about/"
+    "http://127.0.0.1:4173/journal/page/2/",
+    "http://127.0.0.1:4173/journal/the-small-web-toolkit/",
+    "http://127.0.0.1:4173/search/",
+    "http://127.0.0.1:4173/style-guide/",
+    "http://127.0.0.1:4173/customize/",
+    "http://127.0.0.1:4173/about/",
+    "http://127.0.0.1:4173/404.html"
   ]
 }

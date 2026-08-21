@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675">
+  <defs>
+    <linearGradient id="sky" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fff1dd" />
+      <stop offset="1" stop-color="#d9ecff" />
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#1d2833" stroke-opacity=".12" stroke-width="2" />
+    </pattern>
+  </defs>
+  <rect width="1200" height="675" fill="url(#sky)" />
+  <rect width="1200" height="675" fill="url(#grid)" />
+  <path d="M0 510C180 410 320 585 500 480S820 390 1200 500V675H0Z" fill="#00a878" />
+  <path d="M0 570C210 475 380 655 590 535s390-70 610 20v120H0Z" fill="#076451" />
+  <rect x="105" y="90" width="990" height="430" fill="#fffdf7" stroke="#1d2833" stroke-width="10" />
+  <rect x="105" y="90" width="990" height="74" fill="#ef7f45" stroke="#1d2833" stroke-width="10" />
+  <circle cx="1018" cy="127" r="16" fill="#fffdf7" stroke="#1d2833" stroke-width="7" />
+  <circle cx="1060" cy="127" r="16" fill="#fffdf7" stroke="#1d2833" stroke-width="7" />
+  <path d="M600 206v245M450 328h300" fill="none" stroke="#1d2833" stroke-width="10" stroke-dasharray="18 14" />
+  <rect x="172" y="218" width="245" height="205" fill="#e5f3ff" stroke="#1d2833" stroke-width="8" />
+  <rect x="783" y="218" width="245" height="205" fill="#e8fff5" stroke="#1d2833" stroke-width="8" />
+  <circle cx="294" cy="300" r="42" fill="#3f93ff" stroke="#1d2833" stroke-width="8" />
+  <path d="M294 343v48M270 367h48" stroke="#1d2833" stroke-width="8" />
+  <path d="M850 370c25-80 60-112 112-112-8 63-38 101-112 112Zm0 0c-3-63-29-94-75-113 0 56 23 94 75 113Z" fill="#62e6a7" stroke="#1d2833" stroke-width="8" />
+  <path d="M850 362v42" stroke="#1d2833" stroke-width="8" />
+  <text x="145" y="138" fill="#16202a" font-family="monospace" font-size="34" font-weight="700" letter-spacing="5">RETRO-GARDEN.MAP</text>
+  <text x="600" y="478" fill="#16202a" font-family="monospace" font-size="28" font-weight="700" text-anchor="middle">STATIC PATHS • HUMAN PAGES</text>
+</svg>

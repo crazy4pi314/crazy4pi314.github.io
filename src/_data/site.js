@@ -7,6 +7,10 @@ const inferredDeployUrl =
   (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null);
 
 const siteUrl = inferredDeployUrl || "https://retro-garden-eleventy-theme.vercel.app";
+const tinylyticsId = process.env.TINYLYTICS_ID || "";
+const webmentionEndpoint = process.env.WEBMENTION_ENDPOINT || "";
+const pingbackEndpoint = process.env.PINGBACK_ENDPOINT || "";
+const webmentionApi = process.env.WEBMENTION_API || "";
 
 export default {
   title: "Retro Garden",
@@ -14,9 +18,30 @@ export default {
   url: siteUrl,
   language: "en",
   locale: "en_US",
+  defaultPalette: "system",
   tagline: "Dial-up soul, garden-path links, modern static bones.",
   heroLead:
-    "Build a **small web home** with RSS, WebC components, OG cards, share links, markdown posting, and accessible defaults without sanding off the weird edges that make personal sites memorable.",
+    "Build a **small web home** with responsive images, static search, RSS, WebC components, OG cards, IndieWeb hooks, and accessible defaults without sanding off the weird edges that make personal sites memorable.",
+  features: {
+    analytics: Boolean(tinylyticsId),
+    breadcrumbs: true,
+    ogImages: true,
+    postSidebars: true,
+    responsiveImages: true,
+    sampleContent: true,
+    search: true,
+    shareLinks: true,
+    webmentions: Boolean(webmentionEndpoint && webmentionApi)
+  },
+  analytics: {
+    tinylyticsId
+  },
+  indieweb: {
+    webmentionEndpoint,
+    pingbackEndpoint,
+    webmentionApi,
+    relMe: ["https://github.com/kylereddoch"]
+  },
   author: {
     name: "Your Name",
     email: "hello@example.com",
@@ -27,6 +52,7 @@ export default {
   navigation: [
     { label: "Home", url: "/" },
     { label: "Journal", url: "/journal/" },
+    { label: "Search", url: "/search/", feature: "search" },
     { label: "Style Guide", url: "/style-guide/" },
     { label: "Customize", url: "/customize/" },
     { label: "About", url: "/about/" },
@@ -34,6 +60,7 @@ export default {
   ],
   badges: [
     { label: "RSS FEED", url: "/feed.xml", accent: "ember" },
+    { label: "SEARCH", url: "/search/", accent: "midnight", feature: "search" },
     { label: "STYLE GUIDE", url: "/style-guide/", accent: "surf" },
     { label: "CUSTOMIZE", url: "/customize/", accent: "mint" },
     { label: "TAG CLOUD", url: "/tags/", accent: "ember" }
@@ -50,6 +77,13 @@ export default {
       url: "/customize/",
       layout: "Optional sidebar page",
       note: "Maps which parts of the theme can be removed, swapped, or extended without rebuilding the whole starter."
+    },
+    {
+      label: "Search",
+      url: "/search/",
+      layout: "Static search page",
+      note: "Uses a Pagefind index generated from the finished site, with no hosted search service or runtime database.",
+      feature: "search"
     },
     {
       label: "About",
@@ -94,6 +128,18 @@ export default {
         { label: "Strong", value: "#076451" },
         { label: "Secondary", value: "#f28f3b" }
       ]
+    },
+    {
+      name: "Midnight",
+      slug: "midnight",
+      vibe: "after-hours CRT garden",
+      note: "A true dark palette with violet and electric green accents. System mode selects it automatically for visitors who prefer dark color schemes.",
+      swatches: [
+        { label: "Main", value: "#9b8cff" },
+        { label: "Soft", value: "#272447" },
+        { label: "Strong", value: "#c9c2ff" },
+        { label: "Secondary", value: "#62e6a7" }
+      ]
     }
   ],
   stack: [
@@ -104,6 +150,18 @@ export default {
     {
       name: "OG Image Generation",
       detail: "Build-time social cards powered by eleventy-plugin-og-image and local fonts."
+    },
+    {
+      name: "Eleventy Image",
+      detail: "Local images receive responsive dimensions, modern formats, lazy loading, and stable aspect ratios at build time."
+    },
+    {
+      name: "Pagefind Search",
+      detail: "A private static search index is generated after Eleventy writes the site—no hosted search account is required."
+    },
+    {
+      name: "IndieWeb Hooks",
+      detail: "Optional rel-me identity links, webmention endpoints, reply and like displays, and stronger author microformats are ready to configure."
     },
     {
       name: "Shortcodes",
@@ -166,7 +224,7 @@ export default {
   ],
   social: [
     { label: "Email", url: "mailto:hello@example.com" },
-    { label: "GitHub", url: "https://github.com/kylereddoch/retro-garden-eleventy-theme" },
+    { label: "GitHub", url: "https://github.com/kylereddoch/retro-garden-eleventy-theme", relMe: true },
     { label: "Vercel Demo", url: siteUrl },
     { label: "RSS", url: "/feed.xml" }
   ]
