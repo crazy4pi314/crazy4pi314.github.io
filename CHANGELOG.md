@@ -33,6 +33,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 - Restored palette hydration so the active choice, browser color scheme, and theme color update together.
 - Improved accessible heading permalinks and replaced simulated share lists with native list markup.
 - Excluded heading helper text from search snippets and included every generated pagination page in the sitemap.
+- Allowed the headless accessibility browser to run on constrained Linux CI hosts.
 
 ### Security
 
