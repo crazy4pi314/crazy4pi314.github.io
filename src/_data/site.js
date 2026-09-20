@@ -58,6 +58,7 @@ export default {
     { label: "About", url: "/about/" },
     { label: "Tags", url: "/tags/" }
   ],
+  marquee: "Search indexed :: responsive images online :: webmentions ready :: RSS flowing :: accessible by default",
   badges: [
     { label: "RSS FEED", url: "/feed.xml", accent: "ember" },
     { label: "SEARCH", url: "/search/", accent: "midnight", feature: "search" },
