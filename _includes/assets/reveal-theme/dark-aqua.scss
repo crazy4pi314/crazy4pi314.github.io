@@ -1,58 +1,38 @@
 /**
  * Aqua theme for reveal.js
  * Author: crazy4pi314 based on theme by Walther http://github.com/Walther
- *
- * Designed to be used with highlight.js theme
- * "monokai_sublime.css" available from
- * https://github.com/isagalaev/highlight.js/
- *
- * For other themes, change $codeBackground accordingly.
- *
  */
 
- // Default mixins and settings -----------------
-@import "../template/mixins";
-@import "../template/settings";
-// ---------------------------------------------
+@use 'template/mixins' as mixins;
+@use 'ubuntu';
 
-// Include theme-specific fonts
-
-@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,700,300italic,700italic);
-
-// Colors used in the theme
-$aqua: #008B8B;
+$aqua: #008b8b;
 $coal: #222;
-$codeBackground: #23241f;
+$code-background: #23241f;
+$link-color: #ba0069;
+$ubuntu-font: Ubuntu, sans-serif;
 
-$backgroundColor: $coal;
+@use 'template/settings' with (
+	$background: $coal,
+	$background-color: $coal,
+	$main-font: $ubuntu-font,
+	$main-font-size: 36px,
+	$main-color: #eee,
+	$heading-font: $ubuntu-font,
+	$heading-color: #eee,
+	$heading-text-shadow: 2px 2px 2px $coal,
+	$heading-font-weight: 700,
+	$link-color: $link-color,
+	$link-color-dark: #003f3f,
+	$link-color-hover: #bd6396,
+	$selection-background-color: $aqua,
+	$selection-color: #fff
+);
 
-// Main text
-$mainFont: Ubuntu, 'sans-serif';
-$mainFontSize: 36px;
-$mainColor: #eee;
+@use 'template/theme';
+@include mixins.light-bg-text-color(#eee);
 
-// Headings
-$headingFont: Ubuntu, 'sans-serif';
-$headingTextShadow: 2px 2px 2px $coal;
-
-// h1 shadow, borrowed humbly from 
-// (c) Default theme by Hakim El Hattab
-//$heading1TextShadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 20px 20px rgba(0,0,0,.15);
-
-// Links
-$linkColor: $aqua;
-$linkColorHover: lighten( $linkColor, 20% );
-
-// Text selection
-$selectionBackgroundColor: $aqua;
-$selectionColor: #fff;
-
-
-// Theme template ------------------------------
-@import "../template/theme";
-// ---------------------------------------------
-
-// some overrides after theme template import
+@include ubuntu.font-faces;
 
 .reveal p {
     font-weight: 300;
@@ -69,9 +49,22 @@ $selectionColor: #fff;
 }
 
 .reveal p code {
-    background-color: $codeBackground;
+    background-color: $code-background;
     display: inline-block;
     border-radius: 7px;
+}
+
+.reveal img {
+	margin: 15px 0;
+}
+
+.reveal .controls,
+.reveal .progress {
+	color: $aqua;
+}
+
+.reveal .progress span {
+	background: $aqua;
 }
 
 .reveal small code {
