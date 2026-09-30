@@ -8,16 +8,22 @@ section: events
   {% if subtitle %}
   <h2>{{subtitle}}</h2>
   {% endif %}
-  <time datetime="{{ date | machineDate }}">{{ date | readableDate }}</time> | <a href="{{ event_url }}/">{{ event }}</a>
+  <time datetime="{{ date | machineDate }}">{{ date | readableDate }}</time> | {% if eventUrl %}<a href="{{ eventUrl }}">{{ event }}</a>{% else %}{{ event }}{% endif %}
   <br>{{ location }}
   <p>
     {% if video %}
     <a class="tag btn" href="{{ video | url }}" rel="tag">Video</a>
     {% endif %}
+    {% if code %}
+    <a class="tag btn" href="{{ code | url }}" rel="tag">Code Repo</a>
+    {% endif %}
     {% if slides %}
       {% if slides.reveal %}
         {% set slidesUrl %}/talks/{{ slides.reveal }}/{% endset %}
         <a class="tag btn" href="{{ slidesUrl | url }}" rel="tag">Slides (Reveal.js)</a>
+      {% endif %}
+      {% if slides.revealUrl %}
+        <a class="tag btn" href="{{ slides.revealUrl }}" rel="tag">Slides (Reveal.js)</a>
       {% endif %}
       {% if slides.local %}
         {% set slidesUrl %}/static/{{ slides.local }}{% endset %}
