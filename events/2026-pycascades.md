@@ -6,7 +6,8 @@ eventUrl: https://2026.pycascades.com/program/talks/a-bridge-over/
 eventAsset:
 location: SFU Harbour Centre, Vancouver, BC, Canada
 video: https://www.youtube.com/watch?v=-Kxhvm39v_4
-slides: 
+slides:
+  revealUrl: https://talks.xgranade.com/pycascades-2026/
 code: 
 date: 2026-03-22T14:15:00-07:00
 permalink: events/pycascades-2026-a-bridge-over-not-troubled-waters/index.html

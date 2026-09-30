@@ -22,6 +22,9 @@ section: events
         {% set slidesUrl %}/talks/{{ slides.reveal }}/{% endset %}
         <a class="tag btn" href="{{ slidesUrl | url }}" rel="tag">Slides (Reveal.js)</a>
       {% endif %}
+      {% if slides.revealUrl %}
+        <a class="tag btn" href="{{ slides.revealUrl }}" rel="tag">Slides (Reveal.js)</a>
+      {% endif %}
       {% if slides.local %}
         {% set slidesUrl %}/static/{{ slides.local }}{% endset %}
         <a class="tag btn" href="{{ slidesUrl | url }}" rel="tag">Slides (PDF)</a>
