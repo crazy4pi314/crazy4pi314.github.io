@@ -109,9 +109,11 @@
         <accent-picker></accent-picker>
       </header>
 
-      <site-marquee>
-        Search indexed :: responsive images online :: webmentions ready :: RSS flowing :: accessible by default
-      </site-marquee>
+      {% if site.marquee %}
+        <site-marquee>
+          {{ site.marquee }}
+        </site-marquee>
+      {% endif %}
 
       {% include "partials/breadcrumbs.njk" %}
 
