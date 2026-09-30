@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  pull_request:
   workflow_dispatch:
     inputs: {}
     
@@ -13,16 +14,13 @@ permissions:
   pages: write
   id-token: write
 
-# Allow one concurrent deployment
+# Don't let PR builds cancel an in-flight deploy of main
 concurrency:
-  group: "pages"
+  group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
   build:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
 
     steps:
@@ -37,9 +35,20 @@ jobs:
           npm ci
           npm run build
       - name: Upload artifact
+        if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v5
         with:
           path: './_site'
+
+  deploy:
+    needs: build
+    if: github.event_name != 'pull_request'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
