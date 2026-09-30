@@ -7,7 +7,7 @@ eventAsset:
 location: SFU Harbour Centre, Vancouver, BC, Canada
 video: https://www.youtube.com/watch?v=3yJ6VzCU_yE
 slides: 
-code: 
+code: https://github.com/crazy4pi314/pycascades_devcontainers
 date: 2023-03-18T12:00:00-07:00
 permalink: events/pycascades-2023-eternal-sunshine-of-the-spotless-development-environment/index.html
 abstract: |

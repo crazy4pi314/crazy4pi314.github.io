@@ -7,7 +7,7 @@ eventAsset:
 location: Online
 video: https://www.youtube.com/watch?v=pf_SmZ-gkRM
 slides: 
-code: 
+code: https://github.com/crazy4pi314/python_pulse_demo
 permalink: events/python-pulse-lets-make-dev-containers/index.html
 date: 2023-06-09T11:00:00-07:00
 abstract: |

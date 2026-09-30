@@ -7,7 +7,7 @@ eventAsset:
 location: Pittsburgh, PA, USA
 video: https://www.youtube.com/watch?v=UFt5zmpCzBQ
 slides: 
-code: 
+code: https://github.com/crazy4pi314/pycon-devcontainers
 date: 2024-05-18T14:30:00-04:00
 permalink: events/pycon-us-2024-eternal-sunshine-of-the-spotless-development-environment/index.html
 abstract: |

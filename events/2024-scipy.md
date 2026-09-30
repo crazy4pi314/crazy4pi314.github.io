@@ -4,7 +4,7 @@ subtitle: Birds of a Feather session
 event: SciPy 2024 (BoF)
 eventUrl: https://cfp.scipy.org/2024/talk/VDTKBR/
 eventAsset:
-location: Tacoma, WA, USA
+location: Tacoma Convention Center, Tacoma, WA, USA
 video: 
 slides: 
 code: 

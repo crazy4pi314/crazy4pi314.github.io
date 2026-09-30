@@ -14,6 +14,9 @@ section: events
     {% if video %}
     <a class="tag btn" href="{{ video | url }}" rel="tag">Video</a>
     {% endif %}
+    {% if code %}
+    <a class="tag btn" href="{{ code | url }}" rel="tag">Code Repo</a>
+    {% endif %}
     {% if slides %}
       {% if slides.reveal %}
         {% set slidesUrl %}/talks/{{ slides.reveal }}/{% endset %}

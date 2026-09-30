@@ -4,7 +4,7 @@ subtitle: Collaborating and teaching with Python in Excel and the Anaconda Toolb
 event: SciPy 2025
 eventUrl: https://cfp.scipy.org/scipy2025/talk/9QG8PU/
 eventAsset:
-location: Tacoma, WA, USA
+location: Tacoma Convention Center, Tacoma, WA, USA
 video: https://www.youtube.com/watch?v=i765rvBlCLc
 slides: 
 code: 
