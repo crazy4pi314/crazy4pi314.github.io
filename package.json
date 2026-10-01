@@ -1,7 +1,7 @@
 {
-  "name": "eleventy-theme-retro-garden",
+  "name": "eleventy-theme-retro-garden-kaiser",
   "version": "0.2.0",
-  "description": "Retro Garden is an open source Eleventy theme that blends IndieWeb publishing habits with playful 90s personal-site energy.",
+  "description": "Sarah Kaiser's personal site based on the Retro Garden template for Eleventy.",
   "homepage": "https://retro-garden-eleventy-theme.vercel.app",
   "type": "module",
   "license": "MIT",

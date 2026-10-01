@@ -1,15 +1,15 @@
 ---
 layout: layouts/base.njk
-title: Journal
+title: Blog
 description: Long-form posts, field notes, and other dispatches from this handmade corner of the web.
-eyebrow: journal/index.njk
+eyebrow: blog/index.njk
 section: archive
-breadcrumbKey: Journal
+breadcrumbKey: Blog
 pagination:
   data: collections.posts
   size: 3
-  alias: journalPosts
-permalink: "{% if pagination.pageNumber == 0 %}/journal/index.html{% else %}/journal/page/{{ pagination.pageNumber + 1 }}/index.html{% endif %}"
+  alias: blogPosts
+permalink: "{% if pagination.pageNumber == 0 %}/blog/index.html{% else %}/blog/page/{{ pagination.pageNumber + 1 }}/index.html{% endif %}"
 ---
 <div class="content-grid">
   <div class="stack-rows">
@@ -17,12 +17,16 @@ permalink: "{% if pagination.pageNumber == 0 %}/journal/index.html{% else %}/jou
       <span slot="title">archive.log</span>
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Journal archive</p>
-          <h1 class="section-title">Posts with read time, tags, and feed support</h1>
+          <p class="eyebrow">Blog archive</p>
+          <h1 class="section-title">My unscientific lab notebook</h1>
+        </div>
+        <div class="section-heading__actions" role="group" aria-label="Subscribe to the blog">
+          {% button88 "RSS FEED", "/feed.xml", "laser" %}
+          {% button88 "JSON FEED", "/feed.json", "laser-dark" %}
         </div>
       </div>
       <div class="panel-grid">
-        {% for post in journalPosts %}
+        {% for post in blogPosts %}
           <article class="post-card h-entry">
             <p class="post-card__meta">
               <time class="dt-published" datetime="{{ post.date | machineDate }}">{{ post.date | formatDate }}</time>
@@ -45,7 +49,7 @@ permalink: "{% if pagination.pageNumber == 0 %}/journal/index.html{% else %}/jou
         {% endfor %}
       </div>
       {% if pagination.pages.length > 1 %}
-        <nav class="pagination" aria-label="Journal pagination">
+        <nav class="pagination" aria-label="Blog pagination">
           <div>
             {% if pagination.href.previous %}<a class="text-link" href="{{ pagination.href.previous }}">← Newer posts</a>{% endif %}
           </div>
@@ -62,7 +66,6 @@ permalink: "{% if pagination.pageNumber == 0 %}/journal/index.html{% else %}/jou
       <span slot="title">feeds.opml</span>
       <div class="sidebar-block">
         <p class="eyebrow">Subscribe</p>
-        <p class="home-note">Publish once, syndicate widely, and leave a clean feed behind for other humans.</p>
         <div class="badge-wall">
           {% button88 "RSS FEED", "/feed.xml", "laser" %}
           {% button88 "JSON FEED", "/feed.json", "laser-dark" %}

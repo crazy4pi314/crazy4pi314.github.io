@@ -14,12 +14,12 @@ const webmentionApi = process.env.WEBMENTION_API || "";
 
 export default {
   title: "Dr. Sarah Kaiser",
-  description: "Sarah Kaiser's homepage: code, lasers, community.",
+  description: "Sarah Kaiser: scientist, maker, community builder.",
   url: siteUrl,
   language: "en",
   locale: "en_US",
   defaultTheme: "auto",
-  tagline: "code. lasers. community.",
+  tagline: "scientist, maker, community builder.",
   heroLead:
     "I'm an **experimental physicist turned software developer** with 15+ years building and managing cutting-edge tech projects. I write books, cut things with lasers, and hang out with my pup Chewie 🐕💖",
   features: {
@@ -53,7 +53,7 @@ export default {
   },
   navigation: [
     { label: "Home", url: "/" },
-    { label: "Journal", url: "/journal/" },
+    { label: "Blog", url: "/blog/" },
     { label: "Events", url: "/events/" },
     { label: "Projects", url: "/projects/", feature: "projects" },
     { label: "Books", url: "/books/" },
@@ -148,7 +148,7 @@ export default {
     },
     {
       name: "RSS",
-      detail: "RSS and JSON feeds are generated out of the box for journal posts."
+      detail: "RSS and JSON feeds are generated out of the box for blog posts."
     },
     {
       name: "WebC",

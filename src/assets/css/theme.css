@@ -641,6 +641,18 @@ html[data-accent="laser-dark"] {
     margin-bottom: 1rem;
   }
 
+  .section-heading > :first-child {
+    flex: 1 1 16rem;
+    min-width: 0;
+  }
+
+  .section-heading__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin-inline-start: auto;
+  }
+
   .panel-grid {
     display: grid;
     gap: 1rem;

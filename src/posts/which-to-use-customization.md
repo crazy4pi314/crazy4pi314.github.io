@@ -52,7 +52,7 @@ My favorite customization option (and something I set up for nearly every projec
 
 ### Profiles
 
-[Profiles](https://code.visualstudio.com/docs/editor/profiles) in VS Code are a way to specify everything about the editor, without anything about the execution environment. See my [earlier blog post](/journal/vscode-profiles/) to learn more about how I use profiles 😄
+[Profiles](https://code.visualstudio.com/docs/editor/profiles) in VS Code are a way to specify everything about the editor, without anything about the execution environment. See my [earlier blog post](/blog/vscode-profiles/) to learn more about how I use profiles 😄
 
 ### Extension Packs
 

@@ -28,7 +28,7 @@ Retro Garden is an open source Eleventy theme for personal sites that want Indie
 - Tailwind CSS 4 plus custom retro component styles
 - RSS and JSON feeds, sitemap, robots file, web manifest, and themed 404 page
 - Eleventy WebC components and is-land progressive enhancement
-- Journal pagination, read time, tag archives, breadcrumbs, and previous/next metadata
+- Blog pagination, read time, tag archives, breadcrumbs, and previous/next metadata
 - Official Eleventy syntax highlighting
 - Post share links with copy-to-clipboard support
 - Optional sidebars, share links, analytics, webmentions, and sample sections
@@ -85,7 +85,7 @@ To process a local content image, add a normal Markdown or HTML `img` element. Y
 - `src/_data/site.js` stores the main site identity, navigation, palettes, and social links
 - `src/_includes/layouts/base.njk` controls the shared shell, header, footer, and metadata
 - `src/_includes/layouts/page.njk` renders full-width pages with an optional sidebar
-- `src/_includes/layouts/post.njk` renders journal posts, share links, and the author panel
+- `src/_includes/layouts/post.njk` renders blog posts, share links, and the author panel
 - `src/_includes/partials/breadcrumbs.njk` renders Eleventy Navigation breadcrumbs
 - `src/_includes/partials/share-links.njk` contains the reusable share section
 - `src/_includes/partials/webmentions.njk` renders optional reactions and replies
