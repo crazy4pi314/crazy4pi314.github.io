@@ -28,6 +28,7 @@ export default {
     marquee: false,
     ogImages: true,
     postSidebars: true,
+    projects: false,
     responsiveImages: true,
     sampleContent: true,
     search: true,
@@ -54,7 +55,7 @@ export default {
     { label: "Home", url: "/" },
     { label: "Journal", url: "/journal/" },
     { label: "Events", url: "/events/" },
-    { label: "Projects", url: "/projects/" },
+    { label: "Projects", url: "/projects/", feature: "projects" },
     { label: "Books", url: "/books/" },
     { label: "Search", url: "/search/", feature: "search" },
     { label: "About", url: "/about/" }

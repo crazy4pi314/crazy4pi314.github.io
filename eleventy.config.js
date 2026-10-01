@@ -185,6 +185,17 @@ export default function (eleventyConfig) {
       ]
     }
   });
+
+  if (!site.features.projects) {
+    // Books share the projects folder, so only drop non-publication projects and the index.
+    eleventyConfig.addPreprocessor("projects-feature-flag", "njk,md", data => {
+      const inputPath = data.page.inputPath.replace(/\\/g, "/");
+      const tags = [data.tags || []].flat();
+      if (inputPath.endsWith("/src/projects.njk")) return false;
+      if (inputPath.includes("/src/projects/") && !tags.includes("publication")) return false;
+    });
+  }
+
   if (site.features.responsiveImages) {
     eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
       formats: ["avif", "webp", "auto"],
