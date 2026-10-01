@@ -13,18 +13,19 @@ const pingbackEndpoint = process.env.PINGBACK_ENDPOINT || "";
 const webmentionApi = process.env.WEBMENTION_API || "";
 
 export default {
-  title: "Retro Garden",
-  description: "Retro Garden is an open source Eleventy theme that blends IndieWeb publishing habits with bright, hand-made early-web energy.",
+  title: "Dr. Sarah Kaiser",
+  description: "Sarah Kaiser's homepage: code, lasers, community.",
   url: siteUrl,
   language: "en",
   locale: "en_US",
-  defaultPalette: "system",
-  tagline: "Dial-up soul, garden-path links, modern static bones.",
+  defaultTheme: "auto",
+  tagline: "code. lasers. community.",
   heroLead:
-    "Build a **small web home** with responsive images, static search, RSS, WebC components, OG cards, IndieWeb hooks, and accessible defaults without sanding off the weird edges that make personal sites memorable.",
+    "I'm an **experimental physicist turned software developer** with 15+ years building and managing cutting-edge tech projects. I write books, cut things with lasers, and hang out with my pup Chewie 🐕💖",
   features: {
     analytics: Boolean(tinylyticsId),
-    breadcrumbs: true,
+    breadcrumbs: false,
+    marquee: false,
     ogImages: true,
     postSidebars: true,
     responsiveImages: true,
@@ -40,44 +41,32 @@ export default {
     webmentionEndpoint,
     pingbackEndpoint,
     webmentionApi,
-    relMe: ["https://github.com/kylereddoch"]
+    relMe: ["https://github.com/crazy4pi314", "https://mathstodon.xyz/@crazy4pi314"]
   },
   author: {
-    name: "Your Name",
-    email: "hello@example.com",
-    url: siteUrl,
+    name: "Sarah Kaiser",
+    email: "sckaiser@sckaiser.com",
+    url: "https://sckaiser.dev",
     summary:
-      "Independent publisher, hand-coder, and keeper of a brightly opinionated corner of the internet."
+      "Experimental physicist turned software developer. PhD in Quantum Computing, PSF Fellow, and developer advocate. Scientist, maker, community builder."
   },
   navigation: [
     { label: "Home", url: "/" },
     { label: "Journal", url: "/journal/" },
+    { label: "Events", url: "/events/" },
+    { label: "Projects", url: "/projects/" },
+    { label: "Books", url: "/books/" },
     { label: "Search", url: "/search/", feature: "search" },
-    { label: "Style Guide", url: "/style-guide/" },
-    { label: "Customize", url: "/customize/" },
-    { label: "About", url: "/about/" },
-    { label: "Tags", url: "/tags/" }
+    { label: "About", url: "/about/" }
   ],
   badges: [
-    { label: "RSS FEED", url: "/feed.xml", accent: "ember" },
-    { label: "SEARCH", url: "/search/", accent: "midnight", feature: "search" },
-    { label: "STYLE GUIDE", url: "/style-guide/", accent: "surf" },
-    { label: "CUSTOMIZE", url: "/customize/", accent: "mint" },
-    { label: "TAG CLOUD", url: "/tags/", accent: "ember" }
+    { label: "RSS FEED", url: "/feed.xml", accent: "laser" },
+    { label: "GITHUB", url: "https://github.com/crazy4pi314", accent: "laser-dark" },
+    { label: "MASTODON", url: "https://mathstodon.xyz/@crazy4pi314", accent: "laser" },
+    { label: "TWITCH", url: "https://www.twitch.tv/crazy4pi314", accent: "laser-dark" },
+    { label: "LINKEDIN", url: "https://www.linkedin.com/in/sckaiser1/", accent: "laser" }
   ],
   examplePages: [
-    {
-      label: "Style Guide",
-      url: "/style-guide/",
-      layout: "Full width page",
-      note: "Shows typography, badges, panels, code blocks, and the full palette system in one place."
-    },
-    {
-      label: "Customize",
-      url: "/customize/",
-      layout: "Optional sidebar page",
-      note: "Maps which parts of the theme can be removed, swapped, or extended without rebuilding the whole starter."
-    },
     {
       label: "Search",
       url: "/search/",
@@ -94,51 +83,27 @@ export default {
   ],
   palettes: [
     {
-      name: "Ember",
-      slug: "ember",
-      vibe: "sunset modem glow",
-      note: "Warm oranges with a bright blue companion accent. This is the most overtly nostalgic default.",
+      name: "Laser Light",
+      slug: "laser",
+      vibe: "neon optics lab",
+      note: "The light site theme: electric pink and blue over cool, bright neutral surfaces.",
       swatches: [
-        { label: "Main", value: "#ef7f45" },
-        { label: "Soft", value: "#fff1dd" },
-        { label: "Strong", value: "#b94f18" },
+        { label: "Main", value: "#ff7cfe" },
+        { label: "Soft", value: "#f2e2f7" },
+        { label: "Strong", value: "#9a09be" },
         { label: "Secondary", value: "#3f93ff" }
       ]
     },
     {
-      name: "Surf",
-      slug: "surf",
-      vibe: "icy portal chrome",
-      note: "Cool blue panels with teal highlights. Good when you want the retro shell to feel lighter and more technical.",
+      name: "Laser Dark",
+      slug: "laser-dark",
+      vibe: "after-hours optics lab",
+      note: "The Laser palette after dark, with cool charcoal surfaces, luminous pink links, and brighter blue highlights.",
       swatches: [
-        { label: "Main", value: "#2578e7" },
-        { label: "Soft", value: "#e5f3ff" },
-        { label: "Strong", value: "#174da2" },
-        { label: "Secondary", value: "#17b7b3" }
-      ]
-    },
-    {
-      name: "Mint",
-      slug: "mint",
-      vibe: "garden terminal",
-      note: "A greener palette that leans a little more handmade and zine-like while still keeping strong contrast.",
-      swatches: [
-        { label: "Main", value: "#00a878" },
-        { label: "Soft", value: "#e8fff5" },
-        { label: "Strong", value: "#076451" },
-        { label: "Secondary", value: "#f28f3b" }
-      ]
-    },
-    {
-      name: "Midnight",
-      slug: "midnight",
-      vibe: "after-hours CRT garden",
-      note: "A true dark palette with violet and electric green accents. System mode selects it automatically for visitors who prefer dark color schemes.",
-      swatches: [
-        { label: "Main", value: "#9b8cff" },
-        { label: "Soft", value: "#272447" },
-        { label: "Strong", value: "#c9c2ff" },
-        { label: "Secondary", value: "#62e6a7" }
+        { label: "Main", value: "#ff8cff" },
+        { label: "Soft", value: "#35243b" },
+        { label: "Strong", value: "#ffb4ff" },
+        { label: "Secondary", value: "#77b6ff" }
       ]
     }
   ],
@@ -223,9 +188,11 @@ export default {
     }
   ],
   social: [
-    { label: "Email", url: "mailto:hello@example.com" },
-    { label: "GitHub", url: "https://github.com/kylereddoch/retro-garden-eleventy-theme", relMe: true },
-    { label: "Vercel Demo", url: siteUrl },
+    { label: "Email", url: "mailto:sckaiser@sckaiser.com" },
+    { label: "GitHub", url: "https://github.com/crazy4pi314", relMe: true },
+    { label: "Mastodon", url: "https://mathstodon.xyz/@crazy4pi314", relMe: true },
+    { label: "LinkedIn", url: "https://www.linkedin.com/in/sckaiser1/" },
+    { label: "Twitch", url: "https://www.twitch.tv/crazy4pi314" },
     { label: "RSS", url: "/feed.xml" }
   ]
 };

@@ -1,0 +1,40 @@
+---
+layout: layouts/base.njk
+title: Projects
+description: Technical, creative, and community projects by Sarah Kaiser.
+eyebrow: projects/index.njk
+section: project archive
+breadcrumbKey: Projects
+eleventyNavigation:
+  key: Projects
+---
+<div class="content-grid content-grid--single">
+  <div class="stack-rows">
+    <retro-panel>
+      <span slot="title">projects/</span>
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Things I make</p>
+          <h1 class="section-title">Projects</h1>
+        </div>
+      </div>
+      <div class="project-grid">
+        {% for project in collections.projects %}
+          {% if "publication" not in project.data.tags %}
+            <article class="project-card">
+              <p class="project-card__emoji" aria-hidden="true">{{ project.data.emoji or "✦" }}</p>
+              <h2 class="post-card__title"><a href="{{ project.url }}">{{ project.data.title }}</a></h2>
+              {% if project.data.summary %}<p>{{ project.data.summary }}</p>{% endif %}
+              {% set tags = project.data.tags | publicTags %}
+              {% if tags.length %}
+                <ul class="tag-list" aria-label="Project tags">
+                  {% for tag in tags %}<li><a class="tag-pill" href="/tags/{{ tag | slugify }}/">{{ tag }}</a></li>{% endfor %}
+                </ul>
+              {% endif %}
+            </article>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </retro-panel>
+  </div>
+</div>

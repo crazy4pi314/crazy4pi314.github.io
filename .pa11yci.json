@@ -10,10 +10,14 @@
     "http://127.0.0.1:4173/",
     "http://127.0.0.1:4173/journal/",
     "http://127.0.0.1:4173/journal/page/2/",
-    "http://127.0.0.1:4173/journal/the-small-web-toolkit/",
+    "http://127.0.0.1:4173/journal/github-universe-2022/",
+    "http://127.0.0.1:4173/events/",
+    "http://127.0.0.1:4173/events/hacking-quantum-key-distribution-hardware/",
+    "http://127.0.0.1:4173/projects/",
+    "http://127.0.0.1:4173/projects/abcs-of-engineering/",
+    "http://127.0.0.1:4173/books/",
     "http://127.0.0.1:4173/search/",
-    "http://127.0.0.1:4173/style-guide/",
-    "http://127.0.0.1:4173/customize/",
+    "http://127.0.0.1:4173/tags/",
     "http://127.0.0.1:4173/about/",
     "http://127.0.0.1:4173/404.html"
   ]

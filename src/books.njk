@@ -1,0 +1,33 @@
+---
+layout: layouts/base.njk
+title: Books
+description: Books written or co-authored by Sarah Kaiser.
+eyebrow: books/index.njk
+section: publications
+breadcrumbKey: Books
+eleventyNavigation:
+  key: Books
+---
+<div class="content-grid content-grid--single">
+  <div class="stack-rows">
+    <retro-panel>
+      <span slot="title">books.shelf</span>
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Whatever is fit to print</p>
+          <h1 class="section-title">Books</h1>
+        </div>
+      </div>
+      <div class="book-grid">
+        {% for book in collections.publications %}
+          <a class="book-card" href="{{ book.url }}">
+            <span class="book-card__cover">
+              <img src="{{ book.data.image }}" alt="Cover of {{ book.data.title }}" eleventy:widths="240,480" sizes="(min-width: 48rem) 15rem, 70vw" />
+            </span>
+            <h2 class="book-card__title">{{ book.data.title }}</h2>
+          </a>
+        {% endfor %}
+      </div>
+    </retro-panel>
+  </div>
+</div>

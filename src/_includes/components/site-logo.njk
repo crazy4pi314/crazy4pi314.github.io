@@ -1,0 +1,30 @@
+{#
+  Laser burst mark from the previous site, redrawn as clean geometry so it can be
+  inlined, recoloured per palette, and animated. `logoId` keeps gradient ids unique
+  when the mark appears more than once on a page.
+#}
+<svg
+  class="site-logo {{ logoClass }}"
+  viewBox="0 0 240 140"
+  role="img"
+  aria-label="{{ logoLabel | default('Laser burst logo') }}"
+  focusable="false"
+>
+  <defs>
+    <linearGradient id="logo-beam-{{ logoId | default('main') }}" x1="0" y1="70" x2="240" y2="70" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="var(--logo-start, #80d8ff)" />
+      <stop offset="1" stop-color="var(--logo-end, #ea80fc)" />
+    </linearGradient>
+  </defs>
+  <g
+    fill="none"
+    stroke="url(#logo-beam-{{ logoId | default('main') }})"
+    stroke-width="14"
+    stroke-linecap="round"
+  >
+    <path d="M8 70 H232" />
+    <path d="M60 15 V125" />
+    <path d="M23 33 L97 107" />
+    <path d="M97 33 L23 107" />
+  </g>
+</svg>

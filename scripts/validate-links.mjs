@@ -50,6 +50,10 @@ async function firstExistingPath(urlPath) {
 
 await collectHtmlFiles(outputDirectory);
 
+// Migrated Reveal.js decks under /talks/ are vendored historical archives that ship
+// their own libraries and example pages; they are not theme output to validate.
+const ignoredPagePattern = /^\/talks\//;
+
 const failures = [];
 let checkedLinks = 0;
 const attributePattern = /\b(?:href|src)\s*=\s*["']([^"']+)["']/gi;
@@ -57,6 +61,10 @@ const attributePattern = /\b(?:href|src)\s*=\s*["']([^"']+)["']/gi;
 for (const htmlFile of htmlFiles) {
   const source = await readFile(htmlFile, "utf8");
   const pageUrl = pageUrlForFile(htmlFile);
+
+  if (ignoredPagePattern.test(pageUrl)) {
+    continue;
+  }
 
   for (const match of source.matchAll(attributePattern)) {
     const value = match[1].trim();

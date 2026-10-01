@@ -1,0 +1,5 @@
+{
+  "layout": "layouts/project.njk",
+  "permalink": "/projects/{{ title | slugify }}/index.html",
+  "tags": ["project"]
+}

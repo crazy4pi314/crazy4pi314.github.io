@@ -1,0 +1,62 @@
+---
+layout: layouts/base.njk
+section: event
+breadcrumbKey: Events
+---
+<div class="content-grid content-grid--single">
+  <div class="stack-rows">
+    <retro-panel>
+      <span slot="title">events/{{ page.fileSlug }}.md</span>
+      <article class="entry-shell">
+        <header class="entry-header">
+          <p class="eyebrow">{{ event or "Speaking event" }}</p>
+          <h1 class="entry-title">{{ title }}</h1>
+          {% if subtitle %}<p class="entry-lead">{{ subtitle }}</p>{% endif %}
+          <div class="entry-meta event-meta">
+            <time datetime="{{ page.date | machineDate }}">{{ page.date | formatDate }}</time>
+            {% if location %}<span aria-hidden="true">::</span><span>{{ location }}</span>{% endif %}
+          </div>
+          {% set publicEventTags = tags | publicTags %}
+          {% if publicEventTags.length %}
+            <ul class="tag-list" aria-label="Event tags">
+              {% for tag in publicEventTags %}
+                <li><a class="tag-pill" href="/tags/{{ tag | slugify }}/">{{ tag }}</a></li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </header>
+
+        {% set eventSlides = slides | slideLinks %}
+        {% set assetUrl = eventAsset | resourceUrl %}
+        {% if eventUrl or video or eventSlides.length or code or assetUrl %}
+          <pixel-divider></pixel-divider>
+          <nav class="resource-links" aria-label="Event resources">
+            {% if eventUrl %}<a class="resource-link" href="{{ eventUrl }}">Event page</a>{% endif %}
+            {% if video %}<a class="resource-link" href="{{ video }}">Watch video</a>{% endif %}
+            {% for slide in eventSlides %}
+              <a class="resource-link" href="{{ slide.url }}">{{ slide.label }}</a>
+            {% endfor %}
+            {% if code %}<a class="resource-link" href="{{ code }}">View code</a>{% endif %}
+            {% if assetUrl %}<a class="resource-link" href="{{ assetUrl }}">Event material</a>{% endif %}
+          </nav>
+        {% endif %}
+
+        {% if abstract %}
+          <pixel-divider></pixel-divider>
+          <section class="event-abstract">
+            <p class="eyebrow">Abstract</p>
+            <div class="entry-body">{{ abstract | renderMarkdown | safe }}</div>
+          </section>
+        {% endif %}
+
+        {% if content %}
+          <pixel-divider></pixel-divider>
+          <div class="entry-body">{{ content | safe }}</div>
+        {% endif %}
+
+        <pixel-divider></pixel-divider>
+        <a class="text-link" href="/events/">← All events</a>
+      </article>
+    </retro-panel>
+  </div>
+</div>

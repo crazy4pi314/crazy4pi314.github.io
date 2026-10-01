@@ -17,7 +17,19 @@ import slugify from "slugify";
 import site from "./src/_data/site.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const controlTags = new Set(["all", "nav", "post", "posts"]);
+const controlTags = new Set(["all", "event", "events", "nav", "post", "posts", "project", "publication"]);
+
+const talkDecks = new Set(
+  fs.existsSync(path.join(__dirname, "src/talks"))
+    ? fs
+        .readdirSync(path.join(__dirname, "src/talks"), { withFileTypes: true })
+        .filter(entry => entry.isDirectory())
+        .map(entry => entry.name)
+        // Only link decks that ship a usable Reveal.js runtime; a few legacy decks
+        // reference libraries that were never committed and cannot render.
+        .filter(name => fs.existsSync(path.join(__dirname, "src/talks", name, "js/reveal.js")))
+    : []
+);
 
 function toSlug(value = "") {
   return slugify(String(value), {
@@ -163,11 +175,11 @@ export default function (eleventyConfig) {
           style: "normal"
         },
         {
-          name: "Silkscreen",
+          name: "Chakra Petch",
           data: fs.readFileSync(
-            path.join(__dirname, "node_modules/@fontsource/silkscreen/files/silkscreen-latin-400-normal.woff")
+            path.join(__dirname, "node_modules/@fontsource/chakra-petch/files/chakra-petch-latin-600-normal.woff")
           ),
-          weight: 400,
+          weight: 600,
           style: "normal"
         }
       ]
@@ -200,9 +212,58 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("limit", (values = [], amount = 3) => values.slice(0, amount));
   eleventyConfig.addFilter("concat", (left = [], right = []) => [...left, ...right]);
   eleventyConfig.addFilter("publicTags", (tags = []) => tags.filter(tag => !controlTags.has(tag)));
+  eleventyConfig.addFilter("resourceUrl", value => {
+    if (!value || typeof value !== "string") {
+      return "";
+    }
+
+    if (/^https?:\/\//i.test(value) || value.startsWith("/static/")) {
+      return value;
+    }
+
+    return /\.(pdf|pptx?|key)$/i.test(value) ? `/static/${value.replace(/^\.?\//, "")}` : "";
+  });
+  eleventyConfig.addFilter("slideLinks", value => {
+    if (!value) {
+      return [];
+    }
+
+    const links = [];
+
+    if (typeof value === "object") {
+      if (value.reveal && talkDecks.has(value.reveal)) {
+        links.push({ url: `/talks/${value.reveal}/`, label: "Slides (Reveal.js)" });
+      }
+      if (value.local) {
+        links.push({ url: `/static/${String(value.local).replace(/^\.?\//, "")}`, label: "Slides (PDF)" });
+      }
+      return links;
+    }
+
+    if (typeof value !== "string") {
+      return links;
+    }
+
+    const trimmed = value.trim().replace(/^\.\//, "").replace(/\/$/, "");
+    if (!trimmed) {
+      return links;
+    }
+
+    if (/^https?:\/\//i.test(trimmed)) {
+      links.push({ url: trimmed, label: "View slides" });
+    } else if (talkDecks.has(trimmed)) {
+      links.push({ url: `/talks/${trimmed}/`, label: "Slides (Reveal.js)" });
+    } else if (/\.(pdf|pptx?|key)$/i.test(trimmed)) {
+      links.push({
+        url: trimmed.startsWith("/static/") ? trimmed : `/static/${trimmed.replace(/^\//, "")}`,
+        label: "Slides (PDF)"
+      });
+    }
+
+    return links;
+  });
   eleventyConfig.addFilter("urlencode", value => encodeURIComponent(String(value ?? "")));
   eleventyConfig.addFilter("json", value => JSON.stringify(value));
-  eleventyConfig.addFilter("paletteSlugs", (palettes = []) => palettes.map(palette => palette.slug));
   eleventyConfig.addFilter("isCurrentNavigation", (pageUrl = "", itemUrl = "") => {
     return itemUrl === "/" ? pageUrl === itemUrl : pageUrl.startsWith(itemUrl);
   });
@@ -215,8 +276,8 @@ export default function (eleventyConfig) {
   });
 
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
-  eleventyConfig.addShortcode("button88", (label, href, accent = "ember") => {
-    const safeAccent = ["ember", "surf", "mint", "midnight"].includes(accent) ? accent : "ember";
+  eleventyConfig.addShortcode("button88", (label, href, accent = "laser") => {
+    const safeAccent = ["laser", "laser-dark"].includes(accent) ? accent : "laser";
 
     return `<a class="button-88 button-88--${safeAccent}" href="${escapeHtml(href)}"><span>${escapeHtml(
       label
@@ -227,10 +288,22 @@ export default function (eleventyConfig) {
     return collectionApi.getFilteredByTag("post").reverse();
   });
 
+  eleventyConfig.addCollection("events", collectionApi => {
+    return collectionApi.getFilteredByTag("event").reverse();
+  });
+
+  eleventyConfig.addCollection("projects", collectionApi => {
+    return collectionApi.getFilteredByTag("project").reverse();
+  });
+
+  eleventyConfig.addCollection("publications", collectionApi => {
+    return collectionApi.getFilteredByTag("publication").reverse();
+  });
+
   eleventyConfig.addCollection("tagList", collectionApi => {
     const tags = new Set();
 
-    for (const item of collectionApi.getFilteredByTag("post")) {
+    for (const item of collectionApi.getAll()) {
       for (const tag of item.data.tags || []) {
         if (!controlTags.has(tag)) {
           tags.add(tag);
@@ -242,11 +315,14 @@ export default function (eleventyConfig) {
   });
 
   eleventyConfig.addPassthroughCopy({ "src/assets/js": "assets/js" });
+  eleventyConfig.addPassthroughCopy({ "src/static": "static" });
+  eleventyConfig.addPassthroughCopy({ "src/talks": "talks" });
+  eleventyConfig.ignores.add("src/talks/**");
   eleventyConfig.addPassthroughCopy({
     "node_modules/@fontsource/atkinson-hyperlegible/files": "assets/css/files"
   });
   eleventyConfig.addPassthroughCopy({
-    "node_modules/@fontsource/silkscreen/files": "assets/css/files"
+    "node_modules/@fontsource/chakra-petch/files": "assets/css/files"
   });
   eleventyConfig.addPassthroughCopy({ "src/favicon.svg": "favicon.svg" });
   eleventyConfig.addPassthroughCopy({ "node_modules/@11ty/is-land/is-land.js": "assets/js/is-land.js" });

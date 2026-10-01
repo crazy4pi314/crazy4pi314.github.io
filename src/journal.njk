@@ -37,7 +37,7 @@ permalink: "{% if pagination.pageNumber == 0 %}/journal/index.html{% else %}/jou
             {% if tags.length %}
               <ul class="tag-list" aria-label="Post tags">
                 {% for tag in tags %}
-                  <li><a class="tag-pill" href="/tags/{{ tag | slugify }}/">{{ tag }}</a></li>
+                  <li><span class="tag-pill">{{ tag }}</span></li>
                 {% endfor %}
               </ul>
             {% endif %}
@@ -64,8 +64,8 @@ permalink: "{% if pagination.pageNumber == 0 %}/journal/index.html{% else %}/jou
         <p class="eyebrow">Subscribe</p>
         <p class="home-note">Publish once, syndicate widely, and leave a clean feed behind for other humans.</p>
         <div class="badge-wall">
-          {% button88 "RSS FEED", "/feed.xml", "ember" %}
-          {% button88 "JSON FEED", "/feed.json", "surf" %}
+          {% button88 "RSS FEED", "/feed.xml", "laser" %}
+          {% button88 "JSON FEED", "/feed.json", "laser-dark" %}
         </div>
       </div>
       <pixel-divider></pixel-divider>

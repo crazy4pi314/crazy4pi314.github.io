@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Extending the reach of QKD: Satellite prototype for quantum communication</title>
+
+		<meta name="description" content="Quantum Photonics Connections Workshop, November 2016">
+		<meta name="author" content="Sarah Kaiser">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/blood.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<style type="text/css">
+			.reveal section img {
+				border: none;
+				box-shadow: none;
+				background: none;
+			}
+
+			.two-col-container {
+				width: 100%;
+			}
+
+			.left-col {
+				float: left;
+				width: 50%;
+			}
+
+			.right-col {
+				float: right;
+				width: 50%;
+			}
+		</style>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+<!--==================================================================================-->
+				<section>
+					<h1 style="font-size: 167%; margin-bottom: 0;">Extending the reach of QKD:</h1>
+					<h3 style="font-size: 110%">Satellite prototype for quantum communication</h3>
+					<hr />
+
+					<p>
+						<small>
+							<strong><a href="http://www.sckaiser.com">Sarah Kaiser</a></strong> &bull;
+							Macquarie University<br>
+						<a href="http://www.sckaiser.com/talks/photonics_connections_2016/">www.sckaiser.com/talks/photonics_connections_2016</a>
+						</small>
+					</p>
+
+					<aside class="notes">
+						Why space? Gotta go gotta get to space
+					</aside>
+				</section>
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+						## Quantum Key Distribution (QKD) ##
+				
+						- Objective: share a secret key between Alice and Bob
+						- Reviews: [doi:10/bjxpf6](http://doi.org/bjxpf6) and [doi:10/dshjwp](http://doi.org/dshjwp)
+
+						<img src="/static/img/figures/qkd-concept-u.png" alt="diagram for qkd concept" style="width: 80%;" />
+
+						Note:
+						Key EXPANSION protocol, relate to DH 
+					</script>	
+				</section>
+<!--==================================================================================-->
+				<section  data-markdown>
+					<script type="text/template">
+						### Example QKD protocol: BB84 ###
+						<img style="width: 90%" data-src="/static/img/figures/idq-bb84.png" alt="BB84 diagram">	
+						<a href="http://doi.org/bdnw">					
+								doi:10/3d6
+						</a>
+						Note:
+						Mention bob is polarization analyzer.
+						SIFTING,ERROR CORRECTION, PRIVACY AMPLIFICATION
+					</script>
+				</section>
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+						## QKD performance ##
+				
+						- Security of transmission is tested with the quantum bit error rate (sifted key): `\[\text{QBER} = \frac{n_{\text{wrong}}}{n_{\text{wrong}}+n_{\text{right}}}\]`	
+						- Required key generation threshold `$\text{QBER}\lesssim  10\%$`
+						
+						Note:
+						Explain how bad QBER breaks security/threshold works
+					</script>	
+				</section>
+<!--==================================================================================-->
+				<section >	
+					<h3>Commercial QKD devices</h3>
+					<div class="two-col-container">
+						<div class="left-col">
+							<ul>
+								<li><a href="http://www.idquantique.com/">id Quantique</a></li>
+								<li><a href="http://www.quintessencelabs.com/">QuintessenceLabs</a></li>
+							</ul>
+						</div>	
+						<div class="right-col">
+							<ul>
+								<li><a href="http://www.magiqtech.com/Home.html">MagiQ</a></li>
+								<li><a href="http://www.sequrenet.com/">SeQureNet</a></li>
+							</ul>
+						</div>
+						<!-- <p>
+							Toshiba, Hewlett Packard, IBM, Mitsubishi, NEC, NTT, AIT	
+						</p> -->
+					</div>
+				
+					<img src="/static/img/figures/idqfront.jpg" alt="id Quantique Clavis 2" style="width: 100%;" />
+				
+				</section>
+<!--==================================================================================-->				
+				<section>
+					<h2> Why don't we all have quantum keys? </h2>
+					<ol>
+						<li><p> Distance/Loss: $\approx 300$ km</p></li>
+						<li><p> Hardware developments </p></li> 
+						<li><p> Realistic device security models </p></li>
+					</ol>
+					<aside class="notes">
+        				Dont say rep rate
+    				</aside>
+				</section>
+<!--==================================================================================-->
+				<section data-background-image="/static/img/figures/sat-concept.png"
+				         data-background-position="bottom"
+				         data-background-size="80%">
+						<h3 style="position: relative; top: -2em;">
+							One approach: <br> QKD receiver satellite
+						</h3>
+						<!-- <img data-src="/static/img/figures/sat-concept.png" alt="Reciever payload schematic"> -->
+				</section>
+
+				<section  data-markdown>
+					<script type="text/template">
+						### Space QKD losses ###
+						[doi:10/bdnw](http://doi.org/bdnw)
+
+						<a href="http://doi.org/bdnw">
+							<img src="/static/img/figures/loss-u.png" style="width: 90%" alt="Space optical losses doi:10/bdnw">
+						</a>
+					</script>
+				</section>
+
+				<section  data-markdown>
+					<script type="text/template">
+						## Uplink QKD system ##
+
+						- Pros: 
+						  - Configurable source
+						  - Simpler space hardware
+						  - Other space QI experiments [doi:10/bdqf](http://doi.org/bdqf)
+						- Cons: 
+						  - Higher loss
+						  - Detector radiation damage [doi:10/dg8xhd](http://doi.org/dg8xhd)
+
+						Note:
+						Dark count rates->QBER
+					</script>
+				</section>
+
+				<section  data-markdown>
+					<script type="text/template">
+						### Uplink QKD receiver satellite ###
+						<img src="/static/img/figures/reciever_schematic.png" alt="Reciever payload schematic">
+						
+					</script>
+				</section>
+
+<!--==================================================================================-->
+				<section>	
+					<h2>Integrated optical assembly (IOA)</h2>
+					<div class="two-col-container">
+						<div class="left-col" style="width: 53%">
+							<img src="/static/img/figures/comp-ioa-schema.png" alt="IOA schematic">
+
+						</div>
+						<div class="right-col" style="width: 47%">
+							<img data-src="/static/img/figures/comp-ioa-photo.jpg" alt="IOA photo">
+						</div>
+					</div>
+					<aside class="notes">
+        				This is "Bob". 
+    				</aside>
+				</section>
+<!--==================================================================================-->		
+				<section>	
+					<h2>Single photon detector unit</h2>
+					<div class="two-col-container">
+						<div class="left-col" style="width: 43%">
+							<img src="/static/img/figures/comp-detag-detectorpkg.jpg" alt="detector unit">
+
+						</div>
+						<div class="right-col" style="width: 57%">
+							<img data-src="/static/img/figures/comp-detag-det-pcb.png" alt="Geometry model">
+						</div>
+					</div>
+				</section>
+<!--==================================================================================-->
+				<section data-markdown>
+					<script type="text/template">
+						### Average Detector Performance ###
+						|                                 |               |
+						| -------------                   |---------------|
+						| Dark counts                     | 24 cps        |
+						| Detector efficiency             | 50.4%         |
+						| Timing jitter                   | 529 ps        |
+						| Dead time                       | 18.9 &micro;s / 52.9 kHz |
+						|                                 |               |
+						-20 C, 27V over breakdown, 25 mV threshold  
+						
+						Note:
+						1-1/e=63.2% full
+						what are important for sat 
+					</script>
+				</section>
+
+<!--==================================================================================-->
+				<section  data-markdown>
+					<script type="text/template">
+						### QKD receiver lab testing ###
+						<img data-src="/static/img/figures/qkdr-hardware.png" alt="lab hardware demo" style="width: 70%">
+					</script>
+				</section>
+<!--==================================================================================-->
+				<section  data-markdown >
+					<script type="text/template">
+						### Lab testing results ###
+						<!-- <img data-src="/static/img/figures/recunit.jpg" alt="Reciever hardware"> -->
+						|                                 |                               |
+						| -------------                   |---------------                |
+						| Total loss <br> (channel + receiver) | 43.7dB <br>(38.7 dB + 5 dB)|
+						| Duration                        | 100 s                         |
+						| Average QBER                    | 3.14%                         |
+						| Finite size secure key length   | 16.3 kbits |
+						|                   |             |
+						Note:
+						what is AES? symmetric key cypher
+					</script>
+				</section>	
+<!--==================================================================================-->
+				<section>	
+					<h2>Acquisition pointing and tracking (APT)</h2>
+					<div class="two-col-container">
+						<div class="left-col" style="width: 50%">
+							<img src="/static/img/figures/comp-apt-cad.png" alt="detector unit">
+
+						</div>
+						<div class="right-col" style="width: 50%">
+							<img data-src="/static/img/figures/comp-apt-integration-photo.jpg" alt="Geometry model">
+						</div>
+					</div>
+					<ul>
+						<li><p> Transmission, raw key rate, and QBER uniform over pointing range</p></li>
+					</ul>
+					<aside class="notes">
+        				lowest order adaptive optics, beam steering. extensive testing and characterization. 
+    				</aside>
+				</section>
+<!--==================================================================================-->
+				<section  data-markdown>
+					<script type="text/template">
+						### Airborne receiver hardware ###
+						- Rugged electronics and mounting for more extreme conditions (-40° C and vibration)
+						- Fine pointing unit to help reduce loss in receiver optic
+						<div class="two-col-container">
+							<div class="left-col">
+								<img data-src="/static/img/figures/plane-electronics.jpg" alt="Reciever control electronics" >
+							</div>
+							<div class="right-col">
+								<img data-src="/static/img/figures/plane-telescope.jpg" alt="Reciever telescope" >
+							</div>
+						</div>
+
+					</script>
+				</section>
+<!--==================================================================================-->
+				<section  data-markdown>
+					<script type="text/template">
+						### First flights ###
+						
+						<img src="/static/img/figures/risk-wifi-test.png" alt="Initial test flights" style="width: 50%">
+						
+						- 30-250 s passes with angular rates ~1 degree/s
+						- ~750000 bits of final key, with finite size and decoy state BB84 protocol
+						
+					</script>
+				</section>
+<!--==================================================================================-->
+				<section  data-markdown>
+					<script type="text/template">
+					## What next? ##
+
+					- Finish processing current flight data
+					- Work on bringing down the cost of QComm satelights 
+					- Standards and hardware certification for QKD
+					</script>
+				</section>
+<!--==================================================================================-->
+				<section data-markdown >
+					<script type="text/template">
+						# Thank you #
+					</script>
+				</section>
+<!--==================================================================================-->
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+				slideNumber: true,
+				 // Turns fragments on and off globally
+				fragments: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/math/math.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

@@ -4,7 +4,7 @@
 {% endif %}
 {% set metaDescription = description or site.description %}
 <!DOCTYPE html>
-<html lang="{{ site.language }}" data-accent="ember" data-accent-choice="{{ site.defaultPalette }}" data-default-accent="{{ site.defaultPalette }}">
+<html lang="{{ site.language }}" data-accent="laser" data-theme-mode="{{ site.defaultTheme }}" data-default-theme="{{ site.defaultTheme }}">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -45,36 +45,32 @@
     <script>
       (() => {
         const root = document.documentElement;
-        const allowedAccents = new Set({{ site.palettes | paletteSlugs | json | safe }});
-        const allowedChoices = new Set([...allowedAccents, "system"]);
+        const modes = new Set(["light", "dark", "auto"]);
         const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
 
-        const resolveAccent = choice => choice === "system"
-          ? (prefersDark.matches ? "midnight" : "ember")
-          : choice;
+        const resolveTheme = mode => mode === "auto"
+          ? (prefersDark.matches ? "laser-dark" : "laser")
+          : mode === "dark" ? "laser-dark" : "laser";
 
         try {
           const params = new URLSearchParams(window.location.search);
-          const queryChoice = params.get("theme");
-          const storedChoice = window.localStorage.getItem("retro-accent");
-          const defaultChoice = root.dataset.defaultAccent || "system";
-          const choice = allowedChoices.has(queryChoice)
-            ? queryChoice
-            : allowedChoices.has(storedChoice)
-              ? storedChoice
-              : defaultChoice;
+          const queryMode = params.get("theme");
+          const storedMode = window.localStorage.getItem("site-theme");
+          const defaultMode = root.dataset.defaultTheme || "auto";
+          const mode = modes.has(queryMode)
+            ? queryMode
+            : modes.has(storedMode)
+              ? storedMode
+              : defaultMode;
+          const theme = resolveTheme(mode);
 
-          const accent = resolveAccent(choice);
-          root.dataset.accentChoice = choice;
-          root.dataset.accent = accent;
-          root.style.colorScheme = accent === "midnight" ? "dark" : "light";
-          document.querySelector("[data-theme-color]")?.setAttribute(
-            "content",
-            accent === "midnight" ? "#0c1118" : "#fff7e8"
-          );
+          root.dataset.themeMode = mode;
+          root.dataset.accent = theme;
+          root.style.colorScheme = theme === "laser-dark" ? "dark" : "light";
+          document.querySelector("[data-theme-color]")?.setAttribute("content", theme === "laser-dark" ? "#11131a" : "#f3f4f7");
         } catch {
-          root.dataset.accentChoice = "ember";
-          root.dataset.accent = "ember";
+          root.dataset.themeMode = "auto";
+          root.dataset.accent = "laser";
           root.style.colorScheme = "light";
         }
       })();
@@ -106,12 +102,14 @@
             {% endif %}
           {% endfor %}
         </nav>
-        <accent-picker></accent-picker>
+        <theme-toggle></theme-toggle>
       </header>
 
-      <site-marquee>
-        Search indexed :: responsive images online :: webmentions ready :: RSS flowing :: accessible by default
-      </site-marquee>
+      {% if site.features.marquee %}
+        <site-marquee>
+          Search indexed :: responsive images online :: webmentions ready :: RSS flowing :: accessible by default
+        </site-marquee>
+      {% endif %}
 
       {% include "partials/breadcrumbs.njk" %}
 
