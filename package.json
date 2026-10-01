@@ -29,11 +29,13 @@
   },
   "dependencies": {
     "@11ty/eleventy-navigation": "^0.1.6",
+    "@fontsource/ubuntu": "^5.3.0",
     "@kevingimbel/eleventy-plugin-mermaid": "^2.1.0",
     "clean-css": "^4.2.1",
     "eleventy-plugin-unfurl": "^0.0.6",
     "html-minifier": "^4.0.0",
-    "reveal.js": "^4.4.0",
+    "katex": "^0.18.10",
+    "reveal.js": "^6.0.2",
     "uglify-es": "^3.3.9"
   }
 }

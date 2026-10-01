@@ -14,11 +14,11 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/dark-aqua.css" id="theme">
+		<link rel="stylesheet" href="/vendor/reveal/dist/reveal.css">
+		<link rel="stylesheet" href="/_includes/assets/reveal-theme/dark-aqua.css" id="theme">
 
 		<!-- Code syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="/vendor/reveal/dist/plugin/highlight/zenburn.css">
 
 		<style type="text/css">
 			.reveal section img {
@@ -59,15 +59,6 @@
 				left: 1%;
 			}
 		</style>
-
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
 
 	</head>
 
@@ -557,16 +548,12 @@ data-background-size="80%">
 
 		</div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
-		<script type="text/x-mathjax-config">
-		  MathJax.Hub.Config({
-		    'HTML-CSS': {
-				preferredFont: null,
-				webFont: 'Gyre-Pagella'
-			}
-		  });
-		</script>
+		<script src="/vendor/reveal/dist/reveal.js"></script>
+        <script src="/vendor/reveal/dist/plugin/markdown.js"></script>
+        <script src="/vendor/reveal/dist/plugin/highlight.js"></script>
+        <script src="/vendor/reveal/dist/plugin/math.js"></script>
+        <script src="/vendor/reveal/dist/plugin/notes.js"></script>
+        <script src="/vendor/reveal/dist/plugin/zoom.js"></script>
 		<script>
 
 			// Full list of configuration options available at:
@@ -577,21 +564,14 @@ data-background-size="80%">
 				history: true,
 				center: true,
 				slideNumber: true,
+                margin: 0.1,
+                maxScale: 1.5,
 				 // Turns fragments on and off globally
     			fragments: true,
 
 				transition: 'slide', // none/fade/slide/convex/concave/zoom
-
-				// Optional reveal.js plugins
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/math/math.js', async: true }
-				]
+                katex: { local: '/vendor/reveal/katex' },
+                plugins: [ RevealMarkdown, RevealHighlight, RevealMath.KaTeX, RevealNotes, RevealZoom ]
 			});
 
 		</script>
@@ -601,19 +581,17 @@ data-background-size="80%">
 		<!-- 2. Create hidden header/footer <div> -->
 	
 
-		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-		<script type="text/javascript">
-			// 3. On Reveal.js ready event, copy header/footer <div> into each `.slide-background` <div>
-			var header = $('#header').html();
-			if ( window.location.search.match( /print-pdf/gi ) ) {
-				Reveal.addEventListener( 'ready', function( event ) {
-					$('.slide-background').append(header);
-				});
-			}
-			else {
-				$('div.reveal').append(header);
-		}
-		</script>
+		<script>
+            Reveal.on('ready', function() {
+                var header = document.getElementById('header').innerHTML;
+                var targets = window.location.search.match(/print-pdf/gi)
+                    ? document.querySelectorAll('.slide-background')
+                    : [document.querySelector('div.reveal')];
+                targets.forEach(function(target) {
+                    target.insertAdjacentHTML('beforeend', header);
+                });
+            });
+        </script>
 
 	</body>
 </html>

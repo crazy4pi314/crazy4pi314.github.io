@@ -117,6 +117,11 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("talks"); 
     eleventyConfig.addPassthroughCopy("admin");
     eleventyConfig.addPassthroughCopy("_includes/assets/");
+    eleventyConfig.addPassthroughCopy({
+        "node_modules/reveal.js/dist": "vendor/reveal/dist",
+        "node_modules/katex/dist": "vendor/reveal/katex/dist",
+        "node_modules/@fontsource/ubuntu/files": "vendor/reveal/fonts/ubuntu"
+    });
 
     /* Markdown Plugins */
     let markdownIt = require("markdown-it");
