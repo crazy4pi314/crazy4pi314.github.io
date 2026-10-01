@@ -118,27 +118,6 @@
       </main>
 
       <footer class="site-footer">
-        <div class="footer-grid">
-          <div class="micro-card">
-            <p class="eyebrow">example pages</p>
-            <ul class="footer-links">
-              {% for item in site.examplePages %}
-                {% if not item.feature or site.features[item.feature] %}
-                  <li><a href="{{ item.url }}">{{ item.label }}</a> <span class="footer-inline-note">:: {{ item.layout }}</span></li>
-                {% endif %}
-              {% endfor %}
-            </ul>
-          </div>
-          <div class="micro-card">
-            <p class="eyebrow">social + note</p>
-            <ul class="footer-links">
-              {% for item in site.social %}
-                <li><a href="{{ item.url }}"{% if item.relMe %} rel="me"{% endif %}>{{ item.label }}</a></li>
-              {% endfor %}
-            </ul>
-            <p class="footer-note">Customize the sample identity data before publishing your own fork.</p>
-          </div>
-        </div>
         <p class="footer-copyright">
           Built with Eleventy, Retro Garden, and <3. {% year %}
         </p>
