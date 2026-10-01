@@ -105,9 +105,9 @@
         <theme-toggle></theme-toggle>
       </header>
 
-      {% if site.features.marquee %}
+      {% if site.features.marquee and site.marquee %}
         <site-marquee>
-          Search indexed :: responsive images online :: webmentions ready :: RSS flowing :: accessible by default
+          {{ site.marquee }}
         </site-marquee>
       {% endif %}
 

@@ -59,6 +59,7 @@ export default {
     { label: "Search", url: "/search/", feature: "search" },
     { label: "About", url: "/about/" }
   ],
+  marquee: "Search indexed :: responsive images online :: webmentions ready :: RSS flowing :: accessible by default",
   badges: [
     { label: "RSS FEED", url: "/feed.xml", accent: "laser" },
     { label: "GITHUB", url: "https://github.com/crazy4pi314", accent: "laser-dark" },
