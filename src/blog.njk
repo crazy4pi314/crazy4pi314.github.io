@@ -21,7 +21,7 @@ permalink: "{% if pagination.pageNumber == 0 %}/blog/index.html{% else %}/blog/p
           <h1 class="section-title">My unscientific lab notebook</h1>
         </div>
         <div class="section-heading__actions" role="group" aria-label="Subscribe to the blog">
-          {% button88 "RSS FEED", "/feed.xml", "laser" %}
+          {% button88 "RSS FEED", "/feed.xml", "laser-dark" %}
           {% button88 "JSON FEED", "/feed.json", "laser-dark" %}
         </div>
       </div>
@@ -63,15 +63,7 @@ permalink: "{% if pagination.pageNumber == 0 %}/blog/index.html{% else %}/blog/p
   </div>
   <aside class="stack-rows">
     <retro-panel>
-      <span slot="title">feeds.opml</span>
-      <div class="sidebar-block">
-        <p class="eyebrow">Subscribe</p>
-        <div class="badge-wall">
-          {% button88 "RSS FEED", "/feed.xml", "laser" %}
-          {% button88 "JSON FEED", "/feed.json", "laser-dark" %}
-        </div>
-      </div>
-      <pixel-divider></pixel-divider>
+      <span slot="title">topics.txt</span>
       <div class="sidebar-block">
         <p class="eyebrow">Popular tags</p>
         <ul class="tag-list">

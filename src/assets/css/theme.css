@@ -156,8 +156,12 @@ html[data-accent="laser-dark"] {
 
   .site-header {
     display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "brand toggle"
+      "nav nav";
     gap: 1rem;
-    align-items: end;
+    align-items: center;
     margin-bottom: 1.25rem;
     border: 3px solid var(--color-line);
     background: linear-gradient(180deg, var(--surface-header-start), var(--surface-header-end));
@@ -165,14 +169,19 @@ html[data-accent="laser-dark"] {
     padding: 1rem;
   }
 
-  @media (min-width: 58rem) {
-    .site-header {
-      grid-template-columns: minmax(0, 1fr) auto;
-    }
+  .site-brand {
+    grid-area: brand;
+    min-width: 0;
+  }
 
-    .site-brand {
-      grid-column: 1 / -1;
-    }
+  .site-header > .site-nav {
+    grid-area: nav;
+  }
+
+  .site-header > theme-toggle,
+  .site-header > is-land {
+    grid-area: toggle;
+    justify-self: end;
   }
 
   .site-brand__link {
