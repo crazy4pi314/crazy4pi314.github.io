@@ -115,37 +115,25 @@ section: welcome screen
   </div>
 
   <aside class="stack-rows">
-    <retro-panel>
-      <span slot="title">profile.card</span>
-      <div class="sidebar-block h-card">
-        <p class="eyebrow">Home page h-card</p>
-        <h2 class="section-title p-name">{{ site.author.name }}</h2>
-        <p class="home-note p-note">{{ site.author.summary }}</p>
-        <ul class="footer-links home-card-links">
-          <li><a class="u-url" href="{{ site.author.url }}">Primary site URL</a></li>
-          <li><a class="u-email" href="mailto:{{ site.author.email }}">Send email</a></li>
-          <li><a href="/about/">Read the about page</a></li>
-        </ul>
-        <div class="badge-wall">
-          {% for badge in site.badges %}
-            {% if not badge.feature or site.features[badge.feature] %}{% button88 badge.label, badge.url, badge.accent %}{% endif %}
-          {% endfor %}
-        </div>
-      </div>
-    </retro-panel>
 
     {% if site.features.sampleContent %}<retro-panel>
       <span slot="title">toolbox.log</span>
       <div class="sidebar-block">
-        <p class="eyebrow">Fetched with Eleventy Fetch</p>
+        <p class="eyebrow">Some of my favorite OSS projects</p>
         <ul class="toolbox-list">
           {% for item in toolbox %}
             <li class="toolbox-list__item">
               <div>
-                <a class="stack-name" href="{{ item.url }}">{{ item.name }}</a>
+                <p class="toolbox-list__name">
+                  <a class="stack-name" href="{{ item.url }}">{{ item.name }}</a>
+                  {% if item.repo %}
+                    <a class="repo-link" href="{{ item.repo }}" aria-label="{{ item.name }} on GitHub" title="{{ item.name }} on GitHub">
+                      <svg viewBox="0 0 16 16" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                    </a>
+                  {% endif %}
+                </p>
                 <p class="stack-description">{{ item.description }}</p>
               </div>
-              <span class="toolbox-version">{{ item.version }}</span>
             </li>
           {% endfor %}
         </ul>
@@ -156,8 +144,7 @@ section: welcome screen
       <span slot="title">neighbors.net</span>
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Inspiration</p>
-          <h2 class="section-title">Sites and starters worth studying</h2>
+          <h2 class="section-title">Interesting people who say interesting things</h2>
         </div>
       </div>
       <ul class="mini-list">

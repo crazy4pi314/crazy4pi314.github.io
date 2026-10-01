@@ -940,6 +940,27 @@ html[data-accent="laser-dark"] {
     font-size: 0.74rem;
   }
 
+  .toolbox-list__name {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin: 0;
+  }
+
+  .repo-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.75rem;
+    min-height: 1.75rem;
+    color: var(--color-ink);
+    border-radius: 2px;
+  }
+
+  .repo-link:hover {
+    color: var(--accent-strong);
+  }
+
   .entry-shell {
     display: grid;
     gap: 1rem;

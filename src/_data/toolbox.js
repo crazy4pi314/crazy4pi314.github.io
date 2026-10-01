@@ -4,36 +4,42 @@ const packages = [
   {
     name: "Eleventy",
     packageName: "@11ty/eleventy",
+    repo: "https://github.com/11ty/eleventy",
     url: "https://www.npmjs.com/package/@11ty/eleventy",
     fallback: "Static-first site generator"
   },
   {
     name: "Eleventy Image",
     packageName: "@11ty/eleventy-img",
+    repo: "https://github.com/11ty/image",
     url: "https://www.npmjs.com/package/@11ty/eleventy-img",
     fallback: "Responsive build-time image processing"
   },
   {
     name: "Pagefind",
     packageName: "pagefind",
+    repo: "https://github.com/Pagefind/pagefind",
     url: "https://www.npmjs.com/package/pagefind",
     fallback: "Private static search"
   },
   {
     name: "WebC",
     packageName: "@11ty/eleventy-plugin-webc",
+    repo: "https://github.com/11ty/eleventy-plugin-webc",
     url: "https://www.npmjs.com/package/@11ty/eleventy-plugin-webc",
     fallback: "Component authoring for Eleventy"
   },
   {
     name: "is-land",
     packageName: "@11ty/is-land",
+    repo: "https://github.com/11ty/is-land",
     url: "https://www.npmjs.com/package/@11ty/is-land",
     fallback: "Partial hydration islands"
   },
   {
     name: "Tailwind",
     packageName: "tailwindcss",
+    repo: "https://github.com/tailwindlabs/tailwindcss",
     url: "https://www.npmjs.com/package/tailwindcss",
     fallback: "Utility-first styling engine"
   }

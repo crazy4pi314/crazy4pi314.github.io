@@ -111,82 +111,31 @@ export default {
   ],
   stack: [
     {
-      name: "Eleventy Fetch",
-      detail: "Caches remote data so the build stays friendly to APIs and still works offline after a successful fetch."
+      name: "Home Assistant",
+      detail: "Open-source home automation that puts local control and privacy first.",
+      url: "https://github.com/home-assistant/core"
     },
     {
-      name: "OG Image Generation",
-      detail: "Build-time social cards powered by eleventy-plugin-og-image and local fonts."
+      name: "Eleventy",
+      detail: "A simpler static site generator for transforming templates and content into fast websites.",
+      url: "https://github.com/11ty/eleventy"
     },
     {
-      name: "Eleventy Image",
-      detail: "Local images receive responsive dimensions, modern formats, lazy loading, and stable aspect ratios at build time."
-    },
-    {
-      name: "Pagefind Search",
-      detail: "A private static search index is generated after Eleventy writes the site—no hosted search account is required."
-    },
-    {
-      name: "IndieWeb Hooks",
-      detail: "Optional rel-me identity links, webmention endpoints, reply and like displays, and stronger author microformats are ready to configure."
-    },
-    {
-      name: "Shortcodes",
-      detail: "Custom theme helpers like the 88x31 button shortcode are wired into markdown and templates."
-    },
-    {
-      name: "Markdown",
-      detail: "Markdown-it is configured with heading anchors and attribute support for rich long-form posts."
-    },
-    {
-      name: "Accessibility",
-      detail: "Skip links, focus states, motion guards, semantic structure, and a Pa11y CI script are included."
-    },
-    {
-      name: "Tailwind CSS",
-      detail: "Tailwind 4 powers utilities while the theme layers in custom retro components and tokens."
-    },
-    {
-      name: "RSS",
-      detail: "RSS and JSON feeds are generated out of the box for blog posts."
-    },
-    {
-      name: "WebC",
-      detail: "Reusable components handle marquee strips, retro windows, dividers, and the palette switcher."
-    },
-    {
-      name: "is-land",
-      detail: "The accent palette switcher hydrates only when it is useful instead of loading everything up front."
-    },
-    {
-      name: "Read Time",
-      detail: "Posts display estimated reading time using the reading-time package."
-    },
-    {
-      name: "Slugify",
-      detail: "Clean tag and post URLs are generated with slugify."
+      name: "Dev Containers",
+      detail: "An open specification for creating reproducible, full-featured development environments in containers.",
+      url: "https://github.com/devcontainers/spec"
     }
   ],
   neighborhood: [
     {
-      name: "zachleat.com",
-      url: "https://www.zachleat.com/",
-      note: "A practical IndieWeb-feeling personal site with strong publishing ergonomics."
+      name: "cassidoo",
+      url: "https://cassidoo.co/",
+      note: "Cassidy makes memes and dreams and software."
     },
     {
-      name: "Eleventy Excellent",
-      url: "https://github.com/madrilene/eleventy-excellent",
-      note: "A thoughtful Eleventy starter with polished information architecture and modern defaults."
-    },
-    {
-      name: "Retroweird",
-      url: "https://github.com/brennanbrown/retroweird",
-      note: "A direct line to playful 90s design language without abandoning readability."
-    },
-    {
-      name: "11ty Indie Web Blog Starter",
-      url: "https://github.com/brennanbrown/11ty-Indie-Web-Blog-Starter",
-      note: "A useful reference for IndieWeb-flavored structure and publishing patterns."
+      name: "glyph",
+      url: "https://blog.glyph.im/",
+      note: "Glyph is mostly a computer programmer, mostly in Python."
     }
   ],
   social: [
