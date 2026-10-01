@@ -1142,19 +1142,29 @@ html[data-accent="laser-dark"] {
   .share-list {
     display: flex;
     flex-wrap: wrap;
+    align-items: stretch;
     gap: 0.7rem;
     margin: 0;
     padding: 0;
     list-style: none;
   }
 
+  .share-list > li {
+    display: flex;
+  }
+
   .share-link {
+    display: inline-flex;
+    align-items: center;
+    margin: 0;
     border: 2px solid var(--color-line);
     background: var(--accent-soft);
     color: var(--color-ink);
     text-decoration: none;
     font-family: var(--font-display);
     font-size: 0.72rem;
+    font-weight: 400;
+    line-height: 1.2;
     letter-spacing: 0.05em;
     text-transform: uppercase;
     padding: 0.55rem 0.8rem;
