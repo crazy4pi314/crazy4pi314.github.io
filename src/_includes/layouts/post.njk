@@ -9,6 +9,7 @@ section: blog entry
       <span slot="title">{{ eyebrow or "blog-entry.md" }}</span>
       <article class="entry-shell h-entry">
         <header class="entry-header">
+          {% if draft %}<p class="draft-notice" role="note">Draft: not listed, in feeds, or indexed</p>{% endif %}
           <p class="eyebrow">{{ section }}</p>
           <h1 class="entry-title p-name">{{ title }}</h1>
           <a class="u-url visually-hidden" href="{{ page.url | absoluteUrl(site.url) }}">Permalink for {{ title }}</a>

@@ -1477,6 +1477,17 @@ html[data-accent="laser-dark"] {
     margin-top: 1.25rem;
   }
 
+  .draft-notice {
+    display: inline-block;
+    margin: 0 0 0.75rem;
+    padding: 0.2rem 0.6rem;
+    border: 2px dashed var(--accent-strong);
+    color: var(--color-ink);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
   .site-footer {
     margin-top: 2rem;
     display: grid;

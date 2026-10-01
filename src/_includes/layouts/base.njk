@@ -113,7 +113,7 @@
 
       {% include "partials/breadcrumbs.njk" %}
 
-      <main id="content" class="site-main" data-pagefind-body>
+      <main id="content" class="site-main"{% if not noindex %} data-pagefind-body{% endif %}>
         {{ content | safe }}
       </main>
 

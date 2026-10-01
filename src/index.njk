@@ -73,45 +73,6 @@ section: welcome screen
       </div>
     </retro-panel>
 
-    <retro-panel>
-      <span slot="title">palettes.css</span>
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">Built-out palettes</p>
-          <h2 class="section-title">Laser light and dark</h2>
-        </div>
-      </div>
-      <div class="palette-grid">
-        {% for palette in site.palettes %}
-          <article class="palette-card palette-card--{{ palette.slug }}">
-            <p class="eyebrow">{{ palette.vibe }}</p>
-            <h3 class="post-card__title">{{ palette.name }}</h3>
-            <p>{{ palette.note }}</p>
-            <div class="palette-card__window">
-              <div class="palette-card__bar">
-                <span>{{ palette.slug }}.theme</span>
-                <div class="palette-card__dots"><span></span><span></span><span></span></div>
-              </div>
-              <div class="palette-card__body">
-                <div class="palette-swatch-grid">
-                  {% for swatch in palette.swatches %}
-                    <div class="palette-swatch">
-                      <span class="palette-swatch__chip" style="background: {{ swatch.value }}"></span>
-                      <strong>{{ swatch.label }}</strong>
-                      <code>{{ swatch.value }}</code>
-                    </div>
-                  {% endfor %}
-                </div>
-                <div class="badge-wall">
-                  {% button88 "RSS FEED", "/feed.xml", palette.slug %}
-                </div>
-              </div>
-            </div>
-          </article>
-        {% endfor %}
-      </div>
-    </retro-panel>
-
   </div>
 
   <aside class="stack-rows">
