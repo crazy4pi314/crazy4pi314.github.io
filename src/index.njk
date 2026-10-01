@@ -68,29 +68,6 @@ section: welcome screen
       </div>
     </retro-panel>
 
-    {% if site.features.sampleContent %}<retro-panel>
-      <span slot="title">examples/</span>
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">Example pages</p>
-          <h2 class="section-title">Built to show what you can keep, trim, or remix</h2>
-        </div>
-      </div>
-      <ul class="example-list">
-        {% for item in site.examplePages %}
-          {% if not item.feature or site.features[item.feature] %}
-            <li class="example-list__item">
-              <div>
-                <a class="stack-name" href="{{ item.url }}">{{ item.label }}</a>
-                <p class="stack-description">{{ item.note }}</p>
-              </div>
-              <span class="toolbox-version">{{ item.layout }}</span>
-            </li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-    </retro-panel>{% endif %}
-
     <retro-panel>
       <span slot="title">palettes.css</span>
       <div class="section-heading">
@@ -188,19 +165,5 @@ section: welcome screen
       </ul>
     </retro-panel>{% endif %}
 
-    <retro-panel>
-      <span slot="title">features.txt</span>
-      <div class="sidebar-block">
-        <p class="eyebrow">Theme stack</p>
-        <ul class="stack-list">
-          {% for item in site.stack %}
-            <li class="stack-list__item">
-              <strong class="stack-name">{{ item.name }}</strong>
-              <p class="stack-description">{{ item.detail }}</p>
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
-    </retro-panel>
   </aside>
 </div>
