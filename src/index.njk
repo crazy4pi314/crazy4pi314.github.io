@@ -16,6 +16,11 @@ section: welcome screen
           <div class="hero-lead">
             {{ site.heroLead | renderMarkdown | safe }}
           </div>
+          <div class="badge-wall hero-badges" role="group" aria-label="Feeds and profiles">
+            {% for badge in site.badges %}
+              {% if not badge.feature or site.features[badge.feature] %}{% button88 badge.label, badge.url, badge.accent %}{% endif %}
+            {% endfor %}
+          </div>
         </div>
         <div class="status-grid">
           <div class="status-chip">

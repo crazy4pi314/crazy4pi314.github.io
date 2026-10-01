@@ -120,15 +120,6 @@
       <footer class="site-footer">
         <div class="footer-grid">
           <div class="micro-card">
-            <p class="eyebrow">feeds + buttons</p>
-            <p>Keep the small-web pieces visible so readers can subscribe, explore, and steal the good ideas.</p>
-            <div class="badge-wall">
-              {% for badge in site.badges %}
-                {% if not badge.feature or site.features[badge.feature] %}{% button88 badge.label, badge.url, badge.accent %}{% endif %}
-              {% endfor %}
-            </div>
-          </div>
-          <div class="micro-card">
             <p class="eyebrow">example pages</p>
             <ul class="footer-links">
               {% for item in site.examplePages %}

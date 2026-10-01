@@ -1452,6 +1452,10 @@ html[data-accent="laser-dark"] {
     grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
   }
 
+  .hero-badges {
+    margin-top: 1.25rem;
+  }
+
   .site-footer {
     margin-top: 2rem;
     display: grid;
