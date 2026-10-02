@@ -16,7 +16,10 @@
     <link rel="canonical" href="{{ page.url | absoluteUrl(site.url) }}" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }} RSS" href="/feed.xml" />
     <link rel="alternate" type="application/feed+json" title="{{ site.title }} JSON Feed" href="/feed.json" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/assets/images/logo/laser-icon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/assets/images/logo/laser-icon-32x32.png" type="image/png" sizes="32x32" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/assets/images/logo/laser-icon-180x180.png" sizes="180x180" />
     <link rel="manifest" href="/site.webmanifest" />
     {% if pagination and pagination.href.previous %}<link rel="prev" href="{{ pagination.href.previous | absoluteUrl(site.url) }}" />{% endif %}
     {% if pagination and pagination.href.next %}<link rel="next" href="{{ pagination.href.next | absoluteUrl(site.url) }}" />{% endif %}
@@ -86,8 +89,11 @@
     <div class="page-shell">
       <header class="site-header">
         <div class="site-brand">
-          <a class="site-brand__link" href="/">{{ site.title }}</a>
-          <p class="site-tagline">{{ site.tagline }}</p>
+          <img class="site-brand__mark" src="/assets/images/logo/laser-icon-2x.png" width="48" height="42" alt="" />
+          <div class="site-brand__copy">
+            <a class="site-brand__link" href="/">{{ site.title }}</a>
+            <p class="site-tagline">{{ site.tagline }}</p>
+          </div>
         </div>
         <nav class="site-nav" aria-label="Primary">
           {% for item in site.navigation %}

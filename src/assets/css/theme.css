@@ -171,6 +171,27 @@ html[data-accent="laser-dark"] {
 
   .site-brand {
     grid-area: brand;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    min-width: 0;
+  }
+
+  .site-brand > picture {
+    display: block;
+    width: 48px;
+    flex: 0 0 48px;
+  }
+
+  .site-brand__mark {
+    display: block;
+    width: 48px;
+    height: 42px;
+    flex: none;
+    image-rendering: pixelated;
+  }
+
+  .site-brand__copy {
     min-width: 0;
   }
 
@@ -186,8 +207,10 @@ html[data-accent="laser-dark"] {
 
   .site-brand__link {
     display: inline-block;
+    max-width: 100%;
     font-family: var(--font-display);
-    font-size: clamp(1.35rem, 2.5vw, 2.25rem);
+    font-size: clamp(1.1rem, 2.5vw, 2.25rem);
+    line-height: 1.1;
     color: var(--color-ink);
     text-decoration: none;
   }

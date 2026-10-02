@@ -350,7 +350,8 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "node_modules/@fontsource/chakra-petch/files": "assets/css/files"
   });
-  eleventyConfig.addPassthroughCopy({ "src/favicon.svg": "favicon.svg" });
+  eleventyConfig.addPassthroughCopy({ "src/assets/images/logo": "assets/images/logo" });
+  eleventyConfig.addPassthroughCopy({ "src/favicon.ico": "favicon.ico" });
   eleventyConfig.addPassthroughCopy({ "node_modules/@11ty/is-land/is-land.js": "assets/js/is-land.js" });
   eleventyConfig.addWatchTarget("./src/assets/");
 
