@@ -11,7 +11,12 @@ pagination:
   alias: blogPosts
 permalink: "{% if pagination.pageNumber == 0 %}/blog/index.html{% else %}/blog/page/{{ pagination.pageNumber + 1 }}/index.html{% endif %}"
 ---
-<div class="content-grid">
+{% set years = [] %}
+{% for post in collections.posts %}
+  {% set y = post.date.getFullYear() %}
+  {% if not (y in years) %}{% set years = (years.push(y), years) %}{% endif %}
+{% endfor %}
+<div class="content-grid" data-year-filter>
   <div class="stack-rows">
     <retro-panel>
       <span slot="title">archive.log</span>
@@ -25,9 +30,11 @@ permalink: "{% if pagination.pageNumber == 0 %}/blog/index.html{% else %}/blog/p
           {% button88 "JSON FEED", "/feed.json", "laser-dark" %}
         </div>
       </div>
+      <p class="year-filter-status" role="status" hidden></p>
       <div class="panel-grid">
-        {% for post in blogPosts %}
-          <article class="post-card h-entry">
+        {% for post in collections.posts %}
+          {% set onPage = (loop.index0 / pagination.size) | int == pagination.pageNumber %}
+          <article class="post-card h-entry" data-year="{{ post.date.getFullYear() }}" data-current-page="{{ onPage }}"{% if not onPage %} hidden data-pagefind-ignore="all"{% endif %}>
             <p class="post-card__meta">
               <time class="dt-published" datetime="{{ post.date | machineDate }}">{{ post.date | formatDate }}</time>
               <span aria-hidden="true">::</span>
@@ -64,6 +71,20 @@ permalink: "{% if pagination.pageNumber == 0 %}/blog/index.html{% else %}/blog/p
   <aside class="stack-rows">
     <retro-panel>
       <span slot="title">topics.txt</span>
+      <div class="year-filter-stack">
+      <div class="sidebar-block year-filter-block" hidden>
+        <p class="eyebrow">Filter by year</p>
+        <label class="year-select-95">
+          <span class="year-select-95__label">Year:</span>
+          <span class="year-select-95__box">
+            <select class="year-filter-control">
+              <option value="all">All years</option>
+              {% for y in years %}<option value="{{ y }}">{{ y }}</option>{% endfor %}
+            </select>
+            <span class="year-select-95__arrow" aria-hidden="true">▼</span>
+          </span>
+        </label>
+      </div>
       <div class="sidebar-block">
         <p class="eyebrow">Popular tags</p>
         <ul class="tag-list">
@@ -72,6 +93,8 @@ permalink: "{% if pagination.pageNumber == 0 %}/blog/index.html{% else %}/blog/p
           {% endfor %}
         </ul>
       </div>
+      </div>
     </retro-panel>
   </aside>
 </div>
+<script type="module" src="/assets/js/year-filter.js"></script>
