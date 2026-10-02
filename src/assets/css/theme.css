@@ -1552,6 +1552,197 @@ html[data-accent="laser-dark"] {
     outline-offset: 2px;
   }
 
+  /* Popular tag mockups (/tag-ideas/) */
+  .tag-ideas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
+    gap: 1.25rem;
+    align-items: start;
+  }
+
+  .tag-count {
+    margin-left: 0.4rem;
+    padding: 0 0.3rem;
+    border: 1px solid var(--color-line);
+    background: var(--surface-card);
+    font-family: var(--font-display);
+    font-size: 0.7rem;
+    line-height: 1.3;
+  }
+
+  .tag-more {
+    display: grid;
+    gap: 0.8rem;
+  }
+
+  .tag-more__toggle {
+    justify-self: start;
+    cursor: pointer;
+    list-style: none;
+    padding: 0.35rem 0.7rem;
+    border: 2px solid;
+    border-color: var(--surface-card) var(--color-line) var(--color-line) var(--surface-card);
+    background: var(--accent-soft);
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: 2px 2px 0 var(--color-line);
+  }
+
+  .tag-more__toggle::-webkit-details-marker {
+    display: none;
+  }
+
+  .tag-more__toggle:active {
+    border-color: var(--color-line) var(--surface-card) var(--surface-card) var(--color-line);
+    box-shadow: none;
+  }
+
+  .tag-more__toggle:focus-visible,
+  .tag-folder summary:focus-visible {
+    outline: 3px solid var(--accent-strong);
+    outline-offset: 2px;
+  }
+
+  .tag-more__open,
+  .tag-more[open] .tag-more__closed {
+    display: none;
+  }
+
+  .tag-more[open] .tag-more__open {
+    display: inline;
+  }
+
+  .tag-more[open] .tag-more__toggle {
+    order: 2;
+  }
+
+  .tag-cloud {
+    align-items: center;
+  }
+
+  .tag-cloud--1 {
+    font-size: 0.75rem;
+    opacity: 0.85;
+  }
+
+  .tag-cloud--2 {
+    font-size: 0.9rem;
+  }
+
+  .tag-cloud--3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-width: 3px;
+  }
+
+  .tag-folders {
+    display: grid;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .tag-folder summary {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    list-style: none;
+    padding: 0.35rem 0.5rem;
+    border: 2px solid var(--color-line);
+    background: var(--surface-card);
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+  }
+
+  .tag-folder summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .tag-folder[open] summary {
+    background: var(--accent-soft);
+  }
+
+  .tag-folder__icon {
+    width: 1.1rem;
+    height: 0.8rem;
+    border: 2px solid var(--color-line);
+    background: var(--accent-secondary);
+    position: relative;
+  }
+
+  .tag-folder__icon::before {
+    content: "";
+    position: absolute;
+    left: -2px;
+    top: -0.35rem;
+    width: 0.5rem;
+    height: 0.25rem;
+    border: 2px solid var(--color-line);
+    border-bottom: 0;
+    background: var(--accent-secondary);
+  }
+
+  .tag-folder[open] .tag-folder__icon {
+    background: var(--accent-main);
+  }
+
+  .tag-folder__count {
+    margin-left: auto;
+    font-size: 0.75rem;
+    color: var(--color-muted);
+  }
+
+  .tag-folder .tag-list {
+    padding: 0.7rem 0 0.3rem 1rem;
+    border-left: 2px dashed var(--color-line);
+    margin-left: 0.9rem;
+  }
+
+  .tag-find__prompt {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.55rem 0.7rem;
+    border: 2px solid var(--color-line);
+    background: #0e1116;
+    color: #f2f2f2;
+    font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+    font-size: 0.9rem;
+  }
+
+  .tag-find__prompt > span:first-child {
+    color: #ff7ad9;
+  }
+
+  .tag-find__input {
+    flex: 1;
+    min-width: 0;
+    border: 0;
+    border-bottom: 2px dashed #7cf2b0;
+    background: transparent;
+    color: #7cf2b0;
+    font: inherit;
+  }
+
+  .tag-find__input::placeholder {
+    color: #9aa4b2;
+  }
+
+  .tag-find__input:focus-visible {
+    outline: 2px solid #ff7ad9;
+    outline-offset: 3px;
+  }
+
+  .tag-find__status {
+    margin: 0;
+    font-size: 0.8rem;
+    color: var(--color-muted);
+  }
+
 
   .site-footer {
     margin-top: 2rem;

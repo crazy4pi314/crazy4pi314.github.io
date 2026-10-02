@@ -325,6 +325,21 @@ export default function (eleventyConfig) {
     return Array.from(tags).sort((left, right) => left.localeCompare(right));
   });
 
+  eleventyConfig.addCollection("tagCounts", collectionApi => {
+    const counts = new Map();
+
+    for (const item of collectionApi.getAll()) {
+      for (const tag of new Set(item.data.tags || [])) {
+        if (!controlTags.has(tag)) {
+          counts.set(tag, (counts.get(tag) || 0) + 1);
+        }
+      }
+    }
+
+    return Array.from(counts, ([tag, count]) => ({ tag, count }))
+      .sort((left, right) => right.count - left.count || left.tag.localeCompare(right.tag));
+  });
+
   eleventyConfig.addPassthroughCopy({ "src/assets/js": "assets/js" });
   eleventyConfig.addPassthroughCopy({ "src/static": "static" });
   eleventyConfig.addPassthroughCopy({ "src/talks": "talks" });
