@@ -6,7 +6,7 @@ const inferredDeployUrl =
   process.env.CF_PAGES_URL ||
   (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null);
 
-const siteUrl = inferredDeployUrl || "https://retro-garden-eleventy-theme.vercel.app";
+const siteUrl = inferredDeployUrl || "https://sckaiser.com";
 const tinylyticsId = process.env.TINYLYTICS_ID || "";
 const webmentionEndpoint = process.env.WEBMENTION_ENDPOINT || "";
 const pingbackEndpoint = process.env.PINGBACK_ENDPOINT || "";
@@ -84,7 +84,7 @@ export default {
     { label: "Search", url: "/search/", feature: "search" },
     { label: "About", url: "/about/" }
   ],
-  marquee: "Search indexed :: responsive images online :: webmentions ready :: RSS flowing :: accessible by default",
+  marquee: "Now booting ★ caution: class 4 personal website ★ protective eyewear required beyond this point ★ quantum software :: lasers engaged :: Chewie on patrol :: boat still afloat ★ now with 100% more pixels ★",
   badges: [
     { label: "RSS FEED", url: "/feed.xml", accent: "laser" },
     { label: "GITHUB", url: "https://github.com/crazy4pi314", accent: "laser-dark" },
