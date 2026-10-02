@@ -52,7 +52,6 @@ export default {
       "Experimental physicist turned software developer. PhD in Quantum Computing, PSF Fellow, and developer advocate. Scientist, maker, community builder."
   },
   navigation: [
-    { label: "Home", url: "/" },
     { label: "Blog", url: "/blog/" },
     { label: "Events", url: "/events/" },
     { label: "Projects", url: "/projects/", feature: "projects" },
