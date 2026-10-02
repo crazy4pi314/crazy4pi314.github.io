@@ -308,6 +308,9 @@ html[data-accent="laser-dark"] {
   }
 
   .marquee-copy {
+    display: flex;
+    align-items: center;
+    flex: none;
     margin: 0;
     padding: 0.7rem 1rem;
     font-family: var(--font-display);
@@ -317,13 +320,28 @@ html[data-accent="laser-dark"] {
     white-space: nowrap;
   }
 
+  .marquee-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+
+  .marquee-icon {
+    flex: none;
+    image-rendering: pixelated;
+  }
+
+  .marquee-sep {
+    margin-inline: 0.9em;
+  }
+
   .marquee-copy--repeat {
     display: none;
   }
 
   @media (prefers-reduced-motion: no-preference) {
     .marquee-copy--repeat {
-      display: block;
+      display: flex;
     }
 
     .marquee-track {
@@ -342,6 +360,10 @@ html[data-accent="laser-dark"] {
     }
 
     .marquee-copy {
+      flex: 1 1 auto;
+      min-width: 0;
+      flex-wrap: wrap;
+      row-gap: 0.4rem;
       white-space: normal;
     }
   }

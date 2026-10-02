@@ -85,7 +85,13 @@ export default {
     { label: "Search", url: "/search/", feature: "search" },
     { label: "About", url: "/about/" }
   ],
-  marquee: "Now booting ★ caution: class 4 personal website ★ protective eyewear required beyond this point ★ quantum software :: lasers engaged :: Chewie on patrol :: boat still afloat ★ now with 100% more pixels ★",
+  marquee: [
+    { text: "Now Loading...", icon: "/assets/images/logo/hourglass.svg", iconWidth: 10, iconHeight: 12 },
+    { text: "caution: class 4 personal website", icon: "/assets/images/logo/caution-tri.svg", iconWidth: 11, iconHeight: 10 },
+    { text: "protective eyewear required beyond this point", icon: "/assets/images/logo/goggles-wrap.svg", iconWidth: 26, iconHeight: 12 },
+    { text: "yup boat is still afloat" },
+    { text: "CHEWIE STOP BARKING" }
+  ],
   badges: [
     { label: "RSS FEED", url: "/feed.xml", accent: "laser" },
     { label: "GITHUB", url: "https://github.com/crazy4pi314", accent: "laser-dark" },

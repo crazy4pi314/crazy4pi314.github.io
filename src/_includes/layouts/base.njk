@@ -113,8 +113,16 @@
 
       {% if site.features.marquee and site.marquee and page.url == "/" %}
         <site-marquee>
-          <p class="marquee-copy">{{ site.marquee }}</p>
-          <p class="marquee-copy marquee-copy--repeat" aria-hidden="true">{{ site.marquee }}</p>
+          {% for copy in [false, true] %}
+          <p class="marquee-copy{% if copy %} marquee-copy--repeat{% endif %}"{% if copy %} aria-hidden="true"{% endif %}>
+            {%- for item in site.marquee -%}
+            <span class="marquee-item">
+              {%- if item.icon %}<img class="marquee-icon" src="{{ item.icon }}" width="{{ item.iconWidth * 2 }}" height="{{ item.iconHeight * 2 }}" alt="" eleventy:ignore>{% endif -%}
+              {{ item.text }}</span>
+            <span class="marquee-sep" aria-hidden="true">★</span>
+            {%- endfor -%}
+          </p>
+          {% endfor %}
         </site-marquee>
       {% endif %}
 
