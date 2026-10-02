@@ -1552,7 +1552,7 @@ html[data-accent="laser-dark"] {
     outline-offset: 2px;
   }
 
-  /* Popular tag mockups (/tag-ideas/) */
+  /* Popular tag mockups (/tag-ideas/); .tag-folder* is also used on /blog/ */
   .tag-ideas-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));

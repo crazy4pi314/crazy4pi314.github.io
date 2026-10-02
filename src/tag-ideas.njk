@@ -7,15 +7,6 @@ section: design sandbox
 noindex: true
 eleventyExcludeFromCollections: true
 topCount: 10
-tagGroups:
-  - name: quantum
-    tags: [quantum, quantum-programming, qubits, qir, qkd, qml, qram, qsharp, satellite, satellites, security]
-  - name: science
-    tags: [research, phd, nanodiamonds, lasers, marine, publications, datasci, machinelearning, mesh]
-  - name: dev-tools
-    tags: [azure, codespaces, conda, customization, devcontainers, jupyter, python, vscode, tools, tips, tutorial, oss, demo]
-  - name: community
-    tags: [community, diversity, education, kids, scicomm, career, hype, livestream, panel, talks, workshop, book]
 ---
 {% set allTags = collections.tagCounts %}
 {% set maxCount = allTags[0].count if allTags.length else 1 %}

@@ -88,8 +88,36 @@ permalink: "{% if pagination.pageNumber == 0 %}/blog/index.html{% else %}/blog/p
       <div class="sidebar-block">
         <p class="eyebrow">Popular tags</p>
         <ul class="tag-list">
-          {% for tag in collections.tagList %}
-            <li><a class="tag-pill" href="/tags/{{ tag | slugify }}/">{{ tag }}</a></li>
+          {% for t in collections.tagCounts %}{% if loop.index <= 10 %}
+            <li><a class="tag-pill" href="/tags/{{ t.tag | slugify }}/">{{ t.tag }}</a></li>
+          {% endif %}{% endfor %}
+        </ul>
+      </div>
+      <div class="sidebar-block">
+        <p class="eyebrow">Browse by topic</p>
+        {% set grouped = [] %}
+        {% for g in tagGroups %}{% set grouped = (grouped.push.apply(grouped, g.tags), grouped) %}{% endfor %}
+        {% set folders = [] %}
+        {% for g in tagGroups %}
+          {% set folderTags = [] %}
+          {% for t in collections.tagCounts | sort(false, false, "tag") %}{% if t.tag in g.tags %}{% set folderTags = (folderTags.push(t.tag), folderTags) %}{% endif %}{% endfor %}
+          {% if folderTags.length %}{% set folders = (folders.push({ name: g.name, tags: folderTags }), folders) %}{% endif %}
+        {% endfor %}
+        {% set miscTags = [] %}
+        {% for t in collections.tagCounts | sort(false, false, "tag") %}{% if not (t.tag in grouped) %}{% set miscTags = (miscTags.push(t.tag), miscTags) %}{% endif %}{% endfor %}
+        {% if miscTags.length %}{% set folders = (folders.push({ name: "misc", tags: miscTags }), folders) %}{% endif %}
+        <ul class="tag-folders">
+          {% for f in folders %}
+            <li>
+              <details class="tag-folder">
+                <summary><span class="tag-folder__icon" aria-hidden="true"></span>{{ f.name }}/ <span class="tag-folder__count">{{ f.tags.length }}<span class="visually-hidden"> tags</span></span></summary>
+                <ul class="tag-list">
+                  {% for tag in f.tags %}
+                    <li><a class="tag-pill" href="/tags/{{ tag | slugify }}/">{{ tag }}</a></li>
+                  {% endfor %}
+                </ul>
+              </details>
+            </li>
           {% endfor %}
         </ul>
       </div>
