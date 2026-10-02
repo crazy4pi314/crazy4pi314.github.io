@@ -23,9 +23,9 @@
   --panel-shadow: #1d2833;
   --color-paper: #f3f4f7;
   --color-panel: #fafafd;
-  --body-glow: rgba(255, 124, 254, 0.1);
-  --body-start: rgba(243, 244, 247, 0.96);
-  --body-end: rgba(236, 238, 243, 0.99);
+  --body-glow: transparent;
+  --body-start: #f5f5f5;
+  --body-end: #e0e0e0;
   --grid-line: rgba(50, 61, 79, 0.05);
   --surface-solid: #ffffff;
   --surface-header-start: rgba(255, 255, 255, 0.9);
