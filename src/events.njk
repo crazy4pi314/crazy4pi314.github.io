@@ -30,7 +30,7 @@ eleventyNavigation:
             {% if item.data.event %}<p class="archive-card__context">{{ item.data.event }}</p>{% endif %}
             {% set cardSlides = item.data.slides | slideLinks %}
             {% if item.data.video or cardSlides.length or item.data.code %}
-              <nav class="resource-links" aria-label="Resources for {{ item.data.title }}">
+              <nav class="resource-links" aria-label="Resources for {{ item.data.title }}{% if item.data.event %} ({{ item.data.event }}){% endif %}">
                 {% if item.data.video %}<a class="resource-link" href="{{ item.data.video }}">Watch video</a>{% endif %}
                 {% for slide in cardSlides %}
                   <a class="resource-link" href="{{ slide.url }}">{{ slide.label }}</a>
