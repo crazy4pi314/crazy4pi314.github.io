@@ -111,9 +111,10 @@
         <theme-toggle></theme-toggle>
       </header>
 
-      {% if site.features.marquee and site.marquee %}
+      {% if site.features.marquee and site.marquee and page.url == "/" %}
         <site-marquee>
-          {{ site.marquee }}
+          <p class="marquee-copy">{{ site.marquee }}</p>
+          <p class="marquee-copy marquee-copy--repeat" aria-hidden="true">{{ site.marquee }}</p>
         </site-marquee>
       {% endif %}
 

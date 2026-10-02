@@ -50,7 +50,7 @@ export default {
   features: {
     analytics: Boolean(tinylyticsId),
     breadcrumbs: false,
-    marquee: false,
+    marquee: true,
     ogImages: true,
     postSidebars: true,
     projects: false,
@@ -77,6 +77,7 @@ export default {
       "Experimental physicist turned software developer. PhD in Quantum Computing, PSF Fellow, and developer advocate. Scientist, maker, community builder."
   },
   navigation: [
+    { label: "Home", url: "/" },
     { label: "Blog", url: "/blog/" },
     { label: "Events", url: "/events/" },
     { label: "Projects", url: "/projects/", feature: "projects" },
