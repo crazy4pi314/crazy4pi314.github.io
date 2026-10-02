@@ -37,13 +37,13 @@ section: blog entry
         <pixel-divider></pixel-divider>
         {% if site.features.shareLinks %}
           {% include "partials/share-links.njk" %}
-          <pixel-divider></pixel-divider>
+          <!--<pixel-divider></pixel-divider>-->
         {% endif %}
         {% if site.features.webmentions %}
           {% include "partials/webmentions.njk" %}
-          <pixel-divider></pixel-divider>
+          <!--<pixel-divider></pixel-divider>-->
         {% endif %}
-        <section class="author-panel p-author h-card">
+        <!--<section class="author-panel p-author h-card">
           <p class="eyebrow">About the author</p>
           <h2 class="author-panel__title p-name">{{ site.author.name }}</h2>
           <p class="home-note p-note">{{ site.author.summary }}</p>
@@ -52,7 +52,7 @@ section: blog entry
             {% button88 "ABOUT", "/about/", "laser" %}
             {% button88 "RSS FEED", "/feed.xml", "laser-dark" %}
           </div>
-        </section>
+        </section>-->
       </article>
     </retro-panel>
   </div>
