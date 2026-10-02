@@ -245,6 +245,9 @@ export default function (eleventyConfig) {
       if (value.reveal && talkDecks.has(value.reveal)) {
         links.push({ url: `/talks/${value.reveal}/`, label: "Slides (Reveal.js)" });
       }
+      if (value.revealUrl) {
+        links.push({ url: String(value.revealUrl), label: "Slides (Reveal.js)" });
+      }
       if (value.local) {
         links.push({ url: `/static/${String(value.local).replace(/^\.?\//, "")}`, label: "Slides (PDF)" });
       }
