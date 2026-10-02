@@ -22,6 +22,31 @@ export default {
   tagline: "scientist, maker, community builder.",
   heroLead:
     "I'm an **experimental physicist turned software developer** with 15+ years building and managing cutting-edge tech projects. I write books, cut things with lasers, and hang out with my pup Chewie 🐕💖",
+  hero: {
+    kicker: "Est. 2016 // a personal homepage, hand-tended",
+    title: "Welcome to my corner of the web.",
+    photo: {
+      src: "/static/img/sarah-and-chewie.jpg",
+      alt: "Sarah smiling on a couch while her German Shepherd, Chewie, leans over her shoulder."
+    },
+    chips: [
+      {
+        title: "What I make",
+        text: "Quantum software, open-source dev tools, books, and things cut with lasers.",
+        url: "/blog/"
+      },
+      {
+        title: "Where I speak",
+        text: "Conference talks, workshops, podcasts, and streams from PyCon to PyCascades.",
+        url: "/events/"
+      },
+      {
+        title: "What I'm learning",
+        text: "Marine telemetry, Home Assistant, and keeping a vintage boat afloat.",
+        url: "/events/pycascades-2026-a-bridge-over-not-troubled-waters/"
+      }
+    ]
+  },
   features: {
     analytics: Boolean(tinylyticsId),
     breadcrumbs: false,

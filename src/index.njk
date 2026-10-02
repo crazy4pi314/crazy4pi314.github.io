@@ -11,8 +11,8 @@ section: welcome screen
       <span slot="title">home.exe</span>
       <section class="hero-grid">
         <div class="hero-copy">
-          <p class="hero-kicker">Retro Garden // IndieWeb x 90s personal site mixtape</p>
-          <h1 class="hero-title">A garden for dial-up charm and modern publishing parts.</h1>
+          <p class="hero-kicker">{{ site.hero.kicker }}</p>
+          <h1 class="hero-title">{{ site.hero.title }}</h1>
           <div class="hero-lead">
             {{ site.heroLead | renderMarkdown | safe }}
           </div>
@@ -23,18 +23,17 @@ section: welcome screen
           </div>
         </div>
         <div class="status-grid">
-          <div class="status-chip">
-            <strong>View source friendly</strong>
-            <span>Readable templates, markdown posts, and shortcodes you can actually edit.</span>
-          </div>
-          <div class="status-chip">
-            <strong>Accessible by default</strong>
-            <span>Skip links, strong focus rings, reduced motion guards, and contrast that holds up.</span>
-          </div>
-          <div class="status-chip">
-            <strong>Personal-site energy</strong>
-            <span>Badge walls, retro chrome, webring vibes, and room for personality over polish.</span>
-          </div>
+          {% if site.hero.photo %}
+            <figure class="hero-photo">
+              <img src="{{ site.hero.photo.src }}" alt="{{ site.hero.photo.alt }}" width="960" height="960" sizes="(min-width: 48rem) 16rem, 70vw" loading="eager" fetchpriority="high">
+            </figure>
+          {% endif %}
+          {% for chip in site.hero.chips %}
+            <div class="status-chip">
+              <strong>{% if chip.url %}<a href="{{ chip.url }}">{{ chip.title }}</a>{% else %}{{ chip.title }}{% endif %}</strong>
+              <span>{{ chip.text }}</span>
+            </div>
+          {% endfor %}
         </div>
       </section>
     </retro-panel>

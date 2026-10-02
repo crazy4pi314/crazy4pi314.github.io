@@ -664,6 +664,28 @@ html[data-accent="laser-dark"] {
     font-size: 0.82rem;
   }
 
+  .hero-photo {
+    margin: 0;
+    justify-self: center;
+    width: min(100%, 16rem);
+    padding: 0.4rem;
+    background: var(--surface-card);
+    border: 2px solid var(--color-line);
+    box-shadow:
+      inset 2px 2px 0 rgb(255 255 255 / 0.7),
+      inset -2px -2px 0 rgb(0 0 0 / 0.25),
+      4px 4px 0 var(--color-line);
+  }
+
+  .hero-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border: 2px solid var(--color-line);
+  }
+
   .section-heading {
     display: flex;
     flex-wrap: wrap;
