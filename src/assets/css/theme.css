@@ -1488,6 +1488,210 @@ html[data-accent="laser-dark"] {
     letter-spacing: 0.05em;
   }
 
+  /* Blog year filter mockups (/blog-filter-ideas/) */
+  .year-filter-stack {
+    display: grid;
+    gap: 1.1rem;
+  }
+
+  .year-filter-status {
+    margin-block: 1rem;
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .year-filter-control {
+    font: inherit;
+    color: var(--color-ink);
+  }
+
+  .year-select-95 {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: var(--font-display);
+  }
+
+  .year-select-95__box {
+    position: relative;
+    flex: 1;
+    display: flex;
+    border: 2px solid;
+    border-color: var(--color-line) var(--surface-card) var(--surface-card) var(--color-line);
+    box-shadow: inset 2px 2px 0 var(--shadow-color);
+    background: var(--surface-card);
+  }
+
+  .year-select-95 select {
+    appearance: none;
+    width: 100%;
+    padding: 0.4rem 2.6rem 0.4rem 0.6rem;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .year-select-95__arrow {
+    position: absolute;
+    inset: 2px 2px 2px auto;
+    width: 2rem;
+    display: grid;
+    place-items: center;
+    font-size: 0.7rem;
+    pointer-events: none;
+    background: var(--accent-soft);
+    color: var(--color-ink);
+    border: 2px solid;
+    border-color: var(--surface-card) var(--color-line) var(--color-line) var(--surface-card);
+  }
+
+  .year-select-95 select:focus-visible {
+    outline: 3px solid var(--accent-strong);
+    outline-offset: 2px;
+  }
+
+  .year-select-term {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.7rem 0.8rem;
+    background: #11161d;
+    color: #7dffb0;
+    font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
+    font-size: 0.95rem;
+    border: 2px solid var(--color-line);
+    box-shadow: 4px 4px 0 var(--shadow-color);
+  }
+
+  .year-select-term__prompt {
+    color: #ff8cff;
+  }
+
+  .year-select-term select {
+    appearance: none;
+    padding: 0 0.3rem;
+    border: 0;
+    border-bottom: 2px dashed #7dffb0;
+    background: transparent;
+    color: #7dffb0;
+    font-family: inherit;
+    cursor: pointer;
+  }
+
+  .year-select-term select option {
+    background: #11161d;
+    color: #7dffb0;
+  }
+
+  .year-select-term select:focus-visible {
+    outline: 2px solid #ff8cff;
+    outline-offset: 2px;
+  }
+
+  .year-select-term__caret {
+    animation: year-caret-blink 1s steps(1) infinite;
+  }
+
+  @keyframes year-caret-blink {
+    50% { opacity: 0; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .year-select-term__caret { animation: none; }
+  }
+
+  .year-menu {
+    position: relative;
+  }
+
+  .year-menu__button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 0.8rem;
+    list-style: none;
+    cursor: pointer;
+    font-family: var(--font-display);
+    background: var(--surface-card);
+    border: 2px solid var(--color-line);
+    box-shadow: 4px 4px 0 var(--shadow-color);
+  }
+
+  .year-menu__button::-webkit-details-marker {
+    display: none;
+  }
+
+  .year-menu[open] .year-menu__button {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--shadow-color);
+  }
+
+  .year-menu__button:focus-visible {
+    outline: 3px solid var(--accent-strong);
+    outline-offset: 2px;
+  }
+
+  .year-menu__window {
+    position: absolute;
+    z-index: 5;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    right: 0;
+    border: 2px solid var(--color-line);
+    /* Stack two translucent surfaces so the tags underneath don't show through. */
+    background:
+      linear-gradient(var(--surface-card), var(--surface-card)),
+      var(--surface-card-soft);
+    box-shadow: 6px 6px 0 var(--shadow-color);
+  }
+
+  .year-menu__bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.25rem 0.6rem;
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #16202a;
+    background: linear-gradient(90deg, var(--accent-secondary), var(--accent-main));
+    border-bottom: 2px solid var(--color-line);
+  }
+
+  .year-menu__list {
+    margin: 0;
+    padding: 0.35rem;
+    list-style: none;
+    display: grid;
+    gap: 0.2rem;
+  }
+
+  .year-menu__option {
+    width: 100%;
+    padding: 0.35rem 0.6rem;
+    text-align: left;
+    font: inherit;
+    color: var(--color-ink);
+    background: transparent;
+    border: 2px solid transparent;
+    cursor: pointer;
+  }
+
+  .year-menu__option:hover,
+  .year-menu__option:focus-visible {
+    border-color: var(--color-line);
+    background: var(--accent-soft);
+    outline: none;
+  }
+
+  .year-menu__option[aria-pressed="true"]::before {
+    content: "► ";
+  }
+
+
   .site-footer {
     margin-top: 2rem;
     display: grid;
