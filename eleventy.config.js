@@ -223,6 +223,11 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("limit", (values = [], amount = 3) => values.slice(0, amount));
   eleventyConfig.addFilter("concat", (left = [], right = []) => [...left, ...right]);
   eleventyConfig.addFilter("publicTags", (tags = []) => tags.filter(tag => !controlTags.has(tag)));
+  eleventyConfig.addFilter("feedType", data => {
+    if (!(data.tags || []).includes("event")) return "blog";
+    return ["talk", "panel", "workshop", "podcast", "livestream"].includes(data.eventType)
+      ? data.eventType : "event";
+  });
   eleventyConfig.addFilter("resourceUrl", value => {
     if (!value || typeof value !== "string") {
       return "";

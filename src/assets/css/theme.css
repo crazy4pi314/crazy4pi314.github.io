@@ -785,9 +785,124 @@ html[data-accent="laser-dark"] {
     color: var(--accent-strong);
   }
 
-  .feed-type {
-    background: #9dd1ff;
+  .feed-card {
+    --feed-accent: #9dd1ff;
+    padding: 0;
+    min-width: 0;
+    box-shadow: 4px 4px 0 var(--shadow-color);
+    background: var(--surface-card);
+  }
+
+  .feed-card__header {
+    padding: 0.75rem 1rem;
+    border-bottom: 2px solid var(--color-line);
+    background: var(--feed-accent);
     color: #16202a;
+  }
+
+  .feed-card__type {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .feed-card__type svg {
+    flex: none;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: square;
+    stroke-linejoin: miter;
+  }
+
+  .feed-card__header .post-card__title {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .feed-card__header .post-card__title a,
+  .feed-card__header .post-card__meta {
+    color: #16202a;
+  }
+
+  .feed-card__header .post-card__title a:hover {
+    text-decoration: underline;
+  }
+
+  .feed-card__body {
+    padding: 1rem;
+    overflow-wrap: anywhere;
+  }
+
+  .feed-card__body > :first-child {
+    margin-top: 0;
+  }
+
+  .feed-card__event {
+    font-weight: 700;
+  }
+
+  .feed-card--blog {
+    --feed-accent: #e3c9f6;
+  }
+
+  .feed-card--blog .feed-card__body {
+    background-image: radial-gradient(circle, var(--color-muted) 0.6px, transparent 0.8px);
+    background-size: 16px 16px;
+  }
+
+  .feed-card--blog .feed-card__body > * {
+    background: var(--surface-card);
+  }
+
+  .feed-card--workshop {
+    --feed-accent: #f5cf55;
+  }
+
+  .feed-card--workshop .feed-card__event {
+    padding-inline-start: 0.75rem;
+    border-inline-start: 4px solid var(--feed-accent);
+  }
+
+  .feed-card--podcast {
+    --feed-accent: #ffb4b4;
+  }
+
+  .feed-card--livestream {
+    --feed-accent: #a5e8ac;
+  }
+
+  .feed-card--panel {
+    --feed-accent: #c39aff;
+  }
+
+  .feed-card__wave {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    height: 40px;
+    margin-block: 1rem;
+  }
+
+  .feed-card__wave span {
+    flex: 1;
+    background: var(--color-muted);
+  }
+
+  .feed-card__recording {
+    padding: 0.5rem;
+    border: 2px solid var(--color-line);
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+  }
+
+  .feed-card__resources {
+    margin-top: 1rem;
   }
 
   .tag-list {

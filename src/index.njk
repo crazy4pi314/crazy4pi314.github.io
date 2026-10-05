@@ -49,7 +49,7 @@ section: welcome screen
       </div>
       <div class="panel-grid">
         {% for post in collections.blogFeed | limit(3) %}
-          <article class="post-card h-entry">
+          <article class="post-card feed-card feed-card--{{ post.data | feedType }} h-entry">
             {% set feedHeadingLevel = 3 %}
             {% include "partials/feed-card.njk" %}
           </article>

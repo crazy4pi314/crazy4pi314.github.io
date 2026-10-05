@@ -1,26 +1,77 @@
-{% set isEvent = "event" in post.data.tags %}
-<p class="post-card__meta">
-  <span class="tag-pill feed-type">{% if isEvent %}{{ post.data.eventType or "event" }}{% else %}blog{% endif %}</span>
-  <time class="dt-published" datetime="{{ post.date | machineDate }}">{{ post.date | formatDate }}</time>
-  {% if not isEvent %}
-    <span aria-hidden="true">::</span>
-    <span>{{ post.templateContent | stripTags | readTime }}</span>
+{% set kind = post.data | feedType %}
+{% set isEvent = kind != "blog" %}
+<header class="feed-card__header">
+  <p class="feed-card__type">
+    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+      {% if kind == "blog" %}
+        <path d="M5 3h14v18H5zM8 7h8M8 11h8M8 15h5"></path>
+      {% elif kind == "workshop" %}
+        <path d="M9 3h6M10 3v7L4 20h16l-6-10V3M7 15h10"></path>
+      {% elif kind == "podcast" %}
+        <rect x="9" y="2" width="6" height="13" rx="3"></rect>
+        <path d="M6 10v2a6 6 0 0 0 12 0v-2M12 18v4M8 22h8"></path>
+      {% elif kind == "livestream" %}
+        <rect x="3" y="4" width="18" height="14"></rect>
+        <path d="m10 8 5 3-5 3zM8 22h8M12 18v4"></path>
+      {% else %}
+        <path d="M3 3h18v13H3zM12 16v5M7 22l5-3 5 3M7 7h10M7 11h6"></path>
+      {% endif %}
+    </svg>
+    <span>{{ kind }} / {% if kind == "blog" %}notebook.md{% elif kind == "workshop" %}lab sheet{% elif kind == "podcast" %}on air{% elif kind == "livestream" %}live feed{% else %}on stage{% endif %}</span>
+  </p>
+  {% if kind in ["talk", "panel", "event"] %}
+    <h{{ feedHeadingLevel }} class="post-card__title">
+      <a class="p-name u-url" href="{{ post.url }}">{{ post.data.title }}</a>
+    </h{{ feedHeadingLevel }}>
+    <p class="post-card__meta">
+      <time class="dt-published" datetime="{{ post.date | machineDate }}">{{ post.date | formatDate }}</time>
+      {% if post.data.location %}<span>{{ post.data.location }}</span>{% endif %}
+    </p>
+    {% if post.data.event %}<p class="feed-card__event">{{ post.data.event }}</p>{% endif %}
   {% endif %}
-</p>
-<h{{ feedHeadingLevel }} class="post-card__title">
-  <a class="p-name u-url" href="{{ post.url }}">{{ post.data.title }}</a>
-</h{{ feedHeadingLevel }}>
-{% if isEvent %}
-  {% if post.data.event %}<p>{{ post.data.event }}{% if post.data.location %}, {{ post.data.location }}{% endif %}</p>{% endif %}
-  {% if post.data.subtitle %}<p>{{ post.data.subtitle }}</p>{% endif %}
-{% else %}
-  <p>{{ post.data.description }}</p>
-{% endif %}
-{% set tags = post.data.tags | publicTags %}
-{% if tags.length %}
-  <ul class="tag-list" aria-label="{% if isEvent %}Event{% else %}Post{% endif %} tags">
-    {% for tag in tags %}
-      <li><a class="tag-pill" href="/tags/{{ tag | slugify }}/">{{ tag }}</a></li>
-    {% endfor %}
-  </ul>
-{% endif %}
+</header>
+<div class="feed-card__body">
+  {% if kind not in ["talk", "panel", "event"] %}
+    <h{{ feedHeadingLevel }} class="post-card__title">
+      <a class="p-name u-url" href="{{ post.url }}">{{ post.data.title }}</a>
+    </h{{ feedHeadingLevel }}>
+    <p class="post-card__meta">
+      <time class="dt-published" datetime="{{ post.date | machineDate }}">{{ post.date | formatDate }}</time>
+      {% if not isEvent %}<span aria-hidden="true">::</span><span>{{ post.templateContent | stripTags | readTime }}</span>{% endif %}
+    </p>
+    {% if post.data.event %}<p class="feed-card__event">{{ post.data.event }}{% if post.data.location %}, {{ post.data.location }}{% endif %}</p>{% endif %}
+  {% endif %}
+  {% if isEvent %}
+    {% if post.data.subtitle %}<p>{{ post.data.subtitle }}</p>{% endif %}
+  {% else %}
+    <p class="feed-card__excerpt">{{ post.data.description }}</p>
+  {% endif %}
+  {% if kind == "podcast" %}
+    <div class="feed-card__wave" aria-hidden="true">
+      {% for height in [12, 24, 16, 32, 20, 28, 12, 20, 32, 16, 24, 10, 28, 18, 32, 12, 24, 16, 28, 10, 20, 32, 16, 24] %}
+        <span style="height: {{ height }}px"></span>
+      {% endfor %}
+    </div>
+  {% elif kind == "livestream" %}
+    <p class="feed-card__recording"><span aria-hidden="true">&#9654;</span> Recorded stream</p>
+  {% endif %}
+  <div class="resource-links feed-card__resources">
+    {% if not isEvent %}<a class="resource-link" href="{{ post.url }}">Read entry</a>{% endif %}
+    {% if isEvent %}
+      {% if post.data.video %}<a class="resource-link" href="{{ post.data.video }}">{% if kind == "podcast" %}Watch / listen{% else %}Watch{% endif %}</a>{% endif %}
+      {% for slide in post.data.slides | slideLinks %}
+        <a class="resource-link" href="{{ slide.url }}">{{ slide.label }}</a>
+      {% endfor %}
+      {% if post.data.code %}<a class="resource-link" href="{{ post.data.code }}">Code</a>{% endif %}
+      {% set material = post.data.eventAsset | resourceUrl %}
+      {% if material %}<a class="resource-link" href="{{ material }}">Materials</a>{% endif %}
+      <a class="resource-link" href="{{ post.url }}">Details</a>
+    {% endif %}
+  </div>
+  {% set tags = post.data.tags | publicTags %}
+  {% if tags.length %}
+    <ul class="tag-list" aria-label="{% if isEvent %}Event{% else %}Post{% endif %} tags">
+      {% for tag in tags %}<li><a class="tag-pill" href="/tags/{{ tag | slugify }}/">{{ tag }}</a></li>{% endfor %}
+    </ul>
+  {% endif %}
+</div>

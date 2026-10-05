@@ -22,6 +22,8 @@ The homepage and `/blog/` archive use a shared, newest-first `blogFeed` collecti
 
 `site.features.eventsPage` and `site.features.projects` control the standalone listing pages (both default off). Individual event and project pages remain available. Feed card markup lives in `src/_includes/partials/feed-card.njk`.
 
+Feed cards use type-specific layouts: dot-grid blog notes, poster-style talks and panels, workshop lab sheets, and podcast/livestream media panels. Resource buttons are derived from each entry's existing metadata; decorative media graphics are static and hidden from assistive technology.
+
 - Eleventy 3.1 with Windows, macOS, and Linux-friendly scripts
 - Eleventy Fetch for friendly remote-data caching
 - Eleventy Image for responsive AVIF, WebP, and original image output
