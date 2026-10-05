@@ -2,10 +2,13 @@
     /* Brand Colors */
     --color-primary: #222222;
     --color-secondary: #7b2fc2;
+    --color-secondary-dark: #5a1f96;
+    --color-logo-blue: #80D8FF;
     /* Background Colors */
     --color-bg: #ffffff;
     --color-bg-secondary: #f7f7f7;
     --color-bg-accent: #c8ade2;
+    --color-bg-blog: #f5effb;
     /* Text and Border Colors */
     --color-text: #222222;
     --color-text-alt: #ffffff;

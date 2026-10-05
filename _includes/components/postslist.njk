@@ -1,8 +1,9 @@
 <section>
 	{% for post in postslist | reverse %}
     {% if limit === undefined or loop.index0 < limit %}
-      <article class="article-card" {% if post.url == url %} data-current="current item"{% endif %}>
+      <article class="article-card article-card--blog" {% if post.url == url %} data-current="current item"{% endif %}>
         <h5>
+          <a class="tag tag--blog" href="{{ '/blog/' | url }}">#blog</a>
           <a class="article-card__title" href="{{ post.url | url }}">
             {% if post.data.title %}
               {{ post.data.title }}
