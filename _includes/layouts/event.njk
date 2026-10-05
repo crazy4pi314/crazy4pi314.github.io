@@ -50,9 +50,9 @@ section: events
   </article>
   <nav>
     {% if site.features.eventsPage %}
-    <a href="{{ '/events/' | url }}">← View All Events</a>
+    <a href="{{ '/events/' | url }}"><span aria-hidden="true">←</span> View All Events</a>
     {% else %}
-    <a href="{{ '/blog/' | url }}">← View All Posts &amp; Events</a>
+    <a href="{{ '/blog/' | url }}"><span aria-hidden="true">←</span> View All Posts &amp; Events</a>
     {% endif %}
   </nav>
 </div>

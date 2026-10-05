@@ -11,6 +11,6 @@ section: project
   <hr>
   {{ layoutContent | safe }}
   <nav>
-    {% if site.features.projectsPage %}<a href="{{ '/projects/' | url }}">← View All Projects</a>{% else %}<a href="{{ '/' | url }}">← Back to Home</a>{% endif %}
+    {% if site.features.projectsPage %}<a href="{{ '/projects/' | url }}"><span aria-hidden="true">←</span> View All Projects</a>{% else %}<a href="{{ '/' | url }}"><span aria-hidden="true">←</span> Back to Home</a>{% endif %}
   </nav>
 </div>

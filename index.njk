@@ -28,9 +28,10 @@ section: home
   {% set feedlist = collections.blogFeed %}
   {% set show_postslist_tags = true %}
   {% set limit = 3 %}
+  {% set feed_heading_level = 3 %}
   {% include "components/feedlist.njk" %}
-  <nav>
-    <a href="{{ '/blog/' | url }}">View All Posts &amp; Events ➡️</a>
+  <nav aria-label="All posts and events">
+    <a href="{{ '/blog/' | url }}">View All Posts &amp; Events <span aria-hidden="true">➡️</span></a>
   </nav>
 
 </div>

@@ -6,6 +6,28 @@
   color: var(--color-text);
 }
 
+.article-card__heading {
+  font-size: 1.25em;
+}
+
+.article-card__title:focus-visible,
+.article-card .tag:focus-visible {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .article-card__summary {
   margin-bottom: 15px;
 }
