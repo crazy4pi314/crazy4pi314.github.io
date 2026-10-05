@@ -157,6 +157,7 @@ html[data-accent="laser-dark"] {
   }
 
   .site-header {
+    container-type: inline-size;
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     grid-template-areas:
@@ -255,11 +256,12 @@ html[data-accent="laser-dark"] {
     display: inline-flex;
     gap: 0.5rem;
     align-items: center;
-    border: 2px solid var(--color-line);
-    background: var(--color-panel);
+    border: 0;
+    background: transparent;
     color: var(--color-ink);
-    padding: 0.45rem 0.7rem;
-    box-shadow: 4px 4px 0 var(--shadow-color);
+    padding: 6px;
+    min-width: 44px;
+    min-height: 44px;
     cursor: pointer;
     font-family: var(--font-display);
     font-size: 0.75rem;
@@ -267,7 +269,17 @@ html[data-accent="laser-dark"] {
   }
 
   .theme-toggle:hover {
-    background: var(--accent-soft);
+    text-decoration: underline;
+  }
+
+  .theme-toggle__label {
+    display: none;
+  }
+
+  @container (min-width: 36rem) {
+    .theme-toggle__label {
+      display: inline;
+    }
   }
 
   .theme-toggle__icon {
