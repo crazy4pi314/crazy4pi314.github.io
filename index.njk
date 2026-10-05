@@ -25,24 +25,13 @@ section: home
 
   <hr>
   <h2>Recent posts</h2>
-  {% set postslist = collections.post %}
+  {% set feedlist = collections.blogFeed %}
   {% set show_postslist_tags = true %}
   {% set limit = 3 %}
-  {% include "components/postslist.njk" %}
+  {% include "components/feedlist.njk" %}
   <nav>
-    <a href="{{ '/blog/' | url }}">View All Blogs ➡️</a>
+    <a href="{{ '/blog/' | url }}">View All Posts &amp; Events ➡️</a>
   </nav>
-
-  <hr>
-  <h2>Projects</h2>
-  {% set projectlist = collections.project %}
-  {% set limit = 4 %}
-  {% include "components/projectlist.njk" %}
-  {% if site.features.projectsPage %}
-  <nav>
-    <a href="{{ '/projects/' | url }}">View All Projects ➡️</a>
-  </nav>
-  {% endif %}
 
 </div>
 
