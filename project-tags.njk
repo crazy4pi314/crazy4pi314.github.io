@@ -8,6 +8,7 @@ pagination:
     - nav
     - post
     - posts
+    - blogFeed
 permalink: /project-tags/{{ tag | slug }}/
 layout: layouts/base.njk
 renderData:
@@ -17,13 +18,13 @@ renderData:
 <div class="page-container">
   <div class="tag-list tag-list--no-wrap">
     <h3 class="tag-list__title">Projects Tagged: "{{ tag | capitalize }}"</h3>
-    <a class="btn btn--danger" href="/projects">Remove Filter</a>
+    <a class="btn btn--danger" href="{% if site.features.projectsPage %}/projects{% else %}/tags/{% endif %}">Remove Filter</a>
   </div>
 
   {% set projectlist = collections[tag] %}
   {% include "components/projectlist.njk" %}
 
   <nav>
-    <a href="{{ '/projects/' | url }}">← View All Projects</a>
+    {% if site.features.projectsPage %}<a href="{{ '/projects/' | url }}">← View All Projects</a>{% else %}<a href="{{ '/' | url }}">← Back to Home</a>{% endif %}
   </nav>
 </div>

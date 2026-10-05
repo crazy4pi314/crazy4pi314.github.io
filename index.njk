@@ -38,9 +38,11 @@ section: home
   {% set projectlist = collections.project %}
   {% set limit = 4 %}
   {% include "components/projectlist.njk" %}
+  {% if site.features.projectsPage %}
   <nav>
     <a href="{{ '/projects/' | url }}">View All Projects ➡️</a>
   </nav>
+  {% endif %}
 
 </div>
 
