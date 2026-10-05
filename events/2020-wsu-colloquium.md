@@ -1,4 +1,5 @@
 ---
+eventType: talk
 title: The science isn't magic, but we are ✨
 subtitle:
 event: Washington State University Physics and Astronomy Colloquium

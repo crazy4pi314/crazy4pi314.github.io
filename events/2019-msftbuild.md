@@ -1,4 +1,5 @@
 ---
+eventType: talk
 title: "Learning Q# with Python"
 subtitle: "Building the quantum programming community"
 event: Microsoft Build 2019 - Session CFS2020

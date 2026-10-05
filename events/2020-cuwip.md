@@ -1,4 +1,5 @@
 ---
+eventType: workshop
 title: Workshops at CUWIP
 subtitle: Science Communication and K-12 Outreach + Building Inclusive Communities
 event: Conference for Undergraduate Women in Physics

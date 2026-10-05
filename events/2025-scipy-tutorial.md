@@ -1,4 +1,5 @@
 ---
+eventType: workshop
 title: "Develop Pythonic spreadsheets running Python in and out of the grid"
 subtitle: 
 event: SciPy 2025 (Tutorial)

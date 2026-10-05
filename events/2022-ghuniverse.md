@@ -1,4 +1,5 @@
 ---
+eventType: talk
 title: Open source quantum development with Codespaces
 subtitle:
 event: GitHub Universe

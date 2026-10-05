@@ -5,10 +5,11 @@
       <article class="article-card {% if isEvent %}article-card--event{% else %}article-card--blog{% endif %}" {% if item.url == url %} data-current="current item"{% endif %}>
         <h5>
           {% if isEvent %}
+            {% set eventLabel %}#{{ item.data.eventType or "event" }}{% endset %}
             {% if site.features.eventsPage %}
-              <a class="tag tag--event" href="{{ '/events/' | url }}">#event</a>
+              <a class="tag tag--event" href="{{ '/events/' | url }}">{{ eventLabel }}</a>
             {% else %}
-              <span class="tag tag--event">#event</span>
+              <span class="tag tag--event">{{ eventLabel }}</span>
             {% endif %}
           {% else %}
             <a class="tag tag--blog" href="{{ '/blog/' | url }}">#blog</a>

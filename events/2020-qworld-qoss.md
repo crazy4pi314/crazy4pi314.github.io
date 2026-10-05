@@ -1,4 +1,5 @@
 ---
+eventType: talk
 title: Growing the open source quantum software community
 subtitle:
 event: QWebinar

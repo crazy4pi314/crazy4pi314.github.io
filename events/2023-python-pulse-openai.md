@@ -1,4 +1,5 @@
 ---
+eventType: livestream
 title: "Python, Pi and OpenAI"
 subtitle: 
 event: Python Pulse
