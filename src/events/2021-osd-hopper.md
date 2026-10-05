@@ -1,4 +1,5 @@
 ---
+eventType: workshop
 title: Everyone Can Be a Quantum Open Source Developer! 💖
 subtitle: 
 event: Grace Hopper Summer Open Source day 2021

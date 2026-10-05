@@ -1,4 +1,5 @@
 ---
+eventType: podcast
 title: "Quantum Computing - Dr. Sarah Kaiser"
 subtitle: Podcast #63
 event: Jousef Murad Podcast

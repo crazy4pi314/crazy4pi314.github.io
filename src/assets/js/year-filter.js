@@ -19,7 +19,7 @@ if (root) {
     if (pager) pager.hidden = filtering;
     status.hidden = !filtering;
     status.textContent = filtering
-      ? `Showing ${shown} post${shown === 1 ? "" : "s"} from ${year}`
+      ? `Showing ${shown} entr${shown === 1 ? "y" : "ies"} from ${year}`
       : "";
 
     const url = new URL(window.location.href);

@@ -21,10 +21,10 @@ export default {
   defaultTheme: "auto",
   tagline: "scientist, maker, community builder.",
   heroLead:
-    "I'm an **experimental physicist turned software developer** with 15+ years building and managing cutting-edge tech projects. I write books, cut things with lasers, and hang out with my pup Chewie 🐕💖",
+    "I'm an **experimental physicist turned software developer** with 15+ years building and managing cutting-edge tech projects. I write books, cut things with lasers, and find rabbit holes in my garden and workshop.",
   hero: {
-    kicker: "Est. 2016 // a personal homepage, hand-tended",
-    title: "Welcome to my corner of the web.",
+    kicker: "Est. 2016",
+    title: "Hi, I'm Sarah!",
     photo: {
       src: "/static/img/sarah-and-chewie.jpg",
       alt: "Sarah smiling on a couch while her German Shepherd, Chewie, leans over her shoulder."
@@ -38,7 +38,7 @@ export default {
       {
         title: "Where I speak",
         text: "Conference talks, workshops, podcasts, and streams from PyCon to PyCascades.",
-        url: "/events/"
+        url: "/blog/"
       },
       {
         title: "What I'm learning",
@@ -54,6 +54,7 @@ export default {
     ogImages: true,
     postSidebars: true,
     projects: false,
+    eventsPage: false,
     responsiveImages: true,
     sampleContent: true,
     search: true,
@@ -79,25 +80,27 @@ export default {
   navigation: [
     { label: "Home", url: "/" },
     { label: "Blog", url: "/blog/" },
-    { label: "Events", url: "/events/" },
+    { label: "Events", url: "/events/", feature: "eventsPage" },
     { label: "Projects", url: "/projects/", feature: "projects" },
     { label: "Books", url: "/books/" },
     { label: "Search", url: "/search/", feature: "search" },
     { label: "About", url: "/about/" }
   ],
   marquee: [
-    { text: "Now Loading...", icon: "/assets/images/logo/hourglass.svg", iconWidth: 10, iconHeight: 12 },
-    { text: "caution: class 4 personal website", icon: "/assets/images/logo/caution-tri.svg", iconWidth: 11, iconHeight: 10 },
-    { text: "protective eyewear required beyond this point", icon: "/assets/images/logo/goggles-wrap.svg", iconWidth: 26, iconHeight: 12 },
-    { text: "yup boat is still afloat" },
-    { text: "CHEWIE STOP BARKING" }
+    // { text: "Now Loading...", icon: "/assets/images/logo/hourglass.svg", iconWidth: 10, iconHeight: 12 },
+    { text: "caution: class 4 personal website"}, 
+    //icon: "/assets/images/logo/caution-tri.svg", iconWidth: 11, iconHeight: 10 },
+    { text: "protective eyewear required beyond this point", icon: "/assets/images/logo/goggles-wrap.svg", iconWidth: 26, iconHeight: 12, repeatIcon: true },
+    // { text: "yup boat is still afloat" },
+    // { text: "CHEWIE STOP BARKING" }
   ],
   badges: [
-    { label: "RSS FEED", url: "/feed.xml", accent: "laser" },
-    { label: "GITHUB", url: "https://github.com/crazy4pi314", accent: "laser-dark" },
-    { label: "MASTODON", url: "https://mathstodon.xyz/@crazy4pi314", accent: "laser" },
-    { label: "TWITCH", url: "https://www.twitch.tv/crazy4pi314", accent: "laser-dark" },
-    { label: "LINKEDIN", url: "https://www.linkedin.com/in/sckaiser1/", accent: "laser" }
+    { label: "YOUTUBE", url: "https://www.youtube.com/@sckaiser", accent: "youtube" },
+    { label: "RSS FEED", url: "/feed.xml", accent: "rss" },
+    { label: "GITHUB", url: "https://github.com/crazy4pi314", accent: "github" },
+    { label: "MASTODON", url: "https://mathstodon.xyz/@crazy4pi314", accent: "mastodon" },
+    { label: "TWITCH", url: "https://www.twitch.tv/crazy4pi314", accent: "twitch" },
+    { label: "LINKEDIN", url: "https://www.linkedin.com/in/sckaiser1/", accent: "linkedin" }
   ],
   examplePages: [
     {

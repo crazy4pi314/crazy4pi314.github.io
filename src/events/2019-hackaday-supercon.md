@@ -1,4 +1,5 @@
 ---
+eventType: talk
 title: Hacking Quantum Key Distribution Hardware
 subtitle: or How I Learned to Stop Worrying and Burn Things with Lasers
 event: Hackaday Supercon 2019

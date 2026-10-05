@@ -55,7 +55,7 @@ breadcrumbKey: Events
         {% endif %}
 
         <pixel-divider></pixel-divider>
-        <a class="text-link" href="/events/">← All events</a>
+        <a class="text-link" href="{% if site.features.eventsPage %}/events/{% else %}/blog/{% endif %}">← {% if site.features.eventsPage %}All events{% else %}All posts and events{% endif %}</a>
       </article>
     </retro-panel>
   </div>

@@ -1,0 +1,26 @@
+{% set isEvent = "event" in post.data.tags %}
+<p class="post-card__meta">
+  <span class="tag-pill feed-type">{% if isEvent %}{{ post.data.eventType or "event" }}{% else %}blog{% endif %}</span>
+  <time class="dt-published" datetime="{{ post.date | machineDate }}">{{ post.date | formatDate }}</time>
+  {% if not isEvent %}
+    <span aria-hidden="true">::</span>
+    <span>{{ post.templateContent | stripTags | readTime }}</span>
+  {% endif %}
+</p>
+<h{{ feedHeadingLevel }} class="post-card__title">
+  <a class="p-name u-url" href="{{ post.url }}">{{ post.data.title }}</a>
+</h{{ feedHeadingLevel }}>
+{% if isEvent %}
+  {% if post.data.event %}<p>{{ post.data.event }}{% if post.data.location %}, {{ post.data.location }}{% endif %}</p>{% endif %}
+  {% if post.data.subtitle %}<p>{{ post.data.subtitle }}</p>{% endif %}
+{% else %}
+  <p>{{ post.data.description }}</p>
+{% endif %}
+{% set tags = post.data.tags | publicTags %}
+{% if tags.length %}
+  <ul class="tag-list" aria-label="{% if isEvent %}Event{% else %}Post{% endif %} tags">
+    {% for tag in tags %}
+      <li><a class="tag-pill" href="/tags/{{ tag | slugify }}/">{{ tag }}</a></li>
+    {% endfor %}
+  </ul>
+{% endif %}

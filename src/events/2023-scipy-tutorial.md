@@ -1,4 +1,5 @@
 ---
+eventType: workshop
 title: "Meet your coding best friend: VS Code"
 subtitle: A hands-on tutorial on how to get the most out of the world's most popular Python editor
 event: SciPy 2023 (Tutorial)

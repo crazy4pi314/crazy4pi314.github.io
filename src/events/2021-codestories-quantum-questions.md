@@ -1,4 +1,5 @@
 ---
+eventType: livestream
 title: "Quantum Questions with Dr. Sarah Kaiser"
 subtitle: CodeStories, Part 1
 event: CodeStories (Microsoft Developer)

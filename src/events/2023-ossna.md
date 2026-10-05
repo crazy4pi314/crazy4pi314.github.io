@@ -1,4 +1,5 @@
 ---
+eventType: panel
 title: Finding the Right Comms for Your Community
 subtitle: Exploring How Tech Platforms Influence Culture Panel
 event: Open Source Summit North America 2023

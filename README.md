@@ -18,6 +18,10 @@ Retro Garden is an open source Eleventy theme for personal sites that want Indie
 
 ## Features
 
+The homepage and `/blog/` archive use a shared, newest-first `blogFeed` collection of posts and events. Event cards show `eventType` labels; year filtering and pagination cover both content types. RSS and JSON feeds remain post-only.
+
+`site.features.eventsPage` and `site.features.projects` control the standalone listing pages (both default off). Individual event and project pages remain available. Feed card markup lives in `src/_includes/partials/feed-card.njk`.
+
 - Eleventy 3.1 with Windows, macOS, and Linux-friendly scripts
 - Eleventy Fetch for friendly remote-data caching
 - Eleventy Image for responsive AVIF, WebP, and original image output

@@ -1,18 +1,18 @@
 ---
 layout: layouts/base.njk
 title: Blog
-description: Long-form posts, field notes, and other dispatches from this handmade corner of the web.
+description: Posts, talks, workshops, podcasts, and other dispatches from Sarah Kaiser.
 eyebrow: blog/index.njk
 section: archive
 breadcrumbKey: Blog
 pagination:
-  data: collections.posts
+  data: collections.blogFeed
   size: 3
   alias: blogPosts
 permalink: "{% if pagination.pageNumber == 0 %}/blog/index.html{% else %}/blog/page/{{ pagination.pageNumber + 1 }}/index.html{% endif %}"
 ---
 {% set years = [] %}
-{% for post in collections.posts %}
+{% for post in collections.blogFeed %}
   {% set y = post.date.getFullYear() %}
   {% if not (y in years) %}{% set years = (years.push(y), years) %}{% endif %}
 {% endfor %}
@@ -22,7 +22,7 @@ permalink: "{% if pagination.pageNumber == 0 %}/blog/index.html{% else %}/blog/p
       <span slot="title">archive.log</span>
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Blog archive</p>
+          <p class="eyebrow">Posts + events</p>
           <h1 class="section-title">My unscientific lab notebook</h1>
         </div>
         <div class="section-heading__actions" role="group" aria-label="Subscribe to the blog">
@@ -32,37 +32,22 @@ permalink: "{% if pagination.pageNumber == 0 %}/blog/index.html{% else %}/blog/p
       </div>
       <p class="year-filter-status" role="status" hidden></p>
       <div class="panel-grid">
-        {% for post in collections.posts %}
+        {% for post in collections.blogFeed %}
           {% set onPage = (loop.index0 / pagination.size) | int == pagination.pageNumber %}
           <article class="post-card h-entry" data-year="{{ post.date.getFullYear() }}" data-current-page="{{ onPage }}"{% if not onPage %} hidden data-pagefind-ignore="all"{% endif %}>
-            <p class="post-card__meta">
-              <time class="dt-published" datetime="{{ post.date | machineDate }}">{{ post.date | formatDate }}</time>
-              <span aria-hidden="true">::</span>
-              <span>{{ post.templateContent | stripTags | readTime }}</span>
-            </p>
-            <h2 class="post-card__title">
-              <a class="p-name u-url" href="{{ post.url }}">{{ post.data.title }}</a>
-            </h2>
-            <p>{{ post.data.description }}</p>
-            {% set tags = post.data.tags | publicTags %}
-            {% if tags.length %}
-              <ul class="tag-list" aria-label="Post tags">
-                {% for tag in tags %}
-                  <li><span class="tag-pill">{{ tag }}</span></li>
-                {% endfor %}
-              </ul>
-            {% endif %}
+            {% set feedHeadingLevel = 2 %}
+            {% include "partials/feed-card.njk" %}
           </article>
         {% endfor %}
       </div>
       {% if pagination.pages.length > 1 %}
         <nav class="pagination" aria-label="Blog pagination">
           <div>
-            {% if pagination.href.previous %}<a class="text-link" href="{{ pagination.href.previous }}">← Newer posts</a>{% endif %}
+            {% if pagination.href.previous %}<a class="text-link" href="{{ pagination.href.previous }}">← Newer entries</a>{% endif %}
           </div>
           <span class="pagination__status">Page {{ pagination.pageNumber + 1 }} of {{ pagination.pages.length }}</span>
           <div>
-            {% if pagination.href.next %}<a class="text-link" href="{{ pagination.href.next }}">Older posts →</a>{% endif %}
+            {% if pagination.href.next %}<a class="text-link" href="{{ pagination.href.next }}">Older entries →</a>{% endif %}
           </div>
         </nav>
       {% endif %}

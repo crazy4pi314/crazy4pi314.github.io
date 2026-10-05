@@ -1,4 +1,5 @@
 ---
+eventType: talk
 title: "Eternal sunshine of the spotless development environment"
 subtitle: 
 event: PyCon US 2024

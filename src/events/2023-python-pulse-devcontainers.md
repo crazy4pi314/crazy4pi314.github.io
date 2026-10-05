@@ -1,4 +1,5 @@
 ---
+eventType: livestream
 title: "Let's Make Dev Containers"
 subtitle: Audience Edition
 event: Python Pulse

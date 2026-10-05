@@ -38,7 +38,7 @@ I got my PhD in Physics (Quantum Computing) by starting plasma fires with lasers
 
 ## Passions
 
-I am a vocal activist for diversity and inclusion in STEM fields and often give [presentations](/events/) on my experiences and perspective as a bisexual woman in tech. Live streaming quantum software development on [Twitch](https://www.twitch.tv/crazy4pi314) has been another great way I connect with folks to make quantum tech more accessible.
+I am a vocal activist for diversity and inclusion in STEM fields and often give [presentations]({% if site.features.eventsPage %}/events/{% else %}/blog/{% endif %}) on my experiences and perspective as a bisexual woman in tech. Live streaming quantum software development on [Twitch](https://www.twitch.tv/crazy4pi314) has been another great way I connect with folks to make quantum tech more accessible.
 
 <div class="media-grid">
   <figure class="media-figure">
