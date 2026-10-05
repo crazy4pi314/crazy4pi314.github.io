@@ -1,6 +1,6 @@
 {% set kind = post.data | feedType %}
 {% set isEvent = kind != "blog" %}
-{% set compact = compactEventCard and kind in ["talk", "workshop"] %}
+{% set compact = kind in ["talk", "workshop"] %}
 <header class="feed-card__header">
   <p class="feed-card__type">
     <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
