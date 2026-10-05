@@ -701,8 +701,8 @@ html[data-accent="laser-dark"] {
     display: inline-flex;
     align-items: center;
     border: 2px solid var(--color-line);
-    background: var(--accent-soft);
-    color: var(--color-ink);
+    background: var(--accent-secondary);
+    color: #16202a;
     padding: 0.45rem 0.7rem;
     box-shadow: 3px 3px 0 var(--shadow-color);
     font-family: var(--font-display);
