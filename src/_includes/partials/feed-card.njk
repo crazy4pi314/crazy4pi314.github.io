@@ -26,9 +26,10 @@
     </h{{ feedHeadingLevel }}>
     <p class="post-card__meta">
       <time class="dt-published" datetime="{{ post.date | machineDate }}">{{ post.date | formatDate }}</time>
+      {% if compact and post.data.event %}<span aria-hidden="true">::</span><span>{{ post.data.event }}</span>{% endif %}
       {% if post.data.location and not compact %}<span>{{ post.data.location }}</span>{% endif %}
     </p>
-    {% if post.data.event %}<p class="feed-card__event">{{ post.data.event }}</p>{% endif %}
+    {% if post.data.event and not compact %}<p class="feed-card__event">{{ post.data.event }}</p>{% endif %}
   {% endif %}
 </header>
 <div class="feed-card__body">
@@ -39,8 +40,9 @@
     <p class="post-card__meta">
       <time class="dt-published" datetime="{{ post.date | machineDate }}">{{ post.date | formatDate }}</time>
       {% if not isEvent %}<span aria-hidden="true">::</span><span>{{ post.templateContent | stripTags | readTime }}</span>{% endif %}
+      {% if compact and post.data.event %}<span aria-hidden="true">::</span><span>{{ post.data.event }}</span>{% endif %}
     </p>
-    {% if post.data.event %}<p class="feed-card__event">{{ post.data.event }}{% if post.data.location and not compact %}, {{ post.data.location }}{% endif %}</p>{% endif %}
+    {% if post.data.event and not compact %}<p class="feed-card__event">{{ post.data.event }}{% if post.data.location %}, {{ post.data.location }}{% endif %}</p>{% endif %}
   {% endif %}
   {% if isEvent %}
     {% if post.data.subtitle and not compact %}<p>{{ post.data.subtitle }}</p>{% endif %}
