@@ -1,4 +1,5 @@
 ---
+eventType: talk
 title: Science is not a safe space
 subtitle: 
 event: Invited talk @ Q-Turn 2020

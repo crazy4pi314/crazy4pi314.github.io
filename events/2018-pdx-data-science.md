@@ -1,4 +1,5 @@
 ---
+eventType: talk
 title: "Quantum Machine Learning in context"
 subtitle: "What is a quantum algorithm anyway?"
 event: Portland Data Science Group

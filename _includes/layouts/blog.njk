@@ -11,7 +11,7 @@ permalink: /blog/index.html
   {% include "components/tagslist.njk" %}
   </details>
   <hr>
-  {% set postslist = collections.post %}
+  {% set feedlist = collections.blogFeed %}
   {% set show_postslist_tags = true %}
-  {% include "components/postslist.njk" %}
+  {% include "components/feedlist.njk" %}
 </div>

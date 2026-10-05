@@ -15,6 +15,10 @@
         "keybase": "https://keybase.io/skaiser",
         "twitter": "https://twitter.com/crazy4pi314"
     },
+    "features": {
+        "eventsPage": false,
+        "projectsPage": false
+    },
     "images": {
         "favicon": "/favicon.png",
         "favicon_svg": "/favicon.svg",

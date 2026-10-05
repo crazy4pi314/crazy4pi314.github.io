@@ -1,4 +1,5 @@
 ---
+eventType: talk
 title: "I declare an environment!"
 subtitle: Reproducibility with and without Docker
 event: PyCascades 2024

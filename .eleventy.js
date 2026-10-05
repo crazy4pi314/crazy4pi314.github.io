@@ -42,6 +42,17 @@ module.exports = function(eleventyConfig) {
         }, {});
     });
 
+    // Combined, date-sorted view of blog posts and events for the blog page.
+    // The underlying "post" and "events" collections remain separate.
+    eleventyConfig.addCollection("blogFeed", collection => {
+        return collection.getAll()
+            .filter(item => {
+                const tags = item.data.tags || [];
+                return tags.includes("post") || tags.includes("events");
+            })
+            .sort((a, b) => a.date - b.date);
+    });
+
     function filterTagList(tags) {
         return (tags || []).filter(tag => ["all", "nav"].indexOf(tag) === -1);
     }
@@ -140,7 +151,7 @@ module.exports = function(eleventyConfig) {
     );
 
     return {
-        templateFormats: ["md", "njk", "html", "liquid"],
+        templateFormats: ["md", "njk", "html", "liquid", "11ty.js"],
 
         // If your site lives in a different subdirectory, change this.
         // Leading or trailing slashes are all normalized away, so don’t worry about it.

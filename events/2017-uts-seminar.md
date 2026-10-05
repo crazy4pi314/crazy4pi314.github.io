@@ -1,4 +1,5 @@
 ---
+eventType: talk
 title: Extending the reach of QKD
 subtitle:
 event: QSI seminar series

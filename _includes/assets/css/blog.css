@@ -6,8 +6,70 @@
   color: var(--color-text);
 }
 
+.article-card__heading {
+  font-size: 1.25em;
+}
+
+.article-card__title:focus-visible,
+.article-card .tag:focus-visible {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .article-card__summary {
   margin-bottom: 15px;
+}
+
+.article-card--event,
+.article-card--blog {
+  padding: 2px 14px 6px;
+  border-radius: var(--border-radius-sm);
+}
+
+.article-card--event {
+  background-color: var(--color-bg-secondary);
+}
+
+.article-card--blog {
+  background-color: var(--color-bg-blog);
+}
+
+.article-card--event .article-card__summary {
+  font-style: italic;
+}
+
+.article-card--event .tag-list .tag,
+.article-card--blog .tag-list .tag {
+  background-color: var(--color-bg);
+}
+
+.article-card .tag--event,
+.article-card .tag--blog {
+  display: inline-block;
+  margin: 0 8px 0 0;
+  vertical-align: middle;
+}
+
+.article-card .tag--event {
+  background-color: var(--color-bg-accent);
+  color: var(--color-primary);
+}
+
+.article-card .tag--blog {
+  background-color: var(--color-logo-blue);
+  color: var(--color-secondary-dark);
 }
 
 .tag-list {

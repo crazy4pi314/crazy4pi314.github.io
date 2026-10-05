@@ -1,4 +1,5 @@
 ---
+eventType: talk
 title: "Getting all your snakes in a grid"
 subtitle: Collaborating and teaching with Python in Excel and the Anaconda Toolbox
 event: SciPy 2025

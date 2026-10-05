@@ -1,4 +1,5 @@
 ---
+eventType: workshop
 title: Level up you Jupyter Notebooks with VS Code
 subtitle: 
 event: PyData Global 2022

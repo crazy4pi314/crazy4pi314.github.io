@@ -37,7 +37,7 @@ I got my PhD in Physics (Quantum Computing) by starting plasma fires with lasers
 ---
 ### 💞 Passions
 
-I am a vocal activist for diversity and inclusion in STEM fields and often give [presentations]({{site.baseurl}}/events) on my experiences and perspective as bisexual woman in tech. Live streaming quantum software development on [Twitch]({{site.social.twitch}}) has been another great way I  connect with folks to make quantum tech more accessible.
+I am a vocal activist for diversity and inclusion in STEM fields and often give [presentations]({{site.baseurl}}{% if site.features.eventsPage %}/events{% else %}/blog{% endif %}) on my experiences and perspective as bisexual woman in tech. Live streaming quantum software development on [Twitch]({{site.social.twitch}}) has been another great way I  connect with folks to make quantum tech more accessible.
 
 <div class="project-grid">
 <img src="/static/img/figures/sarah-build-talk.png" alt="Sarah on stage ate Microsoft BUILD 2019" style="width: 75%; display: inline;padding-top: 1em;"/>

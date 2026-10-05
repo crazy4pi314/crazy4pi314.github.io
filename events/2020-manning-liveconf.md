@@ -1,4 +1,5 @@
 ---
+eventType: talk
 title: Finding your Community
 subtitle: Together we can be tech leaders of tomorrow
 event: "live@manning conferences: Women in Tech"

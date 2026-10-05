@@ -1,4 +1,5 @@
 ---
+eventType: talk
 title: Introduction to Q#
 subtitle: A high level quantum development language for everyone
 event: Seminar at International Graduate School for Quantum Technologies

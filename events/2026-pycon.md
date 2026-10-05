@@ -1,4 +1,5 @@
 ---
+eventType: talk
 title: "A bridge over (not) troubled waters"
 subtitle: Collecting marine data from your couch
 event: PyCon US 2026

@@ -1,4 +1,5 @@
 ---
+eventType: talk
 title: "Eternal Sunshine of the Spotless Development Environment"
 subtitle: 
 event: PyCascades 2023

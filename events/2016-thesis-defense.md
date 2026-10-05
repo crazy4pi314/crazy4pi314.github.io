@@ -1,4 +1,5 @@
 ---
+eventType: talk
 title: Quantum key distribution devices
 subtitle: How to make them and how to break them
 event: PhD Thesis Defense

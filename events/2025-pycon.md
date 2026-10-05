@@ -1,4 +1,5 @@
 ---
+eventType: workshop
 title: "Snakes in a Grid"
 subtitle: Working with spreadsheets in Python + Python in Excel
 event: PyCon US 2025 (Tutorial)

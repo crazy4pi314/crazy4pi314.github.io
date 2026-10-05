@@ -1,4 +1,5 @@
 ---
+eventType: talk
 title: "Python + Quantum Computing = 💖"
 subtitle: ""
 event: Seattle PyLadies September Talk Night

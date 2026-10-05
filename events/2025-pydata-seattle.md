@@ -1,4 +1,5 @@
 ---
+eventType: workshop
 title: "There's no place like home"
 subtitle: Using AI agents in Jupyter notebooks
 event: PyData Seattle 2025 (Tutorial)

@@ -1,4 +1,5 @@
 ---
+eventType: livestream
 title: Get started developing for Quantum computers today
 subtitle: 
 event: Azure Community Live \#16
