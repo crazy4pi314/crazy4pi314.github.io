@@ -18,6 +18,7 @@
 :root {
   --accent-main: #ff7cfe;
   --accent-soft: #f2e2f7;
+  --resource-soft: #e2ebf7;
   --accent-strong: #9a09be;
   --accent-secondary: #3f93ff;
   --panel-shadow: #1d2833;
@@ -43,6 +44,7 @@
 html[data-accent="laser-dark"] {
   --accent-main: #ff8cff;
   --accent-soft: #35243b;
+  --resource-soft: #24303b;
   --accent-strong: #ffb4ff;
   --accent-secondary: #77b6ff;
   --color-paper: #11131a;
@@ -701,8 +703,8 @@ html[data-accent="laser-dark"] {
     display: inline-flex;
     align-items: center;
     border: 2px solid var(--color-line);
-    background: var(--accent-secondary);
-    color: #16202a;
+    background: var(--resource-soft);
+    color: var(--color-ink);
     padding: 0.45rem 0.7rem;
     box-shadow: 3px 3px 0 var(--shadow-color);
     font-family: var(--font-display);
@@ -901,8 +903,16 @@ html[data-accent="laser-dark"] {
     font-size: 0.85rem;
   }
 
-  .feed-card__resources {
+  .feed-card__footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.65rem;
     margin-top: 1rem;
+  }
+
+  .feed-card__footer .tag-list {
+    margin: 0;
   }
 
   .tag-list {

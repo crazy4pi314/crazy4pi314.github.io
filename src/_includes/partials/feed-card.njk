@@ -55,6 +55,7 @@
   {% elif kind == "livestream" %}
     <p class="feed-card__recording"><span aria-hidden="true">&#9654;</span> Recorded stream</p>
   {% endif %}
+  <div class="feed-card__footer">
   <div class="resource-links feed-card__resources">
     {% if not isEvent %}<a class="resource-link" href="{{ post.url }}">Read entry</a>{% endif %}
     {% if isEvent %}
@@ -74,4 +75,5 @@
       {% for tag in tags %}<li><a class="tag-pill" href="/tags/{{ tag | slugify }}/">{{ tag }}</a></li>{% endfor %}
     </ul>
   {% endif %}
+  </div>
 </div>
