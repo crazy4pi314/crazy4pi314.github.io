@@ -1,0 +1,45 @@
+<section>
+	{% for item in feedlist | reverse %}
+    {% set isEvent = item.data.tags and "events" in item.data.tags %}
+    {% if limit === undefined or loop.index0 < limit %}
+      <article class="article-card{% if isEvent %} article-card--event{% endif %}" {% if item.url == url %} data-current="current item"{% endif %}>
+        <h5>
+          {% if isEvent %}
+            <a class="tag tag--event" href="{{ '/events/' | url }}">#event</a>
+          {% endif %}
+          <a class="article-card__title" href="{{ item.url | url }}">
+            {% if item.data.title %}
+              {{ item.data.title }}
+            {% else %}
+              Untitled
+            {% endif %}
+          </a>
+        <small>
+          | <time datetime="{{ item.date | machineDate }}">{{ item.date | readableDate }}</time>
+        </small>
+        </h5>
+        {% if isEvent %}
+          {% if item.data.event %}
+            <p class="article-card__summary">
+              {{ item.data.event }}{% if item.data.location %} · {{ item.data.location }}{% endif %}
+            </p>
+          {% endif %}
+        {% elif item.data.summary %}
+          <p class="article-card__summary">
+            {{ item.data.summary }}
+          </p>
+        {% endif %}
+        {% if item.data.tags and show_postslist_tags %}
+          <p class="tag-list">
+            {% for tag in item.data.tags %}
+              {%- if tag != "post" and tag != "events" -%}
+                {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+              <a class="tag btn" href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>
+              {%- endif -%}
+            {% endfor %}
+          </p>
+        {% endif %}
+      </article>
+    {% endif %}
+	{% endfor %}
+</section>

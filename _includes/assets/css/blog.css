@@ -10,6 +10,28 @@
   margin-bottom: 15px;
 }
 
+.article-card--event {
+  padding: 2px 14px 6px;
+  background-color: var(--color-bg-secondary);
+  border-radius: var(--border-radius-sm);
+}
+
+.article-card--event .article-card__summary {
+  font-style: italic;
+}
+
+.article-card--event .tag-list .tag {
+  background-color: var(--color-bg);
+}
+
+.article-card .tag--event {
+  display: inline-block;
+  margin: 0 8px 0 0;
+  background-color: var(--color-bg-accent);
+  color: var(--color-primary);
+  vertical-align: middle;
+}
+
 .tag-list {
   display: flex;
   flex-wrap: wrap;
