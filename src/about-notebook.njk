@@ -1,0 +1,183 @@
+---
+layout: layouts/base.njk
+title: About (lab notebook demo)
+description: A lab-notebook redesign demo for Sarah Kaiser's About page.
+eyebrow: about-notebook.njk
+section: notebook demo
+permalink: /about-notebook/
+eleventyExcludeFromCollections: true
+---
+<div class="content-grid content-grid--single">
+  <div class="stack-rows">
+    <retro-panel>
+      <span slot="title">lab-notebook/about.md</span>
+      <article class="notebook">
+        <header class="notebook-cover">
+          <div>
+            <p class="eyebrow">Lab notebook no. 001</p>
+            <h1 class="section-title">About Sarah</h1>
+            <p class="notebook-cover__lead">Experimental physicist turned software developer, author, community builder, and occasional laser enthusiast.</p>
+          </div>
+          <dl class="notebook-label">
+            <div><dt>Researcher</dt><dd>Dr. Sarah Kaiser</dd></div>
+            <div><dt>Location</dt><dd>Seattle</dd></div>
+            <div><dt>Field</dt><dd>Python, open source, quantum software</dd></div>
+            <div><dt>Lab assistant</dt><dd>Chewie</dd></div>
+          </dl>
+        </header>
+
+        <p class="notebook-demo-note"><strong>Demo key:</strong> regular notebook entries use your current About content. <span class="notebook-tag">Suggested entry</span> callouts are new content ideas for you to fill in or remove.</p>
+
+        <nav class="notebook-toc" aria-labelledby="notebook-contents">
+          <h2 id="notebook-contents">Contents</h2>
+          <ol>
+            <li><a href="#objective">Objective</a></li>
+            <li><a href="#background">Background</a></li>
+            <li><a href="#methods">Materials + methods</a></li>
+            <li><a href="#observations">Observations</a></li>
+            <li><a href="#results">Results</a></li>
+            <li><a href="#current">Current experiments</a></li>
+            <li><a href="#collaborate">Collaboration protocol</a></li>
+          </ol>
+        </nav>
+
+        <section class="notebook-entry" id="objective" aria-labelledby="objective-title">
+          <p class="notebook-entry__number">Entry 01</p>
+          <h2 id="objective-title">Objective</h2>
+          <p>I am an experimental physicist turned software developer with over 15 years of experience developing and managing cutting-edge tech projects. I care about making complex technology approachable, building welcoming communities, and making quantum technology more accessible.</p>
+          <p>While not from Seattle originally, I have found my home here. I enjoy <a href="/books/">writing books</a> about cool technologies on a split ergo keyboard, cutting things with lasers, and playing with my pup Chewie.</p>
+        </section>
+
+        <section class="notebook-entry" id="background" aria-labelledby="background-title">
+          <p class="notebook-entry__number">Entry 02</p>
+          <h2 id="background-title">Background</h2>
+          <ol class="notebook-timeline">
+            <li>
+              <strong>PhD in Physics (Quantum Computing)</strong>
+              <span>Started plasma fires with lasers to hack quantum crypto devices and worked on sending and detecting single photons in space. <a href="http://hdl.handle.net/10012/10725">Read the thesis</a>.</span>
+            </li>
+            <li>
+              <strong>Hardware + quantum research</strong>
+              <span>Worked on low-noise optical systems for satellites, virtual reality hardware, and nanodiamonds for quantum sensing at cryogenic temperatures.</span>
+            </li>
+            <li>
+              <strong>Quantum software</strong>
+              <span>Built software tools and languages for quantum computers, including work with Q#.</span>
+            </li>
+            <li>
+              <strong>2021: Python Software Foundation Fellow</strong>
+              <span>Recognized for contributions to the Python community.</span>
+            </li>
+            <li>
+              <strong>Today: developer advocate</strong>
+              <span>Supporting the Python open source community.</span>
+            </li>
+          </ol>
+        </section>
+
+        <section class="notebook-entry" id="methods" aria-labelledby="methods-title">
+          <p class="notebook-entry__number">Entry 03</p>
+          <h2 id="methods-title">Materials + methods</h2>
+          <div class="notebook-grid">
+            <div class="notebook-card">
+              <h3>Languages</h3>
+              <ul>
+                <li>Python for most things</li>
+                <li>Rust for dabbling</li>
+                <li>Q# for programming quantum computers</li>
+              </ul>
+            </div>
+            <div class="notebook-card">
+              <h3>Lab equipment</h3>
+              <ul>
+                <li>Jupyter notebooks</li>
+                <li>Split ergonomic keyboard</li>
+                <li>Lasers, carefully</li>
+              </ul>
+            </div>
+            <aside class="notebook-card notebook-card--suggestion" aria-label="Suggested entry: working style">
+              <span class="notebook-tag">Suggested entry</span>
+              <h3>Working style</h3>
+              <p>Add 3 short notes on how you like to learn, teach, or collaborate. Example prompts: “I learn best by…”, “I am happiest when…”, “Ask me about…”.</p>
+            </aside>
+          </div>
+        </section>
+
+        <section class="notebook-entry" id="observations" aria-labelledby="observations-title">
+          <p class="notebook-entry__number">Entry 04</p>
+          <h2 id="observations-title">Observations</h2>
+          <div class="notebook-figures">
+            <figure class="notebook-figure">
+              <img src="/static/img/lab-uw.jpg" alt="Sarah in a dark lab with optical fibers glowing red and green wrapped around her" width="1400" height="1050">
+              <figcaption><strong>Fig. 1</strong> Optical fibers make excellent lab jewelry.</figcaption>
+            </figure>
+            <figure class="notebook-figure">
+              <img src="/static/img/chewie-mikeandike.jpg" alt="Sarah's German Shepherd named Chewie curled up on the couch with a quantum textbook" width="1400" height="1050">
+              <figcaption><strong>Fig. 2</strong> Chewie, chief quantum napping officer.</figcaption>
+            </figure>
+            <figure class="notebook-figure">
+              <img src="/static/img/figures/sarah-build-talk.png" alt="Sarah speaking on stage at Microsoft BUILD 2019" width="1400" height="1050">
+              <figcaption><strong>Fig. 3</strong> On stage at Microsoft BUILD 2019.</figcaption>
+            </figure>
+            <figure class="notebook-figure">
+              <img src="/static/img/figures/uf-qst.png" alt="Sarah hosting a quantum software talk on Twitch" width="1400" height="1050">
+              <figcaption><strong>Fig. 4</strong> Hosting quantum software streams on Twitch.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="notebook-entry" id="results" aria-labelledby="results-title">
+          <p class="notebook-entry__number">Entry 05</p>
+          <h2 id="results-title">Results</h2>
+          <dl class="notebook-results">
+            <div><dt>{{ collections.publications.length }}</dt><dd><a href="/books/">Books</a> written</dd></div>
+            <div><dt>{{ collections.events.length }}</dt><dd><a href="/blog/">Talks + events</a> logged</dd></div>
+            <div><dt>{{ collections.posts.length }}</dt><dd><a href="/blog/">Notebook posts</a> published</dd></div>
+          </dl>
+          <p>I am a vocal activist for diversity and inclusion in STEM, and I often give <a href="/blog/">presentations</a> about my experiences and perspective as a bisexual woman in tech. Live streaming quantum software development on <a href="https://www.twitch.tv/crazy4pi314">Twitch</a> has been another great way to make quantum technology more accessible.</p>
+        </section>
+
+        <section class="notebook-entry" id="current" aria-labelledby="current-title">
+          <p class="notebook-entry__number">Entry 06</p>
+          <h2 id="current-title">Current experiments</h2>
+          <aside class="notebook-card notebook-card--suggestion" aria-label="Suggested entry: now page">
+            <span class="notebook-tag">Suggested entry</span>
+            <h3>What I am working on now</h3>
+            <ul class="notebook-checklist">
+              <li>[Current project or community initiative]</li>
+              <li>[Something you are learning]</li>
+              <li>[Upcoming talk, book, or event]</li>
+            </ul>
+            <p class="notebook-small">Add a “last updated” date so this can work like a lightweight /now page.</p>
+          </aside>
+        </section>
+
+        <section class="notebook-entry" id="collaborate" aria-labelledby="collaborate-title">
+          <p class="notebook-entry__number">Entry 07</p>
+          <h2 id="collaborate-title">Collaboration protocol</h2>
+          <div class="notebook-grid">
+            <div class="notebook-card">
+              <h3>Find me elsewhere</h3>
+              <ul>
+                <li><a href="https://github.com/crazy4pi314">GitHub</a></li>
+                <li><a href="https://mathstodon.xyz/@crazy4pi314">Mastodon</a></li>
+                <li><a href="https://www.linkedin.com/in/sckaiser1/">LinkedIn</a></li>
+                <li><a href="https://dev.to/crazy4pi314">dev.to</a></li>
+              </ul>
+            </div>
+            <aside class="notebook-card notebook-card--suggestion" aria-label="Suggested entry: speaker kit">
+              <span class="notebook-tag">Suggested entry</span>
+              <h3>Speaker + media kit</h3>
+              <p>Add a short bio, long bio, approved headshot, pronouns, and preferred talk topics for organizers.</p>
+            </aside>
+            <aside class="notebook-card notebook-card--suggestion" aria-label="Suggested entry: lab values">
+              <span class="notebook-tag">Suggested entry</span>
+              <h3>Lab safety rules</h3>
+              <p>Turn your community values into playful rules, such as “Questions are welcome,” “Leave the lab more accessible,” and “Wear eye protection.”</p>
+            </aside>
+          </div>
+        </section>
+      </article>
+    </retro-panel>
+  </div>
+</div>
