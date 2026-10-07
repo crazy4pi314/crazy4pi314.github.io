@@ -1,0 +1,140 @@
+---
+layout: layouts/base.njk
+title: About (retro homepage demo)
+description: A 90s personal-homepage redesign demo for Sarah Kaiser's About page.
+eyebrow: about-retro.njk
+section: retro demo
+permalink: /about-retro/
+eleventyExcludeFromCollections: true
+---
+<div class="content-grid">
+  <div class="stack-rows">
+    <retro-panel>
+      <span slot="title">welcome.exe</span>
+      <section class="retro-about-welcome" aria-labelledby="retro-about-title">
+        {% if site.hero.photo %}
+          <figure class="retro-about-photo">
+            <img src="{{ site.hero.photo.src }}" alt="{{ site.hero.photo.alt }}" width="960" height="960">
+            <figcaption>sarah_and_chewie.jpg</figcaption>
+          </figure>
+        {% endif %}
+        <div class="retro-about-welcome__copy">
+          <p class="hero-kicker">Welcome to my corner of the web</p>
+          <h1 class="hero-title" id="retro-about-title">About Sarah</h1>
+          <p>I am an experimental physicist turned software developer with over 15 years of experience developing and managing cutting-edge tech projects.</p>
+          <p>While not from Seattle originally, I have found my home here. I enjoy <a href="/books/">writing books</a> about cool technologies on a split ergo keyboard, cutting things with lasers, and playing with my pup Chewie.</p>
+          <p class="retro-about-alert">
+            <img src="/assets/images/logo/goggles-wrap.svg" alt="" width="26" height="12">
+            <span>Protective eyewear recommended. Lasers may appear in this homepage.</span>
+          </p>
+        </div>
+      </section>
+    </retro-panel>
+
+    <retro-panel>
+      <span slot="title">C:\SARAH\RESUME.LOG</span>
+      <section class="retro-terminal" aria-labelledby="experience-title">
+        <h2 id="experience-title"><span aria-hidden="true">C:\SARAH&gt;</span> type experience.log</h2>
+        <ol>
+          <li><span class="retro-terminal__key">PhD</span> Physics (Quantum Computing): started plasma fires with lasers to hack quantum crypto devices and worked on sending and detecting single photons in space. <a href="http://hdl.handle.net/10012/10725">Read the thesis</a>.</li>
+          <li><span class="retro-terminal__key">LAB</span> Low-noise optical systems on satellites, virtual reality hardware, and nanodiamonds for quantum sensing at cryogenic temperatures.</li>
+          <li><span class="retro-terminal__key">CODE</span> Python is my go-to language. I also dabble in Rust and program quantum computers in Q#.</li>
+          <li><span class="retro-terminal__key">2021</span> Awarded a Python Software Foundation Fellowship.</li>
+          <li><span class="retro-terminal__key">NOW</span> Developer advocate for the Python open source community.</li>
+        </ol>
+        <p class="retro-terminal__prompt"><span aria-hidden="true">C:\SARAH&gt;</span> <span class="retro-terminal__cursor" aria-hidden="true"></span></p>
+      </section>
+    </retro-panel>
+
+    <retro-panel>
+      <span slot="title">photo_album/</span>
+      <section aria-labelledby="album-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Greetings from the lab</p>
+            <h2 class="section-title" id="album-title">Photo album</h2>
+          </div>
+        </div>
+        <div class="retro-album">
+          <figure>
+            <img src="/static/img/lab-uw.jpg" alt="Sarah in a dark lab with optical fibers glowing red and green wrapped around her" width="1400" height="1050">
+            <figcaption>lab_jewelry.jpg</figcaption>
+          </figure>
+          <figure>
+            <img src="/static/img/chewie-mikeandike.jpg" alt="Sarah's German Shepherd named Chewie curled up on the couch with a quantum textbook" width="1400" height="1050">
+            <figcaption>chief_napping_officer.jpg</figcaption>
+          </figure>
+          <figure>
+            <img src="/static/img/figures/sarah-build-talk.png" alt="Sarah speaking on stage at Microsoft BUILD 2019" width="1400" height="1050">
+            <figcaption>build_2019.png</figcaption>
+          </figure>
+          <figure>
+            <img src="/static/img/figures/uf-qst.png" alt="Sarah hosting a quantum software talk on Twitch" width="1400" height="1050">
+            <figcaption>twitch_stream.png</figcaption>
+          </figure>
+        </div>
+      </section>
+    </retro-panel>
+
+    <retro-panel>
+      <span slot="title">mission_statement.txt</span>
+      <section class="retro-about-copy" aria-labelledby="mission-title">
+        <h2 class="section-title" id="mission-title">Why I do this</h2>
+        <p>I am a vocal activist for diversity and inclusion in STEM, and I often give <a href="/blog/">presentations</a> about my experiences and perspective as a bisexual woman in tech.</p>
+        <p>Live streaming quantum software development on <a href="https://www.twitch.tv/crazy4pi314">Twitch</a> has been another great way to connect with folks and make quantum technology more accessible.</p>
+      </section>
+    </retro-panel>
+  </div>
+
+  <aside class="stack-rows">
+    <retro-panel>
+      <span slot="title">user.ini</span>
+      <dl class="retro-stats">
+        <div><dt>Name</dt><dd>Dr. Sarah Kaiser</dd></div>
+        <div><dt>Location</dt><dd>Seattle</dd></div>
+        <div><dt>Online since</dt><dd>2016</dd></div>
+        <div><dt>Main language</dt><dd>Python</dd></div>
+        <div><dt>Sidekick</dt><dd>Chewie</dd></div>
+      </dl>
+    </retro-panel>
+
+    <retro-panel>
+      <span slot="title">trophy_case.dat</span>
+      <dl class="retro-counters">
+        <div><dt>Books</dt><dd>{{ collections.publications.length }}</dd></div>
+        <div><dt>Talks + events</dt><dd>{{ collections.events.length }}</dd></div>
+        <div><dt>Posts</dt><dd>{{ collections.posts.length }}</dd></div>
+      </dl>
+    </retro-panel>
+
+    <retro-panel>
+      <span slot="title">links.htm</span>
+      <div class="sidebar-block">
+        <p class="eyebrow">Find me elsewhere</p>
+        <div class="badge-wall retro-about-badges" role="group" aria-label="Profiles">
+          {% for badge in site.badges %}
+            {% if not badge.feature or site.features[badge.feature] %}{% button88 badge.label, badge.url, badge.accent %}{% endif %}
+          {% endfor %}
+        </div>
+        <p><a href="https://dev.to/crazy4pi314">dev.to</a></p>
+      </div>
+    </retro-panel>
+
+    <retro-panel>
+      <span slot="title">under_construction.txt</span>
+      <section class="retro-construction" aria-labelledby="construction-title">
+        <p class="retro-construction__banner">
+          <img src="/assets/images/logo/caution-tri.svg" alt="" width="22" height="20">
+          <span id="construction-title">Suggested sections</span>
+        </p>
+        <ul>
+          <li><strong>Now playing:</strong> current projects, learning, and upcoming events.</li>
+          <li><strong>Lab rules:</strong> community values written as playful safety rules.</li>
+          <li><strong>Press kit:</strong> short bio, headshot, pronouns, and talk topics.</li>
+          <li><strong>Guestbook:</strong> a link to webmentions, Mastodon, or email.</li>
+          <li><strong>Webring:</strong> favorite people, projects, and communities.</li>
+        </ul>
+      </section>
+    </retro-panel>
+  </aside>
+</div>

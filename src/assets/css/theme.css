@@ -2057,6 +2057,212 @@ html[data-accent="laser-dark"] {
     margin: 0.35rem 0 0;
   }
 
+  .retro-about-welcome {
+    display: grid;
+    gap: 1.25rem;
+    align-items: start;
+  }
+
+  .retro-about-welcome__copy > *,
+  .retro-about-copy > * {
+    margin: 0;
+  }
+
+  .retro-about-welcome__copy,
+  .retro-about-copy {
+    display: grid;
+    gap: 0.85rem;
+    line-height: 1.7;
+  }
+
+  .retro-about-photo,
+  .retro-album figure {
+    margin: 0;
+    padding: 0.5rem;
+    border: 3px solid var(--color-line);
+    background: var(--surface-card-soft);
+    box-shadow: 5px 5px 0 var(--shadow-color);
+  }
+
+  .retro-about-photo {
+    width: min(100%, 16rem);
+  }
+
+  .retro-about-photo img,
+  .retro-album img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 2px solid var(--color-line);
+    image-rendering: auto;
+  }
+
+  .retro-about-photo img {
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+
+  .retro-about-photo figcaption,
+  .retro-album figcaption {
+    margin-top: 0.4rem;
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    overflow-wrap: anywhere;
+  }
+
+  .retro-about-alert,
+  .retro-construction__banner {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.55rem 0.7rem;
+    border: 2px dashed var(--color-line);
+    background: var(--accent-soft);
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+  }
+
+  .retro-about-alert img,
+  .retro-construction__banner img {
+    flex: none;
+    image-rendering: pixelated;
+  }
+
+  .retro-terminal {
+    padding: 1rem;
+    border: 3px inset #6b7280;
+    background: #071107;
+    color: #8cff8c;
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+  }
+
+  .retro-terminal h2,
+  .retro-terminal p {
+    margin: 0;
+    font: inherit;
+  }
+
+  .retro-terminal ol {
+    display: grid;
+    gap: 0.75rem;
+    margin: 1rem 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .retro-terminal a {
+    color: #fff36b;
+  }
+
+  .retro-terminal__key {
+    display: inline-block;
+    min-width: 4.5ch;
+    margin-right: 0.5rem;
+    color: #fff36b;
+    font-weight: 700;
+  }
+
+  .retro-terminal__cursor {
+    display: inline-block;
+    width: 0.65em;
+    height: 1em;
+    vertical-align: -0.12em;
+    background: currentColor;
+    animation: retro-blink 1s steps(1) infinite;
+  }
+
+  .retro-album {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .retro-album img {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+
+  .retro-stats,
+  .retro-counters {
+    display: grid;
+    gap: 0.5rem;
+    margin: 0;
+    font-family: var(--font-display);
+  }
+
+  .retro-stats div {
+    display: grid;
+    grid-template-columns: minmax(6.5rem, auto) 1fr;
+    gap: 0.75rem;
+    padding-bottom: 0.45rem;
+    border-bottom: 1px dashed var(--color-line);
+  }
+
+  .retro-stats dt {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .retro-stats dd,
+  .retro-counters dd {
+    margin: 0;
+  }
+
+  .retro-counters div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .retro-counters dd {
+    min-width: 4.5ch;
+    padding: 0.2rem 0.45rem;
+    border: 2px inset #6b7280;
+    background: #071107;
+    color: #8cff8c;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-align: right;
+  }
+
+  .badge-wall.retro-about-badges {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .retro-about-badges .button-88 {
+    width: 100%;
+  }
+
+  .retro-construction ul {
+    display: grid;
+    gap: 0.65rem;
+    margin: 1rem 0 0;
+    padding-left: 1.2rem;
+  }
+
+  @media (min-width: 30rem) {
+    .retro-album {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .retro-about-welcome {
+      grid-template-columns: minmax(12rem, 16rem) minmax(0, 1fr);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .retro-terminal__cursor {
+      animation: none;
+    }
+  }
+
   @media (min-width: 48rem) {
     .notebook {
       padding-left: 4rem;
@@ -2066,6 +2272,12 @@ html[data-accent="laser-dark"] {
     .notebook-cover {
       grid-template-columns: minmax(0, 1fr) minmax(16rem, 22rem);
     }
+  }
+}
+
+@keyframes retro-blink {
+  50% {
+    opacity: 0;
   }
 }
 
