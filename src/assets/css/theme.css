@@ -871,20 +871,6 @@ html[data-accent="laser-dark"] {
     stroke-linejoin: miter;
   }
 
-  .feed-card__header .post-card__title {
-    margin-top: 1rem;
-    font-size: 1.5rem;
-  }
-
-  .feed-card__header .post-card__title a,
-  .feed-card__header .post-card__meta {
-    color: #16202a;
-  }
-
-  .feed-card__header .post-card__title a:hover {
-    text-decoration: underline;
-  }
-
   .feed-card__body {
     padding: 1rem;
     overflow-wrap: anywhere;
