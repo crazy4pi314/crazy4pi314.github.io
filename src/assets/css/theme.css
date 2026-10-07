@@ -753,6 +753,41 @@ html[data-accent="laser-dark"] {
     font-size: 0.75rem;
   }
 
+  .feed-loader {
+    display: grid;
+    justify-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    border-top: 2px dashed var(--color-line);
+    padding-top: 1rem;
+  }
+
+  .feed-loader[hidden] {
+    display: none;
+  }
+
+  .feed-loader__button {
+    min-height: 44px;
+    border: 2px solid var(--color-line);
+    background: var(--resource-soft);
+    color: var(--color-ink);
+    font: inherit;
+    font-family: var(--font-display);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+
+  .feed-loader__button:hover {
+    text-decoration: underline;
+  }
+
+  .feed-loader__status {
+    margin: 0;
+    color: var(--color-muted);
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+  }
+
   .example-list {
     list-style: none;
     padding: 0;

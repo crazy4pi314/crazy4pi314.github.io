@@ -34,11 +34,15 @@ permalink: "{% if pagination.pageNumber == 0 %}/blog/index.html{% else %}/blog/p
       <div class="panel-grid">
         {% for post in collections.blogFeed %}
           {% set onPage = (loop.index0 / pagination.size) | int == pagination.pageNumber %}
-          <article class="post-card feed-card feed-card--{{ post.data | feedType }} h-entry" data-year="{{ post.date.getFullYear() }}" data-current-page="{{ onPage }}"{% if not onPage %} hidden data-pagefind-ignore="all"{% endif %}>
+          <article class="post-card feed-card feed-card--{{ post.data | feedType }} h-entry" data-year="{{ post.date.getFullYear() }}" data-feed-index="{{ loop.index0 }}" data-current-page="{{ onPage }}"{% if not onPage %} hidden data-pagefind-ignore="all"{% endif %}>
             {% set feedHeadingLevel = 2 %}
             {% include "partials/feed-card.njk" %}
           </article>
         {% endfor %}
+      </div>
+      <div class="feed-loader" hidden>
+        <button class="feed-loader__button" type="button">Load more entries</button>
+        <p class="feed-loader__status" role="status"></p>
       </div>
       {% if pagination.pages.length > 1 %}
         <nav class="pagination" aria-label="Blog pagination">
