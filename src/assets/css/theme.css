@@ -1100,6 +1100,14 @@ html[data-accent="laser-dark"] {
     padding-left: 1.2rem;
   }
 
+  .entry-body ul {
+    list-style-type: disc;
+  }
+
+  .entry-body ol {
+    list-style-type: decimal;
+  }
+
   .entry-body blockquote {
     border-left: 4px solid var(--accent-main);
     padding-left: 1rem;
