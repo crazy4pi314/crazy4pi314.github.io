@@ -895,11 +895,6 @@ html[data-accent="laser-dark"] {
     --feed-accent: #e3c9f6;
   }
 
-  .feed-card--blog .feed-card__body {
-    background-image: radial-gradient(circle, var(--color-muted) 0.6px, transparent 0.8px);
-    background-size: 16px 16px;
-  }
-
   .feed-card--workshop {
     --feed-accent: #f5cf55;
   }
