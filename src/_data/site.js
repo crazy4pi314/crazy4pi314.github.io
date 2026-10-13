@@ -57,7 +57,7 @@ export default {
     eventsPage: false,
     responsiveImages: true,
     sampleContent: true,
-    search: true,
+    search: false,
     shareLinks: true,
     webmentions: Boolean(webmentionEndpoint && webmentionApi)
   },
