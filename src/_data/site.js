@@ -21,10 +21,10 @@ export default {
   defaultTheme: "auto",
   tagline: "scientist, maker, community builder.",
   heroLead:
-    "I'm an **experimental physicist turned software developer** with 15+ years building and managing cutting-edge tech projects. I write books, cut things with lasers, and find rabbit holes in my garden and workshop.",
+    "I'm an **experimental physicist turned software developer** with 15+ years building and managing cutting-edge tech projects. I love writing books, cutting things with lasers, and finding rabbit holes to go down.",
   hero: {
     kicker: "Est. 2016",
-    title: "Hi, I'm Sarah!",
+    title: "Hi, I'm Sarah! (they/them)",
     photo: {
       src: "/static/img/sarah-and-chewie.jpg",
       alt: "Sarah smiling on a couch while her German Shepherd, Chewie, leans over her shoulder."
@@ -32,17 +32,17 @@ export default {
     chips: [
       {
         title: "What I make",
-        text: "Quantum software, open-source dev tools, books, and things cut with lasers.",
+        text: "Open source dev tools, books, problems, and really bad puns.",
         url: "/blog/"
       },
       {
-        title: "Where I speak",
-        text: "Conference talks, workshops, podcasts, and streams from PyCon to PyCascades.",
+        title: "Where I'm found",
+        text: "Conferences, livestreams, magic the gathering drafts, and the lab.",
         url: "/blog/"
       },
       {
         title: "What I'm learning",
-        text: "Marine telemetry, Home Assistant, and keeping a vintage boat afloat.",
+        text: "Home lab management, Home Assistant, gardening,and keeping a vintage boat afloat.",
         url: "/events/pycascades-2026-a-bridge-over-not-troubled-waters/"
       }
     ]

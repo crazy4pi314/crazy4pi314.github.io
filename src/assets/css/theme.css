@@ -1,13 +1,13 @@
 @import "@fontsource/atkinson-hyperlegible/400.css";
 @import "@fontsource/atkinson-hyperlegible/700.css";
-@import "@fontsource/chakra-petch/600.css";
+@import "@fontsource/silkscreen/400.css";
 @import "tailwindcss";
 
 @source "../../**/*.{njk,md,webc,js}";
 
 @theme {
   --font-sans: "Atkinson Hyperlegible", "Trebuchet MS", sans-serif;
-  --font-display: "Chakra Petch", "Trebuchet MS", sans-serif;
+  --font-display: "Silkscreen", "Courier New", monospace;
   --color-paper: #fff7e8;
   --color-panel: #fffdf7;
   --color-ink: #16202a;
@@ -1175,6 +1175,19 @@ html[data-accent="laser-dark"] {
     margin-inline: auto;
   }
 
+  .about-photo {
+    width: min(100%, 16rem);
+    justify-self: center;
+  }
+
+  .about-photo .content-image {
+    aspect-ratio: 1;
+    object-fit: cover;
+    border: 2px solid var(--color-line);
+    background: none;
+    box-shadow: none;
+  }
+
   .image-caption {
     color: var(--color-muted);
     font-size: 0.9rem;
@@ -1593,6 +1606,17 @@ html[data-accent="laser-dark"] {
   }
 
   .hero-badges .button-88 {
+    width: 100%;
+    min-width: 0;
+    gap: 0.35rem;
+  }
+
+  .about-badges {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+  }
+
+  .about-badges .button-88 {
     width: 100%;
     min-width: 0;
     gap: 0.35rem;

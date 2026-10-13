@@ -175,11 +175,11 @@ export default function (eleventyConfig) {
           style: "normal"
         },
         {
-          name: "Chakra Petch",
+          name: "Silkscreen",
           data: fs.readFileSync(
-            path.join(__dirname, "node_modules/@fontsource/chakra-petch/files/chakra-petch-latin-600-normal.woff")
+            path.join(__dirname, "node_modules/@fontsource/silkscreen/files/silkscreen-latin-400-normal.woff")
           ),
-          weight: 600,
+          weight: 400,
           style: "normal"
         }
       ]
@@ -375,7 +375,7 @@ export default function (eleventyConfig) {
     "node_modules/@fontsource/atkinson-hyperlegible/files": "assets/css/files"
   });
   eleventyConfig.addPassthroughCopy({
-    "node_modules/@fontsource/chakra-petch/files": "assets/css/files"
+    "node_modules/@fontsource/silkscreen/files": "assets/css/files"
   });
   eleventyConfig.addPassthroughCopy({ "src/assets/images/logo": "assets/images/logo" });
   eleventyConfig.addPassthroughCopy({ "src/favicon.ico": "favicon.ico" });

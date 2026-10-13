@@ -9,10 +9,12 @@ layout: layouts/base.njk
       <div class="entry-shell">
         <p class="eyebrow">{{ section or "page" }}</p>
         <h1 class="entry-title">{{ title }}</h1>
-        {% if description %}
+        {% if description and not hideDescription %}
           <p class="entry-lead">{{ description }}</p>
         {% endif %}
-        <pixel-divider></pixel-divider>
+        {% if not hideDivider %}
+          <pixel-divider></pixel-divider>
+        {% endif %}
         <div class="entry-body">
           {{ content | safe }}
         </div>
