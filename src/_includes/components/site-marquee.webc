@@ -1,3 +1,3 @@
-<div webc:root class="marquee-shell" role="note" aria-label="Status line">
+<div webc:root class="marquee-shell" role="region" aria-label="Status line">
   <div class="marquee-track"><slot></slot></div>
 </div>
